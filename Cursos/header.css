@@ -1,0 +1,349 @@
+body {
+    position: fixed;
+    inset: 0 0 0 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+div#cabecalho {
+    position: relative;
+    background-color: #00511C;
+    color: white;
+    margin: 0;
+    padding: 10px;
+    height: 110px;
+}
+
+img {
+    float: left;
+    margin-left: 5%;
+    margin-top: 5px;
+    width: 80px;
+}
+
+@font-face {
+    font-family: 'open-sans';
+    src: url('./fonts/OpenSans-Regular.ttf') format('truetype');
+}
+
+h3#escol {
+    font-family: 'open-sans';
+    margin-left: 12%;
+    margin-top: 1%;
+
+}
+
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('./fonts/BebasNeue-light.ttf') format('truetype');
+}
+
+h3#escol1 {
+    font-family: 'Bebas Neue', sans-serif;
+    margin-left: 12%;
+    margin-top: -1%;
+    font-size: 230%;
+}
+
+div#complemento {
+    background-color: #FFBD00;
+    padding: 7px;
+}
+
+div#navegacao {
+    background-color: #D1E2C8;
+    margin-left: -10px;
+    color: #00511C;
+}
+
+nav#nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'open-sans1';
+    font-size: 120%;
+    height: 38px;
+}
+
+#drop {
+    position: relative;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    height: 38px;
+}
+
+#drop::after {
+    content: '';
+    position: absolute;
+    background: #00511C;
+    left: 14px;
+    bottom: 0;
+    width: 80%;
+    height: 2px;
+    opacity: 0;
+    transition: .3s ease;
+    margin-top: -10px;
+}
+
+#drop:hover::after {
+    opacity: 1;
+    transform: translateY(8px);
+}
+
+.button {
+    font-family: 'open-sans';
+    cursor: pointer;
+    text-decoration: none;
+    color: darkgreen;
+    font-weight: bolder;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+img#select {
+    width: 10px;
+    height: 10px;
+    float: right;
+    margin-top: -12%;
+    margin-right: 6%;
+}
+
+@font-face {
+    font-family: 'open-sans';
+    src: url('./fonts/OpenSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('./fonts/BebasNeue-Light.ttf') format('truetype');
+}
+
+.seta {
+    font-size: 15px;
+    padding: 0px;
+    margin-left: 5px;
+    height: 70%;
+    margin-top: 22px;
+}
+
+.menu-drop a:hover {
+    background: #085537;
+    color: #fff;
+}
+
+button[name="drop"] {
+    border: none;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 100%;
+    color: darkgreen;
+    font-family: 'open-sans';
+    margin-right: 5%;
+}
+
+.menu-drop {
+    display: inline-block;
+    position: relative;
+    height: 40px;
+}
+
+.drop-content {
+    display: none;
+    background-color: #D1E2C8;
+    position: absolute;
+    z-index: 1;
+    border-radius: 10px;
+    width: 100%;
+    margin-top: 1px;
+    font-family: 'open-sans';
+
+}
+
+.drop-content a {
+    color: darkgreen;
+    padding: 8px 10px;
+    background-color: #D1E2C8;
+    text-decoration: none;
+    display: block;
+    border-bottom: #085537;
+    border-radius: 10px;
+    font-weight: bolder;
+}
+
+
+.menu-drop:hover .drop-content {
+    display: block;
+    border-bottom: #D1E2C8;
+
+}
+
+.menu-drop:hover button[name="drop"] {
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 10px;
+    border-bottom: #085537;
+}
+
+
+.responsive-nav,
+.show-nav {
+    display: none;
+}
+
+.responsive-nav a {
+    font-family: 'open-sans';
+}
+
+.black-bar {
+    width: 90%;
+    background-color: #002c0f;
+    border-radius: 20px;
+    height: 5px;
+    transition: .4s;
+}
+
+@media (max-width: 500px) {
+    .show-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 35px;
+        height: 35px;
+        margin-left: .9em;
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+
+    .rotate-0 {
+        rotate: 45deg;
+        translate: 0 7px;
+    }
+
+    .rotate-1 {
+        display: none;
+    }
+
+    .rotate-2 {
+        translate: 0 -7px;
+        rotate: -45deg;
+    }
+
+    nav#nav {
+        display: none;
+    }
+
+    .ativo {
+        transition: .5s;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        inset: 0 0 0 0;
+        background-color: #00511C;
+        z-index: 5;
+        width: 100%;
+        height: 100%;
+    }
+
+    .ativo a {
+        text-decoration: none;
+        width: 100%;
+        text-indent: 10px;
+        color: #fff;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        font-size: 18px;
+        transition: linear .3s;
+    }
+
+    .ativo a:hover {
+        color: #00511C;
+        background-color: #D1E2C8;
+    }
+}
+
+/* -----------------------------------CONTENT--------------------------------------*/
+
+main{
+    flex-grow: 1;
+}
+
+/* -----------------------------------FOOTER---------------------------------------*/
+footer {
+    position: relative;
+    background: #00511C;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    color: #fff;
+    padding-bottom: 13px;
+    z-index: 6;
+}
+
+.div_foot {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.div_foot .titulo_endereco,
+.div_foot .titulo_sobre {
+    font-family: 'Bebas Neue';
+    letter-spacing: 3px;
+    margin-right: 5px;
+    font-size: 25px;
+    font-weight: 900;
+    height: 20px;
+}
+
+.flex_container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    max-height: 40px;
+}
+
+.flex_container h1 {
+    text-align: center;
+    margin-top: 7px;
+    height: 50px;
+}
+
+.div_foot {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: lighter;
+}
+
+.barramarelo {
+    height: 25px;
+    width: 5px;
+    background: #FFBD00;
+    margin-right: 15px;
+    border-radius: 10px;
+}
+
+footer p {
+    margin: 0;
+    margin-top: 3px;
+    font-size: 10px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+#sobre {
+    margin-top: 6px;
+}
+
+#endereco {
+    margin-top: 6px;
+}

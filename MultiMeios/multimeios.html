@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="imagem/png" href="./images/JB.png" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="estilo2.css">
+    <title>EEEP José de Barcelos</title>
+    <script>
+        var showNav = () => {
+        
+        document.getElementById("responsive-nav").classList.toggle("ativo");
+        document.getElementById("responsive-nav").style.transition = "0.5s";
+        setTimeout(()=>{
+          document.getElementById("responsive-nav").style.transition = "";
+        },500)
+        document
+          .getElementsByClassName("black-bar")[0]
+          .classList.toggle("rotate-0");
+        document
+          .getElementsByClassName("black-bar")[1]
+          .classList.toggle("rotate-1");
+        document
+          .getElementsByClassName("black-bar")[2]
+          .classList.toggle("rotate-2");
+      };
+
+    </script>
+</head>
+
+<body>
+
+    <!-------------------------------------- HEADER ------------------------------------>
+    <div id="cabecalho">
+        <img src="./images/JB.png">
+        <h3 id="escol">Escola Estadual de Educação Profissional</h3>
+        <h3 id="escol1">JOSÉ DE BARCELOS</h3>
+    </div>
+    <div id="complemento"></div>
+    <div id="navegacao">
+        <nav id="nav">
+            <div class="menu-drop">
+                <button type="button" name="drop" id="drop" class="button">INSTITUCIONAL<p class="seta">&#x25BC;</p>
+                </button>
+                <div class="drop-content">
+                    <a href="../Origem/origem.html">Origem</a>
+                    <a href="../Edital/edital.html">Regimento Escolar</a>
+                    <a href="../NossaEscola/nossaescola.html">Nossa Escola</a>
+                    <a href="../NossaEquipe/nossaequipe.html" >Nossa Equipe</a>
+                </div>
+
+            </div>
+            <a href="../index.html" class="button">HOME</a>
+            <a href="../Criadores/criadores.html" class="button">CRIADORES</a>
+
+        </nav>
+        <div onClick="showNav()" class="show-nav">
+            <div class="black-bar"></div>
+            <div class="black-bar"></div>
+            <div class="black-bar"></div>
+        </div>
+    </div>
+    
+    <main class="fundo"> 
+        <nav class="responsive-nav" id="responsive-nav">
+            <a href="../index.html">Home</a>
+            <a href="../Origem/origem.html">Origem</a>
+            <a href="../Edital/edital.html">Regimento Escolar</a>
+            <a href="../NossaEscola/nossaescola.html">Nossa Escola</a>
+            <a href="../NossaEquipe/nossaequipe.html">Nossa Equipe</a>
+            <a href="../Criadores/criadores.html">Criadores</a>
+            <a href="../Cursos/cursos.html">Cursos Técnicos</a>
+            <a href="#">Acesso</a>
+          </nav>
+        <section id="primeira">
+            <div class="content">
+                <a href="https://www.instagram.com/apoiodomultimeios/"><img src="logo3.png" class="logo"></a>
+               </div>
+        </section>
+        <section>
+            
+            <div class="content1">
+                <h1>O QUE É MULTIMEIOS?</h1>
+                <p>
+                    O MULTIMEIOS DO JOSÉ DE BARCELOS É O LOCAL DE MAIOR ACOLHIMENTO AOS ALUNOS DENTRO DA ESCOLA, OFERECENDO UMA LISTA DE LAZERES QUE VÃO DESDE A BIBLIOTECA, COMPUTADORES PARA PESQUISA ENTRE OUTROS. O MULTIMEIOS TAMBÉM É RESPONSÁVEL PELA MAIOR PARTE DOS EVENTOS QUE OCORREM DENTRO DA EEEP, DESDE PAIXÃO DE CRISTO, SAARAU, QUITADAS, ETC.
+SEU PRINCIPAL PAPEL É DAR UM LOCAL DE ATIVIDADES E REPOUSO PARA OS ALUNOS, OS AJUDANDO A DESEMPENHAR SUAS RESPONSABILIDADES DURANTE O DIA A DIA ESCOLAR.
+
+                </p>
+            </div>
+        </section>
+        <section id="primeira">
+            <div class="swiper img-slider" id="img-slider2">
+                <div class="swiper-wrapper">
+                    <img src="./images/p1.jpg" class="swiper-slide" alt="">
+                    <img src="./images/p2.jpg" class="swiper-slide" alt="">
+                    <img src="./images/p3.jpg" class="swiper-slide" alt="">
+                </div>
+                <div class="swiper-pagination"></div>
+
+            </div>
+            <div class="content">
+                <h1>PAIXÃO DE CRISTO</h1>
+                <p>
+                    Baseado na história bíblica, a paixão de cristo é o maior evento escolar do José de Barcelos, em que alunos e professores em conjunto se organizam para trabalharem na apresentação para a semana da páscoa. O multimeios fica com o cargo de auxiliar desde os materiais de cenário até a ajuda no roteiro e direção, também é preciso dizer que muitas vezes o espaço do multimeios é doado para os ensaios da Paixão..
+                </p>
+            </div>
+        </section>
+        <section>
+            
+            <div class="content" id="Segunda">
+                <h1>PROGRAMA NACIONAL DO LIVRO DIDÁTICO</h1>
+                <p>
+                    Diante a grade curricular dos primeiros anos, o multimeios se torna o local de acolhimento para o projeto de leitura, apresentando obras para os alunos e fazendo atividades baseadas nessas aulas.
+                </p>
+            </div>
+            <div class="swiper img-slider" id="img-slider3">
+                <div class="swiper-wrapper">
+                    <img src="./images/l0.jpg" class="swiper-slide" alt="">
+                    <img src="./images/l1.jpg" class="swiper-slide" alt="">
+                    <img src="./images/l2.jpg" class="swiper-slide" alt="">
+                    <img src="./images/l3.jpg" class="swiper-slide" alt="">
+                </div>
+                <div class="swiper-pagination"></div>
+
+            </div>
+        </section>
+        <section id="Segunda">
+            <div class="swiper img-slider" id="img-slider2">
+                <div class="swiper-wrapper">
+                    <img src="./images/a1.jpg" class="swiper-slide" alt="">
+                    <img src="./images/a2.jpg" class="swiper-slide" alt="">
+                    <img src="./images/a3.jpg" class="swiper-slide" alt="">
+                    <img src="./images/a4.jpg" class="swiper-slide" alt="">
+                </div>
+                <div class="swiper-pagination"></div>
+
+            </div>
+            <div class="content">
+                <h1>ALUNOS QUE INSPIRAM</h1>
+                <p>
+                    O evento visa identificar, valorizar e dar visibilidade à produção artística e cultural dos estudantes matriculados na Rede Pública Estadual de Ensino do Ceará. O papel do multimeios é projetar os alunos para esse evento, auxiliando-os no que precisarem, desde o auxilio na inscrição e a ajuda nos materiais de apoio, acolhendo os participantes na criatividade para suas apresentações.
+                </p>
+            </div>
+        </section>
+        <section>
+            
+            <div class="content" id="Segunda">
+                <h1>SARAU LITERÁRIO JOSÉ DE BARCELOS</h1>
+                <p>
+                    Sarau literário é um dos tipos mais populares de sarau, encontro promovido para apresentar a literatura e poemas. Nesse tipo de evento, pessoas recitam poemas, leem trechos de obras literárias e debatem conteúdos de livros. O multimeios é quem organiza esse evento no José de Barcelos, incentivando os alunos a criarem por conta própria suas apresentações, utilizando de temas livres e baseando no que for mais interessante para o estudante, instigando sua criatividade.
+                </p>
+            </div>
+            <div class="swiper img-slider" id="img-slider3">
+                <div class="swiper-wrapper">
+                    <img src="./images/s0.jpeg" class="swiper-slide" alt="">
+                    <img src="./images/s1.jpeg" class="swiper-slide" alt="">
+                    <img src="./images/s2.jpeg" class="swiper-slide" alt="">
+                    <img src="./images/s3.jpeg" class="swiper-slide" alt="">
+                </div>
+                <div class="swiper-pagination"></div>
+
+            </div>
+        </section>
+        
+    </main>
+    
+    <footer>
+        <div class="div_foot" id="endereco">
+            <div class="flex_container">
+                <div class="barramarelo"></div>
+                <h1 class="titulo_endereco">Endereço</h1>
+            </div>
+            <p>Rua Angélica Gurgel, 362, Fortaleza - CE</p>
+            <p>Horário: Segunda - Sexta: 7h20 - 16h40</p>
+        </div>
+        <div class="div_foot" id="sobre">
+            <div class="flex_container">
+                <div class="barramarelo"></div>
+                <h1 class="titulo_sobre">Sobre</h1>
+            </div>
+
+            <p><a href="../Criadores/criadores.html">© 2021 - 2023 - Turma Técnico em Informática</a></p>
+            <p>Desenvolvimento e Design</p>
+        </div>
+    </footer>
+</body>
+</html>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script>
+    let imgSlider = new Swiper(".img-slider", {
+        slidesPerView: 1,
+        loop: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            dynamicBullets: true,
+        },
+        autoplay: {
+            delay: 3000,
+        },
+    });
+</script>
+

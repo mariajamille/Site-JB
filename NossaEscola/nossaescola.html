@@ -1,0 +1,150 @@
+<!--       PROJETO SOCIAL INFORMÁTICA 3 | 2021 - 2023 |        -->
+<!--       SITE DA ESCOLA ESTADUAL DE EDUCAÇÃO PROFISSIONAL JOSÉ DE BARCELOS.         -->
+<!--       AUTOR E CRIADOR DESTA PAGINA: AUDI DE OLIVEIRA NASCIMENTO | @AUDILIVEIRA          -->
+<!--       SEGUE A PÁGINA HTML:         -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+
+	<!--       STYLE MENU DROP         -->
+
+	<style media="screen">
+		button[name="drop"] {
+			border: none;
+			cursor: pointer;
+			background-color: #D1E2C8;
+			font-size: 100%;
+			color: #00511C;
+			font-family: 'open-sans';
+			margin-right: 5%;
+		}
+
+		.menu-drop:hover button[name="drop"] {
+			background-color: #D1E2C8;
+			border-radius: 10px;
+			border-bottom: #085537;
+		}
+	</style>
+	<link rel="icon" type="imagem/png" href="JB.png" />
+	<title>EEEP José de Barcelos</title>
+	<script>
+        var showNav = () => {
+        
+        document.getElementById("responsive-nav").classList.toggle("ativo");
+        document.getElementById("responsive-nav").style.transition = "0.5s";
+        setTimeout(()=>{
+          document.getElementById("responsive-nav").style.transition = "";
+        },500)
+        document
+          .getElementsByClassName("black-bar")[0]
+          .classList.toggle("rotate-0");
+        document
+          .getElementsByClassName("black-bar")[1]
+          .classList.toggle("rotate-1");
+        document
+          .getElementsByClassName("black-bar")[2]
+          .classList.toggle("rotate-2");
+      };
+
+    </script>
+</head>
+
+<body style="overflow-x: hidden;">
+
+	<!--       HEADER         -->
+
+	<div id="cabecalho">
+		<img src="JB.png" />
+		<h3 id="escol">Escola Estadual de Educação Profissional</h3>
+		<h3 id="escol1">JOSÉ DE BARCELOS</h3>
+	  </div>
+	  <div id="complemento"></div>
+	  <div id="navegacao">
+		<nav id="nav">
+		  <div class="menu-drop">
+			<button type="button" name="drop" id="drop" class="button">
+			  INSTITUCIONAL
+			  <p class="seta">&#x25BC;</p>
+			</button>
+			<div class="drop-content">
+			  <a href="../Origem/origem.html">Origem</a>
+			  <a href="../Edital/edital.html">Regimento Escolar</a>
+			  <a href="../NossaEquipe/nossaequipe.html" >Nossa Equipe</a>
+			  <a href="../MultiMeios/multimeios.html">MultiMeios</a>
+			</div>
+		  </div>
+		  <a href="../index.html" class="button">HOME</a>
+		  <a href="../Criadores/criadores.html" class="button">CRIADORES</a>
+		</nav>
+		<div onClick="showNav()" class="show-nav">
+		  <div class="black-bar"></div>
+		  <div class="black-bar"></div>
+		  <div class="black-bar"></div>
+		</div>
+	  </div>
+  
+	  <nav class="responsive-nav" id="responsive-nav">
+		<a href="../index.html">Home</a>
+		<a href="../Origem/origem.html">Origem</a>
+		<a href="../Edital/edital.html">Regimento Escolar</a>
+		<a href="../MultiMeios/multimeios.html">MultiMeios</a>
+		<a href="../NossaEquipe/nossaequipe.html">Nossa Equipe</a>
+		<a href="../Criadores/criadores.html">Criadores</a>
+		<a href="../Cursos/cursos.html">Cursos Técnicos</a>
+		<a href="#">Acesso</a>
+		</nav>
+	<!--       CONTENT         -->
+
+	<div id="informacoes">
+		
+		<h2 id="i1">INFRAESTRUTURA:<br></h2>
+		<h2 id="i5">
+			Salas Climatizadas;<br>
+			MultiMeios;<br>
+			Cozinha;<br>
+			Quadra Esportiva;<br>
+			Láb. Informática;<br>
+			Láb. Ciências;<br>
+			Láb. Estética;<br>
+			Láb. Matemática;<br>
+			Láb. Enfermagem;<br>
+			Sala de Professores;<br>
+			Sala de Diretoria;<br>
+		</h2>
+
+		<!--       LOCALIZAÇÃO DA INSTITUIÇÃO | MAPA         -->
+
+		<div id="loc">
+			<h2 id="i3">LOCALIZAÇÃO:</h2>
+			<div id="localizacao">
+				<iframe id="mapa"
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3980.880329087532!2d-38.501407685268255!3d-3.83585464480237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c7501db0d6533f%3A0x9d1cc166e15842cd!2sRua%20Ang%C3%A9lica%20Gurgel%2C%20362%20-%20Messejana%2C%20Fortaleza%20-%20CE%2C%2060871-030!5e0!3m2!1spt-BR!2sbr!4v1680822608576!5m2!1spt-BR!2sbr"
+					width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>
+			<h2 id="i4">Rua Angélica Gurgel, 362, Fortaleza - CE</h2><br><br><br><br><br><br><br><br>
+		</div>
+	</div>
+<!----------------- footer --------------->
+<footer>
+    <div class="div_foot" id="sobre">
+      <div class="flex_container"><div class="barramarelo"></div><h1 class="titulo_endereco" id="titulo_endereco">Sobre</h1></div>
+      <p><a href="../Criadores/criadores.html">© 2021 - 2023 - Turma Técnico em Informática</a></p>
+      <p>Desenvolvimento e Design</p>
+    </div>
+    <div class="div_foot" id="contato">
+      <div class="flex_container"><div class="barramarelo" id="barra_contato"></div><h1 class="titulo_sobre" id="titulo_contato">Contato</h1></div>
+
+      <p><a href="https://api.whatsapp.com/send?phone=5585991919730" id="contatos"><img id="icones" src="whats.png">(85) 9 9191-9730</a></p>
+      <p><a href="https://www.instagram.com/eeep_jb/" id="contato1"><img id="icones" src="insta.png">eeep_jb</a></p>
+       </div>
+
+  </footer>
+</body>
+
+</html>

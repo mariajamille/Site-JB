@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="imagem/png" href="./images/JB.png" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="style.css">
+    <title>EEEP José de Barcelos</title>
+    <script>
+        var showNav = () => {
+        
+        document.getElementById("responsive-nav").classList.toggle("ativo");
+        document.getElementById("responsive-nav").style.transition = "0.5s";
+        setTimeout(()=>{
+          document.getElementById("responsive-nav").style.transition = "";
+        },500)
+        document
+          .getElementsByClassName("black-bar")[0]
+          .classList.toggle("rotate-0");
+        document
+          .getElementsByClassName("black-bar")[1]
+          .classList.toggle("rotate-1");
+        document
+          .getElementsByClassName("black-bar")[2]
+          .classList.toggle("rotate-2");
+      };
+    </script>
+</head>
+
+<body>
+
+    <!-------------------------------------- HEADER ------------------------------------>
+    <div id="cabecalho">
+        <img src="./images/JB.png">
+        <h3 id="escol">Escola Estadual de Educação Profissional</h3>
+        <h3 id="escol1">JOSÉ DE BARCELOS</h3>
+    </div>
+    <div id="complemento"></div>
+    <div id="navegacao">
+        <nav id="nav">
+            <div class="menu-drop">
+                <button type="button" name="drop" id="drop" class="button">INSTITUCIONAL<p class="seta">&#x25BC;</p>
+                </button>
+                <div class="drop-content">
+                    <a href="../NossaEquipe/nossaequipe.html">Nossa Equipe</a>
+                    <a href="../Edital/edital.html">Regimento Escolar</a>
+                    <a href="../NossaEscola/nossaescola.html">Nossa Escola</a>
+                    <a href="../MultiMeios/multimeios.html">MultiMeios</a>
+
+                </div>
+
+            </div>
+            <a href="../index.html" class="button">HOME</a>
+            <a href="../Criadores/criadores.html" class="button">CRIADORES</a>
+
+        </nav>
+        <div onClick="showNav()" class="show-nav">
+            <div class="black-bar"></div>
+            <div class="black-bar"></div>
+            <div class="black-bar"></div>
+        </div>
+    </div>
+
+    <main>
+        <section>
+            <p
+                style="color: #00511C; width: 80%; background-color: #ffd334b3; padding: 10px; border: 2px solid #fba419d8;">
+                As informações aqui presentes foram obtidas através de pesquisas na internet e de uma entrevista
+                realizada pelos
+                alunos da Informática 3 (2023) com a diretora Maria da Glória Brasil Nunes, que atua há 14
+                anos na gestão da EEEP José de Barcelos e possui um belíssimo trabalho e legado
+                marcado pela dedicação aos estudantes, mesmo passando por uma trajetória de
+                dificuldades, incluindo um câncer de mama, que não a deteve. Assim, juntamente com toda
+                a equipe, pôde concretizar a realização de uma escola profissionalizante que é, atualmente,
+                referência no Estado do Ceará.
+            </p>
+        </section>
+        <section>
+            <div class="swiper img-slider">
+                <div class="swiper-wrapper">
+                    <img src="./images/crias.jpg" class="swiper-slide" alt="">
+                    <img src="./images/tias.jpg" class="swiper-slide" alt="">
+                    <img src="./images/food.jpg" class="swiper-slide" alt="">
+                    <img src="./images/flowers.jpg" class="swiper-slide" alt="">
+                    <img src="./images/gym.jpg" class="swiper-slide" alt="">
+                    <img src="./images/bib1.jpg" class="swiper-slide" alt="">
+                    <img src="./images/bib2.jpg" class="swiper-slide" alt="">
+                    <img src="./images/bib3.jpg" class="swiper-slide" alt="">
+                    <img src="./images/bib4.jpg" class="swiper-slide" alt="">
+                    <img src="./images/birbs.jpg" class="swiper-slide" alt="">
+                    <img src="./images/flowers2.jpg" class="swiper-slide" alt="">
+                    
+                </div>
+                <div class="swiper-pagination"></div>
+
+            </div>
+        </section>
+        <section>
+            <div class="image">
+                <img src="./images/josedebarcelos.png" alt="">
+            </div>
+            <div class="content">
+                <h1>QUEM FOI JOSÉ DE BARCELOS?</h1>
+                <p>
+                    José de Barcelos foi um notável humanista, competente, sobretudo, em geografia, história e
+                    Grego.
+                    Nasceu em Baturité no dia 7 de julho de 1843, e faleceu em Fortaleza no dia 24 de outubro de
+                    1919.
+                    Exerceu cargos como de diretor da Escola Normal, onde lecionou Português, Pedagogia e
+                    Metodologia;
+                    Iniciando sua carreira com apenas 13 anos, é considerado uma grande figura da educação
+                    cearense.
+                    Estudou latim, viajou, subsidiado pelo governo provincial, para a escola Agrícola de
+                    Grignon,
+                    França
+                    e a
+                    Escola Normal baiana.
+                    Ministrou aulas particulares em Fortaleza e no Rio de janeiro, substituiu professor no Liceu
+                    cearense e
+                    se tornou diretor da Biblioteca Pública.
+                    Ao longo de sua vida desempenhou importantes comissões do governo da antiga província, em
+                    benefício
+                    da
+                    instrução pública,
+                    havendo estado com esse objetivo na Bahia e depois na Bélgica, apresentando a respeito
+                    excelentes
+                    relatórios.
+                    São de sua autoria vários Regulamentos e Regimentos Internos relativos a escolas do nível
+                    secundário.
+                </p>
+            </div>
+        </section>
+        <section>
+            <div class="image">
+                <img src="./images/IMG_7943.JPG" alt="">
+            </div>
+            <div class="content">
+                <h1>UMA ESCOLA REGULAR</h1>
+                <p>
+                    A escola José de Barcelos é muito conhecida em Messejana e é muito antiga. O prédio da
+                    escola possui muitos anos de existência, tendo sua construção iniciada em 1952. Começou
+                    com um grupo escolar, depois ampliou-se e virou escola de ensino fundamental. Em 2008,
+                    passou a fornecer ensino fundamental e médio, possuindo uma estrutura bem danificada e
+                    alto índice de evasão escolar, ou seja, que não supria a questão de uma oferta adequada
+                    de ensino. Havia mais abandono e reprovação do que aprovação.
+                </p>
+            </div>
+        </section>
+        <section>
+            <div class="content">
+                <h1>A CHEGADA DO ENSINO PROFISSIONAL</h1>
+                <p>
+                    Assim, com a implementação do programa Brasil profissionalizado, o governador do Estado
+                    viu a oportunidade de obter financiamento para um projeto de escolas voltadas para a
+                    educação profissional do ensino médio, já que não havia escola de ensino Médio
+                    profissionalizante no Estado do Ceará que fosse pública e da rede estadual. Logo, a
+                    proposta do projeto Brasil profissionalizado era implantar escolas de ensino profissional a
+                    nível estadual.
+                    Enquanto alguns estados possuíam apenas 1 ou nenhuma escola, foi colocado como alvo
+                    implantar 100 escolas de educação profissional no Estado do Ceará e, como não havia
+                    prédio para imediatamente fazer essas escolas, foi direcionada a implantação nas escolas
+                    estaduais que estavam com uma situação mais precária de rendimento, em áreas de risco
+                    ou mesmo com alta evasão, como era o caso do José de Barcelos, onde o modelo foi
+                    implantado após a observação da precariedade de sua infraestrutura.
+                </p>
+            </div>
+        </section>
+        <section>
+            <div class="content">
+                <h1>JB NO INÍCIO</h1>
+                <p>
+                    A estrutura física da escola era muito precária: a quadra estava no chão, só haviam os
+                    ferros e barras; as salas de aula estavam cheias de goteiras e com a madeira estragada. As
+                    cadeiras eram de madeira e bem pesadas. Os banheiros estavam podres, pichados, e não
+                    tinham sanitários que pudessem ser utilizados, apenas os que ficavam nos vestiários, que
+                    possuíam uma situação bem precária também. A cozinha hoje, onde é o refeitório, tinha
+                    uma pessoa morando (eram três salas que tinham 3 quartos, no qual o primeiro era onde a
+                    pessoa morava e o segundo ela usava para criar passarinhos).
+                </p>
+            </div>
+        </section>
+        <section>
+            <div class="image">
+                <img src="./images/cat.jpg" alt="">
+            </div>
+            <div class="content">
+                <h1>A CONSTRUÇÃO DA ESCOLA</h1>
+                <p>
+                    Foi feita uma licitação para renovação da escola, que ficou parada, pois a empresa
+                    responsável não deu continuidade. Assim, a diretora Glória entrou em contato com esta
+                    empresa, pegou a documentação e solicitou a reforma com a construção de, no mínimo, 4
+                    salas de aula para fazer a jornada pedagógica e para receber as 4 turmas matriculadas.
+                    Dessa maneira, com a pressão da gestão, a empresa retornou à reforma e começou a
+                    revitalizar conforme o pedido. Com 15 dias, a escola iniciou o período letivo, ainda em
+                    obras. Nesse período, não havia a cozinha que a escola hoje possui, apenas uma cozinha
+                    que ficava posicionada no espaço onde hoje se encontra a sala da tia Neide, além do
+                    estado da sala dos professores, que se encontrava muito deteriorado.
+                    Com a reforma e o processo de implantação da Educação Profissional, houve muito esforço
+                    dos primeiros professores e profissionais, que receberam um treinamento específico para o
+                    novo modelo e passaram por um processo de seleção muito rigoroso para comprovação da
+                    aptidão necessária.
+                </p>
+            </div>
+        </section>
+        <section>
+            <div class="content">
+                <h1>A PRIMEIRA EQUIPE</h1>
+                <p>
+                    A diretora Glória conta que nunca havia sido gestora e que nem mesmo almejava o cargo,
+                    mas como acreditava muito no futuro da educação profissional - sendo fruto desse modelo
+                    -, decidiu aceitar o cargo e encarar a missão de direcionar a pequena e deteriorada
+                    estrutura do José de Barcelos, crendo no investimento que a educação profissionalizante
+                    proporciona ao futuro dos jovens. Ela também conta que, enquanto outras colocadas
+                    observaram cada escola para escolher conforme a melhor infraestrutura ofertada, ela
+                    escolheu o José de Barcelos por ser a instituição de sua comunidade, no bairro de
+                    Messejana.
+                    Além disso, a diretora conta que Paulo foi o primeiro que topou a missão de dar um novo
+                    olhar ao José de Barcelos, assumindo posto responsável pelas finanças e dando também
+                    um grande suporte na parte estrutural da escola, auxiliando com pequenos serviços e
+                    fiscalizando os trabalhos prestados à estrutura, garantindo a eficiência do trabalho e a
+                    qualidade do serviço de maneira essencial. Junto dele assumiu também Silvanir Bastos,
+                    que ingressou como coordenadora pedagógica e direcionou todo o formato de avaliação,
+                    desde a estrutura da média somatória até a participação interativa do aluno através dos
+                    trabalhos parciais bem como as provas bimestrais direcionadas ao modelo ENEM. Assim,
+                    em 2009 surgiu a primeira equipe que formou o que seria a EEEP José de Barcelos, mesmo
+                    com as obras e as grandes demandas da escola.
+                </p>
+            </div>
+        </section>
+        <section>
+            <div class="content">
+                <h1>PRIMEIRAS TURMAS E O PROJETO DIRETOR DE TURMA</h1>
+                <p>
+                    No início, grande foi a dificuldade das primeiras turmas, pois, segundo a diretora Glória,
+                    as
+                    salas eram muito altas e possuíam ventiladores que necessitavam ser espanados, o que
+                    muitas vezes mostrou ser uma barreira já que não haviam funcionários suficientes para tal
+                    função.
+                    Conforme o núcleo foi crescendo, os novos profissionais foram sendo instruídos pela
+                    Diretora Glória sobre a proposta pedagógica da escola profissional. Além disso, nessa
+                    mesma época, ainda em 2009, surgiu o projeto Diretor de Turma, oriundo de Portugal e que
+                    se concretizou através de uma palestra com a criadora do projeto.
+                </p>
+            </div>
+        </section>
+        <section>
+            <div class="image">
+                <img src="./images/cda.jpg" alt="">
+            </div>
+            <div class="content">
+                <h1>CURIOSIDADE: UM MORADOR NA ESCOLA</h1>
+                <p>
+                    Sabendo das reformas da escola e avaliando o espaço físico, a primeira equipe descobriu a
+                    presença de uma pessoa que possuía sua casa dentro da estrutura da escola, na parte
+                    onde hoje corresponde à cozinha. Diante disso, eles avaliaram que seria inviável que tal
+                    pessoa continuasse a residir naquele espaço, sabendo que os alunos passariam o dia
+                    inteiro na escola, e resolveram conversar com o homem que ali morava, explicando o novo
+                    modelo que seria implantado. Logo, após muito diálogo - houve muita resistência por parte
+                    da pessoa -, a mudança foi concretizada e o espaço pôde ser revitalizado.
+                </p>
+            </div>
+        </section>
+        <section>
+            <div class="content">
+                <h1>CONQUISTAS E VITÓRIAS</h1>
+                <p>
+                    Com as obras e todo o esforço dos profissionais, a EEEP José de Barcelos obteve
+                    inúmeras conquistas, saindo de escola com alto índice de reprovação e evasão para uma
+                    das escolas profissionalizantes que é referência no Estado. Dentre tais conquistas, pode-se
+                    destacar a posição como uma das melhores escolas profissionalizantes do Ceará, além da
+                    competência demonstrada pelos alunos, que comprova-se pelo fato - conta a diretora - de
+                    atualmente haver campos de estágios que só aceitam alunos do José de Barcelos.
+                    Ademais, a escola atingiu, em 2022, o IDEB - indicador de qualidade de ensino nas escolas
+                    públicas a nível nacional - equivalente a 5.97, considerado alto, e conta com alunos
+                    aprovados nas mais diversas faculdades e cursos - incluindo medicina.
+                </p>
+            </div>
+        </section>
+        <section>
+            <div class="content">
+                <h1>UM LEGADO</h1>
+                <p>
+                    “Todos os alunos passaram pelas mesmas dificuldades, as mesmas aulas, o
+                    mesmo cansaço, problemas familiares e dificuldades financeiras. Porém,
+                    superaram, seguiram a vida, mudaram sua história e mudaram a história da
+                    família. Isso, para mim, é o que mais nos impulsiona: saber que, ficando até o
+                    fim, vocês conseguem. O importante é não desistir. A história do José de
+                    Barcelos é uma história de muita luta, mas também de muitas bençãos e
+                    infinitamente mais vitórias.”
+                    <span style="color: #00511c;">- Diretora Maria da Glória Brasil Nunes.</span>
+                </p>
+            </div>
+        </section>
+        <nav class="responsive-nav" id="responsive-nav">
+            <a href="../homepage.html">Home</a>
+            <a href="../MultiMeios/multimeios.html">MultiMeios</a>
+            <a href="../Edital/edital.html">Regimento Escolar</a>
+            <a href="../NossaEscola/nossaescola.html">Nossa Escola</a>
+            <a href="../NossaEquipe/nossaequipe.html">Nossa Equipe</a>
+            <a href="../Criadores/criadores.html">Criadores</a>
+            <a href="../Cursos/cursos.html">Cursos Técnicos</a>
+            <a href="#">Acesso</a>
+          </nav>
+    </main>
+
+    <footer>
+        <div class="div_foot" id="endereco">
+            <div class="flex_container">
+                <div class="barramarelo"></div>
+                <h1 class="titulo_endereco">Endereço</h1>
+            </div>
+            <p>Rua Angélica Gurgel, 362, Fortaleza - CE</p>
+            <p>Horário: Segunda - Sexta: 7h20 - 16h40</p>
+        </div>
+        <div class="div_foot" id="sobre">
+            <div class="flex_container">
+                <div class="barramarelo"></div>
+                <h1 class="titulo_sobre">Sobre</h1>
+            </div>
+
+            <p><a href="../Criadores/criadores.html">© 2021 - 2023 - Turma Técnico em Informática</a></p>
+            <p>Desenvolvimento e Design</p>
+        </div>
+    </footer>
+</body>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script>
+    let imgSlider = new Swiper(".img-slider", {
+        slidesPerView: 1,
+        loop: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            dynamicBullets: true,
+        },
+        autoplay: {
+            delay: 3000,
+        },
+    });
+</script>
+
+</html>

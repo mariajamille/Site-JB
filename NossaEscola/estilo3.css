@@ -1,0 +1,2093 @@
+/*       PROJETO SOCIAL INFORMÁTICA 3 | 2021 - 2023 |        */
+/*       SITE DA ESCOLA ESTADUAL DE EDUCAÇÃO PROFISSIONAL JOSÉ DE BARCELOS.         */
+/*       AUTOR E CRIADOR DESTA PAGINA: AUDI DE OLIVEIRA NASCIMENTO | @AUDILIVEIRA          */
+/*       SEGUE A PÁGINA CSS:         */
+
+
+/* FONTES UTILIZADAS: */
+
+@font-face {
+    font-family: 'open-sans1';
+    src: url('OpenSans-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'open-sans';
+    src: url('OpenSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'open-sans';
+    src: url('OpenSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('BebasNeue-light.ttf') format('truetype');
+}
+
+/* CSS GERAL DA PAGINA */
+body {
+    background-image: url("escola.jpg");
+    background-size: 102%;
+    background-repeat: no-repeat;
+    color: white;
+    overflow: a;
+    overflow-x: hidden;
+    position: absolute;
+}
+
+div#cabecalho {
+    background-color: #00511C;
+    color: white;
+    margin: 0px;
+    margin-top: -10px;
+    margin-left: -10px;
+    padding: 10px;
+    height: 110px;
+    width: 100vw;
+    padding-right: 7%;
+}
+
+/* LOGO: */
+img {
+    float: left;
+    margin-left: 5%;
+    margin-top: 5px;
+    width: 80px;
+}
+
+h3#escol {
+    font-family: 'open-sans';
+    margin-left: 12%;
+    margin-top: 1%;
+}
+
+h3#escol1 {
+    font-family: 'Bebas Neue', sans-serif;
+    margin-left: 12%;
+    margin-top: -1%;
+    font-size: 230%;
+}
+
+div#complemento {
+    background-color: #FFBD00;
+    padding: 7px;
+    width: 100vw;
+    margin-left: -10px;
+    padding-right: 7%;
+}
+
+div#navegacao {
+    background-color: #D1E2C8;
+    width: 100vw;
+    margin-left: -10px;
+    padding: 5px;
+    padding-right: 7%;
+    color: darkgreen;
+}
+
+nav#nav {
+    align-items: center;
+    text-align: center;
+    font-family: 'open-sans1';
+    font-size: 120%;
+}
+
+/* MENU SUSPENSO: */
+.menu-drop {
+    display: inline-block;
+    position: relative;
+}
+
+.drop-content {
+    display: none;
+    background-color: #D1E2C8;
+    position: absolute;
+    z-index: 1;
+    border-radius: 10px;
+    width: 100%;
+    margin-top: 1px;
+}
+
+.drop-content a {
+    color: #00511C;
+    padding: 8px 10px;
+    background-color: #D1E2C8;
+    text-decoration: none;
+    display: block;
+    border-bottom: #085537;
+    border-radius: 10px;
+    font-family: 'open-sans';
+    font-weight: bold;
+}
+
+.drop-content a:hover {
+    background-color: #00511C;
+    color: white;
+}
+
+.menu-drop:hover .drop-content {
+    display: block;
+    border-bottom: #D1E2C8;
+    background-color: #00511C;
+}
+
+#drop {
+    position: relative;
+    margin-right: 10px;
+    font-weight: bolder;
+}
+
+#drop::after {
+    content: '';
+    position: absolute;
+    background: #D1E2C8;
+    left: 14px;
+    bottom: 0;
+    width: 80%;
+    height: 2px;
+    opacity: 0;
+    transition: .3s ease;
+    margin-top: -10px;
+}
+
+#drop-content {
+    background-color: #D1E2C8;
+}
+
+#drop:hover::after {
+    opacity: 1;
+    transform: translateY(8px);
+}
+
+#button {
+    font-family: 'open-sans';
+    cursor: pointer;
+    text-decoration: none;
+    color: #00511C;
+    font-weight: bolder;
+}
+
+#button1 {
+    font-family: 'open-sans';
+    cursor: pointer;
+    text-decoration: none;
+    color: #00511C;
+    margin-left: 2%;
+    font-weight: bolder;
+}
+
+/* INFORMÇÕES DA PAGINA: */
+div#informacoes {
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100vw;
+    margin-left: -10px;
+    float: left;
+    padding: 15px;
+}
+
+h2#i1 {
+    font-family: 'Bebas Neue', sans-serif;
+    margin-top: 5%;
+    margin-left: 25%;
+    font-size: 180%;
+    float: left;
+}
+
+h2#i2 {
+    font-family: 'Bebas Neue', sans-serif;
+    margin-top: 1%;
+    margin-left: 36%;
+    font-size: 180%;
+    float: left;
+    position: absolute;
+}
+
+h2#i5 {
+    font-family: 'open-sans1';
+    margin-top: 8%;
+    margin-left: -8%;
+    font-size: 120%;
+
+    float: left;
+}
+
+h2#i6 {
+    font-family: 'open-sans1';
+    margin-top: 5%;
+    margin-left: 37%;
+    font-size: 120%;
+}
+
+div#loc {
+    float: right;
+    margin-top: 5%;
+    margin-right: 25%;
+    padding: 3px;
+    text-align: center;
+}
+
+h2#i3 {
+    font-family: 'Bebas Neue', sans-serif;
+    text-align: left;
+    font-size: 180%;
+    margin-top: 1%;
+}
+
+h2#i4 {
+    font-family: 'open-sans1';
+    font-size: 90%;
+    text-align: left;
+    text-align: center;
+}
+
+div#localizacao {
+    background-color: #00511C;
+    position: relative;
+    align-items: center;
+    float: left;
+    border: 10px solid #00511C;
+    border-radius: 10px;
+    margin-top: -2%;
+}
+
+iframe#mapa {
+    float: center;
+    border-color: #00511C;
+    border-radius: 10px;
+}
+
+
+/*
+  ----------footer-----------
+*/
+footer{
+    position: relative;
+    background: #00511C;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    color: #fff;
+    padding-bottom: 35px;
+    margin-top: 42vw;
+    margin-left: -10px;
+  }
+  
+  .div_foot{
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+  
+  .div_foot .titulo_endereco, .div_foot .titulo_sobre{
+    font-family: 'Bebas Neue';
+    letter-spacing: 3px;
+    margin-right: 5px;
+    font-size: 25px;
+    font-weight: 900;
+    height: 10px;
+  }
+  #titulo_contato{
+    margin-top: 8px;
+    margin-bottom: 20%;
+  }
+  #titulo_endereco{
+    margin-top: 20px;
+    margin-bottom: 20%;
+  }
+  #barra_contato{
+    margin-top: 4px;
+  }
+  .flex_container{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    max-height: 40px;
+  }
+  
+  .flex_container h1{
+    text-align: center;
+    margin-top: 7px;
+    height: 50px;
+  }
+  
+  .div_foot{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight:lighter;
+  }
+  
+  .barramarelo{
+    height: 25px;
+    width: 5px;
+    background: #FFBD00;
+    margin-right: 15px;
+    border-radius: 10px;
+  }
+  
+  footer p{
+    margin: 0;
+    margin-top: 3px;
+    font-size: 10px;
+  }
+  
+  footer a{
+    color: white;
+    text-decoration: none;
+  }
+  
+  footer a:visited{
+    color: white;
+    text-decoration: none;
+  }
+  
+  #sobre{
+    margin-top: 6px;
+    
+  }
+  
+  #endereco{
+    margin-top: 6px;
+  }
+  #icones{
+    width: 15px;
+    margin: 2%;
+    margin-right: 5%;
+    margin-top: -1%;
+  }
+  #contatos{
+    float: left;
+    word-wrap: break-word;
+    white-space: nowrap;
+  }
+  #contato1{
+    float: left;
+    word-wrap: break-word;
+    white-space: nowrap;
+    margin-top: 5%;
+  }
+/* resposibilidade Computadores */
+/* UTILIZADO O METODO MEDIA QUERY */
+/* RESPONSIVIDADE WIDTH: 1920 */
+
+@media (max-width: 1920px) {
+    body {
+        background-image: url("escola.jpg");
+        background-size: 102%;
+        background-repeat: no-repeat;
+        color: white;
+        overflow: a;
+        overflow-x: hidden;
+        position: absolute;
+    }
+
+    h2#i1 {
+        font-family: 'Bebas Neue', sans-serif;
+        margin-top: 7%;
+        margin-left: 22%;
+        font-size: 180%;
+        float: left;
+    }
+
+    h2#i5 {
+        font-family: 'open-sans1';
+        margin-top: 10%;
+        margin-left: -7%;
+        font-size: 120%;
+        float: left;
+    }
+
+    div#loc {
+        float: right;
+        margin-top: 6%;
+        margin-right: 22%;
+        padding: 3px;
+        text-align: center;
+    }
+
+    div#com_inferior {
+        background-color: #00511C;
+        width: 100vw;
+        margin-left: -8px;
+        margin-top: 33%;
+        position: fixed;
+        padding: 20px;
+        text-align: center;
+        align-items: center;
+    }
+
+    img#new {
+        width: 8px;
+        height: 25px;
+        margin-top: 10px;
+        margin-left: -2%;
+        position: absolute;
+    }
+}
+
+/* RESPONSIVIDADE WIDTH: 1850 */
+
+@media (max-width: 1850px) {
+    body {
+        background-image: url("escola.jpg");
+        background-size: 110%;
+        background-repeat: no-repeat;
+        color: white;
+        overflow: a;
+        overflow-x: hidden;
+        position: absolute;
+    }
+
+    h2#i1 {
+        font-family: 'Bebas Neue', sans-serif;
+        margin-top: 5%;
+        margin-left: 22%;
+        font-size: 180%;
+        float: left;
+    }
+
+    h2#i5 {
+        font-family: 'open-sans1';
+        margin-top: 8%;
+        margin-left: -8%;
+        font-size: 120%;
+
+        float: left;
+    }
+
+    div#loc {
+        float: right;
+        margin-top: 5%;
+        margin-right: 20%;
+        padding: 3px;
+        text-align: center;
+    }
+
+    div#com_inferior {
+        background-color: #00511C;
+        width: 100vw;
+        margin-left: -8px;
+        margin-top: 33vw;
+        position: fixed;
+        padding: 30px;
+        text-align: center;
+        align-items: center;
+    }
+
+    img#new {
+        width: 8px;
+        height: 25px;
+        margin-top: 10px;
+        margin-left: -3%;
+        position: absolute;
+    }
+    
+}
+
+/* RESPONSIVIDADE WIDTH: 1700 */
+
+@media (max-width: 1700px) {
+    body {
+        background-image: url("escola.jpg");
+        background-size: 115%;
+        background-repeat: no-repeat;
+        color: white;
+        overflow-x: hidden;
+        position: absolute;
+    }
+
+    h2#i1 {
+        font-family: 'Bebas Neue', sans-serif;
+        margin-top: 5%;
+        margin-left: 25%;
+        font-size: 180%;
+        float: left;
+    }
+
+    h2#i5 {
+        font-family: 'open-sans1';
+        margin-top: 8%;
+        margin-left: -9%;
+        font-size: 120%;
+        float: left;
+    }
+
+    div#loc {
+        float: right;
+        margin-top: 5%;
+        margin-right: 20%;
+        padding: 3px;
+        text-align: center;
+    }
+
+    div#com_inferior {
+        background-color: #00511C;
+        width: 100vw;
+        margin-left: -8px;
+        margin-top: 35vw;
+        position: fixed;
+        padding: 45px;
+        text-align: center;
+    }
+
+    img#new {
+        width: 8px;
+        height: 25px;
+        margin-top: 10px;
+        margin-left: -3%;
+        position: absolute;
+    }
+}
+
+/* RESPONSIVIDADE WIDTH: 1560 */
+
+@media (max-width: 1560px) {
+    body {
+        background-image: url("escola.jpg");
+        background-size: 125%;
+        background-repeat: no-repeat;
+        color: white;
+        overflow: a;
+        position: absolute;
+        overflow-x: hidden;
+    }
+
+    div#informacoes {
+        padding: 10px;
+    }
+
+    h2#i1 {
+        font-family: 'Bebas Neue', sans-serif;
+        margin-top: 5%;
+        margin-left: 20%;
+        font-size: 180%;
+        float: left;
+    }
+
+    h2#i5 {
+        font-family: 'open-sans1';
+        margin-top: 8%;
+        margin-left: -10%;
+        font-size: 120%;
+        float: left;
+    }
+
+    div#loc {
+        float: right;
+        margin-top: 5%;
+        margin-right: 20%;
+        padding: 3px;
+        text-align: center;
+    }
+
+    div#com_inferior {
+        background-color: #00511C;
+        width: 100vw;
+        margin-left: -8px;
+        margin-top: 41vw;
+        position: fixed;
+        padding: 25px;
+        text-align: center;
+        align-items: center;
+    }
+
+    img#new {
+        width: 8px;
+        height: 25px;
+        margin-top: 10px;
+        margin-left: -3%;
+        position: absolute;
+    }
+}
+
+/* RESPONSIVIDADE WIDTH: 1500 */
+
+@media (max-width: 1500px) {
+    body {
+        background-image: url("escola.jpg");
+        background-size: 125%;
+        background-repeat: no-repeat;
+        color: white;
+        position: absolute;
+        overflow: visible;
+        overflow-x: hidden;
+        height: 100%;
+    }
+    div#informacoes {
+        padding: 6px;
+    }
+    h2#i1 {
+        font-family: 'Bebas Neue', sans-serif;
+        margin-top: 3%;
+        margin-left: 20%;
+        font-size: 180%;
+        float: left;
+    }
+
+    h2#i5 {
+        font-family: 'open-sans1';
+        margin-top: 7%;
+        margin-left: -10%;
+        font-size: 120%;
+        float: left;
+    }
+
+    div#loc {
+        float: right;
+        margin-top: 3%;
+        margin-right: 17%;
+        padding: 3px;
+        text-align: center;
+    }
+
+    div#com_inferior {
+        background-color: #00511C;
+        width: 100vw;
+        margin-left: -8px;
+        margin-top: 43vw;
+        position: absolute;
+        padding: 25px;
+        text-align: center;
+        align-items: center;
+    }
+
+    img#new {
+        width: 8px;
+        height: 25px;
+        margin-top: 10px;
+        margin-left: -3%;
+        position: absolute;
+    }
+}
+/* RESPONSIVIDADE WIDTH: 1439 */
+
+@media (max-width: 1439px) {
+    body {
+        position: absolute;
+        background-image: url("escola.jpg");
+        background-size: 195%;
+        overflow-x: hidden;
+    }
+
+    h2#i1 {
+        font-family: 'Bebas Neue', sans-serif;
+        margin-top: 3%;
+        margin-left: 43%;
+        font-size: 180%;
+        float: left;
+    }
+
+    h2#i5 {
+        font-family: 'open-sans1';
+        margin-top: 6%;
+        margin-left: -11%;
+        font-size: 120%;
+        float: left;
+    }
+
+    div#loc {
+        margin-right: 21vw;
+        margin-top: 5%;
+        padding: 3px;
+        text-align: center;
+    }
+
+    iframe#mapa {
+        width: 60vw;
+    }
+
+    div#com_inferior {
+        background-color: #00511C;
+        width: 100vw;
+        margin-left: -8px;
+        margin-top: 74vw;
+        position: absolute;
+        padding: 10px;
+        text-align: center;
+        align-items: center;
+    }
+
+    img#new {
+        width: 8px;
+        height: 25px;
+        margin-top: 10px;
+        margin-right: 5%;
+        position: absolute;
+    }
+}
+
+/* RESPONSIVIDADE WIDTH: 1339 */
+
+@media (max-width: 1339px) {
+    body {
+        position: absolute;
+        background-image: url("escola.jpg");
+        background-size: 210%;
+        overflow-x: hidden;
+    }
+
+    h2#i1 {
+        font-family: 'Bebas Neue', sans-serif;
+        margin-top: 3%;
+        margin-left: 43%;
+        font-size: 180%;
+        float: left;
+    }
+
+    h2#i5 {
+        font-family: 'open-sans1';
+        margin-top: 8%;
+        margin-left: -12%;
+        font-size: 120%;
+        float: left;
+    }
+
+    div#loc {
+        margin-right: 21vw;
+        margin-top: 2%;
+        padding: 3px;
+        text-align: center;
+    }
+
+    iframe#mapa {
+        width: 60vw;
+    }
+
+    div#com_inferior {
+        background-color: #00511C;
+        width: 100vw;
+        margin-left: -8px;
+        margin-top: 78vw;
+        position: absolute;
+        padding: 10px;
+        text-align: center;
+        align-items: center;
+    }
+
+    img#new {
+        width: 8px;
+        height: 25px;
+        margin-top: 10px;
+        margin-left: -40px;
+        position: absolute;
+    }
+}
+
+/* RESPONSIVIDADE WIDTH: 1173 */
+
+@media (max-width: 1173px) {
+    body {
+        position: absolute;
+        background-image: url("escola.jpg");
+        background-size: 221%;
+        overflow-x: hidden;
+    }
+
+    h2#i1 {
+        font-family: 'Bebas Neue', sans-serif;
+        margin-top: 3%;
+        margin-left: 40%;
+        font-size: 180%;
+        float: left;
+    }
+
+    h2#i5 {
+        font-family: 'open-sans1';
+        margin-top: 8%;
+        margin-left: -12%;
+        font-size: 120%;
+        float: left;
+    }
+
+    div#loc {
+        margin-right: 21vw;
+        margin-top: 2%;
+        padding: 3px;
+        text-align: center;
+    }
+
+    iframe#mapa {
+        width: 60vw;
+    }
+
+    div#com_inferior {
+        background-color: #00511C;
+        width: 100vw;
+        margin-left: -8px;
+        margin-top: 83vw;
+        position: absolute;
+        padding: 10px;
+        text-align: center;
+        align-items: center;
+    }
+
+    img#new {
+        width: 8px;
+        height: 25px;
+        margin-top: 10px;
+        margin-left: -40px;
+        position: absolute;
+    }
+}
+
+/* RESPONSIVIDADE WIDTH: 1147 */
+
+@media (max-width: 1147px) {
+    body {
+        position: absolute;
+        background-image: url("escola1.jpg");
+        background-size: 250%;
+        overflow-x: hidden;
+    }
+
+    div#informacoes {
+        padding: 30px;
+    }
+
+    h2#i1 {
+        font-family: 'Bebas Neue', sans-serif;
+        margin-top: 3%;
+        margin-left: 43%;
+        font-size: 180%;
+        float: left;
+    }
+
+    h2#i5 {
+        font-family: 'open-sans1';
+        margin-top: 8%;
+        margin-left: -15%;
+        font-size: 120%;
+        float: left;
+    }
+
+    div#loc {
+        margin-right: 21vw;
+        margin-top: 9%;
+        padding: 3px;
+        text-align: center;
+    }
+
+    iframe#mapa {
+        width: 60vw;
+    }
+
+    div#com_inferior {
+        background-color: #00511C;
+        width: 100vw;
+        margin-left: -8px;
+        margin-top: 97vw;
+        position: absolute;
+        padding: 25px;
+        text-align: center;
+        align-items: center;
+    }
+
+    img#new {
+        width: 8px;
+        height: 25px;
+        margin-top: 10px;
+        margin-left: -40px;
+        position: absolute;
+    }
+}
+
+/* RESPONSIVIDADE WIDTH: 968 */
+
+@media (max-width: 968px) {
+    body {
+        position: absolute;
+        background-image: url("escola1.jpg");
+        background-size: 250%;
+        overflow-x: hidden;
+    }
+
+    h2#i1 {
+        font-family: 'Bebas Neue', sans-serif;
+        margin-top: 3%;
+        margin-left: 43%;
+        font-size: 180%;
+        float: left;
+    }
+
+    h2#i5 {
+        font-family: 'open-sans1';
+        margin-top: 8%;
+        margin-left: -15%;
+        font-size: 120%;
+
+        float: left;
+    }
+
+    div#loc {
+        margin-right: 21vw;
+        margin-top: 4%;
+        padding: 3px;
+        text-align: center;
+    }
+
+    iframe#mapa {
+        width: 60vw;
+    }
+
+    div#com_inferior {
+        background-color: #00511C;
+        width: 100vw;
+        margin-left: -8px;
+        margin-top: 105vw;
+        position: absolute;
+        padding: 25px;
+        text-align: center;
+        align-items: center;
+    }
+
+    img#new {
+        width: 8px;
+        height: 25px;
+        margin-top: 10px;
+        margin-left: -40px;
+        position: absolute;
+    }
+}
+
+/* RESPONSIVIDADE WIDTH: 895 */
+
+@media (max-width: 895px) {
+    body {
+        position: absolute;
+        background-image: url("escola3.jpg");
+        background-size: 135%;
+        overflow-x: hidden;
+    }
+
+    h2#i1 {
+        font-family: 'Bebas Neue', sans-serif;
+        margin-top: 3%;
+        margin-left: 40%;
+        font-size: 180%;
+        float: left;
+    }
+
+    h2#i5 {
+        font-family: 'open-sans1';
+        margin-top: 8%;
+        margin-left: -17%;
+        font-size: 120%;
+        float: left;
+    }
+
+    div#loc {
+        margin-right: 21vw;
+        margin-top: 8%;
+        padding: 3px;
+        text-align: center;
+    }
+
+    iframe#mapa {
+        width: 60vw;
+    }
+
+    div#com_inferior {
+        background-color: #00511C;
+        width: 100vw;
+        margin-left: -8px;
+        margin-top: 119vw;
+        position: absolute;
+        padding: 25px;
+        text-align: center;
+        align-items: center;
+    }
+
+    img#new {
+        width: 8px;
+        height: 25px;
+        margin-top: 10px;
+        margin-left: -40px;
+        position: absolute;
+    }
+}
+
+/* RESPONSIVIDADE WIDTH: 795 */
+
+@media (max-width: 795px) {
+    body {
+        position: absolute;
+        background-image: url("escola3.jpg");
+        background-size: 150%;
+        overflow-x: hidden;
+    }
+
+    h2#i1 {
+        font-family: 'Bebas Neue', sans-serif;
+        margin-top: 3%;
+        margin-left: 40%;
+        font-size: 180%;
+        float: left;
+    }
+
+    h2#i5 {
+        font-family: 'open-sans1';
+        margin-top: 10%;
+        margin-left: -20%;
+        font-size: 120%;
+        float: left;
+    }
+
+    div#loc {
+        margin-right: 19vw;
+        margin-top: 3%;
+        padding: 3px;
+        text-align: center;
+    }
+
+    iframe#mapa {
+        width: 60vw;
+    }
+
+    div#com_inferior {
+        background-color: #00511C;
+        width: 100vw;
+        margin-left: -8px;
+        margin-top: 130vw;
+        position: absolute;
+        padding: 25px;
+        text-align: center;
+        align-items: center;
+    }
+
+    img#new {
+        width: 8px;
+        height: 25px;
+        margin-top: 10px;
+        margin-left: -40px;
+        position: absolute;
+    }
+}
+
+/* RESPONSIVIDADE WIDTH: 693 */
+
+@media (max-width: 693px) {
+    body {
+        position: absolute;
+        background-image: url("escola3.jpg");
+        background-size: 230%;
+        overflow-x: hidden;
+    }
+
+    div#cabecalho {
+        padding: 3%;
+    }
+
+    div#complemento {
+        width: 150vw;
+    }
+
+    div#navegacao {
+        width: 110vw;
+    }
+
+    div#informacoes {
+        position: absolute;
+        padding: 45px;
+    }
+
+    h2#i1 {
+        font-family: 'Bebas Neue', sans-serif;
+        margin-top: 5%;
+        margin-left: 30%;
+        font-size: 240%;
+        float: left;
+    }
+
+    h2#i5 {
+        font-family: 'open-sans1';
+        margin-top: 15%;
+        margin-left: -35%;
+        font-size: 150%;
+        float: left;
+    }
+
+    div#loc {
+        margin-right: 19vw;
+        margin-top: 60%;
+        padding: 3px;
+        text-align: center;
+    }
+
+    iframe#mapa {
+        width: 60vw;
+    }
+
+    img#new {
+        width: 8px;
+        height: 25px;
+        margin-top: 10px;
+        margin-left: -40px;
+        position: absolute;
+    }
+    footer{
+        visibility: hidden;
+      }
+      div#cabecalho {
+        background-color: #00511C;
+        color: white;
+        margin: 0px;
+        margin-top: -10px;
+        margin-left: -10px;
+        padding: 10px;
+        height: 110px;
+        width: 100vw;
+        padding-right: 25%;
+    }
+    div#complemento {
+        background-color: #FFBD00;
+        padding: 7px;
+        width: 100vw;
+        margin-left: -10px;
+        padding-right: 25%;
+    }
+    div#navegacao {
+        background-color: #D1E2C8;
+        width: 100vw;
+        margin-left: -10px;
+        padding: 5px;
+        padding-right: 25%;
+        color: darkgreen;
+    }
+}
+
+/* RESPONSIVIDADE WIDTH: 623 */
+
+@media (max-width: 623px) {
+    body {
+        position: absolute;
+        background-image: url("escola3.jpg");
+        background-size: 230%;
+        overflow-x: hidden;
+    }
+
+    div#cabecalho {
+        padding: 3%;
+    }
+
+    div#complemento {
+        width: 150vw;
+    }
+
+    div#navegacao {
+        width: 110vw;
+    }
+
+    div#informacoes {
+        position: absolute;
+        padding: 45px;
+    }
+
+    h2#i1 {
+        font-family: 'Bebas Neue', sans-serif;
+        margin-top: 5%;
+        margin-left: 30%;
+        font-size: 240%;
+        float: left;
+    }
+
+    h2#i5 {
+        font-family: 'open-sans1';
+        margin-top: 15%;
+        margin-left: -35%;
+        font-size: 150%;
+        float: left;
+    }
+
+    div#loc {
+        margin-right: 19vw;
+        margin-top: 10%;
+        padding: 3px;
+        text-align: center;
+    }
+
+    iframe#mapa {
+        width: 60vw;
+    }
+
+    div#com_inferior {
+        background-color: #00511C;
+        width: 100vw;
+        margin-left: -8px;
+        margin-top: 170vw;
+        position: absolute;
+        padding: 40px;
+        text-align: center;
+        align-items: center;
+    }
+
+    img#new {
+        width: 8px;
+        height: 25px;
+        margin-top: 10px;
+        margin-left: -40px;
+        position: absolute;
+    }
+    footer{
+        visibility: hidden;
+      }
+      div#cabecalho {
+        background-color: #00511C;
+        color: white;
+        margin: 0px;
+        margin-top: -10px;
+        margin-left: -10px;
+        padding: 10px;
+        height: 110px;
+        width: 100vw;
+        padding-right: 25%;
+    }
+    div#complemento {
+        background-color: #FFBD00;
+        padding: 7px;
+        width: 100vw;
+        margin-left: -10px;
+        padding-right: 25%;
+    }
+    div#navegacao {
+        background-color: #D1E2C8;
+        width: 100vw;
+        margin-left: -10px;
+        padding: 5px;
+        padding-right: 25%;
+        color: darkgreen;
+    }
+}
+
+/* RESPONSIVIDADE WIDTH: 577 */
+
+@media (max-width: 577px) {
+    body {
+        position: absolute;
+        background-image: url("escola4.jpg");
+        background-size: 160%;
+        overflow-x: hidden;
+    }
+
+    h2#i2 {
+        font-family: 'Bebas Neue', sans-serif;
+        margin-top: 70%;
+        margin-left: 35%;
+        font-size: 240%;
+        float: left;
+        position: absolute;
+    }
+
+    h2#i5 {
+        font-family: 'open-sans1';
+        margin-top: 15%;
+        margin-left: -37%;
+        font-size: 150%;
+        float: left;
+    }
+
+    div#loc {
+        margin-right: 16vw;
+        margin-top: 10%;
+
+        padding: 3px;
+        text-align: center;
+    }
+
+    iframe#mapa {
+        width: 60vw;
+    }
+
+    div#com_inferior {
+        background-color: #00511C;
+        width: 100vw;
+        margin-left: -8px;
+        margin-top: 200vw;
+        position: absolute;
+        padding: 30px;
+        text-align: center;
+        align-items: center;
+    }
+
+    img#new {
+        width: 8px;
+        height: 25px;
+        margin-top: 10px;
+        margin-left: -40px;
+        position: absolute;
+    }
+    footer{
+        visibility: hidden;
+      }
+      div#cabecalho {
+        background-color: #00511C;
+        color: white;
+        margin: 0px;
+        margin-top: -10px;
+        margin-left: -10px;
+        padding: 10px;
+        height: 110px;
+        width: 100vw;
+        padding-right: 25%;
+    }
+    div#complemento {
+        background-color: #FFBD00;
+        padding: 7px;
+        width: 100vw;
+        margin-left: -10px;
+        padding-right: 25%;
+    }
+    div#navegacao {
+        background-color: #D1E2C8;
+        width: 100vw;
+        margin-left: -10px;
+        padding: 5px;
+        padding-right: 25%;
+        color: darkgreen;
+    }
+}
+
+/* RESPONSIVIDADE WIDTH: 525 */
+
+@media (max-width: 525px) {
+    body {
+        position: absolute;
+        background-image: url("escola4.jpg");
+        background-size: 170%;
+        overflow-x: hidden;
+    }
+
+    h2#i1 {
+        font-family: 'Bebas Neue', sans-serif;
+        margin-top: 3%;
+        margin-left: 26%;
+        font-size: 240%;
+        float: left;
+    }
+
+    h2#i5 {
+        font-family: 'open-sans1';
+        margin-top: 15%;
+        margin-left: -40%;
+        font-size: 150%;
+        float: left;
+    }
+
+    div#loc {
+        margin-right: 20vw;
+        margin-top: 10%;
+        padding: 3px;
+        text-align: center;
+    }
+
+    iframe#mapa {
+        width: 60vw;
+    }
+
+    div#com_inferior {
+        background-color: #00511C;
+        width: 100vw;
+        margin-left: -8px;
+        margin-top: 213vw;
+        position: absolute;
+        padding: 30px;
+        text-align: center;
+        align-items: center;
+    }
+
+    img#new {
+        width: 8px;
+        height: 25px;
+        margin-top: 10px;
+        margin-left: -40px;
+        position: absolute;
+    }
+    footer{
+        visibility: hidden;
+      }
+      div#cabecalho {
+        background-color: #00511C;
+        color: white;
+        margin: 0px;
+        margin-top: -10px;
+        margin-left: -10px;
+        padding: 10px;
+        height: 110px;
+        width: 100vw;
+        padding-right: 25%;
+    }
+    div#complemento {
+        background-color: #FFBD00;
+        padding: 7px;
+        width: 100vw;
+        margin-left: -10px;
+        padding-right: 25%;
+    }
+    div#navegacao {
+        background-color: #D1E2C8;
+        width: 100vw;
+        margin-left: -10px;
+        padding: 5px;
+        padding-right: 25%;
+        color: darkgreen;
+    }
+}
+
+/* RESPONSIVIDADE WIDTH: 493 */
+
+@media (max-width: 493px) {
+    body {
+        position: absolute;
+        background-image: url("escola4.jpg");
+        background-size: 180%;
+        overflow-x: hidden;
+    }
+
+    h2#i1 {
+        font-family: 'Bebas Neue', sans-serif;
+        margin-top: 6%;
+        margin-left: 28%;
+        font-size: 240%;
+        float: left;
+    }
+
+    h2#i5 {
+        font-family: 'open-sans1';
+        margin-top: 20%;
+        margin-left: -41%;
+        font-size: 150%;
+        float: left;
+    }
+
+    div#loc {
+        margin-right: 16vw;
+        margin-top: 25%;
+        padding: 3px;
+        text-align: center;
+    }
+
+    iframe#mapa {
+        width: 60vw;
+    }
+
+    div#com_inferior {
+        background-color: #00511C;
+        width: 100vw;
+        margin-left: -8px;
+        margin-top: 250vw;
+        position: absolute;
+        padding: 45px;
+        text-align: center;
+        align-items: center;
+    }
+
+    img#new {
+        width: 8px;
+        height: 25px;
+        margin-top: 10px;
+        margin-left: -40px;
+        position: absolute;
+    }
+    div#informacoes {
+        position: absolute;
+        padding: 45px;
+        padding-right: 12%;
+    }
+    footer{
+        visibility: hidden;
+      }
+      div#cabecalho {
+        background-color: #00511C;
+        color: white;
+        margin: 0px;
+        margin-top: -10px;
+        margin-left: -10px;
+        padding: 10px;
+        height: 110px;
+        width: 100vw;
+        padding-right: 19%;
+    }
+    div#complemento {
+        background-color: #FFBD00;
+        padding: 7px;
+        width: 100vw;
+        margin-left: -10px;
+        padding-right: 21%;
+    }
+    div#navegacao {
+        background-color: #D1E2C8;
+        width: 100vw;
+        margin-left: -10px;
+        padding: 5px;
+        padding-right: 20%;
+        color: darkgreen;
+    }
+}
+
+/* RESPONSIVIDADE WIDTH: 452 */
+
+@media (max-width: 452px) {
+    body {
+        position: absolute;
+        background-image: url("escola4.jpg");
+        background-size: 180%;
+        overflow-x: hidden;
+    }
+
+    h2#i1 {
+        font-family: 'Bebas Neue', sans-serif;
+        margin-top: 6%;
+        margin-left: 32%;
+        font-size: 240%;
+        float: left;
+    }
+
+    h2#i5 {
+        font-family: 'open-sans1';
+        margin-top: 20%;
+        margin-left: -50%;
+        font-size: 150%;
+        float: left;
+    }
+
+    div#loc {
+        margin-right: 17vw;
+        margin-top: 100%;
+        padding: 3px;
+        text-align: center;
+    }
+
+    iframe#mapa {
+        width: 60vw;
+    }
+    div#informacoes {
+        position: absolute;
+        padding: 45px;
+        padding-right: 21%;
+    }
+    div#com_inferior {
+        background-color: #00511C;
+        width: 100vw;
+        margin-left: -8px;
+        margin-top: 260vw;
+        position: absolute;
+        padding: 40px;
+        text-align: center;
+        align-items: center;
+    }
+
+    img#new {
+        width: 8px;
+        height: 25px;
+        margin-top: 10px;
+        margin-left: -40px;
+        position: absolute;
+    }
+    footer{
+        visibility: hidden;
+      }
+      div#cabecalho {
+        background-color: #00511C;
+        color: white;
+        margin: 0px;
+        margin-top: -10px;
+        margin-left: -10px;
+        padding: 10px;
+        height: 110px;
+        width: 100vw;
+        padding-right: 28%;
+    }
+    div#complemento {
+        background-color: #FFBD00;
+        padding: 7px;
+        width: 100vw;
+        margin-left: -10px;
+        padding-right: 29%;
+    }
+    div#navegacao {
+        background-color: #D1E2C8;
+        width: 100vw;
+        margin-left: -10px;
+        padding: 5px;
+        padding-right: 29%;
+        color: darkgreen;
+    }
+}
+
+/* RESPONSIVIDADE WIDTH: 424 */
+
+@media (max-width: 424px) {
+    #drop {
+        position: relative;
+        margin-left: 0%;
+        padding: 10px;
+    }
+
+    #button {
+        font-family: 'open-sans';
+        cursor: pointer;
+        text-decoration: none;
+        color: darkgreen;
+        margin-left: 10%;
+        padding: 10px;
+    }
+
+    #button1 {
+        font-family: 'open-sans';
+        cursor: pointer;
+        text-decoration: none;
+        color: darkgreen;
+        margin-left: 1%;
+        padding: 10px;
+    }
+
+    body {
+        position: absolute;
+        background-image: url("escola4.jpg");
+        background-size: 200%;
+        overflow-x: hidden;
+    }
+    div#informacoes {
+        position: absolute;
+        padding: 45px;
+        padding-right: 17%;
+    }
+    h2#i1 {
+        font-family: 'Bebas Neue', sans-serif;
+        margin-top: 6%;
+        margin-left: 25%;
+        font-size: 240%;
+        float: left;
+    }
+
+    h2#i5 {
+        font-family: 'open-sans1';
+        margin-top: 20%;
+        margin-left: -50%;
+        font-size: 150%;
+        float: left;
+    }
+
+    div#loc {
+        margin-right: 16vw;
+        margin-top: 25%;
+        padding: 3px;
+        text-align: center;
+    }
+
+    iframe#mapa {
+        width: 60vw;
+    }
+
+    div#com_inferior {
+        background-color: #00511C;
+        width: 100vw;
+        margin-left: 0%;
+        margin-top: 290vw;
+        position: absolute;
+        padding: 30px;
+        text-align: center;
+        align-items: center;
+    }
+
+    img#new {
+        width: 8px;
+        height: 25px;
+        margin-top: 10px;
+        margin-left: -40px;
+        position: absolute;
+    }
+    footer{
+        visibility: hidden;
+      }
+      div#cabecalho {
+        background-color: #00511C;
+        color: white;
+        margin: 0px;
+        margin-top: -10px;
+        margin-left: -10px;
+        padding: 10px;
+        height: 110px;
+        width: 100vw;
+        padding-right: 25%;
+    }
+    div#complemento {
+        background-color: #FFBD00;
+        padding: 7px;
+        width: 100vw;
+        margin-left: -10px;
+        padding-right: 26%;
+    }
+    div#navegacao {
+        background-color: #D1E2C8;
+        width: 100vw;
+        margin-left: -10px;
+        padding: 5px;
+        padding-right: 26%;
+        color: darkgreen;
+    }
+}
+
+/* RESPONSIVIDADE WIDTH: 372 */
+
+@media (max-width: 372px) {
+    #drop {
+        position: relative;
+        margin-left: 0%;
+        padding: 10px;
+    }
+
+    #button {
+        font-family: 'open-sans';
+        cursor: pointer;
+        text-decoration: none;
+        color: darkgreen;
+        margin-left: 10%;
+        padding: 10px;
+    }
+
+    #button1 {
+        font-family: 'open-sans';
+        cursor: pointer;
+        text-decoration: none;
+        color: darkgreen;
+        margin-left: 1%;
+        padding: 10px;
+    }
+
+    body {
+        position: absolute;
+        background-image: url("escola4.jpg");
+        background-size: 220%;
+        overflow-x: hidden;
+    }
+    div#informacoes {
+        position: absolute;
+        padding: 45px;
+        padding-right: 15%;
+    }
+    h2#i1 {
+        font-family: 'Bebas Neue', sans-serif;
+        margin-top: 6%;
+        margin-left: 18%;
+        font-size: 240%;
+        float: left;
+    }
+
+    h2#i5 {
+        font-family: 'open-sans1';
+        margin-top: 20%;
+        margin-left: -55%;
+        font-size: 150%;
+        float: left;
+    }
+
+    div#loc {
+        margin-right: 15vw;
+        margin-top: 25%;
+        padding: 3px;
+        text-align: center;
+    }
+
+    iframe#mapa {
+        width: 60vw;
+    }
+
+    div#com_inferior {
+        background-color: #00511C;
+        width: 100vw;
+        margin-left: -20px;
+        margin-top: 290vw;
+        position: absolute;
+        padding: 25px;
+        text-align: center;
+        align-items: center;
+    }
+
+    img#new {
+        width: 8px;
+        height: 25px;
+        margin-top: 10px;
+        margin-left: -40px;
+        position: absolute;
+    }
+    footer{
+        visibility: hidden;
+      }
+      div#informacoes {
+        position: absolute;
+        padding: 45px;
+        padding-right: 15%;
+    }
+      div#cabecalho {
+        background-color: #00511C;
+        color: white;
+        margin: 0px;
+        margin-top: -10px;
+        margin-left: -10px;
+        padding: 10px;
+        height: 110px;
+        width: 100vw;
+        padding-right: 25%;
+    }
+    div#complemento {
+        background-color: #FFBD00;
+        padding: 7px;
+        width: 100vw;
+        margin-left: -10px;
+        padding-right: 25%;
+    }
+    div#navegacao {
+        background-color: #D1E2C8;
+        width: 100vw;
+        margin-left: -10px;
+        padding: 5px;
+        padding-right: 26%;
+        color: darkgreen;
+    }
+}
+
+/* RESPONSIVIDADE WIDTH: 352 */
+
+@media (max-width: 352px) {
+    #drop {
+        position: relative;
+        margin-left: 0%;
+        padding: 10px;
+    }
+
+    #button {
+        font-family: 'open-sans';
+        cursor: pointer;
+        text-decoration: none;
+        color: darkgreen;
+        margin-left: -5%;
+        padding: 10px;
+    }
+
+    #button1 {
+        font-family: 'open-sans';
+        cursor: pointer;
+        text-decoration: none;
+        color: darkgreen;
+        margin-left: 1%;
+        padding: 10px;
+    }
+
+    body {
+        position: absolute;
+        background-image: url("escola4.jpg");
+        background-size: 220%;
+        overflow-x: hidden;
+    }
+
+    h2#i1 {
+        font-family: 'Bebas Neue', sans-serif;
+        margin-top: 6%;
+        margin-left: 25%;
+        font-size: 240%;
+        float: left;
+    }
+
+    h2#i5 {
+        font-family: 'open-sans1';
+        margin-top: 20%;
+        margin-left: -60%;
+        font-size: 150%;
+        float: left;
+    }
+
+    div#loc {
+        margin-right: 15vw;
+        margin-top: 25%;
+        padding: 3px;
+        text-align: center;
+    }
+
+    iframe#mapa {
+        width: 60vw;
+    }
+
+    div#com_inferior {
+        background-color: #00511C;
+        width: 100vw;
+        margin-left: -8px;
+        margin-top: 310vw;
+        position: absolute;
+        padding: 25px;
+        text-align: center;
+        align-items: center;
+    }
+
+    img#new {
+        width: 8px;
+        height: 25px;
+        margin-top: 10px;
+        margin-left: -40px;
+        position: absolute;
+    }
+    footer{
+        visibility: hidden;
+      }
+      div#informacoes {
+        position: absolute;
+        padding: 45px;
+        padding-right: 15%;
+    }
+      div#cabecalho {
+        background-color: #00511C;
+        color: white;
+        margin: 0px;
+        margin-top: -10px;
+        margin-left: -10px;
+        padding: 10px;
+        height: 110px;
+        width: 100vw;
+        padding-right: 25%;
+    }
+    div#complemento {
+        background-color: #FFBD00;
+        padding: 7px;
+        width: 100vw;
+        margin-left: -10px;
+        padding-right: 25%;
+    }
+    div#navegacao {
+        background-color: #D1E2C8;
+        width: 100vw;
+        margin-left: -10px;
+        padding: 5px;
+        padding-right: 25%;
+        color: darkgreen;
+    }
+}
+
+/* RESPONSIVIDADE WIDTH: 339 */
+
+@media (max-width: 339px) {
+    #drop {
+        position: relative;
+        margin-left: 0%;
+        padding: 10px;
+    }
+
+    #button {
+        font-family: 'open-sans';
+        cursor: pointer;
+        text-decoration: none;
+        color: darkgreen;
+        margin-left: -5%;
+        padding: 10px;
+    }
+
+    #button1 {
+        font-family: 'open-sans';
+        cursor: pointer;
+        text-decoration: none;
+        color: darkgreen;
+        margin-left: 1%;
+        padding: 10px;
+    }
+
+    body {
+        position: absolute;
+        background-image: url("escola4.jpg");
+        background-size: 250%;
+        overflow-x: hidden;
+    }
+    div#cabecalho {
+        background-color: #00511C;
+        color: white;
+        margin: 0px;
+        margin-top: -10px;
+        margin-left: -10px;
+        padding: 10px;
+        height: 110px;
+        width: 100vw;
+        padding-right: 25%;
+    }
+    div#informacoes {
+        position: absolute;
+        padding: 45px;
+        padding-right: 15%;
+    }
+
+    div#complemento {
+        background-color: #FFBD00;
+        padding: 7px;
+        width: 100vw;
+        margin-left: -10px;
+        padding-right: 25%;
+    }
+    div#navegacao {
+        background-color: #D1E2C8;
+        width: 100vw;
+        margin-left: -10px;
+        padding: 5px;
+        padding-right: 25%;
+        color: darkgreen;
+    }
+
+
+
+
+    h2#i1 {
+        font-family: 'Bebas Neue', sans-serif;
+        margin-top: 6%;
+        margin-left: 15%;
+        font-size: 220%;
+        float: left;
+    }
+
+    h2#i5 {
+        font-family: 'open-sans1';
+        margin-top: 20%;
+        margin-left: -60%;
+        font-size: 150%;
+        float: left;
+    }
+
+    div#loc {
+        margin-right: 10vw;
+        margin-top: 45%;
+        padding: 3px;
+        text-align: center;
+    }
+
+    iframe#mapa {
+        width: 60vw;
+    }
+
+    div#com_inferior {
+        background-color: #00511C;
+        width: 100vw;
+        margin-left: -8px;
+        margin-top: 360vw;
+        position: absolute;
+        padding: 20px;
+        text-align: center;
+        align-items: center;
+    }
+
+    img#new {
+        width: 8px;
+        height: 25px;
+        margin-top: 10px;
+        margin-left: -40px;
+        position: absolute;
+    }
+    footer{
+        visibility: hidden;
+      }
+}
+
+div#com_inferior {
+    background-color: #00511C;
+    width: 100vw;
+    margin-left: -8px;
+    margin-top: 170vw;
+    bottom: 0;
+    position: absolute;
+    padding: 40px;
+    text-align: center;
+    align-items: center;
+}

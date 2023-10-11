@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css" href="estilo.css?v=1" />
+
+  <link rel="icon" type="imagem/png" href="JB.png" />
+  <title>EEEP José de Barcelos</title>
+  <script>
+    var imgAtual = 0;
+    var elAtual = 0;
+    var el;
+    var showNav = () => {
+
+      document.getElementById("responsive-nav").classList.toggle("ativo");
+      document.getElementById("responsive-nav").style.transition = "0.5s";
+      setTimeout(() => {
+        document.getElementById("responsive-nav").style.transition = "";
+      }, 500)
+      document
+        .getElementsByClassName("black-bar")[0]
+        .classList.toggle("rotate-0");
+      document
+        .getElementsByClassName("black-bar")[1]
+        .classList.toggle("rotate-1");
+      document
+        .getElementsByClassName("black-bar")[2]
+        .classList.toggle("rotate-2");
+    };
+
+    var exibirGrade = (curso) => {
+      document.getElementsByClassName("black-curtain")[0].classList.add("showing");
+      document.getElementById("button-div-grade-" + curso).classList.add("showing");
+
+    }
+    var exibirProfessores = (curso) => {
+      document.getElementsByClassName("black-curtain")[0].classList.add("showing");
+      document.getElementById("button-div-professores-" + curso).classList.add("showing");
+    }
+
+    var exibirAulas = (curso) => {
+      document.getElementsByClassName("black-curtain")[0].classList.add("showing");
+      document.getElementById("button-div-aulas-" + curso).classList.add("showing");
+    }
+
+    var prevImg = (curso) => {
+      els = document.getElementsByClassName("lab-" + curso)
+      if (imgAtual != 0) {
+        document.getElementsByClassName("lab-" + curso)[imgAtual--].style.display = "none";
+        document.getElementsByClassName("lab-" + curso)[imgAtual].style.display = "block";
+      } else {
+        els[imgAtual].style.display = "none";
+        els[imgAtual = els.length - 1].style.display = "block";
+      }
+    }
+    var nextImg = (curso) => {
+      els = document.getElementsByClassName("lab-" + curso);
+      if (imgAtual != els.length - 1) {
+        els[imgAtual++].style.display = "none";
+        els[imgAtual].style.display = "block";
+      }
+      else {
+        els[imgAtual].style.display = "none";
+        els[imgAtual = 0].style.display = "block";
+      }
+    }
+    var closeAll = () => {
+
+      els = document.getElementsByClassName("showing");
+
+      for (i = els.length - 1; i >= 0; i--) {
+        els[i].classList.remove("showing");
+      }
+      elsImg = document.getElementsByClassName("imglab");
+      elsImg[imgAtual].style.display = "none";
+      elsImg[imgAtual = 0].style.display = "block";
+    }
+
+  </script>
+</head>
+
+<body>
+  <!-------------------------------------- HEADER ------------------------------------>
+  <div id="cabecalho">
+    <img src="JB.png">
+    <h3 id="escol">Escola Estadual de Educação Profissional</h3>
+    <h3 id="escol1">JOSÉ DE BARCELOS</h3>
+  </div>
+  <div id="complemento"></div>
+  <div id="navegacao">
+    <nav id="nav">
+      <div class="menu-drop">
+        <button type="button" name="drop" id="drop" class="button">
+          INSTITUCIONAL
+          <p class="seta">&#x25BC;</p>
+        </button>
+        <div class="drop-content">
+          <a href="../Origem/origem.html">Origem</a>
+          <a href="../Edital/edital.html">Regimento Escolar</a>
+          <a href="../NossaEquipe/nossaequipe.html">Nossa Equipe</a>
+          <a href="../NossaEscola/nossaescola.html">Nossa Escola</a>
+          <a href="../MultiMeios/multimeios.html">MultiMeios</a>
+        </div>
+      </div>
+      <a href="../index.html" class="button">HOME</a>
+      <a href="../Criadores/criadores.html" class="button">CRIADORES</a>
+    </nav>
+    <div onClick="showNav()" class="show-nav">
+      <div class="black-bar"></div>
+      <div class="black-bar"></div>
+      <div class="black-bar"></div>
+    </div>
+  </div>
+
+  <!------------------------------------- CONTENT ------------------------------------>
+  <div class="content">
+    <div class="all-cursos">
+      <div class="cursos">
+        <a href="#enfermagem">
+          <div class="enfermagem">
+            <div class="tela-curso">
+              <img src="./imgs/enfermagem_simbolo-removebg-preview.png" class="logos">
+            </div>
+
+            <div class="text">
+              <strong class="titu">ENFERMAGEM</strong>
+              <hr>
+            </div>
+          </div>
+        </a>
+        <a href="#estetica">
+          <div class="estetica">
+
+            <div class="tela-curso">
+              <img src="./imgs/logoest.png" class="logos">
+            </div>
+
+            <div class="text">
+              <strong class="titu">ESTÉTICA</strong>
+              <hr>
+            </div>
+          </div>
+        </a>
+        <a href="#financas">
+          <div class="financas">
+
+            <div class="tela-curso">
+              <img src="./imgs/logofin.png" class="logos">
+            </div>
+
+            <div class="text">
+              <strong class="titu">FINANÇAS</strong>
+              <hr>
+            </div>
+          </div>
+        </a>
+        <a href="#informatica">
+          <div class="informatica" href="content2">
+            <div class="tela-curso">
+              <img src="./imgs/logoinf.png" class="logos">
+            </div>
+
+            <div class="text">
+              <strong class="titu">INFORMÁTICA</strong>
+              <hr>
+            </div>
+          </div>
+        </a>
+
+
+
+
+      </div>
+    </div>
+
+    <div class="curso-div enfer" id="enfermagem">
+      <div class="titulo-curso ">CURSO TÉCNICO EM ENFERMAGEM</div>
+
+      <div class="curso-left">
+        <div class="curso-img enfer"></div>
+      </div>
+      <div class="curso-right">
+        <p class="texto-right">
+          O profissional técnico em enfermagem auxilia os enfermeiros nos cuidados com os
+          pacientes e com o ambiente hospitalar ou unidade de saúde. Em geral, este
+          profissional cuida de pacientes em situações de média e alta complexidade.
+        </p>
+
+        <p class="texto-right">
+          Os
+          técnicos de enfermagem também são preparados para aplicar vacinas e medicação
+          intravenosa, fazer triagem de pacientes em pronto-socorro, realizar a coleta de
+          materiais para exames, preparar instrumentos para cirurgias, entre outras funções.
+        </p>
+
+      </div>
+      <div class="botoes">
+        <div class="button-div button-div-aulas" onclick="exibirGrade('enfer')" id="button-div-grade-enfer">
+          GRADE CURRICULAR
+          <div src="imgs/grad_enfer.png" class="grade button-content" id="grade-enfer">
+          </div>
+        </div>
+        <div class="button-div" onclick="exibirProfessores('enfer')" id="button-div-professores-enfer">
+          PROFESSORES
+          <div class="professores button-content" id="professor-enfer" onclick="closeAll()">
+            <div class="professor">
+              <div class="profImg prof1-img-enfe"></div>
+              <div class="profContent prof1-content-enfe">
+                <p class="profNome prof1-nome-enfe">Patrícia Dantas</p>
+                <p class="profCargo prof1-cargo-enfe">Prof. Técnica de Enfermagem</p>
+              </div>
+            </div>
+            <div class="professor">
+              <div class="profImg prof2-img-enfe"></div>
+              <div class="profContent prof2-content-enfe">
+                <p class="profNome prof2-nome-enfe">Patrícia Oliveira</p>
+                <p class="profCargo prof2-cargo-enfe">Prof. Coord. Técnica de Enfermagem</p>
+              </div>
+            </div>
+            <div class="professor">
+              <div class="profImg prof3-img-enfe"></div>
+              <div class="profContent prof3-content-enfe">
+                <p class="profNome prof3-nome-enfe">Jéssica Moura</p>
+                <p class="profCargo prof3-cargo-enfe">Prof. Técnica de Enfermagem</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="button-div button-div-aulas" onclick="exibirAulas('enfer')" id="button-div-aulas-enfer">
+          AULAS PRÁTICAS
+          <div class="aulas-praticas button-content" id="aulas-praticas-enfer">
+            <div class="slider-space left"><a class="slider-btn previous" onclick="prevImg('enfe')">
+                &lt; </a>
+            </div>
+            <img src="./imgs/lab-enfe1.JPG" alt="" class="imglab lab-enfe" id="imglab1">
+            <img src="./imgs/lab-enfe2.JPG" alt="" class="imglab lab-enfe" id="imglab2" style="display:none">
+            <img src="./imgs/lab-enfe3.JPG" alt="" class="imglab lab-enfe" id="imglab3" style="display:none">
+            <img src="./imgs/lab-enfe4.JPG" alt="" class="imglab lab-enfe" id="imglab4" style="display:none">
+
+            <div class="slider-space right"><a class="slider-btn next" onclick="nextImg('enfe')">></a></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="curso-div este" id="estetica">
+      <div class="titulo-curso ">CURSO TÉCNICO EM ESTÉTICA</div>
+
+      <div class="curso-left">
+        <div class="curso-img este"></div>
+      </div>
+      <div class="curso-right">
+        <p class="texto-right">
+          O técnico em Estética é o profissional responsável por operar equipamentos na realização de procedimentos
+          estéticos, aplicar massagens e outros procedimentos. Ele é responsável por garantir que os procedimentos
+          realizados sejam feitos com segurança, visando preservar a integridade de quem está passando por ele.
+        </p>
+
+        <p class="texto-right">
+          É de responsabilidade desse profissional entender as necessidades de cada cliente, indicando o procedimento
+          mais adequado e fazendo a aplicação.
+        </p>
+
+      </div>
+      <div class="botoes">
+        <div class="button-div button-div-aulas" onclick="exibirGrade('este')" id="button-div-grade-este">
+          GRADE CURRICULAR
+          <div src="imgs/grad_este.png" class="grade button-content" id="grade-este">
+          </div>
+        </div>
+        <div class="button-div" onclick="exibirProfessores('este')" id="button-div-professores-este">
+          PROFESSORES
+          <div class="professores button-content" id="professor-este" onclick="closeAll()">
+            <div class="professor">
+              <div class="profImg prof1-img-este"></div>
+              <div class="profContent prof1-content-este">
+                <p class="profNome prof1-nome-este">Ana Priscila</p>
+                <p class="profCargo prof1-cargo-este">Prof. Técnica de Estética</p>
+              </div>
+            </div>
+            <div class="professor">
+              <div class="profImg prof2-img-este"></div>
+              <div class="profContent prof2-content-este">
+                <p class="profNome prof2-nome-este">Fabiana Frigo</p>
+                <p class="profCargo prof2-cargo-este">Prof. Coord. Técnica de Estética</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="button-div button-div-aulas" onclick="exibirAulas('este')" id="button-div-aulas-este">
+          AULAS PRÁTICAS
+          <div class="aulas-praticas button-content" id="aulas-praticas-este">
+            <div class="slider-space left"><a class="slider-btn previous" onclick="prevImg('este')">
+                &lt; </a>
+            </div>
+            <img src="./imgs/lab-este1.JPG" alt="" class="imglab lab-este" id="imglab1">
+            <img src="./imgs/lab-este2.JPG" alt="" class="imglab lab-este" id="imglab2" style="display:none">
+            <img src="./imgs/lab-este3.JPG" alt="" class="imglab lab-este" id="imglab3" style="display:none">
+            <img src="./imgs/lab-este4.JPG" alt="" class="imglab lab-este" id="imglab4" style="display:none">
+            <img src="./imgs/lab-este5.JPG" alt="" class="imglab lab-este" id="imglab4" style="display:none">
+            <img src="./imgs/lab-este6.JPG" alt="" class="imglab lab-este" id="imglab4" style="display:none">
+            <img src="./imgs/lab-este7.JPG" alt="" class="imglab lab-este" id="imglab4" style="display:none">
+
+            <div class="slider-space right"><a class="slider-btn next" onclick="nextImg('este')">></a></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="curso-div fin" id="financas">
+      <div class="titulo-curso ">CURSO TÉCNICO EM FINANÇAS</div>
+
+      <div class="curso-left">
+        <div class="curso-img fin"></div>
+      </div>
+      <div class="curso-right">
+        <p class="texto-right">
+          O profissional de finanças tem como objetivo executar e monitorar diversos serviços relacionados aos processos
+          de tesouraria, Contas, captação e aplicação de recursos financeiros, e orçamentos empresariais.
+        </p>
+
+        <p class="texto-right">
+          Por essas razões o técnico em finanças pode trabalhar em instituições financeiras, tanto públicas como
+          privadas e do terceiro setor, até empresas de consultoria e ou ainda a possibilidade do profissional trabalhar
+          como autônomo.
+        </p>
+
+      </div>
+      <div class="botoes">
+        <div class="button-div button-div-aulas" onclick="exibirGrade('fin')" id="button-div-grade-fin">
+          GRADE CURRICULAR
+          <div src="imgs/grad_fin.png" class="grade button-content" id="grade-fin">
+          </div>
+        </div>
+        <div class="button-div" onclick="exibirProfessores('fin')" id="button-div-professores-fin">
+          PROFESSORES
+          <div class="professores button-content" id="professor-fin" onclick="closeAll()">
+            <div class="professor">
+              <div class="profImg prof1-img-fin"></div>
+              <div class="profContent prof1-content-fin">
+                <p class="profNome prof1-nome-fin">Alexandre Osterne</p>
+                <p class="profCargo prof1-cargo-fin">Prof. Coord. Técnico de Finanças</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="button-div button-div-aulas" onclick="exibirAulas('fin')" id="button-div-aulas-fin">
+          AULAS PRÁTICAS
+          <div class="aulas-praticas button-content" id="aulas-praticas-fin">
+            <div class="slider-space left"><a class="slider-btn previous" onclick="prevImg('fin')">
+                &lt; </a>
+            </div>
+            <img src="./imgs/lab-fin1.JPG" alt="" class="imglab lab-fin" id="imglab1">
+            <img src="./imgs/lab-fin2.JPG" alt="" class="imglab lab-fin" id="imglab2" style="display:none">
+            <img src="./imgs/lab-fin3.JPG" alt="" class="imglab lab-fin" id="imglab3" style="display:none">
+            <img src="./imgs/lab-fin4.JPG" alt="" class="imglab lab-fin" id="imglab4" style="display:none">
+            <img src="./imgs/lab-fin5.JPG" alt="" class="imglab lab-fin" id="imglab4" style="display:none">
+
+            <div class="slider-space right"><a class="slider-btn next" onclick="nextImg('fin')">></a></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="curso-div infor" id="informatica">
+      <div class="titulo-curso ">CURSO TÉCNICO EM INFORMÁTICA</div>
+
+      <div class="curso-left">
+        <div class="curso-img infor"></div>
+      </div>
+      <div class="curso-right">
+        <p class="texto-right">
+          O técnico em informática é um profissional que tem entre suas responsabilidades a montagem, acabamento e
+          manutenção de computadores, além da identificação e correção de problemas em aparelhos eletrônicos.
+          Ele também instala e configura redes e softwares, trabalhando no desenvolvimento de sistemas e websites, o que
+          o leva a atuar tanto em redes domésticas quanto empresariais (privadas e públicas).
+        </p>
+
+        <p class="texto-right">
+          Por essas razões, o técnico em informática pode trabalhar tanto em empresas que prestem esse tipo de serviço
+          como profissional autônomo, recrutando clientes que necessitem de sua prestação de serviços.
+        </p>
+
+      </div>
+      <div class="botoes">
+        <div class="button-div button-div-aulas" onclick="exibirGrade('infor')" id="button-div-grade-infor">
+          GRADE CURRICULAR
+          <div src="imgs/grad_enfer.png" class="grade button-content" id="grade-infor">
+          </div>
+        </div>
+        <div class="button-div" onclick="exibirProfessores('infor')" id="button-div-professores-infor">
+          PROFESSORES
+          <div class="professores button-content" id="professor-infor" onclick="closeAll()">
+            <div class="professor">
+              <div class="profImg prof1-img-infor"></div>
+              <div class="profContent prof1-content-infor">
+                <p class="profNome prof1-nome-infor">Murilo da Paz</p>
+                <p class="profCargo prof1-cargo-infor">Prof. Coord. Técnico de Informática</p>
+              </div>
+            </div>
+            <div class="professor">
+              <div class="profImg prof2-img-infor"></div>
+              <div class="profContent prof2-content-infor">
+                <p class="profNome prof2-nome-infor">Alexsandro Vieira</p>
+                <p class="profCargo prof2-cargo-infor">Prof. Técnico de Informática</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="button-div button-div-aulas" onclick="exibirAulas('infor')" id="button-div-aulas-infor">
+          AULAS PRÁTICAS
+          <div class="aulas-praticas button-content" id="aulas-praticas-infor">
+            <div class="slider-space left"><a class="slider-btn previous" onclick="prevImg('infor')">
+                &lt; </a>
+            </div>
+            <img src="./imgs/lei-infor1.JPG" alt="" class="imglab lab-infor" id="imglab1">
+            <img src="./imgs/lei-infor2.JPG" alt="" class="imglab lab-infor" id="imglab2" style="display:none">
+            <img src="./imgs/lei-infor3.JPG" alt="" class="imglab lab-infor" id="imglab3" style="display:none">
+            <img src="./imgs/lei-infor4.JPG" alt="" class="imglab lab-infor" id="imglab4" style="display:none">
+
+            <div class="slider-space right"><a class="slider-btn next" onclick="nextImg('infor')">></a></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="black-curtain" onclick="closeAll()">
+
+    </div>
+    <nav class="responsive-nav" id="responsive-nav">
+      <a href="../index.html">Home</a>
+      <a href="../Origem/origem.html">Origem</a>
+      <a href="../Edital/edital.html">Regimento Escolar</a>
+      <a href="../NossaEscola/nossaescola.html">Nossa Escola</a>
+      <a href="../NossaEquipe/nossaequipe.html">Nossa Equipe</a>
+      <a href="../Criadores/criadores.html">Criadores</a>
+      <a href="../MultiMeios/multimeios.html">MultiMeios</a>
+      <a href="#">Acesso</a>
+
+    </nav>
+  </div>
+
+  <!--------------------------------------- FOOTER ----------------------------------->
+  <footer>
+    <div class="div_foot" id="endereco">
+      <div class="flex_container">
+        <div class="barramarelo"></div>
+        <h1 class="titulo_endereco">Endereço</h1>
+      </div>
+      <p>Rua Angélica Gurgel, 362, Fortaleza - CE</p>
+      <p>Horário: Segunda - Sexta: 7h20 - 16h40</p>
+    </div>
+    <div class="div_foot" id="sobre">
+      <div class="flex_container">
+        <div class="barramarelo"></div>
+        <h1 class="titulo_sobre">Sobre</h1>
+      </div>
+
+      <p><a href="../Criadores/criadores.html">© 2021 - 2023 - Turma Técnico em Informática</a></p>
+      <p>Desenvolvimento e Design</p>
+    </div>
+  </footer>
+</body>
+
+</html>

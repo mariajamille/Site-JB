@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="estilo.css?v=1" />
+
+    <link rel="icon" type="imagem/png" href="JB.png" />
+    <title>EEEP José de Barcelos</title>
+    <script>
+       var elAtual = 0;
+       var el;
+      var showNav = () => {
+        
+        document.getElementById("responsive-nav").classList.toggle("ativo");
+        document.getElementById("responsive-nav").style.transition = "0.5s";
+        setTimeout(()=>{
+          document.getElementById("responsive-nav").style.transition = "";
+        },500)
+        document
+          .getElementsByClassName("black-bar")[0]
+          .classList.toggle("rotate-0");
+        document
+          .getElementsByClassName("black-bar")[1]
+          .classList.toggle("rotate-1");
+        document
+          .getElementsByClassName("black-bar")[2]
+          .classList.toggle("rotate-2");
+      };
+
+      window.onload = () => {
+        document.getElementById("banners").onclick = mudarImg;
+      };
+
+      function mudarImg(e) {
+        wid = e.target.clientWidth;
+        x = e.pageX;
+        y = e.pageY;
+
+        if(x <= wid/4){
+          console.log("ESQUERDA")
+          if(elAtual != 0){
+            document.getElementsByClassName("banner")[elAtual--].style.display="none";
+            document.getElementsByClassName("banner")[elAtual].style.display="block";
+          }
+        }
+        if(x >= wid-wid/4){
+          console.log("DIREITA")
+          if(elAtual != document.getElementsByClassName("banner").length-1){
+            document.getElementsByClassName("banner")[elAtual++].style.display="none";
+            document.getElementsByClassName("banner")[elAtual].style.display="block";
+          }
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <!-------------------------------------- HEADER ------------------------------------>
+    <div id="cabecalho">
+      <img src="JB.png" />
+      <h3 id="escol">Escola Estadual de Educação Profissional</h3>
+      <h3 id="escol1">JOSÉ DE BARCELOS</h3>
+    </div>
+    <div id="complemento"></div>
+    <div id="navegacao">
+      <nav id="nav">
+        <div class="menu-drop">
+          <button type="button" name="drop" id="drop" class="button">
+            INSTITUCIONAL
+            <p class="seta">&#x25BC;</p>
+          </button>
+          <div class="drop-content">
+            <a href="./Origem/origem.html">Origem</a>
+            <a href="./Edital/edital.html">Regimento Escolar</a>
+            <a href="./NossaEscola/nossaescola.html">Nossa Escola</a>
+            <a href="./MultiMeios/multimeios.html">MultiMeios</a>
+          </div>
+        </div>
+        <a href="./NossaEquipe/nossaequipe.html" class="button">NOSSA EQUIPE</a>
+        <a href="./Criadores/criadores.html" class="button">CRIADORES</a>
+      </nav>
+      <div onClick="showNav()" class="show-nav">
+        <div class="black-bar"></div>
+        <div class="black-bar"></div>
+        <div class="black-bar"></div>
+      </div>
+    </div>
+
+    <!------------------------------------- CONTENT ------------------------------------>
+    <div class="content">
+      <div id="banners" class="banner-local" style="--proporcao: 10/1.8">
+        <div class="banner" id="banner1" style="--proporcao: 10/1.8 "></div>
+        <div class="banner" id="banner2" style="--proporcao: 10/1.8; display:none"></div>
+        <div class="banner" id="banner3" style="--proporcao: 10/1.8; display:none"></div>
+        <div class="banner" id="banner4" style="--proporcao: 10/1.8; display:none"></div>
+        <div class="banner" id="banner5" style="--proporcao: 10/1.8; display:none"></div>
+      </div>
+      <div class="cards">
+        <a href="./Edital/edital.html" id="a"><div class="card">
+          <div class="icon-card" id="icon-editais"></div>
+          <div class="barra-amarela-card"></div>
+          <p class="texto-card">EDITAIS</p>
+        </div></a>
+        <a href="./Cursos/cursos.html" id="a"><div class="card">
+          <div class="icon-card" id="icon-cursos"></div>
+          <div class="barra-amarela-card"></div>
+          <p class="texto-card">CURSOS TÉCNICOS</p>
+        </div></a>
+        <a href="./NossaEscola/nossaescola.html" id="a"><div class="card">
+          <div class="icon-card" id="icon-escola"></div>
+          <div class="barra-amarela-card"></div>
+          <p class="texto-card">NOSSA ESCOLA</p>
+        </div></a>
+        <a href="#" id="a"><div class="card">
+          <div class="icon-card" id="icon-notificacoes"></div>
+          <div class="barra-amarela-card"></div>
+          <p class="texto-card" id="texto-notificacoes">ACESSO</p>
+        </div></a>
+      </div>
+      <nav class="responsive-nav" id="responsive-nav">
+        <a href="./Origem/origem.html">Origem</a>
+        <a href="./Edital/edital.html">Regimento Escolar</a>
+        <a href="./NossaEscola/nossaescola.html">Nossa Escola</a>
+        <a href="./NossaEquipe/nossaequipe.html">Nossa Equipe</a>
+        <a href="./Criadores/criadores.html">Criadores</a>
+        <a href="./MultiMeios/multimeios.html">MultiMeios</a>
+      </nav>
+    </div>
+
+    <!--------------------------------------- FOOTER ----------------------------------->
+    <footer>
+      <div class="div_foot" id="endereco">
+        <div class="flex_container">
+          <div class="barramarelo"></div>
+          <h1 class="titulo_endereco">Endereço</h1>
+        </div>
+        <p>Rua Angélica Gurgel, 362, Fortaleza - CE</p>
+        <p>Horário: Segunda - Sexta: 7h20 - 16h40</p>
+      </div>
+      <div class="div_foot" id="sobre">
+        <div class="flex_container">
+          <div class="barramarelo"></div>
+          <h1 class="titulo_sobre">Sobre</h1>
+        </div>
+
+        <p><a href="./Criadores/criadores.html">© 2021 - 2023 - Turma Técnico em Informática</a></p>
+        <p>Desenvolvimento e Design</p>
+      </div>
+    </footer>
+  </body>
+</html>

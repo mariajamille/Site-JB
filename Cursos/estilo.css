@@ -1,3 +1,6 @@
+html{
+  scroll-behavior: smooth;
+}
 body{
   margin: 0;
   display: flex;
@@ -317,8 +320,8 @@ a classe content deve ser posta entre as divs do header e footer, sendo customiz
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0px 7px 10px 0px rgba(0, 0, 0, 0.65);
 }
-
 .informatica,.enfermagem,.financas,.estetica{
   margin-top: 4%;
   margin-left: 5%;

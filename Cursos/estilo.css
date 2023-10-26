@@ -320,7 +320,12 @@ a classe content deve ser posta entre as divs do header e footer, sendo customiz
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0px 7px 10px 0px rgba(0, 0, 0, 0.65);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.65);
+  transition: 0.5s;
+}
+.tela-curso:hover{
+  transition: 0.5s;
+  box-shadow:  -5px 7px 15px 0px rgba(0, 0, 0, 0.65);
 }
 .informatica,.enfermagem,.financas,.estetica{
   margin-top: 4%;
@@ -337,6 +342,7 @@ font-size: 1.5rem;
 hr{
 width: 60px;
 border-color: #FFBD00; 
+border: 0.5px solid #FFBD00;
 }
 .text{
 margin-top: 10px;

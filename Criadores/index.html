@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="./Css/estilo.css" />
+
+    <link rel="icon" type="imagem/png" href="./Css/JB.png" />
+    <title>EEEP José de Barcelos</title>
+   <!-------------------------------------- CONFIGURAÇÃO MENU RESPONSIVO (HAMBURGUER) ------------------------------------>
+    <script>
+       var elAtual = 0;
+       var el;
+      var showNav = () => {
+        
+        document.getElementById("responsive-nav").classList.toggle("ativo");
+        document.getElementById("responsive-nav").style.transition = "0.5s";
+        setTimeout(()=>{
+          document.getElementById("responsive-nav").style.transition = "";
+        },500)
+        document
+          .getElementsByClassName("black-bar")[0]
+          .classList.toggle("rotate-0");
+        document
+          .getElementsByClassName("black-bar")[1]
+          .classList.toggle("rotate-1");
+        document
+          .getElementsByClassName("black-bar")[2]
+          .classList.toggle("rotate-2");
+      };
+
+    </script>
+  </head>
+
+  <body>
+    <!-------------------------------------- HEADER ------------------------------------>
+    <div id="cabecalho">
+      <img src="./Css/JB.png" />
+      <h3 id="escol">Escola Estadual de Educação Profissional</h3>
+      <h3 id="escol1">JOSÉ DE BARCELOS</h3>
+    </div>
+    <div id="complemento"></div>
+    <div id="navegacao">
+      <nav id="nav">
+        <a href="../index.html" class="button">INÍCIO</a>
+          <div class="menu-drop">
+            <button type="button" name="drop" id="drop" class="button">
+              INSTITUCIONAL
+              <p class="seta">&#x25BC;</p>
+            </button>
+            <div class="drop-content">
+              <a href="../Origem/index.html">Origem</a>
+              <a href="../Edital/index.html">Regimento Escolar</a>
+              <a href="../NossaEscola/index.html">Nossa Escola</a>
+              <a href="../MultiMeios/index.html">MultiMeios</a>
+            </div>
+          </div>
+          <a href="../NossaEquipe/index.html" class="button">NOSSA EQUIPE</a>
+          <a href="../Criadores/index.html" class="button" id="pagina">CRIADORES</a>
+        </nav>
+      </nav>
+      <!------------------------------------- MENU RESPONSIVO ------------------------------------>
+      <div onClick="showNav()" class="show-nav">
+        <div class="black-bar"></div>
+        <div class="black-bar"></div>
+        <div class="black-bar"></div>
+      </div>
+    </div>
+
+    <!------------------------------------- CONTENT ------------------------------------>
+    <div class="content">
+      
+    <!------------------------------------- CARDS DE PERFIS (TUTORIAL) ------------------------------------>
+      <div class="profile-cards"> <!-- DIV QUE CONTEM TODOS OS CARDS, ORGANIZANDO OS MESMOS NA PÁGINA -->
+
+        <div class="profile-card">
+            <img class="profile-image" src="./Css/imgs/pessoa.jpg" alt="Nome da Pessoa"> <!-- FOTO DA PESSOA -->
+            <div class="overlay">
+                <div class="overlay-text">diferença entre passado, presente e futuro é apenas uma persistente ilusão🚀</div> <!-- FRASE DA PESSOA -->
+            </div>
+            <div class="profile-info">
+                <div class="profile-name"><a href="#">Audi de Oliveira</a></div> <!-- LINK DA REDE SOCIAL E NOME DA PESSOA -->
+                <div class="profile-role">Desenvolvedor Front-end</div> <!-- FUNÇÃO DA PESSOA NO PROJETO -->
+            </div>
+        </div>
+
+        <div class="profile-card">
+            <img class="profile-image" src="./Css/imgs/pessoa.jpg" alt="Nome da Pessoa">
+            <div class="overlay">
+                <div class="overlay-text">diferença entre passado, presente e futuro é apenas uma persistente ilusão🚀</div>
+            </div>
+            <div class="profile-info">
+                <div class="profile-name"><a href="https://cursos.alura.com.br/forum/topico-utilizar-imagem-100-como-fundo-da-div-45932">Audi de Oliveira</a></div>
+                <div class="profile-role">Desenvolvedor Front-end</div>
+            </div>
+        </div>
+
+
+        <div class="profile-card">
+            <img class="profile-image" src="./Css/imgs/pessoa.jpg" alt="Nome da Pessoa">
+            <div class="overlay">
+                <div class="overlay-text">diferença entre passado, presente e futuro é apenas uma persistente ilusão🚀</div>
+            </div>
+            <div class="profile-info">
+                <div class="profile-name"><a href="https://cursos.alura.com.br/forum/topico-utilizar-imagem-100-como-fundo-da-div-45932">Audi de Oliveira</a></div>
+                <div class="profile-role">Desenvolvedor Front-end</div>
+            </div>
+        </div>
+
+
+        <div class="profile-card">
+            <img class="profile-image" src="./Css/imgs/pessoa.jpg" alt="Nome da Pessoa">
+            <div class="overlay">
+                <div class="overlay-text">diferença entre passado, presente e futuro é apenas uma persistente ilusão🚀</div>
+            </div>
+            <div class="profile-info">
+                <div class="profile-name"><a href="https://cursos.alura.com.br/forum/topico-utilizar-imagem-100-como-fundo-da-div-45932">Audi de Oliveira</a></div>
+                <div class="profile-role">Desenvolvedor Front-end</div>
+            </div>
+        </div>
+
+
+        <div class="profile-card">
+            <img class="profile-image" src="./Css/imgs/pessoa.jpg" alt="Nome da Pessoa">
+            <div class="overlay">
+                <div class="overlay-text">diferença entre passado, presente e futuro é apenas uma persistente ilusão🚀</div>
+            </div>
+            <div class="profile-info">
+                <div class="profile-name"><a href="https://cursos.alura.com.br/forum/topico-utilizar-imagem-100-como-fundo-da-div-45932">Audi de Oliveira</a></div>
+                <div class="profile-role">Desenvolvedor Front-end</div>
+            </div>
+        </div>
+        
+
+        <div class="profile-card">
+          <img class="profile-image" src="./Css/imgs/pessoa.jpg" alt="Nome da Pessoa">
+          <div class="overlay">
+              <div class="overlay-text">diferença entre passado, presente e futuro é apenas uma persistente ilusão🚀</div>
+          </div>
+          <div class="profile-info">
+              <div class="profile-name"><a href="https://cursos.alura.com.br/forum/topico-utilizar-imagem-100-como-fundo-da-div-45932">Audi de Oliveira</a></div>
+              <div class="profile-role">Desenvolvedor Front-end</div>
+          </div>
+      </div>
+     
+      <!-- ADICIONE MAIS CARDS DE PESSOAS AQUI! -->
+      
+    </div>
+    
+    
+    <!------------------------------------- BUTÕES REDES SOCIAIS ------------------------------------>
+    <div class="social-buttons">
+      <a href="https://wa.me/+558591919730" target="_blank" class="whatsapp-button">
+          <img src="./Css/whatsapp.png" alt="WhatsApp">
+      </a>
+      <a href="https://www.instagram.com/eeep_jb/" target="_blank" class="instagram-button">
+          <img src="./Css/instagram.png" alt="Instagram">
+      </a>
+  </div>
+  <script>
+    // Função para atualizar a posição dos botões com base na rolagem e largura da tela
+function updateButtonPosition() {
+    const socialButtons = document.querySelector(".social-buttons");
+    const windowHeight = window.innerHeight;
+    const scrollHeight = document.documentElement.scrollHeight;
+    const scrollTop = window.scrollY;
+    const scrollPercentage = (scrollTop / (scrollHeight - windowHeight)) * 100;
+
+    // Verifique a largura da tela
+    const windowWidth = window.innerWidth;
+
+    if (windowWidth <= 768) {
+        // Se a largura da tela for menor ou igual a 768px, defina um valor maior para 'bottom'
+        if (scrollPercentage >= 65) {
+            socialButtons.style.bottom = "170px"; // Ajuste o valor conforme necessário
+        } else {
+            socialButtons.style.bottom = "20px"; // Ou qualquer outro valor desejado
+        }
+    } else {
+        // Caso contrário, mantenha o comportamento anterior
+        if (scrollPercentage >= 65) {
+            socialButtons.style.bottom = "100px"; // Ou qualquer outro valor desejado
+        } else {
+            socialButtons.style.bottom = "20px"; // Ou qualquer outro valor desejado
+        }
+    }
+    
+}
+
+// Adicione um ouvinte de evento de redimensionamento da janela para atualizar a posição dos botões
+window.addEventListener("scroll", updateButtonPosition);
+window.addEventListener("resize", updateButtonPosition);
+
+// Chame a função para definir a posição inicial
+updateButtonPosition();
+
+
+  </script>
+     <!------------------------------------- LINKS MENU RESPONSIVO ------------------------------------>
+     <nav class="responsive-nav" id="responsive-nav">
+      <a href="../index.html">INÍCIO</a>
+      <a href="../Origem/index.html">ORIGEM</a>
+      <a href="../Edital/index.html">REGIMENTO ESCOLAR</a>
+      <a href="../NossaEscola/index.html">NOSSA ESCOLA</a>
+      <a href="../MultiMeios/index.html">MULTIMEIOS</a>
+      <a href="../Criadores/index.html">CRIADORES</a>
+      <a href="../Cursos/index.html">CURSOS TÉCNICOS</a>
+      <a href="#">ACESSO</a>
+    </nav>
+    </div>
+
+    <!--------------------------------------- FOOTER ----------------------------------->
+    <footer>
+      <div class="div_foot" id="endereco">
+        <div class="flex_container">
+          <div class="barramarelo"></div>
+          <h1 class="titulo_endereco">Endereço</h1>
+        </div>
+        <p>Rua Angélica Gurgel, 362, Fortaleza - CE</p>
+        <p>Horário: Segunda - Sexta: 7h20 - 16h40</p>
+      </div>
+      <div class="div_foot" id="sobre">
+        <div class="flex_container">
+          <div class="barramarelo"></div>
+          <h1 class="titulo_sobre">Sobre</h1>
+        </div>
+
+        <p><a href="./Criadores/criadores.html">© 2021 - 2023 - Turma Técnico em Informática</a></p>
+        <p>Desenvolvimento e Design</p>
+      </div>
+    </footer>
+  </body>
+</html>

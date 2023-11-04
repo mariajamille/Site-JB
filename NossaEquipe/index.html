@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./JS/swiper-bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="./Css/estilo.css">
+
+
+    <link rel="icon" type="imagem/png" href="./Css/JB.png" />
+    <title>EEEP José de Barcelos</title>
+    <script>
+        var elAtual = 0;
+        var el;
+        var showNav = () => {
+        
+        document.getElementById("responsive-nav").classList.toggle("ativo");
+        document.getElementById("responsive-nav").style.transition = "0.5s";
+        setTimeout(()=>{
+          document.getElementById("responsive-nav").style.transition = "";
+        },500)
+        document
+          .getElementsByClassName("black-bar")[0]
+          .classList.toggle("rotate-0");
+        document
+          .getElementsByClassName("black-bar")[1]
+          .classList.toggle("rotate-1");
+        document
+          .getElementsByClassName("black-bar")[2]
+          .classList.toggle("rotate-2");
+      };
+ 
+     </script>
+</head>
+
+<body>
+    <!-------------------------------------- Header ------------------------------------>
+    <div id="cabecalho">
+        <img src="./Css/JB.png" class="jb-img">
+        <h3 id="escol">Escola Estadual de Educação Profissional</h3>
+        <h3 id="escol1">JOSÉ DE BARCELOS</h3>
+      </div>
+      <div id="complemento"></div>
+      <div id="navegacao">
+        <nav id="nav">
+            <a href="../index.html" class="button">INÍCIO</a>
+          <div class="menu-drop">
+            <button type="button" name="drop" id="drop" class="button">
+              INSTITUCIONAL
+              <p class="seta">&#x25BC;</p>
+            </button>
+            <div class="drop-content">
+              <a href="../Origem/index.html">Origem</a>
+              <a href="../Edital/index.html">Regimento Escolar</a>
+              <a href="../NossaEscola/index.html">Nossa Escola</a>
+              <a href="../MultiMeios/index.html">MultiMeios</a>
+            </div>
+          </div>
+          <a href="../NossaEquipe/index.html" class="button" id="pagina">NOSSA EQUIPE</a>
+          <a href="../Criadores/index.html" class="button">CRIADORES</a>
+        </nav>
+        <div onClick="showNav()" class="show-nav">
+          <div class="black-bar"></div>
+          <div class="black-bar"></div>
+          <div class="black-bar"></div>
+        </div>
+      </div>
+    <!-- content -->
+    <div class="content">
+
+        <div class="swiper teachers">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="name">Glória Brasil</div>
+                        <img src="./Css/images/IMG_gloria.png" class="img-card">
+                        <div class="cargo">Diretora</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="name">Paulo Oliveira</div>
+                        <img src="./Css/images/IMG_paulo.png" class="img-card dif">
+                        <div class="cargo">Coordenador<br> pedagógico</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="name">Erika dos Santos</div>
+                        <img src="./Css/images/IMG_erika.png" class="img-card">
+                        <div class="cargo">Assistente Financeira</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="name">Leila Lima</div>
+                        <img src="./Css/images/IMG_leila.png" class="img-card">
+                        <div class="cargo">Coordenadora <br>pedagógica</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="name">Liduina Rodrigues</div>
+                        <img src="./Css/images/IMG_liduina.png" class="img-card">
+                        <div class="cargo">Agente <br> administrativa</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="name">Vanuzia Neves</div>
+                        <img src="./Css/images/IMG_vanuzia.png" class="img-card">
+                        <div class="cargo">Secretária <br>escolar</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="name">Maura Muniz</div>
+                        <img src="./Css/images/IMG_maura.png" class="img-card">
+                        <div class="cargo">Agente <br> administrativa</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="name">Will Alves</div>
+                        <img src="./Css/images/IMG_william.png" class="img-card dif">
+                        <div class="cargo">Agente administrativo</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="name">Ermelinda Souza</div>
+                        <img src="./Css/images/IMG_ermelinda.png" class="img-card">
+                        <div class="cargo">Apoio de multimeios</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="name">Caroline Forte</div>
+                        <img src="./Css/images/IMG_carol.png" class="img-card">
+                        <div class="cargo">Apoio de multimeios</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="name">Paula Parente</div>
+                        <img src="./Css/images/IMG_paula.png" class="img-card">
+                        <div class="cargo">Apoio de multimeios</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="name">Claudete Carvalho</div>
+                        <img src="./Css/images/IMG_claudete.png" class="img-card">
+                        <div class="cargo">Coord. Regente <br>de multimeios</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="name">Leonardo Piauilino</div>
+                        <img src="./Css/images/IMG_leo.png" class="img-card dif">
+                        <div class="cargo">Professor de atualidades</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="name">Mateus Reis</div>
+                        <img src="./Css/images/IMG_matheus.png" class="img-card">
+                        <div class="cargo">Professor de artes</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="name">Vanessa Araújo</div>
+                        <img src="./Css/images/IMG_vanessa.png" class="img-card">
+                        <div class="cargo">Professora de português</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="name">Patrícia Moreira</div>
+                        <img src="./Css/images/IMG_patricia.png" class="img-card">
+                        <div class="cargo">Professora de espanhol</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="name">Sara Camurça</div>
+                        <img src="./Css/images/IMG_sara.png" class="img-card">
+                        <div class="cargo">Professora de inglês</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="name">Simone de Olivera</div>
+                        <img src="./Css/images/IMG_simone.png" class="img-card">
+                        <div class="cargo">Professora de <br>português e espanhol</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="name">Josecilda Moura</div>
+                        <img src="./Css/images/IMG_josi.png" class="img-card">
+                        <div class="cargo">Professora de português</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="name">Rosella régis</div>
+                        <img src="./Css/images/IMG_rosella.png" class="img-card dif">
+                        <div class="cargo">Professora de <br> Educação Física</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="name">Cristiano Duarte</div>
+                        <img src="./Css/images/IMG_cristiano.png" class="img-card">
+                        <div class="cargo">Professor de química</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="name">Lucas Macedo</div>
+                        <img src="./Css/images/IMG_lucas.png" class="img-card dif">
+                        <div class="cargo">Professor de física</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="name">Liliana Fernandes</div>
+                        <img src="./Css/images/IMG_liliana.png" class="img-card dif">
+                        <div class="cargo">Professora de biologia</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="name">Mafa Diba</div>
+                        <img src="./Css/images/IMG_mafa.png" class="img-card">
+                        <div class="cargo">Professora de história</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="name">Carlos Geovane</div>
+                        <img src="./Css/images/IMG_geovane.png" class="img-card">
+                        <div class="cargo">Professor de <br>filosofia e sociologia</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="name">Victória Ferreira</div>
+                        <img src="./Css/images/IMG_vitoria.png" class="img-card">
+                        <div class="cargo">Professora de geografia</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="name">Sâmia Sandra</div>
+                        <img src="./Css/images/IMG_samia.png" class="img-card">
+                        <div class="cargo">Professora de <br> matemática</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="name">Luciana Saraiva</div>
+                        <img src="./Css/images/IMG_luciana.png" class="img-card">
+                        <div class="cargo">Professora de <br> matemática</div>
+                    </div>
+                </div>
+                 
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next" style="margin-left: 30px;"></div>
+            <div class="swiper-button-prev" style="margin-right: 30px;"></div>
+        </div>
+
+        <!------------------------------------- LINKS MENU RESPONSIVO ------------------------------------>
+        <nav class="responsive-nav" id="responsive-nav">
+            <a href="../index.html">INÍCIO</a>
+            <a href="../Origem/index.html">ORIGEM</a>
+            <a href="../Edital/index.html">REGIMENTO ESCOLAR</a>
+            <a href="../NossaEscola/index.html">NOSSA ESCOLA</a>
+            <a href="../MultiMeios/index.html">MULTIMEIOS</a>
+            <a href="../Criadores/index.html">CRIADORES</a>
+            <a href="../Cursos/index.html">CURSOS TÉCNICOS</a>
+            <a href="#">ACESSO</a>
+          </nav>
+    </div>
+    </div>
+
+    <!------------------------------------- BUTÕES REDES SOCIAIS ------------------------------------>
+  <div class="social-buttons">
+    <a href="https://wa.me/+558591919730" target="_blank" class="whatsapp-button">
+        <img src="./Css/whatsapp.png" alt="WhatsApp">
+    </a>
+    <a href="https://www.instagram.com/eeep_jb/" target="_blank" class="instagram-button">
+        <img src="./Css/instagram.png" alt="Instagram">
+    </a>
+</div>
+<script>
+  // Função para atualizar a posição dos botões com base na rolagem e largura da tela
+function updateButtonPosition() {
+  const socialButtons = document.querySelector(".social-buttons");
+  const windowHeight = window.innerHeight;
+  const scrollHeight = document.documentElement.scrollHeight;
+  const scrollTop = window.scrollY;
+  const scrollPercentage = (scrollTop / (scrollHeight - windowHeight)) * 100;
+
+  // Verifique a largura da tela
+  const windowWidth = window.innerWidth;
+
+  if (windowWidth <= 768) {
+      // Se a largura da tela for menor ou igual a 768px, defina um valor maior para 'bottom'
+      if (scrollPercentage >= 65) {
+          socialButtons.style.bottom = "170px"; // Ajuste o valor conforme necessário
+      } else {
+          socialButtons.style.bottom = "100px"; // VALOR PADRÃO É 20PX, MUDE DE ACORDO COM A PÁGINA. 
+      }
+  } else {
+      // Caso contrário, mantenha o comportamento anterior
+      if (scrollPercentage >= 65) {
+          socialButtons.style.bottom = "100px"; // Ou qualquer outro valor desejado
+      } else {
+          socialButtons.style.bottom = "60px"; // VALOR PADRÃO É 20PX, MUDE DE ACORDO COM A PÁGINA. 
+      }
+  }
+  
+}
+
+// Adicione um ouvinte de evento de redimensionamento da janela para atualizar a posição dos botões
+window.addEventListener("scroll", updateButtonPosition);
+window.addEventListener("resize", updateButtonPosition);
+
+// Chame a função para definir a posição inicial
+updateButtonPosition();
+
+
+</script>
+    <!----------------- footer --------------->
+    <footer>
+        <div class="div_foot" id="endereco">
+            <div class="flex_container">
+                <div class="barramarelo"></div>
+                <h1 class="titulo_endereco">Endereço</h1>
+            </div>
+            <p>Rua Angélica Gurgel, 362, Fortaleza - CE</p>
+            <p>Horário: Segunda - Sexta: 7h20 - 16h40</p>
+        </div>
+        <div class="div_foot" id="sobre">
+            <div class="flex_container">
+                <div class="barramarelo"></div>
+                <h1 class="titulo_sobre">Sobre</h1>
+            </div>
+
+            <p><a href="../Criadores/criadores.html">© 2021 - 2023 - Turma Técnico em Informática</a></p>
+            <p>Desenvolvimento e Design</p>
+        </div>
+
+    </footer>
+    </div>
+</body>
+
+<!-------------- JavaScript----------------------->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="./JS/slider.js"></script>

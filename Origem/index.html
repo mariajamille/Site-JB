@@ -1,17 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="imagem/png" href="./Css/images/JB.png" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="./Css/header.css">
-    <link rel="stylesheet" href="./Css/style.css">
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="./Css/estilo.css" />
+    <link rel="stylesheet" type="text/css" href="./Css/estilizado.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <link rel="icon" type="imagem/png" href="./Css/JB.png" />
     <title>EEEP José de Barcelos</title>
+   <!-------------------------------------- CONFIGURAÇÃO MENU RESPONSIVO (HAMBURGUER) ------------------------------------>
     <script>
-        var showNav = () => {
+       var elAtual = 0;
+       var el;
+      var showNav = () => {
         
         document.getElementById("responsive-nav").classList.toggle("ativo");
         document.getElementById("responsive-nav").style.transition = "0.5s";
@@ -28,21 +30,22 @@
           .getElementsByClassName("black-bar")[2]
           .classList.toggle("rotate-2");
       };
+
     </script>
-</head>
+  </head>
 
-<body>
-
+  <body>
+    
     <!-------------------------------------- HEADER ------------------------------------>
     <div id="cabecalho">
-        <img src="./Css/images/JB.png">
-        <h3 id="escol">Escola Estadual de Educação Profissional</h3>
-        <h3 id="escol1">JOSÉ DE BARCELOS</h3>
+      <img src="./Css/JB.png" />
+      <h3 id="escol">Escola Estadual de Educação Profissional</h3>
+      <h3 id="escol1">JOSÉ DE BARCELOS</h3>
     </div>
     <div id="complemento"></div>
     <div id="navegacao">
-        <nav id="nav">
-            <a href="../index.html" class="button">INÍCIO</a>
+      <nav id="nav">
+        <a href="../index.html" class="button">INÍCIO</a>
           <div class="menu-drop">
             <button type="button" name="drop" id="drop" class="button">
               INSTITUCIONAL
@@ -57,16 +60,18 @@
           </div>
           <a href="../NossaEquipe/index.html" class="button">NOSSA EQUIPE</a>
           <a href="../Criadores/index.html" class="button">CRIADORES</a>
-
-        </nav>
-        <div onClick="showNav()" class="show-nav">
-            <div class="black-bar"></div>
-            <div class="black-bar"></div>
-            <div class="black-bar"></div>
-        </div>
+      </nav>
+      <!------------------------------------- MENU RESPONSIVO ------------------------------------>
+      <div onClick="showNav()" class="show-nav">
+        <div class="black-bar"></div>
+        <div class="black-bar"></div>
+        <div class="black-bar"></div>
+      </div>
     </div>
 
-    <main>
+    <!------------------------------------- CONTENT ------------------------------------>
+    <div class="content">
+      <main>
         <section>
             <p
                 style="color: #00511C; width: 80%; background-color: #ffd334b3; padding: 10px; border: 2px solid #fba419d8;">
@@ -81,30 +86,70 @@
             </p>
         </section>
         <section>
-            <div class="swiper img-slider">
-                <div class="swiper-wrapper">
-                    <img src="./Css/images/crias.jpg" class="swiper-slide" alt="">
-                    <img src="./Css/images/tias.jpg" class="swiper-slide" alt="">
-                    <img src="./Css/images/food.jpg" class="swiper-slide" alt="">
-                    <img src="./Css/images/flowers.jpg" class="swiper-slide" alt="">
-                    <img src="./Css/images/gym.jpg" class="swiper-slide" alt="">
-                    <img src="./Css/images/bib1.jpg" class="swiper-slide" alt="">
-                    <img src="./Css/images/bib2.jpg" class="swiper-slide" alt="">
-                    <img src="./Css/images/bib3.jpg" class="swiper-slide" alt="">
-                    <img src="./Css/images/bib4.jpg" class="swiper-slide" alt="">
-                    <img src="./Css/images/birbs.jpg" class="swiper-slide" alt="">
-                    <img src="./Css/images/flowers2.jpg" class="swiper-slide" alt="">
-                    
-                </div>
-                <div class="swiper-pagination"></div>
-
+          <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="3" aria-label="Slide 4"></button>
+              <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="4" aria-label="Slide 5"></button>
+              <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="5" aria-label="Slide 6"></button>
+              <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="6" aria-label="Slide 7"></button>
+              <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="7" aria-label="Slide 8"></button>
+              <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="8" aria-label="Slide 9"></button>
+              <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="9" aria-label="Slide 10"></button>
+              <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="10" aria-label="Slide 11"></button>
             </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="4000" >
+                <img src="./Css/images/crias.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item" data-bs-interval="4000">
+                <img src="./Css/images/tias.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item" data-bs-interval="4000">
+                <img src="./Css/images/food.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item" data-bs-interval="4000">
+                <img src="./Css/images/flowers.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item" data-bs-interval="4000">
+                <img src="./Css/images/gym.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item" data-bs-interval="4000">
+                <img src="./Css/images/bib1.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item" data-bs-interval="4000">
+                <img src="./Css/images/bib2.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item" data-bs-interval="4000">
+                <img src="./Css/images/bib3.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item" data-bs-interval="4000">
+                <img src="./Css/images/bib4.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item" data-bs-interval="4000">
+                <img src="./Css/images/birbs.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item" data-bs-interval="4000">
+                <img src="./Css/images/flowers2.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
         </section>
         <section>
             <div class="image">
                 <img src="./Css/images/josedebarcelos.png" alt="">
             </div>
-            <div class="content">
+            <div class="content1">
                 <h1>QUEM FOI JOSÉ DE BARCELOS?</h1>
                 <p>
                     José de Barcelos foi um notável humanista, competente, sobretudo, em geografia, história e
@@ -139,7 +184,7 @@
             <div class="image">
                 <img src="./Css/images/IMG_7943.JPG" alt="">
             </div>
-            <div class="content">
+            <div class="content1">
                 <h1>UMA ESCOLA REGULAR</h1>
                 <p>
                     A escola José de Barcelos é muito conhecida em Messejana e é muito antiga. O prédio da
@@ -152,7 +197,7 @@
             </div>
         </section>
         <section>
-            <div class="content">
+            <div class="content1">
                 <h1>A CHEGADA DO ENSINO PROFISSIONAL</h1>
                 <p>
                     Assim, com a implementação do programa Brasil profissionalizado, o governador do Estado
@@ -171,7 +216,7 @@
             </div>
         </section>
         <section>
-            <div class="content">
+            <div class="content1">
                 <h1>JB NO INÍCIO</h1>
                 <p>
                     A estrutura física da escola era muito precária: a quadra estava no chão, só haviam os
@@ -188,7 +233,7 @@
             <div class="image">
                 <img src="./Css/images/cat.jpg" alt="">
             </div>
-            <div class="content">
+            <div class="content1">
                 <h1>A CONSTRUÇÃO DA ESCOLA</h1>
                 <p>
                     Foi feita uma licitação para renovação da escola, que ficou parada, pois a empresa
@@ -208,7 +253,7 @@
             </div>
         </section>
         <section>
-            <div class="content">
+            <div class="content1">
                 <h1>A PRIMEIRA EQUIPE</h1>
                 <p>
                     A diretora Glória conta que nunca havia sido gestora e que nem mesmo almejava o cargo,
@@ -233,7 +278,7 @@
             </div>
         </section>
         <section>
-            <div class="content">
+            <div class="content1">
                 <h1>PRIMEIRAS TURMAS E O PROJETO DIRETOR DE TURMA</h1>
                 <p>
                     No início, grande foi a dificuldade das primeiras turmas, pois, segundo a diretora Glória,
@@ -252,7 +297,7 @@
             <div class="image">
                 <img src="./Css/images/cda.jpg" alt="">
             </div>
-            <div class="content">
+            <div class="content1">
                 <h1>CURIOSIDADE: UM MORADOR NA ESCOLA</h1>
                 <p>
                     Sabendo das reformas da escola e avaliando o espaço físico, a primeira equipe descobriu a
@@ -266,7 +311,7 @@
             </div>
         </section>
         <section>
-            <div class="content">
+            <div class="content1">
                 <h1>CONQUISTAS E VITÓRIAS</h1>
                 <p>
                     Com as obras e todo o esforço dos profissionais, a EEEP José de Barcelos obteve
@@ -282,7 +327,7 @@
             </div>
         </section>
         <section>
-            <div class="content">
+            <div class="content1">
                 <h1>UM LEGADO</h1>
                 <p>
                     “Todos os alunos passaram pelas mesmas dificuldades, as mesmas aulas, o
@@ -296,28 +341,25 @@
                 </p>
             </div>
         </section>
+    
+    
+    
 
-        <!------------------------------------- LINKS MENU RESPONSIVO ------------------------------------>
-        <nav class="responsive-nav" id="responsive-nav">
-            <a href="../index.html">INÍCIO</a>
-            <a href="../Origem/index.html">ORIGEM</a>
-            <a href="../Edital/index.html">REGIMENTO ESCOLAR</a>
-            <a href="../NossaEscola/index.html">NOSSA ESCOLA</a>
-            <a href="../MultiMeios/index.html">MULTIMEIOS</a>
-            <a href="../Criadores/index.html">CRIADORES</a>
-            <a href="../Cursos/index.html">CURSOS TÉCNICOS</a>
-            <a href="#">Acesso</a>
-          </nav>
-    </div>
-    </div>
 
-    <!------------------------------------- BUTÕES REDES SOCIAIS ------------------------------------>
+
+
+
+
+
+
+      
+  <!------------------------------------- BUTÕES REDES SOCIAIS ------------------------------------>
   <div class="social-buttons">
     <a href="https://wa.me/+558591919730" target="_blank" class="whatsapp-button">
-        <img src="./Css/images/whatsapp.png" alt="WhatsApp">
+        <img src="./Css/whatsapp.png" alt="WhatsApp">
     </a>
     <a href="https://www.instagram.com/eeep_jb/" target="_blank" class="instagram-button">
-        <img src="./Css/images/instagram.png" alt="Instagram">
+        <img src="./Css/instagram.png" alt="Instagram">
     </a>
 </div>
 <script>
@@ -341,7 +383,7 @@ function updateButtonPosition() {
       }
   } else {
       // Caso contrário, mantenha o comportamento anterior
-      if (scrollPercentage >= 65) {
+      if (scrollPercentage >= 85) {
           socialButtons.style.bottom = "100px"; // Ou qualquer outro valor desejado
       } else {
           socialButtons.style.bottom = "60px"; // VALOR PADRÃO É 20PX, MUDE DE ACORDO COM A PÁGINA. 
@@ -358,45 +400,44 @@ window.addEventListener("resize", updateButtonPosition);
 updateButtonPosition();
 
 
-</script>
-    </main>
 
+</script>
+    <!------------------------------------- LINKS MENU RESPONSIVO ------------------------------------>
+    <nav class="responsive-nav" id="responsive-nav">
+      <a href="../index.html">INÍCIO</a>
+      <a href="../Origem/index.html">ORIGEM</a>
+      <a href="../Edital/index.html">REGIMENTO ESCOLAR</a>
+      <a href="../NossaEscola/index.html">NOSSA ESCOLA</a>
+      <a href="../MultiMeios/index.html">MULTIMEIOS</a>
+      <a href="../Criadores/index.html">CRIADORES</a>
+      <a href="../Cursos/index.html">CURSOS TÉCNICOS</a>
+      <a href="#">ACESSO</a>
+    </nav>
+    </div>
+  </main>
+    <!--------------------------------------- FOOTER ----------------------------------->
     <footer>
-        <div class="div_foot" id="endereco">
-            <div class="flex_container">
-                <div class="barramarelo"></div>
-                <h1 class="titulo_endereco">Endereço</h1>
-            </div>
-            <p>Rua Angélica Gurgel, 362, Fortaleza - CE</p>
-            <p>Horário: Segunda - Sexta: 7h20 - 16h40</p>
+      <div class="div_foot" id="endereco">
+        <div class="flex_container">
+          <div class="barramarelo"></div>
+          <h1 class="titulo_endereco">Endereço</h1>
         </div>
-        <div class="div_foot" id="sobre">
-            <div class="flex_container">
-                <div class="barramarelo"></div>
-                <h1 class="titulo_sobre">Sobre</h1>
-            </div>
+        <p>Rua Angélica Gurgel, 362, Fortaleza - CE</p>
+        <p>Horário: Segunda - Sexta: 7h20 - 16h40</p>
+      </div>
+      <div class="div_foot" id="sobre">
+        <div class="flex_container">
+          <div class="barramarelo"></div>
+          <h1 class="titulo_sobre">Sobre</h1>
+        </div>
 
-            <p><a href="../Criadores/criadores.html">© 2021 - 2023 - Turma Técnico em Informática</a></p>
-            <p>Desenvolvimento e Design</p>
-        </div>
+        <p><a href="./Criadores/criadores.html">© 2021 - 2023 - Turma Técnico em Informática</a></p>
+        <p>Desenvolvimento e Design</p>
+      </div>
+
+  
     </footer>
-</body>
-
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-<script>
-    let imgSlider = new Swiper(".img-slider", {
-        slidesPerView: 1,
-        loop: true,
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-            dynamicBullets: true,
-        },
-        autoplay: {
-            delay: 3000,
-        },
-    });
+  </body>
+  
 </script>
-
 </html>

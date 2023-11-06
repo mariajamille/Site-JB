@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" href="./Css/estilo.css?v=1" />
+    <link rel="stylesheet" type="text/css" href="./Css/estilo.css" />
 
     <link rel="icon" type="imagem/png" href="./Css/JB.png" />
     <title>EEEP José de Barcelos</title>
@@ -87,7 +87,6 @@
               <iframe src="https://drive.google.com/file/d/1PaIPwSGIG56yssVOuIj8OoSjqyKamTTH/preview" class="regimento"></iframe>
            </div>
           </div>
-        </div>
     
     
     
@@ -130,10 +129,10 @@ function updateButtonPosition() {
       }
   } else {
       // Caso contrário, mantenha o comportamento anterior
-      if (scrollPercentage >= 65) {
+      if (scrollPercentage >= 30) {
           socialButtons.style.bottom = "100px"; // Ou qualquer outro valor desejado
       } else {
-          socialButtons.style.bottom = "100px"; // VALOR PADRÃO É 20PX, MUDE DE ACORDO COM A PÁGINA. 
+          socialButtons.style.bottom = "50px"; // VALOR PADRÃO É 20PX, MUDE DE ACORDO COM A PÁGINA. 
       }
   }
   

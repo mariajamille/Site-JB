@@ -273,42 +273,6 @@ button[name="drop"] {
   }
 
 }
-@media (max-width: 560px) {
-  .responsive-nav{
-      margin-top: 33%;
-      height: 95%;
-  }
-}
-@media (max-width: 530px) {
-  .responsive-nav{
-      margin-top: 35%;
-  }
-}
-@media (max-width: 500px) {
-  .responsive-nav{
-      margin-top: 39%;
-  }
-}
-@media (max-width: 450px) {
-  .responsive-nav{
-      margin-top: 42%;
-  }
-}
-@media (max-width: 400px) {
-  .responsive-nav{
-      margin-top: 45%;
-  }
-}
-@media (max-width: 370px) {
-  .responsive-nav{
-      margin-top: 50%;
-  }
-}
-@media (max-width: 340px) {
-  .responsive-nav{
-      margin-top: 55%;
-  }
-}
 
 /*--------------------------------------------- CONTENT PADRÃO DO SITE (NÃO ALTERAR!) -----------------------------------------*/
 /*
@@ -336,7 +300,6 @@ a classe content deve ser posta entre as divs do header e footer, sendo customiz
 /*
   --------------------------------------------- CONTENT (ADICIONE AQUI O CONTEÚDO DA PAGINA) ----------------------------------------------
 */
-
 
 .container{
   display: flex;
@@ -384,7 +347,7 @@ a classe content deve ser posta entre as divs do header e footer, sendo customiz
   text-align: center;
   margin-left: 0;
   position: relative;
-  margin-right: 10%;
+  margin-right: 0%;
 }
 a#pagina{
   border-bottom: 5px solid #006400;
@@ -392,6 +355,8 @@ a#pagina{
   background-color: #00511C;
   color: #fff;
 }
+
+
 
 
 

@@ -341,9 +341,8 @@ section{
 .image{
   display: flex;
   flex-direction: column;
-  width: 15%;
+  width: 17%;
   height: auto;
-
   font-family: 'open-sans';
   font-weight: 700;
 }
@@ -362,12 +361,14 @@ section{
 
 .content1 {
   width: 50%;
+  font-size: 20px;
 }
 .content1 h1{
   color: #00511c;
 }
 .content1 p{
   color: #175924;
+  font-size: 1.4rem;
 }
 
 @media screen and (max-width:800px) {

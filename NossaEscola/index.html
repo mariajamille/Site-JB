@@ -166,12 +166,47 @@ updateButtonPosition();
       <div class="div_foot" id="sobre">
         <div class="flex_container">
           <div class="barramarelo"></div>
-          <h1 class="titulo_sobre">Sobre</h1>
+          <h1 class="titulo_sobre" id="R1">Sobre</h1>
         </div>
 
-        <p><a href="./Criadores/criadores.html">© 2021 - 2023 - Turma Técnico em Informática</a></p>
-        <p>Desenvolvimento e Design</p>
+        <p id="R2"><a href="./Criadores/criadores.html">© 2021 - 2023 - Turma Técnico em Informática</a></p>
+        <p id="R3">Desenvolvimento e Design</p>
       </div>
+      <script>
+        if (window.innerWidth <= 560) { // Verifique se a largura da tela é menor ou igual a 800 pixels
+      document.getElementById('R1').textContent = 'Contato';
+    }
+
+        if (window.innerWidth <= 560) {
+            // Altere o texto
+            document.getElementById('R2').textContent = 'Whatsapp';
+            
+            // Adicione um link (href)
+            var link = document.createElement('a');
+            link.href = 'https://wa.me/+558591919730'; // URL desejada
+            link.textContent = '(85) 9 9191-9730';
+        
+            // Substitua o conteúdo anterior pelo link
+            document.getElementById('R2').innerHTML = '';
+            document.getElementById('R2').appendChild(link);
+            
+        }
+
+        if (window.innerWidth <= 560) { 
+            // Altere o texto
+            document.getElementById('R3').textContent = 'Instagram';
+            
+            // Adicione um link (href)
+            var link = document.createElement('a');
+            link.href = 'https://www.instagram.com/eeep_jb/'; // URL desejada
+            link.textContent = '@eeep_jb';
+            
+            // Substitua o conteúdo anterior pelo link
+            document.getElementById('R3').innerHTML = '';
+            document.getElementById('R3').appendChild(link);
+            document.getElementById('invisivel1').style.display = 'block';
+        }
+      </script>
     </footer>
   </body>
 </html>

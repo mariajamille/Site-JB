@@ -7,8 +7,7 @@
 
     <link rel="icon" type="imagem/png" href="./Css/JB.png" />
     <title>EEEP José de Barcelos</title>
-
-    <!-------------------------------------- CONFIGURAÇÃO MENU RESPONSIVO (HAMBURGUER) ------------------------------------>
+   <!-------------------------------------- CONFIGURAÇÃO MENU RESPONSIVO (HAMBURGUER) ------------------------------------>
     <script>
        var elAtual = 0;
        var el;
@@ -30,30 +29,6 @@
           .classList.toggle("rotate-2");
       };
 
-      window.onload = () => {
-        document.getElementById("banners").onclick = mudarImg;
-      };
-
-      function mudarImg(e) {
-        wid = e.target.clientWidth;
-        x = e.pageX;
-        y = e.pageY;
-
-        if(x <= wid/4){
-          console.log("ESQUERDA")
-          if(elAtual != 0){
-            document.getElementsByClassName("banner")[elAtual--].style.display="none";
-            document.getElementsByClassName("banner")[elAtual].style.display="block";
-          }
-        }
-        if(x >= wid-wid/4){
-          console.log("DIREITA")
-          if(elAtual != document.getElementsByClassName("banner").length-1){
-            document.getElementsByClassName("banner")[elAtual++].style.display="none";
-            document.getElementsByClassName("banner")[elAtual].style.display="block";
-          }
-        }
-      }
     </script>
   </head>
 
@@ -67,21 +42,21 @@
     <div id="complemento"></div>
     <div id="navegacao">
       <nav id="nav">
-        <a href="./index.html" class="button" id="pagina">INÍCIO</a>
+        <a href="../index.html" class="button">INÍCIO</a>
           <div class="menu-drop">
             <button type="button" name="drop" id="drop" class="button">
               INSTITUCIONAL
               <p class="seta">&#x25BC;</p>
             </button>
             <div class="drop-content">
-              <a href="./Origem/index.html">Origem</a>
-              <a href="./Edital/index.html">Regimento Escolar</a>
-              <a href="./NossaEscola/index.html">Nossa Escola</a>
-              <a href="./MultiMeios/index.html">MultiMeios</a>
+              <a href="../Origem/index.html">Origem</a>
+              <a href="../Edital/index.html" id="pagina">Regimento Escolar</a>
+              <a href="../NossaEscola/index.html">Nossa Escola</a>
+              <a href="../MultiMeios/index.html">MultiMeios</a>
             </div>
           </div>
-          <a href="./NossaEquipe/index.html" class="button">NOSSA EQUIPE</a>
-          <a href="./Criadores/index.html" class="button">CRIADORES</a>
+          <a href="../NossaEquipe/index.html" class="button">NOSSA EQUIPE</a>
+          <a href="../Criadores/index.html" class="button">CRIADORES</a>
       </nav>
       <!------------------------------------- MENU RESPONSIVO ------------------------------------>
       <div onClick="showNav()" class="show-nav">
@@ -93,51 +68,38 @@
 
     <!------------------------------------- CONTENT ------------------------------------>
     <div class="content">
-      <div id="banners" class="banner-local" style="--proporcao: 10/1.8">
-        <div class="banner" id="banner1" style="--proporcao: 10/1.8 "></div>
-        <div class="banner" id="banner2" style="--proporcao: 10/1.8; display:none"></div>
-        <div class="banner" id="banner3" style="--proporcao: 10/1.8; display:none"></div>
-        <div class="banner" id="banner4" style="--proporcao: 10/1.8; display:none"></div>
-        <div class="banner" id="banner5" style="--proporcao: 10/1.8; display:none"></div>
-      </div>
-      <div class="cards">
-        <a href="./Edital/index.html" id="a"><div class="card">
-          <div class="icon-card" id="icon-editais"></div>
-          <div class="barra-amarela-card"></div>
-          <p class="texto-card">EDITAIS</p>
-        </div></a>
-        <a href="./Cursos/index.html" id="a"><div class="card">
-          <div class="icon-card" id="icon-cursos"></div>
-          <div class="barra-amarela-card"></div>
-          <p class="texto-card">CURSOS TÉCNICOS</p>
-        </div></a>
-        <a href="./NossaEscola/index.html" id="a"><div class="card">
-          <div class="icon-card" id="icon-escola"></div>
-          <div class="barra-amarela-card"></div>
-          <p class="texto-card">NOSSA ESCOLA</p>
-        </div></a>
-        <a href="#" id="a"><div class="card">
-          <div class="icon-card" id="icon-notificacoes"></div>
-          <div class="barra-amarela-card"></div>
-          <p class="texto-card" id="texto-notificacoes">ACESSO</p>
-        </div></a>
-      </div>
+      <div class="container">
+        <div class="pdf">
+        <h1>Processo Seletivo 2023 - <br>
+          Ingressos de alunos novatos <br>
+          para o 1° ano do Ensino Médio:
+          </h1>
+        
+          <iframe src="https://drive.google.com/file/d/1fKuI9hp-XOFp7UwLs6zq0cYrYFD0DPkh/preview" class="edital"></iframe>
+        </div> 
+            
+           <div class="pdf">
+            <h1>Regimento escolar 2023 - <br>
+              Ingressos de alunos novatos <br>
+              para o 1° ano do Ensino Médio:
+            </h1>
+           
+              <iframe src="https://drive.google.com/file/d/1PaIPwSGIG56yssVOuIj8OoSjqyKamTTH/preview" class="regimento"></iframe>
+           </div>
+          </div>
+    
+    
+    
+
+
+
+
+
+
+
+
       
-      <!------------------------------------- LINKS MENU RESPONSIVO ------------------------------------>
-      <nav class="responsive-nav" id="responsive-nav">
-        <a href="./index.html">INÍCIO</a>
-    <a href="./Origem/index.html">ORIGEM</a>
-    <a href="./Edital/index.html">REGIMENTO ESCOLAR</a>
-    <a href="./NossaEscola/index.html">NOSSA ESCOLA</a>
-    <a href="./MultiMeios/index.html">MULTIMEIOS</a>
-    <a href="./Criadores/index.html">CRIADORES</a>
-    <a href="./Cursos/index.html">CURSOS TÉCNICOS</a>
-    <a href="#">ACESSO</a>
-      </nav>
-    </div>
-
-
-    <!------------------------------------- BUTÕES REDES SOCIAIS ------------------------------------>
+  <!------------------------------------- BUTÕES REDES SOCIAIS ------------------------------------>
   <div class="social-buttons">
     <a href="https://wa.me/+558591919730" target="_blank" class="whatsapp-button">
         <img src="./Css/whatsapp.png" alt="WhatsApp">
@@ -167,10 +129,10 @@ function updateButtonPosition() {
       }
   } else {
       // Caso contrário, mantenha o comportamento anterior
-      if (scrollPercentage >= 65) {
+      if (scrollPercentage >= 30) {
           socialButtons.style.bottom = "100px"; // Ou qualquer outro valor desejado
       } else {
-          socialButtons.style.bottom = "100px"; // VALOR PADRÃO É 20PX, MUDE DE ACORDO COM A PÁGINA. 
+          socialButtons.style.bottom = "50px"; // VALOR PADRÃO É 20PX, MUDE DE ACORDO COM A PÁGINA. 
       }
   }
   
@@ -185,6 +147,19 @@ updateButtonPosition();
 
 
 </script>
+    <!------------------------------------- LINKS MENU RESPONSIVO ------------------------------------>
+      <nav class="responsive-nav" id="responsive-nav">
+        <a href="../index.html">INÍCIO</a>
+    <a href="../Origem/index.html">ORIGEM</a>
+    <a href="../Edital/index.html">REGIMENTO ESCOLAR</a>
+    <a href="../NossaEscola/index.html">NOSSA ESCOLA</a>
+    <a href="../MultiMeios/index.html">MULTIMEIOS</a>
+    <a href="../Criadores/index.html">CRIADORES</a>
+    <a href="../Cursos/index.html">CURSOS TÉCNICOS</a>
+    <a href="#">ACESSO</a>
+      </nav>
+    </div>
+
     <!--------------------------------------- FOOTER ----------------------------------->
     <footer>
       <div class="div_foot" id="endereco">

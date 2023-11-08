@@ -345,11 +345,13 @@ a classe content deve ser posta entre as divs do header e footer, sendo customiz
   margin-left: 0;
   position: relative;
   margin-right: 0%;
+  margin-bottom: 5%;
 }
 @media (max-width: 435px) {
   .pdf{
     margin-left: 10%;
     margin-right: 10%;
+    margin-bottom: 10%;
   }
 }
 a#pagina{

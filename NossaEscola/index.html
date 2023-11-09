@@ -4,20 +4,23 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="./Css/estilo.css" />
-
+    <link href="../fontawesome/css/all.css" rel="stylesheet">
     <link rel="icon" type="imagem/png" href="./Css/JB.png" />
     <title>EEEP José de Barcelos</title>
    <!-------------------------------------- CONFIGURAÇÃO MENU RESPONSIVO (HAMBURGUER) ------------------------------------>
     <script>
        var elAtual = 0;
-       var el;
-      var showNav = () => {
-        
+        var el;
+        var windowWidth = window.innerWidth;
+
+        var showNav = () => {
+
         document.getElementById("responsive-nav").classList.toggle("ativo");
         document.getElementById("responsive-nav").style.transition = "0.5s";
-        setTimeout(()=>{
+        document.getElementById("qualquer").classList.toggle("ativo1");
+        setTimeout(() => {
           document.getElementById("responsive-nav").style.transition = "";
-        },500)
+        }, 500);
         document
           .getElementsByClassName("black-bar")[0]
           .classList.toggle("rotate-0");
@@ -27,7 +30,14 @@
         document
           .getElementsByClassName("black-bar")[2]
           .classList.toggle("rotate-2");
-      };
+        };
+        var showNav1 = () => {
+        document.getElementById("qualquer").classList.toggle("desativado");
+        setTimeout(() => {
+        qualquer.classList.remove('desativado');
+        }, 1000);
+        };
+
 
     </script>
   </head>
@@ -141,17 +151,31 @@ updateButtonPosition();
 
 </script>
     <!------------------------------------- LINKS MENU RESPONSIVO ------------------------------------>
+    <div class="qualquer" id="qualquer" onclick="showNav()"></div>
     <nav class="responsive-nav" id="responsive-nav">
-      <a href="../index.html">INÍCIO</a>
-      <a href="../Origem/index.html">ORIGEM</a>
-      <a href="../Edital/index.html">REGIMENTO ESCOLAR</a>
-      <a href="../NossaEscola/index.html">NOSSA ESCOLA</a>
-      <a href="../MultiMeios/index.html">MULTIMEIOS</a>
-      <a href="../Criadores/index.html">CRIADORES</a>
-      <a href="../Cursos/index.html">CURSOS TÉCNICOS</a>
-      <a href="#">ACESSO</a>
+      <a href="../index.html" ontouchstart="changeIconColor(this)" ontouchend="resetIconColor(this)"><i class="fa-solid fa-house" style="color: #ffffff; margin-right: 10px;"></i>INÍCIO</a>
+    <a href="../Origem/index.html" ontouchstart="changeIconColor(this)" ontouchend="resetIconColor(this)"><i class="fa-solid fa-timeline" style="color: #ffffff; margin-right: 10px;"></i>ORIGEM</a>
+    <a href="../Edital/index.html" ontouchstart="changeIconColor(this)" ontouchend="resetIconColor(this)"><i class="fa-solid fa-file-invoice" style="color: #ffffff; margin-right: 10px;"></i>REGIMENTO ESCOLAR</a>
+    <a href="../NossaEquipe/index.html" ontouchstart="changeIconColor(this)" ontouchend="resetIconColor(this)"><i class="fa-solid fa-people-group" style="color: #ffffff; margin-right: 10PX;"></i>NOSSA EQUIPE</a>
+    <a href="../NossaEscola/index.html" class="responsive" ontouchstart="changeIconColor(this)" ontouchend="resetIconColor(this)"><i class="fa-solid fa-graduation-cap" style="color: #ffffff; margin-right: 10px;"></i>NOSSA ESCOLA</a>
+    <a href="../MultiMeios/index.html" ontouchstart="changeIconColor(this)" ontouchend="resetIconColor(this)"><i class="fa-solid fa-book-open-reader" style="color: #ffffff; margin-right: 10px;"></i>MULTIMEIOS</a>
+    <a href="../Criadores/index.html" ontouchstart="changeIconColor(this)" ontouchend="resetIconColor(this)"><i class="fa-solid fa-users-gear" style="color: #ffffff; margin-right: 10px;"></i>CRIADORES</a>
+    <a href="../Cursos/index.html" ontouchstart="changeIconColor(this)" ontouchend="resetIconColor(this)"><i class="fa-solid fa-brain" style="color: #ffffff; margin-right: 10px;"></i>CURSOS TÉCNICOS</a>
+    <a href="#" ontouchstart="changeIconColor(this)" ontouchend="resetIconColor(this)"><i class="fa-solid fa-right-to-bracket" style="color: #ffffff; margin-right: 10px;"></i>ACESSO</a>
     </nav>
+
     </div>
+    <!------------------------------------- HOVER PARA DISPOSITIVOS MOVEIS ------------------------------------>
+    <script>
+    function changeIconColor(element) {
+    element.querySelector('i').style.color = '#00511C'; // Cor desejada quando o mouse passa sobre o <a>
+    }
+
+    function resetIconColor(element) {
+    element.querySelector('i').style.color = '#ffffff'; // Cor original quando o mouse sai do <a>
+    }
+
+    </script>
 
     <!--------------------------------------- FOOTER ----------------------------------->
     <footer>

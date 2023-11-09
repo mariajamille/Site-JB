@@ -199,76 +199,135 @@ div#cabecalho {
   }
   
   
-   .show-nav{
+  .show-nav {
     display: none;
   }
-  .responsive-nav{
-       transition: .5s;
-       display: flex;
-       flex-direction: column;
-       position: absolute;    
-       inset: 0 0 0 0;
-       background-color: #00511C;
-       z-index: 5;
-       width: 100%;
-       height: 100%;
-       left: -100vw;
-       transition: all 0s;
-     }
-     .responsive-nav a{
-       text-decoration: none;
-       width: 100%;
-       text-indent: 10px;
-       color: #fff;
-       padding-top: 7px;
-       padding-bottom: 7px;
-       font-size: 18px;
-       transition: linear .3s;
-     }
-     .responsive-nav a:hover{
-       color: #00511C;
-       background-color: #D1E2C8;
-     }
-  .responsive-nav a{
+  .responsive{
+    background: linear-gradient(to right, #ffffff 4px, transparent 4px);
+      background-color: #03501e;
+  }
+  .responsive-nav:hover i {
+    color: #e61212; /* Cor desejada ao passar o mouse sobre o ícone */
+  }
+  
+  .responsive-nav {
+    transition: .5s;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    inset: 0 0 0 0;
+    background-color: #003a14;
+    z-index: 5;
+    width: 50%;
+    height: 100%;
+    left: -100vw;
+    transition: all 0s;
+    max-height: 100%; /* Defina a altura máxima desejada para a div */
+    overflow: auto;   /* Isso adicionará uma barra de rolagem quando o conteúdo exceder a altura máxima */
+  }
+  .qualquer {
+    transition: .5s;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    inset: 0 0 0 0;
+    background-color: #00000000;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 1.5s;
+    max-height: 100%; /* Defina a altura máxima desejada para a div */
+    overflow: auto;   /* Isso adicionará uma barra de rolagem quando o conteúdo exceder a altura máxima */
+    scrollbar-width: thin;
+  }
+  .responsive-nav a {
+    text-decoration: none;
+    width: 100%;
+    text-indent: 10px;
+    color: #fff;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    font-size: 18px;
+    transition: linear .3s;
+    margin-bottom: 2px;
+    margin-top: 2px;
+  }
+  .responsive-nav a:hover {
+    color: #00511C;
+    background-color: #D1E2C8;
+  }
+  
+  .responsive-nav a {
     font-family: 'open-sans';
   }
-  .black-bar{
+  
+  .black-bar {
     width: 90%;
     background-color: #002c0f;
     border-radius: 20px;
     height: 5px;
     transition: .4s;
   }
+  
+  
+  
+  /*--------------------------------------------- RESOLUÇÃO MENU RESPONSIVO (NÃO ALTERAR!) -----------------------------------------*/
+  
   @media (max-width: 560px) {
-    .show-nav{
-       display: flex;
-       flex-direction: column;
-       align-items: center;
-       justify-content: space-evenly;
-       width: 35px;
-       height: 35px;
-       margin-left: .9em;
-       margin-bottom: 10px;
-       cursor: pointer;
-     }
-     .rotate-0{
-       rotate: 45deg;
-       translate: 0 7px;
-     }
-     .rotate-1{
-       display: none;
-     }
-     .rotate-2{
-       translate: 0 -7px;
-       rotate: -45deg;
-     }
-     nav#nav{
-       display: none;
-     }
-     .ativo{
-      left: 0;
-     }
+    .show-nav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      width: 35px;
+      height: 35px;
+      margin-left: .9em;
+      margin-bottom: 10px;
+      cursor: pointer;
     }
+  
+    .rotate-0 {
+      rotate: 45deg;
+      translate: 0 7px;
+    }
+  
+    .rotate-1 {
+      display: none;
+    }
+  
+    .rotate-2 {
+      translate: 0 -7px;
+      rotate: -45deg;
+    }
+  
+    nav#nav {
+      display: none;
+    }
+    .ativo1 {
+      opacity: 1;
+      background-color: #00000081;
+      z-index: 2;
+    }
+    .ativo {
+      left: 0;
+    }
+    .desativado{
+      display: none;
+    }
+  }
+  @media (max-width: 485px) {
+    .responsive-nav {
+      width: 65%;
+    }
+  
+  }
+  @media (max-width: 380px) {
+    .responsive-nav {
+      width: 82%;
+    }
+  
+  }
 /*
 
 tutorial content:

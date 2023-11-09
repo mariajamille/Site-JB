@@ -39,11 +39,13 @@
         }, 1000);
         };
 
+        window.onload = () => {
+        document.getElementById("banners").onclick = mudarImg;
+      };
       function mudarImg(e) {
         wid = e.target.clientWidth;
         x = e.pageX;
         y = e.pageY;
-
         if(x <= wid/4){
           console.log("ESQUERDA")
           if(elAtual != 0){

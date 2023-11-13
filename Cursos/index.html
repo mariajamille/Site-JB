@@ -9,7 +9,7 @@
   <link rel="icon" type="imagem/png" href="./Css/JB.png" />
   <title>EEEP José de Barcelos</title>
   <script>
-    var elAtual = 0;
+    var imgAtual = 0;
         var el;
         var windowWidth = window.innerWidth;
 
@@ -55,26 +55,26 @@
     }
 
     var prevImg = (curso) => {
-      els = document.getElementsByClassName("lab-" + curso)
-      if (imgAtual != 0) {
-        document.getElementsByClassName("lab-" + curso)[imgAtual--].style.display = "none";
-        document.getElementsByClassName("lab-" + curso)[imgAtual].style.display = "block";
-      } else {
-        els[imgAtual].style.display = "none";
-        els[imgAtual = els.length - 1].style.display = "block";
-      }
-    }
-    var nextImg = (curso) => {
-      els = document.getElementsByClassName("lab-" + curso);
-      if (imgAtual != els.length - 1) {
-        els[imgAtual++].style.display = "none";
-        els[imgAtual].style.display = "block";
-      }
-      else {
-        els[imgAtual].style.display = "none";
-        els[imgAtual = 0].style.display = "block";
-      }
-    }
+  els = document.getElementsByClassName("lab-" + curso);
+  if (imgAtual != 0) {
+    els[imgAtual--].style.display = "none";
+    els[imgAtual].style.display = "block";
+  } else {
+    els[imgAtual].style.display = "none";
+    els[imgAtual = els.length - 1].style.display = "block";
+  }
+};
+
+var nextImg = (curso) => {
+  els = document.getElementsByClassName("lab-" + curso);
+  if (imgAtual != els.length - 1) {
+    els[imgAtual++].style.display = "none";
+    els[imgAtual].style.display = "block";
+  } else {
+    els[imgAtual].style.display = "none";
+    els[imgAtual = 0].style.display = "block";
+  }
+};
     var closeAll = () => {
 
       els = document.getElementsByClassName("showing");
@@ -303,13 +303,13 @@
             <div class="slider-space left"><a class="slider-btn previous" onclick="prevImg('este')">
                 &lt; </a>
             </div>
-            <img src="./Css/imgs/lab-este1.wwebp" alt="" class="imglab lab-este" id="imglab1">
-            <img src="./Css/imgs/lab-este2.wwebp" alt="" class="imglab lab-este" id="imglab2" style="display:none">
-            <img src="./Css/imgs/lab-este3.wwebp" alt="" class="imglab lab-este" id="imglab3" style="display:none">
-            <img src="./Css/imgs/lab-este4.wwebp" alt="" class="imglab lab-este" id="imglab4" style="display:none">
-            <img src="./Css/imgs/lab-este5.wwebp" alt="" class="imglab lab-este" id="imglab4" style="display:none">
-            <img src="./Css/imgs/lab-este6.wwebp" alt="" class="imglab lab-este" id="imglab4" style="display:none">
-            <img src="./Css/imgs/lab-este7.wwebp" alt="" class="imglab lab-este" id="imglab4" style="display:none">
+            <img src="./Css/imgs/lab-este1.webp" alt="" class="imglab lab-este" id="imglab1">
+            <img src="./Css/imgs/lab-este2.webp" alt="" class="imglab lab-este" id="imglab2" style="display:none">
+            <img src="./Css/imgs/lab-este3.webp" alt="" class="imglab lab-este" id="imglab3" style="display:none">
+            <img src="./Css/imgs/lab-este4.webp" alt="" class="imglab lab-este" id="imglab4" style="display:none">
+            <img src="./Css/imgs/lab-este5.webp" alt="" class="imglab lab-este" id="imglab4" style="display:none">
+            <img src="./Css/imgs/lab-este6.webp" alt="" class="imglab lab-este" id="imglab4" style="display:none">
+            <img src="./Css/imgs/lab-este7.webp" alt="" class="imglab lab-este" id="imglab4" style="display:none">
 
             <div class="slider-space right"><a class="slider-btn next" onclick="nextImg('este')">></a></div>
           </div>

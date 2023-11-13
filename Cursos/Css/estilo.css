@@ -440,7 +440,7 @@ margin-top: 10px;
   /* 1 - 1.5 */
   width: 80%;
   padding-bottom: 53.5%;
-  background: url("./imgs/lei_enfer.png");
+  background: url("./imgs/lei_enfer_banner.webp");
   background-size: contain;
   background-repeat: no-repeat;
   border-radius: 20px;
@@ -448,7 +448,7 @@ margin-top: 10px;
 .curso-img.fin{
   width: 80%;
   padding-bottom: 53.5%;
-  background: url("./imgs/lei_fin.png");
+  background: url("./imgs/lei_fin_banner.webp");
   background-size: contain;
   background-repeat: no-repeat;
   border-radius: 20px;
@@ -456,7 +456,7 @@ margin-top: 10px;
 .curso-img.este{
   width: 80%;
   padding-bottom: 53.5%;
-  background: url("./imgs/lei_este.png");
+  background: url("./imgs/lei_este_banner.webp");
   background-size: contain;
   background-repeat: no-repeat;
   border-radius: 20px;
@@ -464,7 +464,7 @@ margin-top: 10px;
 .curso-img.infor{
   width: 80%;
   padding-bottom: 53.5%;
-  background: url("./imgs/lei-infor.JPG");
+  background: url("./imgs/lei_infor_banner.webp");
   background-size: contain;
   background-repeat: no-repeat;
   border-radius: 20px;
@@ -571,26 +571,26 @@ h4{
   overflow: hidden;
 }
 #button-div-grade-enfer .button-content{
-  background: url("./imgs/grad_img_enfer.png");
+  background: url("./imgs/grad_img_enfer.webp");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center; 
 }
 
 #button-div-grade-infor .button-content{
-  background: url("./imgs/grad_img_infor.png");
+  background: url("./imgs/grad_img_infor.webp");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center; 
 }
 #button-div-grade-este .button-content{
-  background: url("./imgs/grad_img_este.png");
+  background: url("./imgs/grad_img_este.webp");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center; 
 }
 #button-div-grade-fin .button-content{
-  background: url("./imgs/grad_img_fin.png");
+  background: url("./imgs/grad_img_fin.webp");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center; 
@@ -675,7 +675,7 @@ h4{
 }
 
 .prof1-img-enfe{
-  background: url("./imgs/prof_enfer1.png");
+  background: url("./imgs/prof_enfer1.webp");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -683,7 +683,7 @@ h4{
   width: 200px;
 }
 .prof2-img-enfe{
-  background: url("./imgs/IMG_paty-oliveira.png");
+  background: url("./imgs/IMG_paty-oliveira.webp");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -691,7 +691,7 @@ h4{
   width: 200px;
 }
 .prof3-img-enfe{
-  background: url("./imgs/prof_enfer2.png");
+  background: url("./imgs/prof_enfer2.webp");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -699,7 +699,7 @@ h4{
   width: 200px;
 }
 .prof1-img-este{
-  background: url("./imgs/prof_este1.png");
+  background: url("./imgs/prof_este1.webp");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -707,7 +707,7 @@ h4{
   width: 200px;
 }
 .prof2-img-este{
-  background: url("./imgs/prof_este2.png");
+  background: url("./imgs/prof_este2.webp");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -715,7 +715,7 @@ h4{
   width: 200px;
 }
 .prof1-img-fin{
-  background: url("./imgs/prof_fin.png");
+  background: url("./imgs/prof_fin.webp");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -724,7 +724,7 @@ h4{
 }
 
 .prof1-img-infor{
-  background: url("./imgs/prof_infor1.png");
+  background: url("./imgs/prof_infor1.webp");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -732,7 +732,7 @@ h4{
   width: 200px;
 }
 .prof2-img-infor{
-  background: url("./imgs/prof_infor2.png");
+  background: url("./imgs/prof_infor2.webp");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;

@@ -354,9 +354,8 @@ a classe content deve ser posta entre as divs do header e footer, sendo customiz
   background-position: center;
   min-width: 100%;
   padding-bottom: calc(100%/(var(--proporcao)));
-  transition: .5s;
+  transition: opacity 0.5s ease; /* Adicionando uma transição de opacidade */
 }
-
 .banner-local {
   display: flex;
   justify-content: flex-start;
@@ -413,7 +412,70 @@ a classe content deve ser posta entre as divs do header e footer, sendo customiz
 .next:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
+/* Banners responsivo */
+.custom-slide-container {
+  width: 100vw;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  margin-top: 15px;
+}
 
+.custom-slide {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.custom-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.custom-prevBtn,
+.custom-nextBtn {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 10%;
+  background: rgba(0, 0, 0, 0);
+  color: rgba(255, 255, 255, 0);
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+  opacity: 0;
+}
+
+.custom-prevBtn:hover,
+.custom-nextBtn:hover {
+  background: rgba(0, 0, 0, 0);
+}
+
+.custom-prevBtn {
+  left: 0;
+}
+
+.custom-nextBtn {
+  right: 0;
+}
+
+.custom-slide:hover .custom-prevBtn,
+.custom-slide:hover .custom-nextBtn {
+  opacity: 1;
+}
+
+@media(min-width: 560px) {
+  .custom-slide-container{
+display: none;
+}
+}
+@media(max-width: 560px) {
+  .banner-local{
+display: none;
+}
+}
 .cards {
   display: flex;
   flex-direction: row;
@@ -422,7 +484,6 @@ a classe content deve ser posta entre as divs do header e footer, sendo customiz
   margin-top: 15px;
   flex-wrap: wrap;
 }
-
 .card {
   display: flex;
   flex-direction: row;

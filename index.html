@@ -39,6 +39,7 @@
         }, 1000);
         };
 
+        
         window.onload = () => {
         document.getElementById("banners").onclick = mudarImg;
       };
@@ -50,7 +51,7 @@
           console.log("ESQUERDA")
           if(elAtual != 0){
             document.getElementsByClassName("banner")[elAtual--].style.display="none";
-            document.getElementsByClassName("banner")[elAtual].style.display="block";
+            document.getElementsByClassName("banner")[elAtual].style.display="block"; 
           }
         }
         if(x >= wid-wid/4){
@@ -106,6 +107,33 @@
         <div class="banner" id="banner3" style="--proporcao: 10/1.8; display:none"></div>
         <div class="banner" id="banner4" style="--proporcao: 10/1.8; display:none"></div>
         <div class="banner" id="banner5" style="--proporcao: 10/1.8; display:none"></div>
+      </div>
+      <div class="custom-slide-container">
+        <div class="custom-slide" id="slide1">
+          <button class="custom-prevBtn">&#10094;</button>
+          <img src="./Css/img/1.webp" alt="Slide 1">
+          <button class="custom-nextBtn">&#10095;</button>
+        </div>
+        <div class="custom-slide" id="slide2" style="display: none;">
+          <button class="custom-prevBtn">&#10094;</button>
+          <img src="./Css/img/2.webp" alt="Slide 2">
+          <button class="custom-nextBtn">&#10095;</button>
+        </div>
+        <div class="custom-slide" id="slide3" style="display: none;">
+          <button class="custom-prevBtn">&#10094;</button>
+          <img src="./Css/img/3.webp" alt="Slide 3">
+          <button class="custom-nextBtn">&#10095;</button>
+        </div>
+        <div class="custom-slide" id="slide4" style="display: none;">
+          <button class="custom-prevBtn">&#10094;</button>
+          <img src="./Css/img/4.webp" alt="Slide 4">
+          <button class="custom-nextBtn">&#10095;</button>
+        </div>
+        <div class="custom-slide" id="slide5" style="display: none;">
+          <button class="custom-prevBtn">&#10094;</button>
+          <img src="./Css/img/5.webp" alt="Slide 5">
+          <button class="custom-nextBtn">&#10095;</button>
+        </div>
       </div>
       <div class="cards">
         <a href="./Edital/index.html" id="a"><div class="card">
@@ -224,5 +252,36 @@ updateButtonPosition();
         <p>Desenvolvimento e Design</p>
       </div>
     </footer>
+    <script>
+      const customSlides = document.querySelectorAll('.custom-slide');
+      let customSlideIndex = 0;
+    
+      function showCustomSlides(offset) {
+        customSlideIndex = (customSlideIndex + offset + customSlides.length) % customSlides.length;
+    
+        customSlides.forEach((slide, index) => {
+          if (index === customSlideIndex) {
+            slide.style.display = 'block';
+          } else {
+            slide.style.display = 'none';
+          }
+        });
+      }
+    
+      customSlides.forEach((slide, index) => {
+        slide.addEventListener('click', (event) => {
+          const rect = slide.getBoundingClientRect();
+          const clickPosition = event.clientX - rect.left;
+    
+          if (clickPosition < rect.width / 2) {
+            showCustomSlides(-1);
+          } else {
+            showCustomSlides(1);
+          }
+        });
+      });
+    
+      showCustomSlides(0); // Mostra o primeiro slide inicialmente
+    </script>
   </body>
 </html>

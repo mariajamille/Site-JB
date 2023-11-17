@@ -1,7 +1,8 @@
-html{
+html {
   scroll-behavior: smooth;
 }
-body{
+
+body {
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -74,7 +75,7 @@ nav#nav {
 #drop {
   position: relative;
   font-weight: bolder;
-  display:flex;
+  display: flex;
   align-items: center;
   height: 38px;
 }
@@ -133,11 +134,12 @@ img#select {
   margin-top: 22px;
 }
 
- .menu-drop a:hover{
+.menu-drop a:hover {
   background: #085537;
   color: #fff;
- }
- button[name="drop"] {
+}
+
+button[name="drop"] {
   border: none;
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0);
@@ -193,12 +195,15 @@ img#select {
 .show-nav {
   display: none;
 }
-.responsive{
+
+.responsive {
   background: linear-gradient(to right, #ffffff 4px, transparent 4px);
-    background-color: #03501e;
+  background-color: #03501e;
 }
+
 .responsive-nav:hover i {
-  color: #e61212; /* Cor desejada ao passar o mouse sobre o ícone */
+  color: #e61212;
+  /* Cor desejada ao passar o mouse sobre o ícone */
 }
 
 .responsive-nav {
@@ -213,9 +218,12 @@ img#select {
   height: 100%;
   left: -100vw;
   transition: all 0s;
-  max-height: 100%; /* Defina a altura máxima desejada para a div */
-  overflow: auto;   /* Isso adicionará uma barra de rolagem quando o conteúdo exceder a altura máxima */
+  max-height: 100%;
+  /* Defina a altura máxima desejada para a div */
+  overflow: auto;
+  /* Isso adicionará uma barra de rolagem quando o conteúdo exceder a altura máxima */
 }
+
 .qualquer {
   transition: .5s;
   display: flex;
@@ -228,10 +236,13 @@ img#select {
   height: 100%;
   opacity: 0;
   transition: all 1.5s;
-  max-height: 100%; /* Defina a altura máxima desejada para a div */
-  overflow: auto;   /* Isso adicionará uma barra de rolagem quando o conteúdo exceder a altura máxima */
+  max-height: 100%;
+  /* Defina a altura máxima desejada para a div */
+  overflow: auto;
+  /* Isso adicionará uma barra de rolagem quando o conteúdo exceder a altura máxima */
   scrollbar-width: thin;
 }
+
 .responsive-nav a {
   text-decoration: none;
   width: 100%;
@@ -244,6 +255,7 @@ img#select {
   margin-bottom: 2px;
   margin-top: 2px;
 }
+
 .responsive-nav a:hover {
   color: #00511C;
   background-color: #D1E2C8;
@@ -295,24 +307,29 @@ img#select {
   nav#nav {
     display: none;
   }
+
   .ativo1 {
     opacity: 1;
     background-color: #00000081;
     z-index: 2;
   }
+
   .ativo {
     left: 0;
   }
-  .desativado{
+
+  .desativado {
     display: none;
   }
 }
+
 @media (max-width: 485px) {
   .responsive-nav {
     width: 65%;
   }
 
 }
+
 @media (max-width: 380px) {
   .responsive-nav {
     width: 82%;
@@ -330,7 +347,7 @@ a classe content deve ser posta entre as divs do header e footer, sendo customiz
   flex-grow: 1;
 }
 */
-.content{
+.content {
   position: relative;
   flex-grow: 1;
   display: flex;
@@ -339,7 +356,7 @@ a classe content deve ser posta entre as divs do header e footer, sendo customiz
   align-items: center;
 }
 
-.all-cursos{
+.all-cursos {
   position: relative;
   flex-grow: 1;
   display: flex;
@@ -350,9 +367,12 @@ a classe content deve ser posta entre as divs do header e footer, sendo customiz
   margin-right: 25px;
   /* margin-top: 150px; */
 }
-.all-cursos a{text-decoration: none;}
 
-.hero{
+.all-cursos a {
+  text-decoration: none;
+}
+
+.hero {
   padding-top: 20px;
   display: flex;
   justify-content: center;
@@ -362,19 +382,19 @@ a classe content deve ser posta entre as divs do header e footer, sendo customiz
   padding-bottom: 20px;
 }
 
-.cursos{
+.cursos {
   width: 100%;
   gap: 20px;
   display: flex;
-  justify-content: space-around; 
+  justify-content: space-around;
   flex-wrap: wrap;
 }
 
-.tela-curso{
+.tela-curso-enfer{
   margin: 0;
   width: 250px;
   height: 150px;
-  background-color: darkgreen;
+  background-color: #009F78;
   border-radius: 30px;
   display: flex;
   align-items: center;
@@ -382,51 +402,144 @@ a classe content deve ser posta entre as divs do header e footer, sendo customiz
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.66);
   transition: 0.5s;
 }
-.tela-curso:hover{
+.tela-curso-est{
+  margin: 0;
+  width: 250px;
+  height: 150px;
+  background-color: #7C00B6;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.66);
   transition: 0.5s;
-  box-shadow:  -5px 7px 15px 0px rgba(0, 0, 0, 0.65);
 }
-.informatica,.enfermagem,.financas,.estetica{
+.tela-curso-fin{
+  margin: 0;
+  width: 250px;
+  height: 150px;
+  background-color: #00511C;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.66);
+  transition: 0.5s;
+}
+.tela-curso-infor{
+  margin: 0;
+  width: 250px;
+  height: 150px;
+  background-color: #022657;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.66);
+  transition: 0.5s;
+}
+
+.tela-curso:hover {
+  transition: 0.5s;
+  box-shadow: -5px 7px 15px 0px rgba(0, 0, 0, 0.65);
+}
+
+.informatica,
+.enfermagem,
+.financas,
+.estetica {
   margin-top: 4%;
   margin-left: 5%;
   margin-right: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 
-.informatica,.enfermagem,.estetica,.financas,  strong.titu{
-color: #FFBD00;
-text-align: center;
-font-size: 1.5rem;
+.informatica,
+.enfermagem,
+.estetica,
+.financas,
+strong.titu-enfer {
+  color: #009F78;
+  text-align: center;
+  font-size: 1.5rem;
 }
-hr{
-width: 60px;
-border-color: #FFBD00; 
-border: 0.5px solid #FFBD00;
+.informatica,
+.enfermagem,
+.estetica,
+.financas,
+strong.titu-est {
+  color: #7C00B6;
+  text-align: center;
+  font-size: 1.5rem;
 }
-.text{
-margin-top: 10px;
+.informatica,
+.enfermagem,
+.estetica,
+.financas,
+strong.titu-fin {
+  color: #00511C;
+  text-align: center;
+  font-size: 1.5rem;
+}
+.informatica,
+.enfermagem,
+.estetica,
+.financas,
+strong.titu-infor {
+  color: #022657;
+  text-align: center;
+  font-size: 1.5rem;
 }
 
-.logos{
+.hr-enfer {
+  width: 60px;
+  /* border-color: #FFBD00; */
+  border: 0.5px solid #009F78;
+}
+.hr-est {
+  width: 60px;
+  /* border-color: #FFBD00; */
+  border: 0.5px solid #7C00B6;
+}
+.hr-fin {
+  width: 60px;
+  /* border-color: #FFBD00; */
+  border: 0.5px solid #00511C;
+}
+.hr-infor {
+  width: 60px;
+  /* border-color: #FFBD00; */
+  border: 0.5px solid #022657;
+}
+
+.text {
+  margin-top: 10px;
+}
+
+.logos {
   width: 110px;
   margin-top: 25px;
   filter: brightness(0) invert(1);
 }
 
 
-.curso-div{
+.curso-div {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  
+
   flex-wrap: wrap;
   width: 95%;
   min-height: 70vh;
   margin-top: 10px;
   font-family: Arial, Helvetica, sans-serif;
   border-bottom: 2px solid #002c0f;
-  }
-.curso-left{
+}
+
+.curso-left {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -436,7 +549,8 @@ margin-top: 10px;
   min-width: 350px;
 
 }
-.curso-img.enfer{
+
+.curso-img.enfer {
   /* 1 - 1.5 */
   width: 80%;
   padding-bottom: 53.5%;
@@ -445,7 +559,8 @@ margin-top: 10px;
   background-repeat: no-repeat;
   border-radius: 20px;
 }
-.curso-img.fin{
+
+.curso-img.fin {
   width: 80%;
   padding-bottom: 53.5%;
   background: url("./imgs/lei_fin_banner.webp");
@@ -453,7 +568,8 @@ margin-top: 10px;
   background-repeat: no-repeat;
   border-radius: 20px;
 }
-.curso-img.este{
+
+.curso-img.este {
   width: 80%;
   padding-bottom: 53.5%;
   background: url("./imgs/lei_este_banner.webp");
@@ -461,7 +577,8 @@ margin-top: 10px;
   background-repeat: no-repeat;
   border-radius: 20px;
 }
-.curso-img.infor{
+
+.curso-img.infor {
   width: 80%;
   padding-bottom: 53.5%;
   background: url("./imgs/lei_infor_banner.webp");
@@ -469,14 +586,16 @@ margin-top: 10px;
   background-repeat: no-repeat;
   border-radius: 20px;
 }
-.curso-right{
+
+.curso-right {
   display: flex;
   flex-direction: column;
   justify-content: center;
 
   width: 45%;
 }
-.titulo-curso{
+
+.titulo-curso {
   width: 100%;
   text-align: center;
   padding-top: 10px;
@@ -485,13 +604,15 @@ margin-top: 10px;
   font-weight: 500;
   color: #00511C;
 }
-.texto-right{
-  color: #00511C; 
+
+.texto-right {
+  color: #00511C;
   text-indent: 20px;
   font-size: 25px;
   margin: 30px;
 }
-.botoes{
+
+.botoes {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
@@ -501,8 +622,8 @@ margin-top: 10px;
   gap: 15px;
   font-weight: 600;
 }
- 
-.button-div{
+
+.button-div {
   cursor: pointer;
   color: white;
   background-color: #085537;
@@ -515,31 +636,37 @@ margin-top: 10px;
   max-width: 900px;
 
 }
-.button-div:hover{
+
+.button-div:hover {
   background-color: #002c0f;
 }
-.black-curtain{
+
+.black-curtain {
   display: none;
   position: fixed;
   inset: 0 0 0 0;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 900;
 }
-h4{
+
+h4 {
   color: rgb(197, 184, 0);
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
 }
-.showing{
+
+.showing {
   display: block;
   transform: all 0s;
 
 }
-.button-content{
+
+.button-content {
   display: none;
 
 }
-.button-div.showing{
+
+.button-div.showing {
   cursor: auto;
   position: fixed;
   z-index: 901;
@@ -547,18 +674,19 @@ h4{
   width: 90%;
   height: auto;
   padding-bottom: 20px;
- font-size: larger;
- background-color: transparent;
+  font-size: larger;
+  background-color: transparent;
 }
-.button-div-aulas.showing{
+
+.button-div-aulas.showing {
   max-width: 800px;
   padding-left: 30px;
   padding-right: 30px;
- 
-  
+
+
 }
 
-.showing.button-div-aulas .button-content{
+.showing.button-div-aulas .button-content {
   display: block;
   height: 100px;
   width: 100%;
@@ -567,35 +695,39 @@ h4{
   margin-top: 10px;
 }
 
-.showing.button-div-aulas .button-content{
+.showing.button-div-aulas .button-content {
   overflow: hidden;
 }
-#button-div-grade-enfer .button-content{
+
+#button-div-grade-enfer .button-content {
   background: url("./imgs/grad_img_enfer.webp");
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: center; 
+  background-position: center;
 }
 
-#button-div-grade-infor .button-content{
+#button-div-grade-infor .button-content {
   background: url("./imgs/grad_img_infor.webp");
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: center; 
+  background-position: center;
 }
-#button-div-grade-este .button-content{
+
+#button-div-grade-este .button-content {
   background: url("./imgs/grad_img_este.webp");
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: center; 
+  background-position: center;
 }
-#button-div-grade-fin .button-content{
+
+#button-div-grade-fin .button-content {
   background: url("./imgs/grad_img_fin.webp");
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: center; 
+  background-position: center;
 }
-.showing .professores{
+
+.showing .professores {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -605,11 +737,12 @@ h4{
   overflow: auto;
   max-height: 90vh;
 }
-.showing .professor:last-child{
+
+.showing .professor:last-child {
   margin-bottom: 90px;
 }
 
-.professor{
+.professor {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -617,16 +750,18 @@ h4{
   flex-wrap: wrap;
   height: auto;
   min-width: 100px;
-  width:100%;
+  width: 100%;
   background-color: #002c0f;
   border-radius: 20px;
   margin-top: 20px;
 }
-.imglab{
+
+.imglab {
   width: 100%;
 
 }
-.slider-btn{
+
+.slider-btn {
   cursor: pointer;
   width: auto;
   color: rgb(0, 0, 0);
@@ -637,36 +772,41 @@ h4{
   justify-content: center;
   font-weight: bold;
   font-size: 28px;
-  transition:  0.6s ease;
+  transition: 0.6s ease;
   user-select: none;
   background-color: rgba(255, 255, 255, 0.5);
 }
- .slider-space{
+
+.slider-space {
   position: absolute;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   top: 0%;
- }
- .slider-space.left{
+}
+
+.slider-space.left {
   left: 5px;
- }
- .slider-space.right{
+}
+
+.slider-space.right {
   right: 5px;
- }
+}
+
 /* setting the position of the previous button towards left */
 .previous {
-  border-top-left-radius: 10px ;
+  border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
 }
- /* setting the position of the next button towards right */
+
+/* setting the position of the next button towards right */
 .next {
-  
-  border-top-right-radius: 10px ;
+
+  border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
- 
+
 /* On hover, adding a background color */
 .previous:hover,
 .next:hover {
@@ -674,7 +814,7 @@ h4{
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-.prof1-img-enfe{
+.prof1-img-enfe {
   background: url("./imgs/prof_enfer1.webp");
   background-size: contain;
   background-position: center;
@@ -682,7 +822,8 @@ h4{
   height: 200px;
   width: 200px;
 }
-.prof2-img-enfe{
+
+.prof2-img-enfe {
   background: url("./imgs/IMG_paty-oliveira.webp");
   background-size: contain;
   background-position: center;
@@ -690,7 +831,8 @@ h4{
   height: 200px;
   width: 200px;
 }
-.prof3-img-enfe{
+
+.prof3-img-enfe {
   background: url("./imgs/prof_enfer2.webp");
   background-size: contain;
   background-position: center;
@@ -698,7 +840,8 @@ h4{
   height: 200px;
   width: 200px;
 }
-.prof1-img-este{
+
+.prof1-img-este {
   background: url("./imgs/prof_este1.webp");
   background-size: contain;
   background-position: center;
@@ -706,7 +849,8 @@ h4{
   height: 200px;
   width: 200px;
 }
-.prof2-img-este{
+
+.prof2-img-este {
   background: url("./imgs/prof_este2.webp");
   background-size: contain;
   background-position: center;
@@ -714,7 +858,8 @@ h4{
   height: 200px;
   width: 200px;
 }
-.prof1-img-fin{
+
+.prof1-img-fin {
   background: url("./imgs/prof_fin.webp");
   background-size: contain;
   background-position: center;
@@ -723,7 +868,7 @@ h4{
   width: 200px;
 }
 
-.prof1-img-infor{
+.prof1-img-infor {
   background: url("./imgs/prof_infor1.webp");
   background-size: contain;
   background-position: center;
@@ -731,7 +876,8 @@ h4{
   height: 200px;
   width: 200px;
 }
-.prof2-img-infor{
+
+.prof2-img-infor {
   background: url("./imgs/prof_infor2.webp");
   background-size: contain;
   background-position: center;
@@ -739,12 +885,15 @@ h4{
   height: 200px;
   width: 200px;
 }
-@media (max-width: 1000px){
-  .curso-div{
+
+@media (max-width: 1000px) {
+  .curso-div {
     flex-direction: column;
     width: 98%;
   }
-  .curso-left,.curso-right{
+
+  .curso-left,
+  .curso-right {
     width: 100%;
   }
 }
@@ -759,7 +908,8 @@ h4{
   position: fixed;
   bottom: 100px;
   right: 20px;
-  transition: bottom 0.3s; /* Adicione a regra de transição aqui */
+  transition: bottom 0.3s;
+  /* Adicione a regra de transição aqui */
 }
 
 .social-buttons a {
@@ -768,7 +918,8 @@ h4{
   height: 50px;
   border-radius: 50%;
   margin: 10px;
-  background-color: #00511c; /* Cor do WhatsApp */
+  background-color: #00511c;
+  /* Cor do WhatsApp */
   text-align: center;
   line-height: 50px;
   font-size: 24px;
@@ -776,33 +927,38 @@ h4{
   text-decoration: none;
   transition: background-color 0.3s;
 }
-.social-buttons img{
+
+.social-buttons img {
   width: 35px;
   justify-content: center;
   margin-top: 7px;
 }
 
 .social-buttons a.instagram-button {
-  background-color: #00511c; /* Cor do Instagram */
+  background-color: #00511c;
+  /* Cor do Instagram */
 }
 
 .social-buttons a:hover {
-  background-color: #128C7E; /* Cor de destaque ao passar o mouse */
+  background-color: #128C7E;
+  /* Cor de destaque ao passar o mouse */
 }
+
 /*--------------------------------------------- RESOLUÇÃO BUTÕES REDES SOCIAIS (NÃO ALTERAR!) -----------------------------------------*/
 @media (min-height: 821px) {
-  .social-buttons{
+  .social-buttons {
     display: none;
   }
-  }
+}
+
 @media (max-width: 790px) {
-  .social-buttons{
+  .social-buttons {
     display: none;
   }
 }
 
 /* -----------------------------------FOOTER---------------------------------------*/
-footer{
+footer {
   position: relative;
   background: #00511C;
   display: flex;
@@ -813,11 +969,14 @@ footer{
   padding-bottom: 13px;
   z-index: 6;
 }
-.div_foot{
+
+.div_foot {
   margin-left: 30px;
   margin-right: 30px;
 }
-.div_foot .titulo_endereco, .div_foot .titulo_sobre{
+
+.div_foot .titulo_endereco,
+.div_foot .titulo_sobre {
   font-family: 'Bebas Neue';
   letter-spacing: 3px;
   margin-right: 5px;
@@ -825,44 +984,53 @@ footer{
   font-weight: 900;
   height: 20px;
 }
-.flex_container{
+
+.flex_container {
   display: flex;
   align-items: center;
   flex-direction: row;
   max-height: 40px;
 }
-.flex_container h1{
+
+.flex_container h1 {
   text-align: center;
   margin-top: 7px;
   height: 50px;
 }
-.div_foot{
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-weight:lighter;
+
+.div_foot {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: lighter;
 }
-.barramarelo{
+
+.barramarelo {
   height: 25px;
   width: 5px;
   background: #FFBD00;
   margin-right: 15px;
   border-radius: 10px;
 }
-footer p{
+
+footer p {
   margin: 0;
   margin-top: 3px;
   font-size: 10px;
 }
-footer a{
+
+footer a {
   color: white;
   text-decoration: none;
 }
-footer a:visited{
+
+footer a:visited {
   color: white;
   text-decoration: none;
 }
-#sobre{
+
+#sobre {
   margin-top: 6px;
 }
-#endereco{
+
+#endereco {
   margin-top: 6px;
 }

@@ -39,29 +39,53 @@
         }, 1000);
         };
 
-        
+      
+              // Função para mudar os banners
+              function mudarBanner(index) {
+          const banners = document.getElementsByClassName("banner");
+          
+          for (let i = 0; i < banners.length; i++) {
+            banners[i].style.display = "none";
+          }
+          
+          banners[index].style.display = "block";
+        }
+        function autoChangeBanner() {
+          const totalBanners = document.getElementsByClassName("banner").length;
+          
+          elAtual = (elAtual + 1) % totalBanners;
+          
+          mudarBanner(elAtual);
+        }
+
         window.onload = () => {
-        document.getElementById("banners").onclick = mudarImg;
-      };
-      function mudarImg(e) {
-        wid = e.target.clientWidth;
-        x = e.pageX;
-        y = e.pageY;
-        if(x <= wid/4){
-          console.log("ESQUERDA")
-          if(elAtual != 0){
-            document.getElementsByClassName("banner")[elAtual--].style.display="none";
-            document.getElementsByClassName("banner")[elAtual].style.display="block"; 
+          document.getElementById("banners").onclick = mudarImg;
+          setInterval(autoChangeBanner, 6000);
+        };
+
+        function mudarImg(e) {
+          const wid = e.target.clientWidth;
+          const x = e.pageX;
+
+          if (x <= wid / 4) {
+            console.log("ESQUERDA");
+            if (elAtual !== 0) {
+              elAtual--;
+            } else {
+              const totalBanners = document.getElementsByClassName("banner").length;
+              elAtual = totalBanners - 1;
+            }
+          } else if (x >= wid - wid / 4) {
+            console.log("DIREITA");
+            const totalBanners = document.getElementsByClassName("banner").length;
+            if (elAtual !== totalBanners - 1) {
+              elAtual++;
+            } else {
+              elAtual = 0;
+            }
           }
+          mudarBanner(elAtual);
         }
-        if(x >= wid-wid/4){
-          console.log("DIREITA")
-          if(elAtual != document.getElementsByClassName("banner").length-1){
-            document.getElementsByClassName("banner")[elAtual++].style.display="none";
-            document.getElementsByClassName("banner")[elAtual].style.display="block";
-          }
-        }
-      }
     </script>
   </head>
 
@@ -249,10 +273,11 @@ updateButtonPosition();
     <script>
       const customSlides = document.querySelectorAll('.custom-slide');
       let customSlideIndex = 0;
-    
+      let slideInterval;
+
       function showCustomSlides(offset) {
         customSlideIndex = (customSlideIndex + offset + customSlides.length) % customSlides.length;
-    
+
         customSlides.forEach((slide, index) => {
           if (index === customSlideIndex) {
             slide.style.display = 'block';
@@ -261,12 +286,24 @@ updateButtonPosition();
           }
         });
       }
-    
+
+      function startSlideInterval() {
+        slideInterval = setInterval(() => {
+          showCustomSlides(1); // Avança para o próximo slide a cada 6 segundos
+        }, 6000); // 6000 milissegundos = 6 segundos
+      }
+
+      function stopSlideInterval() {
+        clearInterval(slideInterval);
+      }
+
       customSlides.forEach((slide, index) => {
         slide.addEventListener('click', (event) => {
+          stopSlideInterval(); // Para o intervalo quando o usuário interagir com os slides
+
           const rect = slide.getBoundingClientRect();
           const clickPosition = event.clientX - rect.left;
-    
+
           if (clickPosition < rect.width / 2) {
             showCustomSlides(-1);
           } else {
@@ -274,8 +311,10 @@ updateButtonPosition();
           }
         });
       });
-    
+
+      startSlideInterval(); // Inicia o intervalo automaticamente
       showCustomSlides(0); // Mostra o primeiro slide inicialmente
+
     </script>
   </body>
 </html>

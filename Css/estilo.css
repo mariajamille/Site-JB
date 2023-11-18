@@ -365,23 +365,19 @@ a classe content deve ser posta entre as divs do header e footer, sendo customiz
 }
 
 #banner1 {
-  background-image: url("./img/protimg1.png");
+  background-image: url("./img/protimg1.webp");
 }
 
 #banner2 {
-  background-image: url("./img/protimg2.png");
+  background-image: url("./img/protimg2.webp");
 }
 
 #banner3 {
-  background-image: url("./img/protimg3.jpg");
+  background-image: url("./img/protimg3.webp");
 }
 
 #banner4 {
-  background-image: url("./img/protimg4.png");
-}
-
-#banner5 {
-  background-image: url("./img/protimg5.png");
+  background-image: url("./img/protimg4.webp");
 }
 
 #a{

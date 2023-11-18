@@ -3,7 +3,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-image: url("./images/fundo3.png");
+  background-image: url("./images/fundo3.webp");
   background-size: cover; /* A imagem se ajustará à tela */
   background-attachment: fixed; /* A imagem permanecerá fixa à medida que a página rola */
   background-repeat: no-repeat; /* Impede a repetição da imagem */

@@ -8,13 +8,12 @@
     <link href="../fontawesome/css/all.css" rel="stylesheet">
     <link rel="icon" type="imagem/png" href="./Css/JB.png" />
     <title>EEEP José de Barcelos</title>
+     <!-------------------------------------- CONFIGURAÇÃO MENU RESPONSIVO (HAMBURGUER) ------------------------------------>
     <script>
         var elAtual = 0;
         var el;
         var windowWidth = window.innerWidth;
-
         var showNav = () => {
-
         document.getElementById("responsive-nav").classList.toggle("ativo");
         document.getElementById("responsive-nav").style.transition = "0.5s";
         document.getElementById("qualquer").classList.toggle("ativo1");
@@ -37,12 +36,10 @@
         qualquer.classList.remove('desativado');
         }, 1000);
         };
- 
      </script>
 </head>
-
 <body>
-    <!-------------------------------------- Header ------------------------------------>
+    <!-------------------------------------- HEADER ------------------------------------>
     <div id="cabecalho">
         <img src="./Css/JB.png" class="jb-img">
         <h3 id="escol">Escola Estadual de Educação Profissional</h3>
@@ -67,15 +64,15 @@
           <a href="../NossaEquipe/index.html" class="button" id="pagina">NOSSA EQUIPE</a>
           <a href="../Criadores/index.html" class="button">CRIADORES</a>
         </nav>
+         <!------------------------------------- MENU RESPONSIVO ------------------------------------>
         <div onClick="showNav()" class="show-nav">
           <div class="black-bar"></div>
           <div class="black-bar"></div>
           <div class="black-bar"></div>
         </div>
       </div>
-    <!-- content -->
+    <!------------------------------------- CONTENT ------------------------------------>
     <div class="content">
-
         <div class="swiper teachers">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
@@ -273,15 +270,13 @@
                         <img src="./Css/images/IMG_luciana.webp" class="img-card">
                         <div class="cargo">Professora de <br> matemática</div>
                     </div>
-                </div>
-                 
+                </div>  
             </div>
             <div class="swiper-pagination"></div>
             <div class="swiper-button-next" style="margin-left: 30px;"></div>
             <div class="swiper-button-prev" style="margin-right: 30px;"></div>
         </div>
-
-    <!------------------------------------- BUTÕES REDES SOCIAIS ------------------------------------>
+<!------------------------------------- BUTÕES REDES SOCIAIS ------------------------------------>
   <div class="social-buttons">
     <a href="https://wa.me/+558591919730" target="_blank" class="whatsapp-button">
         <img src="./Css/whatsapp.png" alt="WhatsApp">
@@ -298,10 +293,8 @@ function updateButtonPosition() {
   const scrollHeight = document.documentElement.scrollHeight;
   const scrollTop = window.scrollY;
   const scrollPercentage = (scrollTop / (scrollHeight - windowHeight)) * 100;
-
   // Verifique a largura da tela
   const windowWidth = window.innerWidth;
-
   if (windowWidth <= 768) {
       // Se a largura da tela for menor ou igual a 768px, defina um valor maior para 'bottom'
       if (scrollPercentage >= 65) {
@@ -317,19 +310,13 @@ function updateButtonPosition() {
           socialButtons.style.bottom = "60px"; // VALOR PADRÃO É 20PX, MUDE DE ACORDO COM A PÁGINA. 
       }
   }
-  
 }
-
 // Adicione um ouvinte de evento de redimensionamento da janela para atualizar a posição dos botões
 window.addEventListener("scroll", updateButtonPosition);
 window.addEventListener("resize", updateButtonPosition);
-
 // Chame a função para definir a posição inicial
 updateButtonPosition();
-
-
 </script>
-
 <!------------------------------------- LINKS MENU RESPONSIVO ------------------------------------>
 <div class="qualquer" id="qualquer" onclick="showNav()"></div>
 <nav class="responsive-nav" id="responsive-nav">
@@ -343,20 +330,16 @@ updateButtonPosition();
 <a href="../Cursos/index.html" ontouchstart="changeIconColor(this)" ontouchend="resetIconColor(this)"><i class="fa-solid fa-brain" style="color: #ffffff; margin-right: 10px;"></i>CURSOS TÉCNICOS</a>
 <a href="#" ontouchstart="changeIconColor(this)" ontouchend="resetIconColor(this)"><i class="fa-solid fa-right-to-bracket" style="color: #ffffff; margin-right: 10px;"></i>ACESSO</a>
 </nav>
-
 </div>
 <!------------------------------------- HOVER PARA DISPOSITIVOS MOVEIS ------------------------------------>
 <script>
 function changeIconColor(element) {
 element.querySelector('i').style.color = '#00511C'; // Cor desejada quando o mouse passa sobre o <a>
 }
-
 function resetIconColor(element) {
 element.querySelector('i').style.color = '#ffffff'; // Cor original quando o mouse sai do <a>
 }
-
 </script>
-
     <!----------------- footer --------------->
     <footer>
         <div class="div_foot" id="endereco">
@@ -376,11 +359,10 @@ element.querySelector('i').style.color = '#ffffff'; // Cor original quando o mou
             <p><a href="../Criadores/criadores.html">© 2021 - 2023 - Turma Técnico em Informática</a></p>
             <p>Desenvolvimento e Design</p>
         </div>
-
     </footer>
     </div>
 </body>
-
 <!-------------- JavaScript----------------------->
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 <script src="./JS/slider.js"></script>
+</html>

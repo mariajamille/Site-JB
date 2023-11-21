@@ -7,15 +7,12 @@
     <link href="./fontawesome/css/all.css" rel="stylesheet">
     <link rel="icon" type="imagem/png" href="./Css/JB.png" />
     <title>EEEP José de Barcelos</title>
-
     <!-------------------------------------- CONFIGURAÇÃO MENU RESPONSIVO (HAMBURGUER) ------------------------------------>
     <script>
         var elAtual = 0;
         var el;
         var windowWidth = window.innerWidth;
-
         var showNav = () => {
-
         document.getElementById("responsive-nav").classList.toggle("ativo");
         document.getElementById("responsive-nav").style.transition = "0.5s";
         document.getElementById("qualquer").classList.toggle("ativo1");
@@ -38,35 +35,27 @@
         qualquer.classList.remove('desativado');
         }, 1000);
         };
-
-      
-              // Função para mudar os banners
+              // Função para mudar os banners automáticamente. padrao: 6 segundos.
               function mudarBanner(index) {
           const banners = document.getElementsByClassName("banner");
           
           for (let i = 0; i < banners.length; i++) {
             banners[i].style.display = "none";
           }
-          
           banners[index].style.display = "block";
         }
         function autoChangeBanner() {
           const totalBanners = document.getElementsByClassName("banner").length;
-          
           elAtual = (elAtual + 1) % totalBanners;
-          
           mudarBanner(elAtual);
         }
-
         window.onload = () => {
           document.getElementById("banners").onclick = mudarImg;
           setInterval(autoChangeBanner, 6000);
         };
-
         function mudarImg(e) {
           const wid = e.target.clientWidth;
           const x = e.pageX;
-
           if (x <= wid / 4) {
             console.log("ESQUERDA");
             if (elAtual !== 0) {
@@ -88,7 +77,6 @@
         }
     </script>
   </head>
-
   <body>
     <!-------------------------------------- HEADER ------------------------------------>
     <div id="cabecalho">
@@ -122,7 +110,6 @@
         <div class="black-bar"></div>
       </div>
     </div>
-
     <!------------------------------------- CONTENT ------------------------------------>
     <div class="content">
       <div id="banners" class="banner-local" style="--proporcao: 10/1.8">
@@ -211,19 +198,14 @@ function updateButtonPosition() {
           socialButtons.style.bottom = "90px"; // VALOR PADRÃO É 20PX, MUDE DE ACORDO COM A PÁGINA. 
       }
   }
-  
 }
-
 // Adicione um ouvinte de evento de redimensionamento da janela para atualizar a posição dos botões
 window.addEventListener("scroll", updateButtonPosition);
 window.addEventListener("resize", updateButtonPosition);
 
 // Chame a função para definir a posição inicial
 updateButtonPosition();
-
-
 </script>
-
     <!------------------------------------- LINKS MENU RESPONSIVO ------------------------------------>
     <div class="qualquer" id="qualquer" onclick="showNav()"></div>
     <nav class="responsive-nav" id="responsive-nav">
@@ -237,18 +219,15 @@ updateButtonPosition();
     <a href="./Cursos/index.html" ontouchstart="changeIconColor(this)" ontouchend="resetIconColor(this)"><i class="fa-solid fa-brain" style="color: #ffffff; margin-right: 10px;"></i>CURSOS TÉCNICOS</a>
     <a href="#" ontouchstart="changeIconColor(this)" ontouchend="resetIconColor(this)"><i class="fa-solid fa-right-to-bracket" style="color: #ffffff; margin-right: 10px;"></i>ACESSO</a>
     </nav>
-
     </div>
     <!------------------------------------- HOVER PARA DISPOSITIVOS MOVEIS ------------------------------------>
     <script>
     function changeIconColor(element) {
     element.querySelector('i').style.color = '#00511C'; // Cor desejada quando o mouse passa sobre o <a>
     }
-
     function resetIconColor(element) {
     element.querySelector('i').style.color = '#ffffff'; // Cor original quando o mouse sai do <a>
     }
-
     </script>
     <!--------------------------------------- FOOTER ----------------------------------->
     <footer>
@@ -265,7 +244,6 @@ updateButtonPosition();
           <div class="barramarelo"></div>
           <h1 class="titulo_sobre">Sobre</h1>
         </div>
-
         <p><a href="./Criadores/criadores.html">© 2021 - 2023 - Turma Técnico em Informática</a></p>
         <p>Desenvolvimento e Design</p>
       </div>
@@ -274,10 +252,8 @@ updateButtonPosition();
       const customSlides = document.querySelectorAll('.custom-slide');
       let customSlideIndex = 0;
       let slideInterval;
-
       function showCustomSlides(offset) {
         customSlideIndex = (customSlideIndex + offset + customSlides.length) % customSlides.length;
-
         customSlides.forEach((slide, index) => {
           if (index === customSlideIndex) {
             slide.style.display = 'block';
@@ -286,24 +262,19 @@ updateButtonPosition();
           }
         });
       }
-
       function startSlideInterval() {
         slideInterval = setInterval(() => {
           showCustomSlides(1); // Avança para o próximo slide a cada 6 segundos
         }, 6000); // 6000 milissegundos = 6 segundos
       }
-
       function stopSlideInterval() {
         clearInterval(slideInterval);
       }
-
       customSlides.forEach((slide, index) => {
         slide.addEventListener('click', (event) => {
           stopSlideInterval(); // Para o intervalo quando o usuário interagir com os slides
-
           const rect = slide.getBoundingClientRect();
           const clickPosition = event.clientX - rect.left;
-
           if (clickPosition < rect.width / 2) {
             showCustomSlides(-1);
           } else {
@@ -311,10 +282,8 @@ updateButtonPosition();
           }
         });
       });
-
       startSlideInterval(); // Inicia o intervalo automaticamente
       showCustomSlides(0); // Mostra o primeiro slide inicialmente
-
     </script>
   </body>
 </html>

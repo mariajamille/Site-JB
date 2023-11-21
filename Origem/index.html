@@ -15,9 +15,7 @@
        var elAtual = 0;
         var el;
         var windowWidth = window.innerWidth;
-
         var showNav = () => {
-
           document.getElementById("responsive-nav").classList.toggle("ativo");
           document.getElementById("responsive-nav").style.transition = "0.5s";
           document.getElementById("qualquer").classList.toggle("ativo1");
@@ -40,13 +38,9 @@
           qualquer.classList.remove('desativado');
           }, 1000);
           };
-
-
     </script>
   </head>
-
   <body>
-    
     <!-------------------------------------- HEADER ------------------------------------>
     <div id="cabecalho">
       <img src="./Css/JB.png" />
@@ -79,7 +73,6 @@
         <div class="black-bar"></div>
       </div>
     </div>
-
     <!------------------------------------- CONTENT ------------------------------------>
     <div class="content">
       <main>
@@ -96,6 +89,7 @@
                 referência no Estado do Ceará.
             </p>
         </section>
+        <!------------------------------------- SLIDE BOOTSTRAP ------------------------------------>
         <section>
           <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
@@ -352,18 +346,6 @@
                 </p>
             </div>
         </section>
-    
-    
-    
-
-
-
-
-
-
-
-
-      
   <!------------------------------------- BUTÕES REDES SOCIAIS ------------------------------------>
   <div class="social-buttons">
     <a href="https://wa.me/+558591919730" target="_blank" class="whatsapp-button">
@@ -381,10 +363,8 @@ function updateButtonPosition() {
   const scrollHeight = document.documentElement.scrollHeight;
   const scrollTop = window.scrollY;
   const scrollPercentage = (scrollTop / (scrollHeight - windowHeight)) * 100;
-
   // Verifique a largura da tela
   const windowWidth = window.innerWidth;
-
   if (windowWidth <= 768) {
       // Se a largura da tela for menor ou igual a 768px, defina um valor maior para 'bottom'
       if (scrollPercentage >= 95) {
@@ -400,18 +380,12 @@ function updateButtonPosition() {
           socialButtons.style.bottom = "60px"; // VALOR PADRÃO É 20PX, MUDE DE ACORDO COM A PÁGINA. 
       }
   }
-  
 }
-
 // Adicione um ouvinte de evento de redimensionamento da janela para atualizar a posição dos botões
 window.addEventListener("scroll", updateButtonPosition);
 window.addEventListener("resize", updateButtonPosition);
-
 // Chame a função para definir a posição inicial
 updateButtonPosition();
-
-
-
 </script>
     <!------------------------------------- LINKS MENU RESPONSIVO ------------------------------------>
     <div class="qualquer" id="qualquer" onclick="showNav()"></div>
@@ -426,18 +400,15 @@ updateButtonPosition();
     <a href="../Cursos/index.html" ontouchstart="changeIconColor(this)" ontouchend="resetIconColor(this)"><i class="fa-solid fa-brain" style="color: #ffffff; margin-right: 10px;"></i>CURSOS TÉCNICOS</a>
     <a href="#" ontouchstart="changeIconColor(this)" ontouchend="resetIconColor(this)"><i class="fa-solid fa-right-to-bracket" style="color: #ffffff; margin-right: 10px;"></i>ACESSO</a>
     </nav>
-
     </div>
     <!------------------------------------- HOVER PARA DISPOSITIVOS MOVEIS ------------------------------------>
     <script>
     function changeIconColor(element) {
     element.querySelector('i').style.color = '#00511C'; // Cor desejada quando o mouse passa sobre o <a>
     }
-
     function resetIconColor(element) {
     element.querySelector('i').style.color = '#ffffff'; // Cor original quando o mouse sai do <a>
     }
-
     </script>
   </main>
     <!--------------------------------------- FOOTER ----------------------------------->
@@ -459,10 +430,7 @@ updateButtonPosition();
         <p><a href="./Criadores/criadores.html">© 2021 - 2023 - Turma Técnico em Informática</a></p>
         <p>Desenvolvimento e Design</p>
       </div>
-
-  
     </footer>
   </body>
-  
 </script>
 </html>

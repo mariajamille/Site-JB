@@ -81,10 +81,8 @@
 
     <!------------------------------------- CONTENT ------------------------------------>
     <div class="content">
-      
-
       <section id="conteudo0">
-        <div class="content">
+        <div class="">
             <a href="https://www.instagram.com/apoiodomultimeios/"><img src="./Css/images/logo3.png" class="logo"></a>
            </div>
     </section>
@@ -94,11 +92,9 @@
           <p>
               O MULTIMEIOS DO JOSÉ DE BARCELOS É O LOCAL DE MAIOR ACOLHIMENTO AOS ALUNOS DENTRO DA ESCOLA, OFERECENDO UMA LISTA DE LAZERES QUE VÃO DESDE A BIBLIOTECA, COMPUTADORES PARA PESQUISA ENTRE OUTROS. O MULTIMEIOS TAMBÉM É RESPONSÁVEL PELA MAIOR PARTE DOS EVENTOS QUE OCORREM DENTRO DA EEEP, DESDE PAIXÃO DE CRISTO, SAARAU, QUITADAS, ETC.
 SEU PRINCIPAL PAPEL É DAR UM LOCAL DE ATIVIDADES E REPOUSO PARA OS ALUNOS, OS AJUDANDO A DESEMPENHAR SUAS RESPONSABILIDADES DURANTE O DIA A DIA ESCOLAR.
-
           </p>
       </div>
   </section>
-
   <section id="conteudo2">
     <div class="paragrafo2">
       <h1>PITADA LITERÁRIA</h1>
@@ -106,6 +102,7 @@ SEU PRINCIPAL PAPEL É DAR UM LOCAL DE ATIVIDADES E REPOUSO PARA OS ALUNOS, OS A
         A Pitada Literária, é um projeto do centro de multimeios que ocorre uma vez por ano, com o intuito de difundir o acervo literário da biblioteca no centro de multimeios JB, através de apresentações artísticas da pequena parte (pitada) da obra e vida de um escritor brasileiro.
       </p>
   </div>
+  <!------------------------------------- SLIDE BOOTSTRAP ------------------------------------>
     <div id="carouselExampleAutoplaying1" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleAutoplaying1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -133,7 +130,6 @@ SEU PRINCIPAL PAPEL É DAR UM LOCAL DE ATIVIDADES E REPOUSO PARA OS ALUNOS, OS A
       </button>
     </div>
   </section>
-
       <section id="conteudo1">
         <div id="carouselExampleAutoplaying0" class="carousel slide carousel-custom" data-bs-ride="carousel">
           <div class="carousel-indicators">
@@ -277,18 +273,7 @@ SEU PRINCIPAL PAPEL É DAR UM LOCAL DE ATIVIDADES E REPOUSO PARA OS ALUNOS, OS A
             <span class="visually-hidden">Next</span>
           </button>
         </div>
-      </section>
-    
-    
-
-
-
-
-
-
-
-
-      
+      </section> 
   <!------------------------------------- BUTÕES REDES SOCIAIS ------------------------------------>
   <div class="social-buttons">
     <a href="https://wa.me/+558591919730" target="_blank" class="whatsapp-button">
@@ -306,10 +291,8 @@ function updateButtonPosition() {
   const scrollHeight = document.documentElement.scrollHeight;
   const scrollTop = window.scrollY;
   const scrollPercentage = (scrollTop / (scrollHeight - windowHeight)) * 100;
-
   // Verifique a largura da tela
   const windowWidth = window.innerWidth;
-
   if (windowWidth <= 768) {
       // Se a largura da tela for menor ou igual a 768px, defina um valor maior para 'bottom'
       if (scrollPercentage >= 65) {
@@ -325,17 +308,12 @@ function updateButtonPosition() {
           socialButtons.style.bottom = "20px"; // VALOR PADRÃO É 20PX, MUDE DE ACORDO COM A PÁGINA. 
       }
   }
-  
 }
-
 // Adicione um ouvinte de evento de redimensionamento da janela para atualizar a posição dos botões
 window.addEventListener("scroll", updateButtonPosition);
 window.addEventListener("resize", updateButtonPosition);
-
 // Chame a função para definir a posição inicial
 updateButtonPosition();
-
-
 </script>
     <!------------------------------------- LINKS MENU RESPONSIVO ------------------------------------>
     <div class="qualquer" id="qualquer" onclick="showNav()"></div>
@@ -350,20 +328,16 @@ updateButtonPosition();
     <a href="../Cursos/index.html" ontouchstart="changeIconColor(this)" ontouchend="resetIconColor(this)"><i class="fa-solid fa-brain" style="color: #ffffff; margin-right: 10px;"></i>CURSOS TÉCNICOS</a>
     <a href="#" ontouchstart="changeIconColor(this)" ontouchend="resetIconColor(this)"><i class="fa-solid fa-right-to-bracket" style="color: #ffffff; margin-right: 10px;"></i>ACESSO</a>
     </nav>
-
     </div>
     <!------------------------------------- HOVER PARA DISPOSITIVOS MOVEIS ------------------------------------>
     <script>
     function changeIconColor(element) {
     element.querySelector('i').style.color = '#00511C'; // Cor desejada quando o mouse passa sobre o <a>
     }
-
     function resetIconColor(element) {
     element.querySelector('i').style.color = '#ffffff'; // Cor original quando o mouse sai do <a>
     }
-
     </script>
-
     <!--------------------------------------- FOOTER ----------------------------------->
     <footer>
       <div class="div_foot" id="endereco">
@@ -379,7 +353,6 @@ updateButtonPosition();
           <div class="barramarelo"></div>
           <h1 class="titulo_sobre">Sobre</h1>
         </div>
-
         <p><a href="./Criadores/criadores.html">© 2021 - 2023 - Turma Técnico em Informática</a></p>
         <p>Desenvolvimento e Design</p>
       </div>

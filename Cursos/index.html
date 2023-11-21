@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -8,13 +7,12 @@
   <link href="../fontawesome/css/all.css" rel="stylesheet">
   <link rel="icon" type="imagem/png" href="./Css/JB.png" />
   <title>EEEP José de Barcelos</title>
+  <!-------------------------------------- CONFIGURAÇÃO MENU RESPONSIVO (HAMBURGUER) ------------------------------------>
   <script>
     var imgAtual = 0;
         var el;
         var windowWidth = window.innerWidth;
-
         var showNav = () => {
-
           document.getElementById("responsive-nav").classList.toggle("ativo");
           document.getElementById("responsive-nav").style.transition = "0.5s";
           document.getElementById("qualquer").classList.toggle("ativo1");
@@ -37,23 +35,19 @@
       qualquer.classList.remove('desativado');
     }, 1000);
         };
-
-
+  //-------------------------------------- CONFIGURAÇÃO JS DOS CURSOS. ------------------------------------>
     var exibirGrade = (curso) => {
       document.getElementsByClassName("black-curtain")[0].classList.add("showing");
       document.getElementById("button-div-grade-" + curso).classList.add("showing");
-
     }
     var exibirProfessores = (curso) => {
       document.getElementsByClassName("black-curtain")[0].classList.add("showing");
       document.getElementById("button-div-professores-" + curso).classList.add("showing");
     }
-
     var exibirAulas = (curso) => {
       document.getElementsByClassName("black-curtain")[0].classList.add("showing");
       document.getElementById("button-div-aulas-" + curso).classList.add("showing");
     }
-
     var prevImg = (curso) => {
   els = document.getElementsByClassName("lab-" + curso);
   if (imgAtual != 0) {
@@ -64,7 +58,6 @@
     els[imgAtual = els.length - 1].style.display = "block";
   }
 };
-
 var nextImg = (curso) => {
   els = document.getElementsByClassName("lab-" + curso);
   if (imgAtual != els.length - 1) {
@@ -76,9 +69,7 @@ var nextImg = (curso) => {
   }
 };
     var closeAll = () => {
-
       els = document.getElementsByClassName("showing");
-
       for (i = els.length - 1; i >= 0; i--) {
         els[i].classList.remove("showing");
       }
@@ -88,7 +79,6 @@ var nextImg = (curso) => {
     }
    </script>
 </head>
-
 <body>
   <!-------------------------------------- HEADER ------------------------------------>
   <div id="cabecalho">
@@ -115,15 +105,16 @@ var nextImg = (curso) => {
           <a href="../NossaEquipe/index.html" class="button" id="pagina">NOSSA EQUIPE</a>
           <a href="../Criadores/index.html" class="button">CRIADORES</a>
     </nav>
+    <!------------------------------------- MENU RESPONSIVO ------------------------------------>
     <div onClick="showNav()" class="show-nav">
       <div class="black-bar"></div>
       <div class="black-bar"></div>
       <div class="black-bar"></div>
     </div>
   </div>
-
   <!------------------------------------- CONTENT ------------------------------------>
   <div class="content">
+    <!------------------------------------- CARDS DOS CURSOS ------------------------------------>
     <div class="all-cursos">
       <div class="cursos">
         <a href="#enfermagem">
@@ -131,7 +122,6 @@ var nextImg = (curso) => {
             <div class="tela-curso-enfer">
               <img src="./Css/imgs/enfermagem_simbolo-removebg-preview.png" class="logos">
             </div>
-
             <div class="text">
               <strong class="titu-enfer">ENFERMAGEM</strong>
               <hr class="hr-enfer">
@@ -140,11 +130,9 @@ var nextImg = (curso) => {
         </a>
         <a href="#estetica">
           <div class="estetica">
-
             <div class="tela-curso-est">
               <img src="./Css/imgs/logoest.png" class="logos">
             </div>
-
             <div class="text">
               <strong class="titu-est">ESTÉTICA</strong>
               <hr class="hr-est">
@@ -153,11 +141,9 @@ var nextImg = (curso) => {
         </a>
         <a href="#financas">
           <div class="financas">
-
             <div class="tela-curso-fin">
               <img src="./Css/imgs/logofin.png" class="logos">
             </div>
-
             <div class="text">
               <strong class="titu-fin">FINANÇAS</strong>
               <hr class="hr-fin">
@@ -176,16 +162,11 @@ var nextImg = (curso) => {
             </div>
           </div>
         </a>
-
-
-
-
       </div>
     </div>
-
+    <!------------------------------------- CURSO ENFERMAGEM ------------------------------------>
     <div class="curso-div enfer" id="enfermagem">
       <div class="titulo-curso ">CURSO TÉCNICO EM ENFERMAGEM</div>
-
       <div class="curso-left">
         <div class="curso-img enfer"></div>
       </div>
@@ -195,21 +176,21 @@ var nextImg = (curso) => {
           pacientes e com o ambiente hospitalar ou unidade de saúde. Em geral, este
           profissional cuida de pacientes em situações de média e alta complexidade.
         </p>
-
         <p class="texto-right">
           Os
           técnicos de enfermagem também são preparados para aplicar vacinas e medicação
           intravenosa, fazer triagem de pacientes em pronto-socorro, realizar a coleta de
           materiais para exames, preparar instrumentos para cirurgias, entre outras funções.
         </p>
-
       </div>
       <div class="botoes">
+        <!------------------------------------- GRADE CURRICULAR ------------------------------------>
         <div class="button-div button-div-aulas" onclick="exibirGrade('enfer')" id="button-div-grade-enfer">
           GRADE CURRICULAR
           <div src="Css/imgs/grad_img_enfer.webp" class="grade button-content" id="grade-enfer">
           </div>
         </div>
+        <!------------------------------------- PROFESSORES ENFERMAGEM ------------------------------------>
         <div class="button-div" onclick="exibirProfessores('enfer')" id="button-div-professores-enfer">
           PROFESSORES
           <div class="professores button-content" id="professor-enfer" onclick="closeAll()">
@@ -236,6 +217,7 @@ var nextImg = (curso) => {
             </div>
           </div>
         </div>
+        <!------------------------------------- AULAS ENFERMAGEM ------------------------------------>
         <div class="button-div button-div-aulas" onclick="exibirAulas('enfer')" id="button-div-aulas-enfer">
           AULAS PRÁTICAS
           <div class="aulas-praticas button-content" id="aulas-praticas-enfer">
@@ -246,16 +228,14 @@ var nextImg = (curso) => {
             <img src="./Css/imgs/lab-enfe2.webp" alt="" class="imglab lab-enfe" id="imglab2" style="display:none">
             <img src="./Css/imgs/lab-enfe3.webp" alt="" class="imglab lab-enfe" id="imglab3" style="display:none">
             <img src="./Css/imgs/lab-enfe4.webp" alt="" class="imglab lab-enfe" id="imglab4" style="display:none">
-
             <div class="slider-space right"><a class="slider-btn next" onclick="nextImg('enfe')">></a></div>
           </div>
         </div>
       </div>
-
     </div>
+    <!------------------------------------- CURSO ESTÉTICA ------------------------------------>
     <div class="curso-div este" id="estetica">
       <div class="titulo-curso ">CURSO TÉCNICO EM ESTÉTICA</div>
-
       <div class="curso-left">
         <div class="curso-img este"></div>
       </div>
@@ -265,19 +245,19 @@ var nextImg = (curso) => {
           estéticos, aplicar massagens e outros procedimentos. Ele é responsável por garantir que os procedimentos
           realizados sejam feitos com segurança, visando preservar a integridade de quem está passando por ele.
         </p>
-
         <p class="texto-right">
           É de responsabilidade desse profissional entender as necessidades de cada cliente, indicando o procedimento
           mais adequado e fazendo a aplicação.
         </p>
-
       </div>
       <div class="botoes">
+        <!------------------------------------- GRADE CURRICULAR ------------------------------------>
         <div class="button-div button-div-aulas" onclick="exibirGrade('este')" id="button-div-grade-este">
           GRADE CURRICULAR
           <div src="imgs/grad_este.png" class="grade button-content" id="grade-este">
           </div>
         </div>
+        <!------------------------------------- PROFESSORES ESTÉTICA ------------------------------------>
         <div class="button-div" onclick="exibirProfessores('este')" id="button-div-professores-este">
           PROFESSORES
           <div class="professores button-content" id="professor-este" onclick="closeAll()">
@@ -297,6 +277,7 @@ var nextImg = (curso) => {
             </div>
           </div>
         </div>
+        <!------------------------------------- AULAS ESTÉTICA ------------------------------------>
         <div class="button-div button-div-aulas" onclick="exibirAulas('este')" id="button-div-aulas-este">
           AULAS PRÁTICAS
           <div class="aulas-praticas button-content" id="aulas-praticas-este">
@@ -310,16 +291,14 @@ var nextImg = (curso) => {
             <img src="./Css/imgs/lab-este5.webp" alt="" class="imglab lab-este" id="imglab4" style="display:none">
             <img src="./Css/imgs/lab-este6.webp" alt="" class="imglab lab-este" id="imglab4" style="display:none">
             <img src="./Css/imgs/lab-este7.webp" alt="" class="imglab lab-este" id="imglab4" style="display:none">
-
             <div class="slider-space right"><a class="slider-btn next" onclick="nextImg('este')">></a></div>
           </div>
         </div>
       </div>
-
     </div>
+    <!------------------------------------- CURSO FINANÇAS ------------------------------------>
     <div class="curso-div fin" id="financas">
       <div class="titulo-curso ">CURSO TÉCNICO EM FINANÇAS</div>
-
       <div class="curso-left">
         <div class="curso-img fin"></div>
       </div>
@@ -328,20 +307,20 @@ var nextImg = (curso) => {
           O profissional de finanças tem como objetivo executar e monitorar diversos serviços relacionados aos processos
           de tesouraria, Contas, captação e aplicação de recursos financeiros, e orçamentos empresariais.
         </p>
-
         <p class="texto-right">
           Por essas razões o técnico em finanças pode trabalhar em instituições financeiras, tanto públicas como
           privadas e do terceiro setor, até empresas de consultoria e ou ainda a possibilidade do profissional trabalhar
           como autônomo.
         </p>
-
       </div>
       <div class="botoes">
+        <!------------------------------------- GRADE CURRICULAR ------------------------------------>
         <div class="button-div button-div-aulas" onclick="exibirGrade('fin')" id="button-div-grade-fin">
           GRADE CURRICULAR
           <div src="imgs/grad_fin.png" class="grade button-content" id="grade-fin">
           </div>
         </div>
+        <!------------------------------------- PROFESSORES FINANÇAS ------------------------------------>
         <div class="button-div" onclick="exibirProfessores('fin')" id="button-div-professores-fin">
           PROFESSORES
           <div class="professores button-content" id="professor-fin" onclick="closeAll()">
@@ -354,6 +333,7 @@ var nextImg = (curso) => {
             </div>
           </div>
         </div>
+        <!------------------------------------- AULAS FINANÇAS ------------------------------------>
         <div class="button-div button-div-aulas" onclick="exibirAulas('fin')" id="button-div-aulas-fin">
           AULAS PRÁTICAS
           <div class="aulas-praticas button-content" id="aulas-praticas-fin">
@@ -365,16 +345,14 @@ var nextImg = (curso) => {
             <img src="./Css/imgs/lab-fin3.webp" alt="" class="imglab lab-fin" id="imglab3" style="display:none">
             <img src="./Css/imgs/lab-fin4.webp" alt="" class="imglab lab-fin" id="imglab4" style="display:none">
             <img src="./Css/imgs/lab-fin5.webp" alt="" class="imglab lab-fin" id="imglab4" style="display:none">
-
             <div class="slider-space right"><a class="slider-btn next" onclick="nextImg('fin')">></a></div>
           </div>
         </div>
       </div>
-
     </div>
+    <!------------------------------------- CURSO INFORMÁTICA ------------------------------------>
     <div class="curso-div infor" id="informatica">
       <div class="titulo-curso ">CURSO TÉCNICO EM INFORMÁTICA</div>
-
       <div class="curso-left">
         <div class="curso-img infor"></div>
       </div>
@@ -385,19 +363,19 @@ var nextImg = (curso) => {
           Ele também instala e configura redes e softwares, trabalhando no desenvolvimento de sistemas e websites, o que
           o leva a atuar tanto em redes domésticas quanto empresariais (privadas e públicas).
         </p>
-
         <p class="texto-right">
           Por essas razões, o técnico em informática pode trabalhar tanto em empresas que prestem esse tipo de serviço
           como profissional autônomo, recrutando clientes que necessitem de sua prestação de serviços.
         </p>
-
       </div>
       <div class="botoes">
+        <!------------------------------------- GRADE CURRICULAR ------------------------------------>
         <div class="button-div button-div-aulas" onclick="exibirGrade('infor')" id="button-div-grade-infor">
           GRADE CURRICULAR
           <div src="imgs/grad_enfer.png" class="grade button-content" id="grade-infor">
           </div>
         </div>
+        <!------------------------------------- PROFESSORES INFORMÁTICA ------------------------------------>
         <div class="button-div" onclick="exibirProfessores('infor')" id="button-div-professores-infor">
           PROFESSORES
           <div class="professores button-content" id="professor-infor" onclick="closeAll()">
@@ -417,6 +395,7 @@ var nextImg = (curso) => {
             </div>
           </div>
         </div>
+        <!------------------------------------- AULAS INFORMÁTICA ------------------------------------>
         <div class="button-div button-div-aulas" onclick="exibirAulas('infor')" id="button-div-aulas-infor">
           AULAS PRÁTICAS
           <div class="aulas-praticas button-content" id="aulas-praticas-infor">
@@ -427,20 +406,14 @@ var nextImg = (curso) => {
             <img src="./Css/imgs/lei-infor2.webp" alt="" class="imglab lab-infor" id="imglab2" style="display:none">
             <img src="./Css/imgs/lei-infor3.webp" alt="" class="imglab lab-infor" id="imglab3" style="display:none">
             <img src="./Css/imgs/lei-infor4.webp" alt="" class="imglab lab-infor" id="imglab4" style="display:none">
-
             <div class="slider-space right"><a class="slider-btn next" onclick="nextImg('infor')">></a></div>
           </div>
         </div>
       </div>
 
     </div>
-
     <div class="black-curtain" onclick="closeAll()">
-
     </div>
-  
-
-
   <!------------------------------------- BUTÕES REDES SOCIAIS ------------------------------------>
   <div class="social-buttons">
     <a href="https://wa.me/+558591919730" target="_blank" class="whatsapp-button">
@@ -477,19 +450,13 @@ function updateButtonPosition() {
           socialButtons.style.bottom = "60px"; // VALOR PADRÃO É 20PX, MUDE DE ACORDO COM A PÁGINA. 
       }
   }
-  
 }
-
 // Adicione um ouvinte de evento de redimensionamento da janela para atualizar a posição dos botões
 window.addEventListener("scroll", updateButtonPosition);
 window.addEventListener("resize", updateButtonPosition);
-
 // Chame a função para definir a posição inicial
 updateButtonPosition();
-
-
 </script>
-
  <!------------------------------------- LINKS MENU RESPONSIVO ------------------------------------>
  <div class="qualquer" id="qualquer" onclick="showNav(), showNav1()"></div>
  <nav class="responsive-nav" id="responsive-nav">
@@ -503,18 +470,15 @@ updateButtonPosition();
  <a href="../Cursos/index.html" class="responsive" ontouchstart="changeIconColor(this)" ontouchend="resetIconColor(this)"><i class="fa-solid fa-brain" style="color: #ffffff; margin-right: 10px;"></i>CURSOS TÉCNICOS</a>
  <a href="#" ontouchstart="changeIconColor(this)" ontouchend="resetIconColor(this)"><i class="fa-solid fa-right-to-bracket" style="color: #ffffff; margin-right: 10px;"></i>ACESSO</a>
  </nav>
-
  </div>
  <!------------------------------------- HOVER PARA DISPOSITIVOS MOVEIS ------------------------------------>
  <script>
  function changeIconColor(element) {
  element.querySelector('i').style.color = '#00511C'; // Cor desejada quando o mouse passa sobre o <a>
  }
-
  function resetIconColor(element) {
  element.querySelector('i').style.color = '#ffffff'; // Cor original quando o mouse sai do <a>
  }
-
  </script>
   <!--------------------------------------- FOOTER ----------------------------------->
   <footer>
@@ -531,7 +495,6 @@ updateButtonPosition();
         <div class="barramarelo"></div>
         <h1 class="titulo_sobre">Sobre</h1>
       </div>
-
       <p><a href="../Criadores/criadores.html">© 2021 - 2023 - Turma Técnico em Informática</a></p>
       <p>Desenvolvimento e Design</p>
     </div>

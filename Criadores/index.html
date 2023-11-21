@@ -12,9 +12,7 @@
        var elAtual = 0;
         var el;
         var windowWidth = window.innerWidth;
-
         var showNav = () => {
-
         document.getElementById("responsive-nav").classList.toggle("ativo");
         document.getElementById("responsive-nav").style.transition = "0.5s";
         document.getElementById("qualquer").classList.toggle("ativo1");
@@ -37,11 +35,8 @@
         qualquer.classList.remove('desativado');
         }, 1000);
         };
-
-
     </script>
   </head>
-
   <body>
     <!-------------------------------------- HEADER ------------------------------------>
     <div id="cabecalho">
@@ -76,13 +71,10 @@
         <div class="black-bar"></div>
       </div>
     </div>
-
     <!------------------------------------- CONTENT ------------------------------------>
     <div class="content">
-      
     <!------------------------------------- CARDS DE PERFIS (TUTORIAL) ------------------------------------>
       <div class="profile-cards"> <!-- DIV QUE CONTEM TODOS OS CARDS, ORGANIZANDO OS MESMOS NA PÁGINA -->
-
         <div class="profile-card">
             <img class="profile-image" src="./Css/imgs/pessoa.jpg" alt="Nome da Pessoa"> <!-- FOTO DA PESSOA -->
             <div class="overlay">
@@ -93,7 +85,6 @@
                 <div class="profile-role">Desenvolvedor Front-end</div> <!-- FUNÇÃO DA PESSOA NO PROJETO -->
             </div>
         </div>
-
         <div class="profile-card">
             <img class="profile-image" src="./Css/imgs/pessoa.jpg" alt="Nome da Pessoa">
             <div class="overlay">
@@ -104,8 +95,6 @@
                 <div class="profile-role">Desenvolvedor Front-end</div>
             </div>
         </div>
-
-
         <div class="profile-card">
             <img class="profile-image" src="./Css/imgs/pessoa.jpg" alt="Nome da Pessoa">
             <div class="overlay">
@@ -116,8 +105,6 @@
                 <div class="profile-role">Desenvolvedor Front-end</div>
             </div>
         </div>
-
-
         <div class="profile-card">
             <img class="profile-image" src="./Css/imgs/pessoa.jpg" alt="Nome da Pessoa">
             <div class="overlay">
@@ -128,8 +115,6 @@
                 <div class="profile-role">Desenvolvedor Front-end</div>
             </div>
         </div>
-
-
         <div class="profile-card">
             <img class="profile-image" src="./Css/imgs/pessoa.jpg" alt="Nome da Pessoa">
             <div class="overlay">
@@ -140,8 +125,6 @@
                 <div class="profile-role">Desenvolvedor Front-end</div>
             </div>
         </div>
-        
-
         <div class="profile-card">
           <img class="profile-image" src="./Css/imgs/pessoa.jpg" alt="Nome da Pessoa">
           <div class="overlay">
@@ -152,12 +135,8 @@
               <div class="profile-role">Desenvolvedor Front-end</div>
           </div>
       </div>
-     
       <!-- ADICIONE MAIS CARDS DE PESSOAS AQUI! -->
-      
     </div>
-    
-    
     <!------------------------------------- BUTÕES REDES SOCIAIS ------------------------------------>
     <div class="social-buttons">
       <a href="https://wa.me/+558591919730" target="_blank" class="whatsapp-button">
@@ -175,10 +154,8 @@ function updateButtonPosition() {
     const scrollHeight = document.documentElement.scrollHeight;
     const scrollTop = window.scrollY;
     const scrollPercentage = (scrollTop / (scrollHeight - windowHeight)) * 100;
-
     // Verifique a largura da tela
     const windowWidth = window.innerWidth;
-
     if (windowWidth <= 768) {
         // Se a largura da tela for menor ou igual a 768px, defina um valor maior para 'bottom'
         if (scrollPercentage >= 65) {
@@ -194,17 +171,12 @@ function updateButtonPosition() {
             socialButtons.style.bottom = "20px"; // Ou qualquer outro valor desejado
         }
     }
-    
 }
-
 // Adicione um ouvinte de evento de redimensionamento da janela para atualizar a posição dos botões
 window.addEventListener("scroll", updateButtonPosition);
 window.addEventListener("resize", updateButtonPosition);
-
 // Chame a função para definir a posição inicial
 updateButtonPosition();
-
-
   </script>
      <!------------------------------------- LINKS MENU RESPONSIVO ------------------------------------>
     <div class="qualquer" id="qualquer" onclick="showNav()"></div>
@@ -219,20 +191,16 @@ updateButtonPosition();
     <a href="../Cursos/index.html" ontouchstart="changeIconColor(this)" ontouchend="resetIconColor(this)"><i class="fa-solid fa-brain" style="color: #ffffff; margin-right: 10px;"></i>CURSOS TÉCNICOS</a>
     <a href="#" ontouchstart="changeIconColor(this)" ontouchend="resetIconColor(this)"><i class="fa-solid fa-right-to-bracket" style="color: #ffffff; margin-right: 10px;"></i>ACESSO</a>
     </nav>
-
     </div>
     <!------------------------------------- HOVER PARA DISPOSITIVOS MOVEIS ------------------------------------>
     <script>
     function changeIconColor(element) {
     element.querySelector('i').style.color = '#00511C'; // Cor desejada quando o mouse passa sobre o <a>
     }
-
     function resetIconColor(element) {
     element.querySelector('i').style.color = '#ffffff'; // Cor original quando o mouse sai do <a>
     }
-
     </script>
-
     <!--------------------------------------- FOOTER ----------------------------------->
     <footer>
       <div class="div_foot" id="endereco">
@@ -248,7 +216,6 @@ updateButtonPosition();
           <div class="barramarelo"></div>
           <h1 class="titulo_sobre">Sobre</h1>
         </div>
-
         <p><a href="./Criadores/criadores.html">© 2021 - 2023 - Turma Técnico em Informática</a></p>
         <p>Desenvolvimento e Design</p>
       </div>

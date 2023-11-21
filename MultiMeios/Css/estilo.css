@@ -381,7 +381,7 @@ section#conteudo0{
   margin-top: 6%;
   margin-bottom: 10%;
   display: flex;
-  
+  margin-right: 7%;
 }
 @media (max-width: 800px) {
  
@@ -461,6 +461,7 @@ border-radius: 20px;
   text-align: center;
   font-size: 120%;
   margin-bottom: 10%;
+  margin-right: 7%;
 }
 .paragrafo0 h1{
   color: #ffffff;

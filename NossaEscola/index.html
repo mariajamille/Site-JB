@@ -12,9 +12,7 @@
        var elAtual = 0;
         var el;
         var windowWidth = window.innerWidth;
-
         var showNav = () => {
-
         document.getElementById("responsive-nav").classList.toggle("ativo");
         document.getElementById("responsive-nav").style.transition = "0.5s";
         document.getElementById("qualquer").classList.toggle("ativo1");
@@ -37,11 +35,8 @@
         qualquer.classList.remove('desativado');
         }, 1000);
         };
-
-
     </script>
   </head>
-
   <body>
     <!-------------------------------------- HEADER ------------------------------------>
     <div id="cabecalho">
@@ -75,10 +70,8 @@
         <div class="black-bar"></div>
       </div>
     </div>
-
     <!------------------------------------- CONTENT ------------------------------------>
     <div class="content">
-      
       <div class="conteudo-esquerda">
         <h2>INFRAESTRUTURA:</h2>
         <p id="Info">Salas Climatizadas;<br>
@@ -91,17 +84,13 @@
           Láb. Matemática;<br>
           Láb. Enfermagem;<br>
           Sala de Professores;<br>
-          Sala de Diretoria;</p>
+          Sala de Diretoria.</p>
     </div>
-
     <div class="conteudo-direita">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d591.7611934385637!2d-38.49926094723555!3d-3.8360843600708394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c751d4bc75b055%3A0xdd1f68422919cd8d!2sEEEP%20Jos%C3%A9%20de%20Barcelos!5e0!3m2!1spt-BR!2sbr!4v1699053768687!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="maps"></iframe>
         <p>Rua Angélica Gurgel, 362, Fortaleza - CE.</p>
     </div>
-
-    <div class="clear"></div>
-    
-      
+    <div class="clear"></div> 
   <!------------------------------------- BUTÕES REDES SOCIAIS ------------------------------------>
   <div class="social-buttons">
     <a href="https://wa.me/+558591919730" target="_blank" class="whatsapp-button">
@@ -119,10 +108,8 @@ function updateButtonPosition() {
   const scrollHeight = document.documentElement.scrollHeight;
   const scrollTop = window.scrollY;
   const scrollPercentage = (scrollTop / (scrollHeight - windowHeight)) * 100;
-
   // Verifique a largura da tela
   const windowWidth = window.innerWidth;
-
   if (windowWidth <= 917) {
       // Se a largura da tela for menor ou igual a 768px, defina um valor maior para 'bottom'
       if (scrollPercentage >= 65) {
@@ -138,17 +125,12 @@ function updateButtonPosition() {
           socialButtons.style.bottom = "100px"; // VALOR PADRÃO É 20PX, MUDE DE ACORDO COM A PÁGINA. 
       }
   }
-  
 }
-
 // Adicione um ouvinte de evento de redimensionamento da janela para atualizar a posição dos botões
 window.addEventListener("scroll", updateButtonPosition);
 window.addEventListener("resize", updateButtonPosition);
-
 // Chame a função para definir a posição inicial
 updateButtonPosition();
-
-
 </script>
     <!------------------------------------- LINKS MENU RESPONSIVO ------------------------------------>
     <div class="qualquer" id="qualquer" onclick="showNav()"></div>
@@ -163,20 +145,16 @@ updateButtonPosition();
     <a href="../Cursos/index.html" ontouchstart="changeIconColor(this)" ontouchend="resetIconColor(this)"><i class="fa-solid fa-brain" style="color: #ffffff; margin-right: 10px;"></i>CURSOS TÉCNICOS</a>
     <a href="#" ontouchstart="changeIconColor(this)" ontouchend="resetIconColor(this)"><i class="fa-solid fa-right-to-bracket" style="color: #ffffff; margin-right: 10px;"></i>ACESSO</a>
     </nav>
-
     </div>
     <!------------------------------------- HOVER PARA DISPOSITIVOS MOVEIS ------------------------------------>
     <script>
     function changeIconColor(element) {
     element.querySelector('i').style.color = '#00511C'; // Cor desejada quando o mouse passa sobre o <a>
     }
-
     function resetIconColor(element) {
     element.querySelector('i').style.color = '#ffffff'; // Cor original quando o mouse sai do <a>
     }
-
     </script>
-
     <!--------------------------------------- FOOTER ----------------------------------->
     <footer>
       <div class="div_foot" id="endereco">
@@ -192,39 +170,32 @@ updateButtonPosition();
           <div class="barramarelo"></div>
           <h1 class="titulo_sobre" id="R1">Sobre</h1>
         </div>
-
         <p id="R2"><a href="./Criadores/criadores.html">© 2021 - 2023 - Turma Técnico em Informática</a></p>
         <p id="R3">Desenvolvimento e Design</p>
       </div>
+      <!--------------------------------------- INFORMAÇÕES DE CONTATO PARA FOOTER RESPONSIVO ----------------------------------->
       <script>
         if (window.innerWidth <= 560) { // Verifique se a largura da tela é menor ou igual a 800 pixels
       document.getElementById('R1').textContent = 'Contato';
     }
-
         if (window.innerWidth <= 560) {
             // Altere o texto
             document.getElementById('R2').textContent = 'Whatsapp';
-            
             // Adicione um link (href)
             var link = document.createElement('a');
             link.href = 'https://wa.me/+558591919730'; // URL desejada
             link.textContent = '(85) 9 9191-9730';
-        
             // Substitua o conteúdo anterior pelo link
             document.getElementById('R2').innerHTML = '';
-            document.getElementById('R2').appendChild(link);
-            
+            document.getElementById('R2').appendChild(link); 
         }
-
         if (window.innerWidth <= 560) { 
             // Altere o texto
             document.getElementById('R3').textContent = 'Instagram';
-            
             // Adicione um link (href)
             var link = document.createElement('a');
             link.href = 'https://www.instagram.com/eeep_jb/'; // URL desejada
             link.textContent = '@eeep_jb';
-            
             // Substitua o conteúdo anterior pelo link
             document.getElementById('R3').innerHTML = '';
             document.getElementById('R3').appendChild(link);

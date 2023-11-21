@@ -1,289 +1,310 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" href="./Css/estilo.css" />
-    <link href="./fontawesome/css/all.css" rel="stylesheet">
-    <link rel="icon" type="imagem/png" href="./Css/JB.png" />
-    <title>EEEP José de Barcelos</title>
-    <!-------------------------------------- CONFIGURAÇÃO MENU RESPONSIVO (HAMBURGUER) ------------------------------------>
-    <script>
-        var elAtual = 0;
-        var el;
-        var windowWidth = window.innerWidth;
-        var showNav = () => {
-        document.getElementById("responsive-nav").classList.toggle("ativo");
-        document.getElementById("responsive-nav").style.transition = "0.5s";
-        document.getElementById("qualquer").classList.toggle("ativo1");
-        setTimeout(() => {
-          document.getElementById("responsive-nav").style.transition = "";
-        }, 500);
-        document
-          .getElementsByClassName("black-bar")[0]
-          .classList.toggle("rotate-0");
-        document
-          .getElementsByClassName("black-bar")[1]
-          .classList.toggle("rotate-1");
-        document
-          .getElementsByClassName("black-bar")[2]
-          .classList.toggle("rotate-2");
-        };
-        var showNav1 = () => {
-        document.getElementById("qualquer").classList.toggle("desativado");
-        setTimeout(() => {
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css" href="./Css/estilo.css" />
+  <link href="./fontawesome/css/all.css" rel="stylesheet">
+  <link rel="icon" type="imagem/png" href="./Css/JB.png" />
+  <title>EEEP José de Barcelos</title>
+  <!-------------------------------------- CONFIGURAÇÃO MENU RESPONSIVO (HAMBURGUER) ------------------------------------>
+  <script>
+    var elAtual = 0;
+    var el;
+    var windowWidth = window.innerWidth;
+    var showNav = () => {
+      document.getElementById("responsive-nav").classList.toggle("ativo");
+      document.getElementById("responsive-nav").style.transition = "0.5s";
+      document.getElementById("qualquer").classList.toggle("ativo1");
+      setTimeout(() => {
+        document.getElementById("responsive-nav").style.transition = "";
+      }, 500);
+      document
+        .getElementsByClassName("black-bar")[0]
+        .classList.toggle("rotate-0");
+      document
+        .getElementsByClassName("black-bar")[1]
+        .classList.toggle("rotate-1");
+      document
+        .getElementsByClassName("black-bar")[2]
+        .classList.toggle("rotate-2");
+    };
+    var showNav1 = () => {
+      document.getElementById("qualquer").classList.toggle("desativado");
+      setTimeout(() => {
         qualquer.classList.remove('desativado');
-        }, 1000);
-        };
-              // Função para mudar os banners automáticamente. padrao: 6 segundos.
-              function mudarBanner(index) {
-          const banners = document.getElementsByClassName("banner");
-          
-          for (let i = 0; i < banners.length; i++) {
-            banners[i].style.display = "none";
-          }
-          banners[index].style.display = "block";
-        }
-        function autoChangeBanner() {
+      }, 1000);
+    };
+    // Função para mudar os banners automáticamente. padrao: 6 segundos.
+    function mudarBanner(index) {
+      const banners = document.getElementsByClassName("banner");
+
+      for (let i = 0; i < banners.length; i++) {
+        banners[i].style.display = "none";
+      }
+      banners[index].style.display = "block";
+    }
+    function autoChangeBanner() {
+      const totalBanners = document.getElementsByClassName("banner").length;
+      elAtual = (elAtual + 1) % totalBanners;
+      mudarBanner(elAtual);
+    }
+    window.onload = () => {
+      document.getElementById("banners").onclick = mudarImg;
+      setInterval(autoChangeBanner, 6000);
+    };
+    function mudarImg(e) {
+      const wid = e.target.clientWidth;
+      const x = e.pageX;
+      if (x <= wid / 4) {
+        console.log("ESQUERDA");
+        if (elAtual !== 0) {
+          elAtual--;
+        } else {
           const totalBanners = document.getElementsByClassName("banner").length;
-          elAtual = (elAtual + 1) % totalBanners;
-          mudarBanner(elAtual);
+          elAtual = totalBanners - 1;
         }
-        window.onload = () => {
-          document.getElementById("banners").onclick = mudarImg;
-          setInterval(autoChangeBanner, 6000);
-        };
-        function mudarImg(e) {
-          const wid = e.target.clientWidth;
-          const x = e.pageX;
-          if (x <= wid / 4) {
-            console.log("ESQUERDA");
-            if (elAtual !== 0) {
-              elAtual--;
-            } else {
-              const totalBanners = document.getElementsByClassName("banner").length;
-              elAtual = totalBanners - 1;
-            }
-          } else if (x >= wid - wid / 4) {
-            console.log("DIREITA");
-            const totalBanners = document.getElementsByClassName("banner").length;
-            if (elAtual !== totalBanners - 1) {
-              elAtual++;
-            } else {
-              elAtual = 0;
-            }
-          }
-          mudarBanner(elAtual);
+      } else if (x >= wid - wid / 4) {
+        console.log("DIREITA");
+        const totalBanners = document.getElementsByClassName("banner").length;
+        if (elAtual !== totalBanners - 1) {
+          elAtual++;
+        } else {
+          elAtual = 0;
         }
-    </script>
-  </head>
-  <body>
-    <!-------------------------------------- HEADER ------------------------------------>
-    <div id="cabecalho">
-      <img src="./Css/JB.png" />
-      <h3 id="escol">Escola Estadual de Educação Profissional</h3>
-      <h3 id="escol1">JOSÉ DE BARCELOS</h3>
+      }
+      mudarBanner(elAtual);
+    }
+  </script>
+</head>
+
+<body>
+  <!-------------------------------------- HEADER ------------------------------------>
+  <div id="cabecalho">
+    <img src="./Css/JB.png" />
+    <h3 id="escol">Escola Estadual de Educação Profissional</h3>
+    <h3 id="escol1">JOSÉ DE BARCELOS</h3>
+  </div>
+  <div id="complemento"></div>
+  <div id="navegacao">
+    <nav id="nav">
+      <a href="./index.html" class="button" id="pagina">INÍCIO</a>
+      <div class="menu-drop">
+        <button type="button" name="drop" id="drop" class="button">
+          INSTITUCIONAL
+          <p class="seta">&#x25BC;</p>
+        </button>
+        <div class="drop-content">
+          <a href="./Origem/index.html">Origem</a>
+          <a href="./Edital/index.html">Regimento Escolar</a>
+          <a href="./NossaEscola/index.html">Nossa Escola</a>
+          <a href="./MultiMeios/index.html">MultiMeios</a>
+        </div>
+      </div>
+      <a href="./NossaEquipe/index.html" class="button">NOSSA EQUIPE</a>
+      <a href="./Criadores/index.html" class="button">CRIADORES</a>
+    </nav>
+    <!------------------------------------- MENU RESPONSIVO ------------------------------------>
+    <div onClick="showNav()" class="show-nav">
+      <div class="black-bar"></div>
+      <div class="black-bar"></div>
+      <div class="black-bar"></div>
     </div>
-    <div id="complemento"></div>
-    <div id="navegacao">
-      <nav id="nav">
-        <a href="./index.html" class="button" id="pagina">INÍCIO</a>
-          <div class="menu-drop">
-            <button type="button" name="drop" id="drop" class="button">
-              INSTITUCIONAL
-              <p class="seta">&#x25BC;</p>
-            </button>
-            <div class="drop-content">
-              <a href="./Origem/index.html">Origem</a>
-              <a href="./Edital/index.html">Regimento Escolar</a>
-              <a href="./NossaEscola/index.html">Nossa Escola</a>
-              <a href="./MultiMeios/index.html">MultiMeios</a>
-            </div>
-          </div>
-          <a href="./NossaEquipe/index.html" class="button">NOSSA EQUIPE</a>
-          <a href="./Criadores/index.html" class="button">CRIADORES</a>
-      </nav>
-      <!------------------------------------- MENU RESPONSIVO ------------------------------------>
-      <div onClick="showNav()" class="show-nav">
-        <div class="black-bar"></div>
-        <div class="black-bar"></div>
-        <div class="black-bar"></div>
+  </div>
+  <!------------------------------------- CONTENT ------------------------------------>
+  <div class="content">
+    <div id="banners" class="banner-local" style="--proporcao: 10/1.8">
+      <div class="banner" id="banner1" style="--proporcao: 10/1.8 "></div>
+      <div class="banner" id="banner2" style="--proporcao: 10/1.8; display:none"></div>
+      <div class="banner" id="banner3" style="--proporcao: 10/1.8; display:none"></div>
+      <div class="banner" id="banner4" style="--proporcao: 10/1.8; display:none"></div>
+    </div>
+    <div class="custom-slide-container">
+      <div class="custom-slide" id="slide1">
+        <button class="custom-prevBtn">&#10094;</button>
+        <img src="./Css/img/1.webp" alt="Slide 1">
+        <button class="custom-nextBtn">&#10095;</button>
+      </div>
+      <div class="custom-slide" id="slide2" style="display: none;">
+        <button class="custom-prevBtn">&#10094;</button>
+        <img src="./Css/img/2.webp" alt="Slide 2">
+        <button class="custom-nextBtn">&#10095;</button>
+      </div>
+      <div class="custom-slide" id="slide3" style="display: none;">
+        <button class="custom-prevBtn">&#10094;</button>
+        <img src="./Css/img/3.webp" alt="Slide 3">
+        <button class="custom-nextBtn">&#10095;</button>
+      </div>
+      <div class="custom-slide" id="slide4" style="display: none;">
+        <button class="custom-prevBtn">&#10094;</button>
+        <img src="./Css/img/4.webp" alt="Slide 4">
+        <button class="custom-nextBtn">&#10095;</button>
       </div>
     </div>
-    <!------------------------------------- CONTENT ------------------------------------>
-    <div class="content">
-      <div id="banners" class="banner-local" style="--proporcao: 10/1.8">
-        <div class="banner" id="banner1" style="--proporcao: 10/1.8 "></div>
-        <div class="banner" id="banner2" style="--proporcao: 10/1.8; display:none"></div>
-        <div class="banner" id="banner3" style="--proporcao: 10/1.8; display:none"></div>
-        <div class="banner" id="banner4" style="--proporcao: 10/1.8; display:none"></div>
-      </div>
-      <div class="custom-slide-container">
-        <div class="custom-slide" id="slide1">
-          <button class="custom-prevBtn">&#10094;</button>
-          <img src="./Css/img/1.webp" alt="Slide 1">
-          <button class="custom-nextBtn">&#10095;</button>
-        </div>
-        <div class="custom-slide" id="slide2" style="display: none;">
-          <button class="custom-prevBtn">&#10094;</button>
-          <img src="./Css/img/2.webp" alt="Slide 2">
-          <button class="custom-nextBtn">&#10095;</button>
-        </div>
-        <div class="custom-slide" id="slide3" style="display: none;">
-          <button class="custom-prevBtn">&#10094;</button>
-          <img src="./Css/img/3.webp" alt="Slide 3">
-          <button class="custom-nextBtn">&#10095;</button>
-        </div>
-        <div class="custom-slide" id="slide4" style="display: none;">
-          <button class="custom-prevBtn">&#10094;</button>
-          <img src="./Css/img/4.webp" alt="Slide 4">
-          <button class="custom-nextBtn">&#10095;</button>
-        </div>
-      </div>
-      <div class="cards">
-        <a href="./Edital/index.html" id="a"><div class="card">
+    <div class="cards">
+      <a href="./Edital/index.html" id="a">
+        <div class="card">
           <div class="icon-card" id="icon-editais"></div>
           <div class="barra-amarela-card"></div>
           <p class="texto-card">EDITAIS</p>
-        </div></a>
-        <a href="./Cursos/index.html" id="a"><div class="card">
+        </div>
+      </a>
+      <a href="./Cursos/index.html" id="a">
+        <div class="card">
           <div class="icon-card" id="icon-cursos"></div>
           <div class="barra-amarela-card"></div>
           <p class="texto-card">CURSOS TÉCNICOS</p>
-        </div></a>
-        <a href="./NossaEscola/index.html" id="a"><div class="card">
+        </div>
+      </a>
+      <a href="./NossaEscola/index.html" id="a">
+        <div class="card">
           <div class="icon-card" id="icon-escola"></div>
           <div class="barra-amarela-card"></div>
           <p class="texto-card">NOSSA ESCOLA</p>
-        </div></a>
-        <a href="#" id="a"><div class="card">
+        </div>
+      </a>
+      <a href="#" id="a">
+        <div class="card">
           <div class="icon-card" id="icon-notificacoes"></div>
           <div class="barra-amarela-card"></div>
           <p class="texto-card" id="texto-notificacoes">ACESSO</p>
-        </div></a>
-      </div>
+        </div>
+      </a>
+    </div>
     <!------------------------------------- BUTÕES REDES SOCIAIS ------------------------------------>
-  <div class="social-buttons">
-    <a href="https://wa.me/+558591919730" target="_blank" class="whatsapp-button">
+    <div class="social-buttons">
+      <a href="https://wa.me/+558591919730" target="_blank" class="whatsapp-button">
         <img src="./Css/whatsapp.png" alt="WhatsApp">
-    </a>
-    <a href="https://www.instagram.com/eeep_jb/" target="_blank" class="instagram-button">
+      </a>
+      <a href="https://www.instagram.com/eeep_jb/" target="_blank" class="instagram-button">
         <img src="./Css/instagram.png" alt="Instagram">
-    </a>
-</div>
-<script>
-  // Função para atualizar a posição dos botões com base na rolagem e largura da tela
-function updateButtonPosition() {
-  const socialButtons = document.querySelector(".social-buttons");
-  const windowHeight = window.innerHeight;
-  const scrollHeight = document.documentElement.scrollHeight;
-  const scrollTop = window.scrollY;
-  const scrollPercentage = (scrollTop / (scrollHeight - windowHeight)) * 100;
+      </a>
+    </div>
+    <script>
+      // Função para atualizar a posição dos botões com base na rolagem e largura da tela
+      function updateButtonPosition() {
+        const socialButtons = document.querySelector(".social-buttons");
+        const windowHeight = window.innerHeight;
+        const scrollHeight = document.documentElement.scrollHeight;
+        const scrollTop = window.scrollY;
+        const scrollPercentage = (scrollTop / (scrollHeight - windowHeight)) * 100;
 
-  // Verifique a largura da tela
-  const windowWidth = window.innerWidth;
+        // Verifique a largura da tela
+        const windowWidth = window.innerWidth;
 
-  if (windowWidth <= 768) {
-      // Se a largura da tela for menor ou igual a 768px, defina um valor maior para 'bottom'
-      if (scrollPercentage >= 65) {
-          socialButtons.style.bottom = "170px"; // Ajuste o valor conforme necessário
-      } else {
-          socialButtons.style.bottom = "100px"; // VALOR PADRÃO É 20PX, MUDE DE ACORDO COM A PÁGINA. 
+        if (windowWidth <= 768) {
+          // Se a largura da tela for menor ou igual a 768px, defina um valor maior para 'bottom'
+          if (scrollPercentage >= 65) {
+            socialButtons.style.bottom = "170px"; // Ajuste o valor conforme necessário
+          } else {
+            socialButtons.style.bottom = "100px"; // VALOR PADRÃO É 20PX, MUDE DE ACORDO COM A PÁGINA. 
+          }
+        } else {
+          // Caso contrário, mantenha o comportamento anterior
+          if (scrollPercentage >= 65) {
+            socialButtons.style.bottom = "100px"; // Ou qualquer outro valor desejado
+          } else {
+            socialButtons.style.bottom = "90px"; // VALOR PADRÃO É 20PX, MUDE DE ACORDO COM A PÁGINA. 
+          }
+        }
       }
-  } else {
-      // Caso contrário, mantenha o comportamento anterior
-      if (scrollPercentage >= 65) {
-          socialButtons.style.bottom = "100px"; // Ou qualquer outro valor desejado
-      } else {
-          socialButtons.style.bottom = "90px"; // VALOR PADRÃO É 20PX, MUDE DE ACORDO COM A PÁGINA. 
-      }
-  }
-}
-// Adicione um ouvinte de evento de redimensionamento da janela para atualizar a posição dos botões
-window.addEventListener("scroll", updateButtonPosition);
-window.addEventListener("resize", updateButtonPosition);
+      // Adicione um ouvinte de evento de redimensionamento da janela para atualizar a posição dos botões
+      window.addEventListener("scroll", updateButtonPosition);
+      window.addEventListener("resize", updateButtonPosition);
 
-// Chame a função para definir a posição inicial
-updateButtonPosition();
-</script>
+      // Chame a função para definir a posição inicial
+      updateButtonPosition();
+    </script>
     <!------------------------------------- LINKS MENU RESPONSIVO ------------------------------------>
     <div class="qualquer" id="qualquer" onclick="showNav()"></div>
     <nav class="responsive-nav" id="responsive-nav">
-      <a href="./index.html" class="responsive" ontouchstart="changeIconColor(this)" ontouchend="resetIconColor(this)"><i class="fa-solid fa-house" style="color: #ffffff; margin-right: 10px;"></i>INÍCIO</a>
-    <a href="./Origem/index.html" ontouchstart="changeIconColor(this)" ontouchend="resetIconColor(this)"><i class="fa-solid fa-timeline" style="color: #ffffff; margin-right: 10px;"></i>ORIGEM</a>
-    <a href="./Edital/index.html" ontouchstart="changeIconColor(this)" ontouchend="resetIconColor(this)"><i class="fa-solid fa-file-invoice" style="color: #ffffff; margin-right: 10px;"></i>REGIMENTO ESCOLAR</a>
-    <a href="./NossaEquipe/index.html" ontouchstart="changeIconColor(this)" ontouchend="resetIconColor(this)"><i class="fa-solid fa-people-group" style="color: #ffffff; margin-right: 10PX;"></i>NOSSA EQUIPE</a>
-    <a href="./NossaEscola/index.html"ontouchstart="changeIconColor(this)" ontouchend="resetIconColor(this)"><i class="fa-solid fa-graduation-cap" style="color: #ffffff; margin-right: 10px;"></i>NOSSA ESCOLA</a>
-    <a href="./MultiMeios/index.html" ontouchstart="changeIconColor(this)" ontouchend="resetIconColor(this)"><i class="fa-solid fa-book-open-reader" style="color: #ffffff; margin-right: 10px;"></i>MULTIMEIOS</a>
-    <a href="./Criadores/index.html" ontouchstart="changeIconColor(this)" ontouchend="resetIconColor(this)"><i class="fa-solid fa-users-gear" style="color: #ffffff; margin-right: 10px;"></i>CRIADORES</a>
-    <a href="./Cursos/index.html" ontouchstart="changeIconColor(this)" ontouchend="resetIconColor(this)"><i class="fa-solid fa-brain" style="color: #ffffff; margin-right: 10px;"></i>CURSOS TÉCNICOS</a>
-    <a href="#" ontouchstart="changeIconColor(this)" ontouchend="resetIconColor(this)"><i class="fa-solid fa-right-to-bracket" style="color: #ffffff; margin-right: 10px;"></i>ACESSO</a>
+      <a href="./index.html" class="responsive" ontouchstart="changeIconColor(this)"
+        ontouchend="resetIconColor(this)"><i class="fa-solid fa-house"
+          style="color: #ffffff; margin-right: 10px;"></i>INÍCIO</a>
+      <a href="./Origem/index.html" ontouchstart="changeIconColor(this)" ontouchend="resetIconColor(this)"><i
+          class="fa-solid fa-timeline" style="color: #ffffff; margin-right: 10px;"></i>ORIGEM</a>
+      <a href="./Edital/index.html" ontouchstart="changeIconColor(this)" ontouchend="resetIconColor(this)"><i
+          class="fa-solid fa-file-invoice" style="color: #ffffff; margin-right: 10px;"></i>REGIMENTO ESCOLAR</a>
+      <a href="./NossaEquipe/index.html" ontouchstart="changeIconColor(this)" ontouchend="resetIconColor(this)"><i
+          class="fa-solid fa-people-group" style="color: #ffffff; margin-right: 10PX;"></i>NOSSA EQUIPE</a>
+      <a href="./NossaEscola/index.html" ontouchstart="changeIconColor(this)" ontouchend="resetIconColor(this)"><i
+          class="fa-solid fa-graduation-cap" style="color: #ffffff; margin-right: 10px;"></i>NOSSA ESCOLA</a>
+      <a href="./MultiMeios/index.html" ontouchstart="changeIconColor(this)" ontouchend="resetIconColor(this)"><i
+          class="fa-solid fa-book-open-reader" style="color: #ffffff; margin-right: 10px;"></i>MULTIMEIOS</a>
+      <a href="./Criadores/index.html" ontouchstart="changeIconColor(this)" ontouchend="resetIconColor(this)"><i
+          class="fa-solid fa-users-gear" style="color: #ffffff; margin-right: 10px;"></i>CRIADORES</a>
+      <a href="./Cursos/index.html" ontouchstart="changeIconColor(this)" ontouchend="resetIconColor(this)"><i
+          class="fa-solid fa-brain" style="color: #ffffff; margin-right: 10px;"></i>CURSOS TÉCNICOS</a>
+      <a href="#" ontouchstart="changeIconColor(this)" ontouchend="resetIconColor(this)"><i
+          class="fa-solid fa-right-to-bracket" style="color: #ffffff; margin-right: 10px;"></i>ACESSO</a>
     </nav>
-    </div>
-    <!------------------------------------- HOVER PARA DISPOSITIVOS MOVEIS ------------------------------------>
-    <script>
+  </div>
+  <!------------------------------------- HOVER PARA DISPOSITIVOS MOVEIS ------------------------------------>
+  <script>
     function changeIconColor(element) {
-    element.querySelector('i').style.color = '#00511C'; // Cor desejada quando o mouse passa sobre o <a>
+      element.querySelector('i').style.color = '#00511C'; // Cor desejada quando o mouse passa sobre o <a>
     }
     function resetIconColor(element) {
-    element.querySelector('i').style.color = '#ffffff'; // Cor original quando o mouse sai do <a>
+      element.querySelector('i').style.color = '#ffffff'; // Cor original quando o mouse sai do <a>
     }
-    </script>
-    <!--------------------------------------- FOOTER ----------------------------------->
-    <footer>
-      <div class="div_foot" id="endereco">
-        <div class="flex_container">
-          <div class="barramarelo"></div>
-          <h1 class="titulo_endereco">Endereço</h1>
-        </div>
-        <p>Rua Angélica Gurgel, 362, Fortaleza - CE</p>
-        <p>Horário: Segunda - Sexta: 7h20 - 16h40</p>
+  </script>
+  <!--------------------------------------- FOOTER ----------------------------------->
+  <footer>
+    <div class="div_foot" id="endereco">
+      <div class="flex_container">
+        <div class="barramarelo"></div>
+        <h1 class="titulo_endereco">Endereço</h1>
       </div>
-      <div class="div_foot" id="sobre">
-        <div class="flex_container">
-          <div class="barramarelo"></div>
-          <h1 class="titulo_sobre">Sobre</h1>
-        </div>
-        <p><a href="./Criadores/criadores.html">© 2021 - 2023 - Turma Técnico em Informática</a></p>
-        <p>Desenvolvimento e Design</p>
+      <p>Rua Angélica Gurgel, 362, Fortaleza - CE</p>
+      <p>Horário: Segunda - Sexta: 7h20 - 16h40</p>
+    </div>
+    <div class="div_foot" id="sobre">
+      <div class="flex_container">
+        <div class="barramarelo"></div>
+        <h1 class="titulo_sobre">Sobre</h1>
       </div>
-    </footer>
-    <script>
-      const customSlides = document.querySelectorAll('.custom-slide');
-      let customSlideIndex = 0;
-      let slideInterval;
-      function showCustomSlides(offset) {
-        customSlideIndex = (customSlideIndex + offset + customSlides.length) % customSlides.length;
-        customSlides.forEach((slide, index) => {
-          if (index === customSlideIndex) {
-            slide.style.display = 'block';
-          } else {
-            slide.style.display = 'none';
-          }
-        });
-      }
-      function startSlideInterval() {
-        slideInterval = setInterval(() => {
-          showCustomSlides(1); // Avança para o próximo slide a cada 6 segundos
-        }, 6000); // 6000 milissegundos = 6 segundos
-      }
-      function stopSlideInterval() {
-        clearInterval(slideInterval);
-      }
+      <p><a href="./Criadores/criadores.html">© 2021 - 2023 - Turma Técnico em Informática</a></p>
+      <p>Desenvolvimento e Design</p>
+    </div>
+  </footer>
+  <script>
+    const customSlides = document.querySelectorAll('.custom-slide');
+    let customSlideIndex = 0;
+    let slideInterval;
+    function showCustomSlides(offset) {
+      customSlideIndex = (customSlideIndex + offset + customSlides.length) % customSlides.length;
       customSlides.forEach((slide, index) => {
-        slide.addEventListener('click', (event) => {
-          stopSlideInterval(); // Para o intervalo quando o usuário interagir com os slides
-          const rect = slide.getBoundingClientRect();
-          const clickPosition = event.clientX - rect.left;
-          if (clickPosition < rect.width / 2) {
-            showCustomSlides(-1);
-          } else {
-            showCustomSlides(1);
-          }
-        });
+        if (index === customSlideIndex) {
+          slide.style.display = 'block';
+        } else {
+          slide.style.display = 'none';
+        }
       });
-      startSlideInterval(); // Inicia o intervalo automaticamente
-      showCustomSlides(0); // Mostra o primeiro slide inicialmente
-    </script>
-  </body>
+    }
+    function startSlideInterval() {
+      slideInterval = setInterval(() => {
+        showCustomSlides(1); // Avança para o próximo slide a cada 6 segundos
+      }, 6000); // 6000 milissegundos = 6 segundos
+    }
+    function stopSlideInterval() {
+      clearInterval(slideInterval);
+    }
+    customSlides.forEach((slide, index) => {
+      slide.addEventListener('click', (event) => {
+        stopSlideInterval(); // Para o intervalo quando o usuário interagir com os slides
+        const rect = slide.getBoundingClientRect();
+        const clickPosition = event.clientX - rect.left;
+        if (clickPosition < rect.width / 2) {
+          showCustomSlides(-1);
+        } else {
+          showCustomSlides(1);
+        }
+      });
+    });
+    startSlideInterval(); // Inicia o intervalo automaticamente
+    showCustomSlides(0); // Mostra o primeiro slide inicialmente
+  </script>
+</body>
+
 </html>

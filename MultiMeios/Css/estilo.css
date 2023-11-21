@@ -1,12 +1,26 @@
+/*--------------------------------------------- IMPORTAÇÃO DE FONTES. -------------------------------------------*/
+@font-face {
+  font-family: 'open-sans';
+  src: url('OpenSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('BebasNeue-light.ttf') format('truetype');
+}
+
 body {
   margin: 0;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   background-image: url("./images/fundo3.webp");
-  background-size: cover; /* A imagem se ajustará à tela */
-  background-attachment: fixed; /* A imagem permanecerá fixa à medida que a página rola */
-  background-repeat: no-repeat; /* Impede a repetição da imagem */
+  background-size: cover;
+  /* A imagem se ajustará à tela */
+  background-attachment: fixed;
+  /* A imagem permanecerá fixa à medida que a página rola */
+  background-repeat: no-repeat;
+  /* Impede a repetição da imagem */
 }
 
 /*--------------------------------------------- HEADER PADRÃO (NÃO ALTERAR!) -------------------------------------------*/
@@ -26,21 +40,12 @@ div#cabecalho img {
   width: 80px;
 }
 
-@font-face {
-  font-family: 'open-sans';
-  src: url('OpenSans-Regular.ttf') format('truetype');
-}
 
 h3#escol {
   font-family: 'open-sans';
   margin-left: 12%;
   margin-top: 1%;
 
-}
-
-@font-face {
-  font-family: 'Bebas Neue';
-  src: url('BebasNeue-light.ttf') format('truetype');
 }
 
 h3#escol1 {
@@ -78,9 +83,9 @@ nav#nav {
   align-items: center;
   height: 38px;
   border-bottom: 5px solid darkgreen;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    text-decoration: none;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  text-decoration: none;
 }
 
 #drop::after {
@@ -117,16 +122,6 @@ img#select {
   float: right;
   margin-top: -12%;
   margin-right: 6%;
-}
-
-@font-face {
-  font-family: 'open-sans';
-  src: url('OpenSans-Regular.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Bebas Neue';
-  src: url('BebasNeue-Light.ttf') format('truetype');
 }
 
 .seta {
@@ -167,7 +162,7 @@ button[name="drop"] {
   width: 100%;
   margin-top: 1px;
   font-family: 'open-sans';
-  
+
 }
 
 .drop-content a {
@@ -180,7 +175,8 @@ button[name="drop"] {
   border-radius: 10px;
   font-weight: bolder;
 }
-a#pagina{
+
+a#pagina {
   border-bottom: 5px solid #006400;
   border-top: 5px solid #006400;
   background-color: #00511C;
@@ -202,12 +198,16 @@ a#pagina{
 .show-nav {
   display: none;
 }
-.responsive{
+
+/*--------------------------------------------- MENU RESPONSIVO (NÃO ALTERAR!) -----------------------------------------*/
+.responsive {
   background: linear-gradient(to right, #ffffff 4px, transparent 4px);
-    background-color: #03501e;
+  background-color: #03501e;
 }
+
 .responsive-nav:hover i {
-  color: #e61212; /* Cor desejada ao passar o mouse sobre o ícone */
+  color: #e61212;
+  /* Cor desejada ao passar o mouse sobre o ícone */
 }
 
 .responsive-nav {
@@ -222,9 +222,12 @@ a#pagina{
   height: 100%;
   left: -100vw;
   transition: all 0s;
-  max-height: 100%; /* Defina a altura máxima desejada para a div */
-  overflow: auto;   /* Isso adicionará uma barra de rolagem quando o conteúdo exceder a altura máxima */
+  max-height: 100%;
+  /* Defina a altura máxima desejada para a div */
+  overflow: auto;
+  /* Isso adicionará uma barra de rolagem quando o conteúdo exceder a altura máxima */
 }
+
 .qualquer {
   transition: .5s;
   display: flex;
@@ -237,10 +240,13 @@ a#pagina{
   height: 100%;
   opacity: 0;
   transition: all 1.5s;
-  max-height: 100%; /* Defina a altura máxima desejada para a div */
-  overflow: auto;   /* Isso adicionará uma barra de rolagem quando o conteúdo exceder a altura máxima */
+  max-height: 100%;
+  /* Defina a altura máxima desejada para a div */
+  overflow: auto;
+  /* Isso adicionará uma barra de rolagem quando o conteúdo exceder a altura máxima */
   scrollbar-width: thin;
 }
+
 .responsive-nav a {
   text-decoration: none;
   width: 100%;
@@ -253,6 +259,7 @@ a#pagina{
   margin-bottom: 2px;
   margin-top: 2px;
 }
+
 .responsive-nav a:hover {
   color: #00511C;
   background-color: #D1E2C8;
@@ -304,24 +311,29 @@ a#pagina{
   nav#nav {
     display: none;
   }
+
   .ativo1 {
     opacity: 1;
     background-color: #00000081;
     z-index: 2;
   }
+
   .ativo {
     left: 0;
   }
-  .desativado{
+
+  .desativado {
     display: none;
   }
 }
+
 @media (max-width: 485px) {
   .responsive-nav {
     width: 65%;
   }
 
 }
+
 @media (max-width: 380px) {
   .responsive-nav {
     width: 82%;
@@ -348,17 +360,18 @@ a classe content deve ser posta entre as divs do header e footer, sendo customiz
 }
 
 
-#a{
+#a {
   text-decoration: none;
 }
 
 /*
   --------------------------------------------- CONTENT (ADICIONE AQUI O CONTEÚDO DA PAGINA) ----------------------------------------------
 */
-main{
+main {
   flex-grow: 1;
 }
-main{
+
+main {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -366,7 +379,7 @@ main{
   overflow-y: auto;
 }
 
-section{
+section {
   position: relative;
   display: flex;
   flex-direction: row;
@@ -377,19 +390,22 @@ section{
   margin-bottom: 50px;
   margin-top: 50px;
 }
-section#conteudo0{
+
+section#conteudo0 {
   margin-top: 6%;
   margin-bottom: 10%;
   display: flex;
   margin-right: 7%;
 }
+
 @media (max-width: 800px) {
- 
-  .logo{
+
+  .logo {
     width: 100%;
   }
 }
-section#conteudo1{
+
+section#conteudo1 {
   align-items: center;
   justify-content: flex-start;
   max-width: 100%;
@@ -397,7 +413,8 @@ section#conteudo1{
   margin-bottom: 50px;
   margin-top: 50px;
 }
-section#conteudo2{
+
+section#conteudo2 {
   align-items: center;
   justify-content: flex-end;
   max-width: 100%;
@@ -405,7 +422,8 @@ section#conteudo2{
   margin-bottom: 50px;
   margin-top: 50px;
 }
-section#conteudo3{
+
+section#conteudo3 {
   align-items: center;
   justify-content: flex-start;
   max-width: 100%;
@@ -413,7 +431,8 @@ section#conteudo3{
   margin-bottom: 50px;
   margin-top: 50px;
 }
-section#conteudo4{
+
+section#conteudo4 {
   align-items: center;
   justify-content: flex-end;
   max-width: 100%;
@@ -421,20 +440,23 @@ section#conteudo4{
   margin-bottom: 50px;
   margin-top: 50px;
 }
-.carousel-inner{
-border-radius: 20px;
+
+.carousel-inner {
+  border-radius: 20px;
 }
-.img-slider{
+
+.img-slider {
   inset: 0;
   width: 50%;
   height: auto;
   z-index: 0;
 }
-.swiper-slide{
+
+.swiper-slide {
   margin: 0;
 }
 
-.image{
+.image {
   display: flex;
   flex-direction: column;
   width: 15%;
@@ -444,13 +466,13 @@ border-radius: 20px;
   font-weight: 700;
 }
 
-.image img{
+.image img {
   margin: 0;
   margin-bottom: 20px;
   width: 100%;
 }
 
-.image label{
+.image label {
   text-align: center;
   background-color: #00511C;
   color: #feba03;
@@ -463,14 +485,17 @@ border-radius: 20px;
   margin-bottom: 10%;
   margin-right: 7%;
 }
-.paragrafo0 h1{
+
+.paragrafo0 h1 {
   color: #ffffff;
   margin-bottom: 5%;
   font-size: 150%;
 }
-.paragrafo0 p{
+
+.paragrafo0 p {
   color: #ffffff;
 }
+
 .paragrafo1 {
   width: 70%;
   text-align: center;
@@ -478,14 +503,17 @@ border-radius: 20px;
   margin-left: 5%;
 
 }
-.paragrafo1 h1{
+
+.paragrafo1 h1 {
   color: #ffffff;
   margin-bottom: 5%;
   font-size: 150%;
 }
-.paragrafo1 p{
+
+.paragrafo1 p {
   color: #ffffff;
 }
+
 .paragrafo2 {
   width: 70%;
   text-align: center;
@@ -493,14 +521,17 @@ border-radius: 20px;
   margin-right: 5%;
 
 }
-.paragrafo2 h1{
+
+.paragrafo2 h1 {
   color: #ffffff;
   margin-bottom: 5%;
   font-size: 150%;
 }
-.paragrafo2 p{
+
+.paragrafo2 p {
   color: #ffffff;
 }
+
 .paragrafo3 {
   width: 70%;
   text-align: center;
@@ -508,14 +539,17 @@ border-radius: 20px;
   margin-left: 5%;
 
 }
-.paragrafo3 h1{
+
+.paragrafo3 h1 {
   color: #ffffff;
   margin-bottom: 5%;
   font-size: 150%;
 }
-.paragrafo3 p{
+
+.paragrafo3 p {
   color: #ffffff;
 }
+
 .paragrafo4 {
   width: 70%;
   text-align: center;
@@ -523,80 +557,98 @@ border-radius: 20px;
   margin-right: 5%;
 
 }
-.paragrafo4 h1{
+
+.paragrafo4 h1 {
   color: #ffffff;
   margin-bottom: 5%;
   font-size: 150%;
 }
-.paragrafo4 p{
+
+.paragrafo4 p {
   color: #ffffff;
 }
 
 
 @media screen and (max-width:800px) {
-  section{
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-evenly;
+  section {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
   }
-  .content1{
-      width: 90%;
+
+  .content1 {
+    width: 90%;
   }
-  .img-slider{
-      width: 100%;
+
+  .img-slider {
+    width: 100%;
   }
+
   .image {
-      width: 50vw;
+    width: 50vw;
   }
 }
 
-#carouselExampleAutoplaying0{
+#carouselExampleAutoplaying0 {
   width: 50%;
-  
+
 }
-#carouselExampleAutoplaying1{
-  width: 50%;
-}
-#carouselExampleAutoplaying2{
+
+#carouselExampleAutoplaying1 {
   width: 50%;
 }
-#carouselExampleAutoplaying3{
+
+#carouselExampleAutoplaying2 {
   width: 50%;
 }
-.carousel-control-prev{
+
+#carouselExampleAutoplaying3 {
+  width: 50%;
+}
+
+.carousel-control-prev {
   cursor: pointer;
 }
-.carousel-control-next{
+
+.carousel-control-next {
   cursor: pointer;
 }
+
 @media (max-width: 830px) {
-  #carouselExampleAutoplaying0{
+  #carouselExampleAutoplaying0 {
     width: 70%;
   }
-  #carouselExampleAutoplaying1{
+
+  #carouselExampleAutoplaying1 {
     width: 70%;
   }
-  #carouselExampleAutoplaying2{
+
+  #carouselExampleAutoplaying2 {
     width: 0%;
   }
-  #carouselExampleAutoplaying3{
+
+  #carouselExampleAutoplaying3 {
     width: 70%;
   }
 }
+
 @media (max-width: 560px) {
-  #carouselExampleAutoplaying0{
+  #carouselExampleAutoplaying0 {
     width: 90%;
   }
-  #carouselExampleAutoplaying1{
+
+  #carouselExampleAutoplaying1 {
     width: 90%;
   }
-  #carouselExampleAutoplaying2{
+
+  #carouselExampleAutoplaying2 {
     width: 90%;
   }
-  #carouselExampleAutoplaying3{
+
+  #carouselExampleAutoplaying3 {
     width: 90%;
   }
-  
+
 }
 
 /*
@@ -606,7 +658,8 @@ border-radius: 20px;
   position: fixed;
   bottom: 100px;
   right: 20px;
-  transition: bottom 0.3s; /* Adicione a regra de transição aqui */
+  transition: bottom 0.3s;
+  /* Adicione a regra de transição aqui */
 }
 
 .social-buttons a {
@@ -615,7 +668,8 @@ border-radius: 20px;
   height: 50px;
   border-radius: 50%;
   margin: 10px;
-  background-color: #00511c; /* Cor do WhatsApp */
+  background-color: #00511c;
+  /* Cor do WhatsApp */
   text-align: center;
   line-height: 50px;
   font-size: 24px;
@@ -623,30 +677,36 @@ border-radius: 20px;
   text-decoration: none;
   transition: background-color 0.3s;
 }
-.social-buttons img{
+
+.social-buttons img {
   width: 35px;
   justify-content: center;
   margin-top: 7px;
 }
 
 .social-buttons a.instagram-button {
-  background-color: #00511c; /* Cor do Instagram */
+  background-color: #00511c;
+  /* Cor do Instagram */
 }
 
 .social-buttons a:hover {
-  background-color: #128C7E; /* Cor de destaque ao passar o mouse */
+  background-color: #128C7E;
+  /* Cor de destaque ao passar o mouse */
 }
+
 /*--------------------------------------------- RESOLUÇÃO BUTÕES REDES SOCIAIS (NÃO ALTERAR!) -----------------------------------------*/
 @media (min-height: 821px) {
-  .social-buttons{
-    display: none;
-  }
-  }
-@media (max-width: 560px) {
-  .social-buttons{
+  .social-buttons {
     display: none;
   }
 }
+
+@media (max-width: 560px) {
+  .social-buttons {
+    display: none;
+  }
+}
+
 /* ----------------------------------- FOOTER PADRÃO DO SITE (NÃO ALTERAR) ---------------------------------------*/
 footer {
   position: relative;

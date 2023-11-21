@@ -1,3 +1,14 @@
+/*--------------------------------------------- IMPORTAÇÃO DE FONTES. -------------------------------------------*/
+@font-face {
+  font-family: 'open-sans';
+  src: url('OpenSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('BebasNeue-Light.ttf') format('truetype');
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -27,21 +38,11 @@ div#cabecalho {
   width: 80px;
 }
 
-@font-face {
-  font-family: 'open-sans';
-  src: url('OpenSans-Regular.ttf') format('truetype');
-}
-
 h3#escol {
   font-family: 'open-sans';
   margin-left: 12%;
   margin-top: 1%;
 
-}
-
-@font-face {
-  font-family: 'Bebas Neue';
-  src: url('BebasNeue-light.ttf') format('truetype');
 }
 
 h3#escol1 {
@@ -116,16 +117,6 @@ img#select {
   margin-right: 6%;
 }
 
-@font-face {
-  font-family: 'open-sans';
-  src: url('OpenSans-Regular.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Bebas Neue';
-  src: url('BebasNeue-Light.ttf') format('truetype');
-}
-
 .seta {
   font-size: 15px;
   padding: 0px;
@@ -196,6 +187,7 @@ button[name="drop"] {
   display: none;
 }
 
+/*--------------------------------------------- MENU RESPONSIVO (NÃO ALTERAR!) -----------------------------------------*/
 .responsive {
   background: linear-gradient(to right, #ffffff 4px, transparent 4px);
   background-color: #03501e;
@@ -390,7 +382,7 @@ a classe content deve ser posta entre as divs do header e footer, sendo customiz
   flex-wrap: wrap;
 }
 
-.tela-curso-enfer{
+.tela-curso-enfer {
   margin: 0;
   width: 250px;
   height: 150px;
@@ -402,7 +394,8 @@ a classe content deve ser posta entre as divs do header e footer, sendo customiz
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.66);
   transition: 0.5s;
 }
-.tela-curso-est{
+
+.tela-curso-est {
   margin: 0;
   width: 250px;
   height: 150px;
@@ -414,7 +407,8 @@ a classe content deve ser posta entre as divs do header e footer, sendo customiz
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.66);
   transition: 0.5s;
 }
-.tela-curso-fin{
+
+.tela-curso-fin {
   margin: 0;
   width: 250px;
   height: 150px;
@@ -426,7 +420,8 @@ a classe content deve ser posta entre as divs do header e footer, sendo customiz
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.66);
   transition: 0.5s;
 }
-.tela-curso-infor{
+
+.tela-curso-infor {
   margin: 0;
   width: 250px;
   height: 150px;
@@ -466,6 +461,7 @@ strong.titu-enfer {
   text-align: center;
   font-size: 1.5rem;
 }
+
 .informatica,
 .enfermagem,
 .estetica,
@@ -475,6 +471,7 @@ strong.titu-est {
   text-align: center;
   font-size: 1.5rem;
 }
+
 .informatica,
 .enfermagem,
 .estetica,
@@ -484,6 +481,7 @@ strong.titu-fin {
   text-align: center;
   font-size: 1.5rem;
 }
+
 .informatica,
 .enfermagem,
 .estetica,
@@ -499,16 +497,19 @@ strong.titu-infor {
   /* border-color: #FFBD00; */
   border: 0.5px solid #009F78;
 }
+
 .hr-est {
   width: 60px;
   /* border-color: #FFBD00; */
   border: 0.5px solid #7C00B6;
 }
+
 .hr-fin {
   width: 60px;
   /* border-color: #FFBD00; */
   border: 0.5px solid #00511C;
 }
+
 .hr-infor {
   width: 60px;
   /* border-color: #FFBD00; */

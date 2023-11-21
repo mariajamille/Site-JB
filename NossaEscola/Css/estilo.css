@@ -1,26 +1,35 @@
+/*--------------------------------------------- IMPORTAÇÃO DE FONTES. -------------------------------------------*/
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('BebasNeue-light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'open-sans';
+  src: url('OpenSans-Regular.ttf') format('truetype');
+}
+
 body {
   margin: 0;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-image: url('escola.webp'); /* Substitua pelo caminho da sua imagem */
-  background-size: cover; /* A imagem se ajustará à tela */
-  background-attachment: fixed; /* A imagem permanecerá fixa à medida que a página rola */
-  background-repeat: no-repeat; /* Impede a repetição da imagem */
-  
+  background-image: url('escola.webp');
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
+
 body::before {
   content: "";
-  background-color: rgba(0, 0, 0, 0.0); /* Cor escura com 50% de transparência (ajuste conforme necessário) */
+  background-color: rgba(0, 0, 0, 0.0);
   position: absolute;
-  
-top: 0;
+  top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: -1; /* Coloca o pseudo-elemento atrás do conteúdo do body */
+  z-index: -1;
 }
-
 
 /*--------------------------------------------- HEADER PADRÃO (NÃO ALTERAR!) -------------------------------------------*/
 div#cabecalho {
@@ -39,10 +48,7 @@ div#cabecalho img {
   width: 80px;
 }
 
-@font-face {
-  font-family: 'open-sans';
-  src: url('OpenSans-Regular.ttf') format('truetype');
-}
+
 
 h3#escol {
   font-family: 'open-sans';
@@ -51,10 +57,7 @@ h3#escol {
 
 }
 
-@font-face {
-  font-family: 'Bebas Neue';
-  src: url('BebasNeue-light.ttf') format('truetype');
-}
+
 
 h3#escol1 {
   font-family: 'Bebas Neue', sans-serif;
@@ -91,9 +94,9 @@ nav#nav {
   align-items: center;
   height: 38px;
   border-bottom: 5px solid darkgreen;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    text-decoration: none;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  text-decoration: none;
 }
 
 #drop::after {
@@ -180,7 +183,7 @@ button[name="drop"] {
   width: 100%;
   margin-top: 1px;
   font-family: 'open-sans';
-  
+
 }
 
 .drop-content a {
@@ -193,7 +196,8 @@ button[name="drop"] {
   border-radius: 10px;
   font-weight: bolder;
 }
-a#pagina{
+
+a#pagina {
   border-bottom: 5px solid #006400;
   border-top: 5px solid #006400;
   background-color: #00511C;
@@ -215,12 +219,16 @@ a#pagina{
 .show-nav {
   display: none;
 }
-.responsive{
+
+/*--------------------------------------------- MENU RESPONSIVO (NÃO ALTERAR!) -----------------------------------------*/
+.responsive {
   background: linear-gradient(to right, #ffffff 4px, transparent 4px);
-    background-color: #03501e;
+  background-color: #03501e;
 }
+
 .responsive-nav:hover i {
-  color: #e61212; /* Cor desejada ao passar o mouse sobre o ícone */
+  color: #e61212;
+  /* Cor desejada ao passar o mouse sobre o ícone */
 }
 
 .responsive-nav {
@@ -235,9 +243,12 @@ a#pagina{
   height: 100%;
   left: -100vw;
   transition: all 0s;
-  max-height: 100%; /* Defina a altura máxima desejada para a div */
-  overflow: auto;   /* Isso adicionará uma barra de rolagem quando o conteúdo exceder a altura máxima */
+  max-height: 100%;
+  /* Defina a altura máxima desejada para a div */
+  overflow: auto;
+  /* Isso adicionará uma barra de rolagem quando o conteúdo exceder a altura máxima */
 }
+
 .qualquer {
   transition: .5s;
   display: flex;
@@ -250,10 +261,13 @@ a#pagina{
   height: 100%;
   opacity: 0;
   transition: all 1.5s;
-  max-height: 100%; /* Defina a altura máxima desejada para a div */
-  overflow: auto;   /* Isso adicionará uma barra de rolagem quando o conteúdo exceder a altura máxima */
+  max-height: 100%;
+  /* Defina a altura máxima desejada para a div */
+  overflow: auto;
+  /* Isso adicionará uma barra de rolagem quando o conteúdo exceder a altura máxima */
   scrollbar-width: thin;
 }
+
 .responsive-nav a {
   text-decoration: none;
   width: 100%;
@@ -266,6 +280,7 @@ a#pagina{
   margin-bottom: 2px;
   margin-top: 2px;
 }
+
 .responsive-nav a:hover {
   color: #00511C;
   background-color: #D1E2C8;
@@ -282,8 +297,6 @@ a#pagina{
   height: 5px;
   transition: .4s;
 }
-
-
 
 /*--------------------------------------------- RESOLUÇÃO MENU RESPONSIVO (NÃO ALTERAR!) -----------------------------------------*/
 
@@ -317,24 +330,29 @@ a#pagina{
   nav#nav {
     display: none;
   }
+
   .ativo1 {
     opacity: 1;
     background-color: #00000081;
     z-index: 2;
   }
+
   .ativo {
     left: 0;
   }
-  .desativado{
+
+  .desativado {
     display: none;
   }
 }
+
 @media (max-width: 485px) {
   .responsive-nav {
     width: 65%;
   }
 
 }
+
 @media (max-width: 380px) {
   .responsive-nav {
     width: 82%;
@@ -366,8 +384,7 @@ a classe content deve ser posta entre as divs do header e footer, sendo customiz
   font-family: 'open-sans1';
 }
 
-
-#a{
+#a {
   text-decoration: none;
 }
 
@@ -378,9 +395,11 @@ a classe content deve ser posta entre as divs do header e footer, sendo customiz
 .conteudo-esquerda {
   /* Removendo float */
   /* float: left; */
-  width: 100%; /* Ocupar a largura total */
+  width: 100%;
+  /* Ocupar a largura total */
   color: #fff;
-  display: block; /* Alterado para display: block */
+  display: block;
+  /* Alterado para display: block */
   justify-content: center;
   text-align: center;
   margin-top: 0%;
@@ -390,41 +409,47 @@ a classe content deve ser posta entre as divs do header e footer, sendo customiz
 .conteudo-direita {
   /* Removendo float */
   /* float: right; */
-  width: 100%; /* Ocupar a largura total */
+  width: 100%;
+  /* Ocupar a largura total */
   color: #fff;
-  display: block; /* Alterado para display: block */
+  display: block;
+  /* Alterado para display: block */
   justify-content: center;
   text-align: center;
 }
-p#Info{
-font-size: 130%;
+
+p#Info {
+  font-size: 130%;
 
 }
+
 /* Estilo para limpar a flutuação e evitar problemas de layout */
 .clear {
   clear: both;
 }
 
 @media (max-width: 917px) {
-  .conteudo-esquerda, .conteudo-direita {
-      width: 100%; /* Ocupar a largura total */
-      float: none; /* Remover a flutuação */
-      display: block; /* Alterado para display: block */
+
+  .conteudo-esquerda,
+  .conteudo-direita {
+    width: 100%;
+    /* Ocupar a largura total */
+    float: none;
+    /* Remover a flutuação */
+    display: block;
+    /* Alterado para display: block */
   }
-  .content{
+
+  .content {
     flex-direction: column;
   }
 }
+
 @media (max-width: 560px) {
-#maps{
-  width: 80%;
+  #maps {
+    width: 80%;
+  }
 }
-}
-
-
-
-
-
 
 /*
   --------------------------------------------- CONFIGURAÇÃO BUTÕES REDES SOCIAIS (NÃO ALTERAR!) ----------------------------------------------
@@ -433,7 +458,8 @@ font-size: 130%;
   position: fixed;
   bottom: 100px;
   right: 20px;
-  transition: bottom 0.3s; /* Adicione a regra de transição aqui */
+  transition: bottom 0.3s;
+  /* Adicione a regra de transição aqui */
 }
 
 .social-buttons a {
@@ -442,7 +468,8 @@ font-size: 130%;
   height: 50px;
   border-radius: 50%;
   margin: 10px;
-  background-color: #00511c; /* Cor do WhatsApp */
+  background-color: #00511c;
+  /* Cor do WhatsApp */
   text-align: center;
   line-height: 50px;
   font-size: 24px;
@@ -450,30 +477,36 @@ font-size: 130%;
   text-decoration: none;
   transition: background-color 0.3s;
 }
-.social-buttons img{
+
+.social-buttons img {
   width: 35px;
   justify-content: center;
   margin-top: 7px;
 }
 
 .social-buttons a.instagram-button {
-  background-color: #00511c; /* Cor do Instagram */
+  background-color: #00511c;
+  /* Cor do Instagram */
 }
 
 .social-buttons a:hover {
-  background-color: #128C7E; /* Cor de destaque ao passar o mouse */
+  background-color: #128C7E;
+  /* Cor de destaque ao passar o mouse */
 }
+
 /*--------------------------------------------- RESOLUÇÃO BUTÕES REDES SOCIAIS (NÃO ALTERAR!) -----------------------------------------*/
 @media (min-height: 821px) {
-  .social-buttons{
-    display: none;
-  }
-  }
-@media (max-width: 560px) {
-  .social-buttons{
+  .social-buttons {
     display: none;
   }
 }
+
+@media (max-width: 560px) {
+  .social-buttons {
+    display: none;
+  }
+}
+
 /* ----------------------------------- FOOTER PADRÃO DO SITE (NÃO ALTERAR) ---------------------------------------*/
 footer {
   position: relative;
@@ -551,17 +584,20 @@ footer a:visited {
 #endereco {
   margin-top: 6px;
 }
-#invisivel1{
+
+#invisivel1 {
   width: 15px;
   margin-right: 10px;
   display: none;
-  
+
 }
-#invisivel2{
+
+#invisivel2 {
   width: 15px;
   margin-right: 10px;
   display: none;
 }
-#R2{
+
+#R2 {
   white-space: norap;
 }

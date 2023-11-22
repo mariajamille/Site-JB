@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: 'Bebas Neue';
-  src: url('BebasNeue-light.ttf') format('truetype');
+  src: url('BebasNeue-Light.ttf') format('truetype');
 }
 
 body {
@@ -108,7 +108,6 @@ nav#nav {
   margin-left: 2%;
   margin-right: 2%;
 }
-
 
 .button#pagina {
   border-bottom: 5px solid darkgreen;

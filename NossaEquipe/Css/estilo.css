@@ -20,7 +20,7 @@ body {
   bottom: 0;
 }
 
-/*--------------------------------- Header ---------------------------------*/
+/*--------------------------------------------- HEADER PADRÃO (NÃO ALTERAR!) -------------------------------------------*/
 div#cabecalho {
   position: relative;
   background-color: #00511C;
@@ -70,7 +70,7 @@ nav#nav {
   text-align: center;
   font-family: 'open-sans1';
   font-size: 120%;
-  height: 35px;
+  height: 36px;
 }
 
 #drop {
@@ -78,7 +78,7 @@ nav#nav {
   font-weight: bolder;
   display: flex;
   align-items: center;
-  height: 38px;
+  height: 36px;
 }
 
 #drop::after {
@@ -102,13 +102,13 @@ nav#nav {
 .button {
   font-family: 'open-sans';
   cursor: pointer;
+  text-decoration: none;
   color: darkgreen;
   font-weight: bolder;
   margin-left: 2%;
   margin-right: 2%;
-
-  text-decoration: none;
 }
+
 
 .button#pagina {
   border-bottom: 5px solid darkgreen;
@@ -181,7 +181,6 @@ button[name="drop"] {
 .menu-drop:hover .drop-content {
   display: block;
   border-bottom: #D1E2C8;
-
 }
 
 .menu-drop:hover button[name="drop"] {
@@ -488,6 +487,7 @@ a classe content deve ser posta entre as divs do header e footer, sendo customiz
 }
 
 /*--------------------------------------------- RESOLUÇÃO BUTÕES REDES SOCIAIS (NÃO ALTERAR!) -----------------------------------------*/
+
 @media (max-width: 560px) {
   .social-buttons {
     display: none;

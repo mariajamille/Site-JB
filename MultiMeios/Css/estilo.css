@@ -72,7 +72,7 @@ nav#nav {
   text-align: center;
   font-family: 'open-sans1';
   font-size: 120%;
-  height: 38px;
+  height: 36px;
 }
 
 #drop {
@@ -81,6 +81,10 @@ nav#nav {
   display: flex;
   align-items: center;
   height: 38px;
+  border-bottom: 5px solid darkgreen;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    text-decoration: none;
 }
 
 #drop::after {
@@ -111,13 +115,13 @@ nav#nav {
   margin-right: 2%;
 }
 
-.button#pagina {
-  border-bottom: 5px solid darkgreen;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  text-decoration: none;
-}
 
+a#pagina {
+  border-bottom: 5px solid #006400;
+  border-top: 5px solid #006400;
+  background-color: #00511C;
+  color: #fff;
+}
 img#select {
   width: 10px;
   height: 10px;

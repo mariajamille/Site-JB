@@ -1,12 +1,12 @@
 /*--------------------------------------------- IMPORTAÇÃO DE FONTES. -------------------------------------------*/
 @font-face {
-  font-family: 'Bebas Neue';
-  src: url('BebasNeue-light.ttf') format('truetype');
+  font-family: 'open-sans';
+  src: url('OpenSans-Regular.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'open-sans';
-  src: url('OpenSans-Regular.ttf') format('truetype');
+  font-family: 'Bebas Neue';
+  src: url('BebasNeue-Light.ttf') format('truetype');
 }
 
 body {
@@ -75,9 +75,9 @@ nav#nav {
   align-items: center;
   height: 38px;
   border-bottom: 5px solid darkgreen;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  text-decoration: none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    text-decoration: none;
 }
 
 #drop::after {
@@ -106,6 +106,13 @@ nav#nav {
   font-weight: bolder;
   margin-left: 2%;
   margin-right: 2%;
+}
+
+.button#pagina {
+  border-bottom: 5px solid darkgreen;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  text-decoration: none;
 }
 
 img#select {

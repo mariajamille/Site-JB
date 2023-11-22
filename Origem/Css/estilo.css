@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: 'Bebas Neue';
-  src: url('BebasNeue-light.ttf') format('truetype');
+  src: url('BebasNeue-Light.ttf') format('truetype');
 }
 
 body {
@@ -33,18 +33,15 @@ div#cabecalho img {
   width: 80px;
 }
 
-
-
 h3#escol {
-  font-family: 'open-sans' !important;
-  ;
+  font-family: 'open-sans';
   margin-left: 12%;
   margin-top: 1%;
 
 }
 
 h3#escol1 {
-  font-family: 'Bebas Neue', sans-serif !important;
+  font-family: 'Bebas Neue', sans-serif;
   margin-left: 12%;
   margin-top: -1%;
   font-size: 230%;
@@ -78,9 +75,9 @@ nav#nav {
   align-items: center;
   height: 38px;
   border-bottom: 5px solid darkgreen;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  text-decoration: none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    text-decoration: none;
 }
 
 #drop::after {
@@ -109,6 +106,13 @@ nav#nav {
   font-weight: bolder;
   margin-left: 2%;
   margin-right: 2%;
+}
+
+a#pagina {
+  border-bottom: 5px solid #006400;
+  border-top: 5px solid #006400;
+  background-color: #00511C;
+  color: #fff;
 }
 
 img#select {
@@ -171,12 +175,6 @@ button[name="drop"] {
   font-weight: bolder;
 }
 
-a#pagina {
-  border-bottom: 5px solid #006400;
-  border-top: 5px solid #006400;
-  background-color: #00511C;
-  color: #fff;
-}
 
 .menu-drop:hover .drop-content {
   display: block;

@@ -946,12 +946,6 @@ h4 {
 }
 
 /*--------------------------------------------- RESOLUÇÃO BUTÕES REDES SOCIAIS (NÃO ALTERAR!) -----------------------------------------*/
-@media (min-height: 821px) {
-  .social-buttons {
-    display: none;
-  }
-}
-
 @media (max-width: 790px) {
   .social-buttons {
     display: none;

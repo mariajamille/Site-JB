@@ -488,12 +488,6 @@ a classe content deve ser posta entre as divs do header e footer, sendo customiz
 }
 
 /*--------------------------------------------- RESOLUÇÃO BUTÕES REDES SOCIAIS (NÃO ALTERAR!) -----------------------------------------*/
-@media (min-height: 821px) {
-  .social-buttons {
-    display: none;
-  }
-}
-
 @media (max-width: 560px) {
   .social-buttons {
     display: none;

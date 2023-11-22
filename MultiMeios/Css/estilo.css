@@ -1,3 +1,14 @@
+/*--------------------------------------------- IMPORTAÇÃO DE FONTES. -------------------------------------------*/
+@font-face {
+  font-family: 'open-sans';
+  src: url('../Css/OpenSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('../Css/BebasNeue-Light.ttf') format('truetype');
+}
+
 body {
   margin: 0;
   display: flex;
@@ -42,17 +53,6 @@ h3#escol1 {
   margin-left: 12%;
   margin-top: -1%;
   font-size: 230%;
-}
-
-/*--------------------------------------------- IMPORTAÇÃO DE FONTES. -------------------------------------------*/
-@font-face {
-  font-family: 'open-sans';
-  src: url('OpenSans-Regular.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Bebas Neue';
-  src: url('BebasNeue-light.ttf') format('truetype');
 }
 
 div#complemento {

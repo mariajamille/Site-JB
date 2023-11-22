@@ -1,14 +1,3 @@
-/*--------------------------------------------- IMPORTAÇÃO DE FONTES. -------------------------------------------*/
-@font-face {
-  font-family: 'open-sans';
-  src: url('OpenSans-Regular.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Bebas Neue';
-  src: url('BebasNeue-light.ttf') format('truetype');
-}
-
 body {
   margin: 0;
   display: flex;
@@ -21,6 +10,17 @@ body {
   /* A imagem permanecerá fixa à medida que a página rola */
   background-repeat: no-repeat;
   /* Impede a repetição da imagem */
+}
+
+/*--------------------------------------------- IMPORTAÇÃO DE FONTES. -------------------------------------------*/
+@font-face {
+  font-family: 'open-sans';
+  src: url('OpenSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('BebasNeue-light.ttf') format('truetype');
 }
 
 /*--------------------------------------------- HEADER PADRÃO (NÃO ALTERAR!) -------------------------------------------*/

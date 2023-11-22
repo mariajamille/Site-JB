@@ -379,6 +379,18 @@ a classe content deve ser posta entre as divs do header e footer, sendo customiz
   background-image: url("./img/protimg4.webp");
 }
 
+#banner5 {
+  background-image: url("./img/protimg5.webp");
+}
+
+#banner6 {
+  background-image: url("./img/protimg6.webp");
+}
+
+#banner7 {
+  background-image: url("./img/protimg7.webp");
+}
+
 #a {
   text-decoration: none;
 }

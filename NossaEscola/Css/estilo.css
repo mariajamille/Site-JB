@@ -416,11 +416,12 @@ a classe content deve ser posta entre as divs do header e footer, sendo customiz
   /* Alterado para display: block */
   justify-content: center;
   text-align: center;
+  font-weight: bold;
 }
 
 p#Info {
   font-size: 130%;
-
+  font-weight: bold;
 }
 
 /* Estilo para limpar a flutuação e evitar problemas de layout */

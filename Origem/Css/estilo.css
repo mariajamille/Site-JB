@@ -347,6 +347,7 @@ a classe content deve ser posta entre as divs do header e footer, sendo customiz
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  font-family: 'open-sans';
 }
 
 #a {

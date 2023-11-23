@@ -96,6 +96,41 @@
       <p>Rua Angélica Gurgel, 362, Fortaleza - CE.</p>
     </div>
     <div class="clear"></div>
+
+    <!-- BUTTON BACK TO TOP (JAMILLE) -->
+    <div id="back_to_top">
+      <div id="btn_back">
+        <i id="icon_up" class="fa-solid fa-arrow-up"></i>
+      </div>
+    </div>
+    <script>
+     //BOTÃO BACK TO TOP (JAMILLE)
+  let calcScrollValue = () => {
+    let scrollProgress = document.getElementById("back_to_top");
+    let pos = document.documentElement.scrollTop;
+    let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    let scrollValue = Math.round((pos * 100) / calcHeight);
+
+    if (pos > 50) {
+      scrollProgress.style.display = "grid";
+    } else {
+      scrollProgress.style.display = "none";
+    }
+
+    scrollProgress.addEventListener("click", () => {
+      // Scroll suave para o topo
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // Adiciona um efeito de rolagem suave
+      });
+    });
+
+    scrollProgress.style.background = `conic-gradient(#FFBD00 ${scrollValue}%, #d7d7d7 ${scrollValue}%)`;
+  };
+
+  window.onscroll = calcScrollValue;
+  window.onload = calcScrollValue;
+</script>
     <!------------------------------------- BUTÕES REDES SOCIAIS ------------------------------------>
     <div class="social-buttons">
       <a href="https://wa.me/+558591919730" target="_blank" class="whatsapp-button">

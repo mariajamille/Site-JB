@@ -317,6 +317,40 @@ button[name="drop"] {
   .desativado {
     display: none;
   }
+
+  /* INÍCIO DO BUTTON BACK TO TOP (JAMILLE) */
+#back_to_top {
+  position: fixed;
+  z-index: 999;
+  color: black;
+  bottom: 60px;
+  right: 30px;
+  height: 48px;
+  width: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+
+#back_to_top #btn_back #icon_up:hover {
+  transform: translateY(-3px);
+}
+
+#btn_back {
+  display: block;
+  height: calc(100% - 12px);
+  width: calc(100% - 12px);
+  background-color: white;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+/* FIM DO BUTTON BACK TO TOP (JAMILLE) */
 }
 
 @media (max-width: 485px) {

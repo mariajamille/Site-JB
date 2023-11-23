@@ -58,12 +58,13 @@
         <div class="drop-content">
           <a href="../Origem/index.html">Origem</a>
           <a href="../Edital/index.html">Regimento Escolar</a>
-          <a href="../NossaEscola/index.html" id="pagina">Nossa Escola</a>
+          <a href="../NossaEscola/index.html">Nossa Escola</a>
           <a href="../MultiMeios/index.html">MultiMeios</a>
         </div>
       </div>
       <a href="../NossaEquipe/index.html" class="button">NOSSA EQUIPE</a>
       <a href="../Criadores/index.html" class="button">CRIADORES</a>
+    </nav>
     </nav>
     <!------------------------------------- MENU RESPONSIVO ------------------------------------>
     <div onClick="showNav()" class="show-nav">
@@ -74,28 +75,82 @@
   </div>
   <!------------------------------------- CONTENT ------------------------------------>
   <div class="content">
-    <div class="conteudo-esquerda">
-      <h2>INFRAESTRUTURA:</h2>
-      <p id="Info">Salas Climatizadas;<br>
-        MultiMeios;<br>
-        Cozinha;<br>
-        Quadra Esportiva;<br>
-        Láb. Informática;<br>
-        Láb. Ciências;<br>
-        Láb. Estética;<br>
-        Láb. Matemática;<br>
-        Láb. Enfermagem;<br>
-        Sala de Professores;<br>
-        Sala de Diretoria.</p>
+    
+    <div class="modal-box" id="modal-box">
+      <div class="modal-content">
+        <h1> RECUPERAR SENHA </h1>
+        <span onclick="toggleModal()" class="btn-close-modal"></span>
+        <div class="flex_container"><div class="barra_amarela_form"></div><p> Insira o seu email para recuperar sua senha. </p></div>
+        
+        <form method="post" action="">
+            <label for="recuperar-email"><input type="email" id="recuperar-email" name="recuperar-email" placeholder="insira um email válido"></label>
+
+            <div class="modal-buttons">
+                <input type="submit" id="enviar-email-button" value="ENVIAR">
+            </div>
+        </form>
+
+      </div>
     </div>
-    <div class="conteudo-direita">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d591.7611934385637!2d-38.49926094723555!3d-3.8360843600708394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c751d4bc75b055%3A0xdd1f68422919cd8d!2sEEEP%20Jos%C3%A9%20de%20Barcelos!5e0!3m2!1spt-BR!2sbr!4v1699053768687!5m2!1spt-BR!2sbr"
-        width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade" id="maps"></iframe>
-      <p>Rua Angélica Gurgel, 362, Fortaleza - CE.</p>
+
+
+    <div class="div_login" id="div_login">
+
+    <form method="post" action="#">
+
+        <div class="flex_user-img"><div class="img-user"></div></div>
+    
+        <fieldset>
+            <label for="email"><span class="input-img" id="img-email" style="background: url(./Css/images/envelope.png) no-repeat center; background-size: 20px auto;"></span><input type="text" name="email" id="email" placeholder="EMAIL OU MATRÍCULA" required></label>
+            <label for="senha"><span class="span-versenha visible" onclick="verSenha()" id="versenha" title="Clique para ver a senha"></span><input type="password" pattern="[A-Za-z0-9@#$%&]{8,}" title="Sua senha deve conter, no mínimo, 8 caracteres." name="senha" id="senha" placeholder="SENHA" required></label>
+            <a href="#" onclick="toggleModal()" class="esqueceu-senha">Esqueceu a senha?</a>
+            <a href="../Acesso_registro/index.html" class="nãotemlogin">Não tem login? Faça seu cadastro aqui.</a>
+            
+            <input type="submit" class="input-acessar" value="ACESSAR">
+        </fieldset>
+    </form>
     </div>
-    <div class="clear"></div>
+
+
+<script>
+function toggleModal() {
+var modalBox = document.getElementById("modal-box");
+if (modalBox.style.visibility === "hidden") {
+    modalBox.style.visibility = "visible";
+} else {
+    modalBox.style.visibility = "hidden";
+}
+}
+
+var inputSenha = document.getElementById('senha');
+var toggleSenha = document.getElementById('versenha');
+
+function verSenha () {
+
+ if(toggleSenha.classList.contains('visible')){
+  toggleSenha.classList.remove('visible');
+  inputSenha.setAttribute("type", "text");
+ }else {
+  toggleSenha.classList.add('visible');
+  inputSenha.setAttribute("type", "password");
+ }
+
+}
+
+var botãoProf = document.getElementById('iden-prof');
+var botãoAluno = document.getElementById('iden-aluno');
+
+function mudarBotão () {
+ if(botãoProf.classList.contains('selected')){
+  botãoProf.classList.remove('selected');
+  botãoAluno.classList.add('selected');
+ }else {
+  botãoProf.classList.add('selected')
+  botãoAluno.classList.remove('selected');
+ }
+
+}
+</script>
 
     <!-- BUTTON BACK TO TOP (JAMILLE) -->
     <div id="back_to_top">
@@ -150,19 +205,19 @@
         const scrollPercentage = (scrollTop / (scrollHeight - windowHeight)) * 100;
         // Verifique a largura da tela
         const windowWidth = window.innerWidth;
-        if (windowWidth <= 917) {
+        if (windowWidth <= 768) {
           // Se a largura da tela for menor ou igual a 768px, defina um valor maior para 'bottom'
           if (scrollPercentage >= 65) {
             socialButtons.style.bottom = "170px"; // Ajuste o valor conforme necessário
           } else {
-            socialButtons.style.bottom = "20px"; // VALOR PADRÃO É 20PX, MUDE DE ACORDO COM A PÁGINA. 
+            socialButtons.style.bottom = "100px"; // Ou qualquer outro valor desejado
           }
         } else {
           // Caso contrário, mantenha o comportamento anterior
           if (scrollPercentage >= 65) {
             socialButtons.style.bottom = "100px"; // Ou qualquer outro valor desejado
           } else {
-            socialButtons.style.bottom = "100px"; // VALOR PADRÃO É 20PX, MUDE DE ACORDO COM A PÁGINA. 
+            socialButtons.style.bottom = "100px"; // Ou qualquer outro valor desejado
           }
         }
       }
@@ -183,16 +238,15 @@
           class="fa-solid fa-file-invoice" style="color: #ffffff; margin-right: 10px;"></i>REGIMENTO ESCOLAR</a>
       <a href="../NossaEquipe/index.html" ontouchstart="changeIconColor(this)" ontouchend="resetIconColor(this)"><i
           class="fa-solid fa-people-group" style="color: #ffffff; margin-right: 10PX;"></i>NOSSA EQUIPE</a>
-      <a href="../NossaEscola/index.html" class="responsive" ontouchstart="changeIconColor(this)"
-        ontouchend="resetIconColor(this)"><i class="fa-solid fa-graduation-cap"
-          style="color: #ffffff; margin-right: 10px;"></i>NOSSA ESCOLA</a>
+      <a href="../NossaEscola/index.html" ontouchstart="changeIconColor(this)" ontouchend="resetIconColor(this)"><i
+          class="fa-solid fa-graduation-cap" style="color: #ffffff; margin-right: 10px;"></i>NOSSA ESCOLA</a>
       <a href="../MultiMeios/index.html" ontouchstart="changeIconColor(this)" ontouchend="resetIconColor(this)"><i
           class="fa-solid fa-book-open-reader" style="color: #ffffff; margin-right: 10px;"></i>MULTIMEIOS</a>
-      <a href="../Criadores/index.html" ontouchstart="changeIconColor(this)" ontouchend="resetIconColor(this)"><i
-          class="fa-solid fa-users-gear" style="color: #ffffff; margin-right: 10px;"></i>CRIADORES</a>
+      <a href="../Criadores/index.html" ontouchstart="changeIconColor(this)"
+        ontouchend="resetIconColor(this)"><i class="fa-solid fa-users-gear" style="color: #ffffff; margin-right: 10px;"></i>CRIADORES</a>
       <a href="../Cursos/index.html" ontouchstart="changeIconColor(this)" ontouchend="resetIconColor(this)"><i
           class="fa-solid fa-brain" style="color: #ffffff; margin-right: 10px;"></i>CURSOS TÉCNICOS</a>
-      <a href="../Acesso_Login/index.html" ontouchstart="changeIconColor(this)" ontouchend="resetIconColor(this)"><i
+      <a href="../Acesso_Login/index.html" class="responsive" ontouchstart="changeIconColor(this)" ontouchend="resetIconColor(this)"><i
           class="fa-solid fa-right-to-bracket" style="color: #ffffff; margin-right: 10px;"></i>ACESSO</a>
     </nav>
   </div>
@@ -218,40 +272,11 @@
     <div class="div_foot" id="sobre">
       <div class="flex_container">
         <div class="barramarelo"></div>
-        <h1 class="titulo_sobre" id="R1">Sobre</h1>
+        <h1 class="titulo_sobre">Sobre</h1>
       </div>
-      <p id="R2"><a href="./Criadores/criadores.html">© 2021 - 2023 - Turma Técnico em Informática</a></p>
-      <p id="R3">Desenvolvimento e Design</p>
+      <p><a href="./Criadores/criadores.html">© 2021 - 2023 - Turma Técnico em Informática</a></p>
+      <p>Desenvolvimento e Design</p>
     </div>
-    <!--------------------------------------- INFORMAÇÕES DE CONTATO PARA FOOTER RESPONSIVO ----------------------------------->
-    <script>
-      if (window.innerWidth <= 560) { // Verifique se a largura da tela é menor ou igual a 800 pixels
-        document.getElementById('R1').textContent = 'Contato';
-      }
-      if (window.innerWidth <= 560) {
-        // Altere o texto
-        document.getElementById('R2').textContent = 'Whatsapp';
-        // Adicione um link (href)
-        var link = document.createElement('a');
-        link.href = 'https://wa.me/+558591919730'; // URL desejada
-        link.textContent = '(85) 9 9191-9730';
-        // Substitua o conteúdo anterior pelo link
-        document.getElementById('R2').innerHTML = '';
-        document.getElementById('R2').appendChild(link);
-      }
-      if (window.innerWidth <= 560) {
-        // Altere o texto
-        document.getElementById('R3').textContent = 'Instagram';
-        // Adicione um link (href)
-        var link = document.createElement('a');
-        link.href = 'https://www.instagram.com/eeep_jb/'; // URL desejada
-        link.textContent = '@eeep_jb';
-        // Substitua o conteúdo anterior pelo link
-        document.getElementById('R3').innerHTML = '';
-        document.getElementById('R3').appendChild(link);
-        document.getElementById('invisivel1').style.display = 'block';
-      }
-    </script>
   </footer>
 </body>
 

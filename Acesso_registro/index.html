@@ -58,12 +58,13 @@
         <div class="drop-content">
           <a href="../Origem/index.html">Origem</a>
           <a href="../Edital/index.html">Regimento Escolar</a>
-          <a href="../NossaEscola/index.html" id="pagina">Nossa Escola</a>
+          <a href="../NossaEscola/index.html">Nossa Escola</a>
           <a href="../MultiMeios/index.html">MultiMeios</a>
         </div>
       </div>
       <a href="../NossaEquipe/index.html" class="button">NOSSA EQUIPE</a>
       <a href="../Criadores/index.html" class="button">CRIADORES</a>
+    </nav>
     </nav>
     <!------------------------------------- MENU RESPONSIVO ------------------------------------>
     <div onClick="showNav()" class="show-nav">
@@ -74,28 +75,75 @@
   </div>
   <!------------------------------------- CONTENT ------------------------------------>
   <div class="content">
-    <div class="conteudo-esquerda">
-      <h2>INFRAESTRUTURA:</h2>
-      <p id="Info">Salas Climatizadas;<br>
-        MultiMeios;<br>
-        Cozinha;<br>
-        Quadra Esportiva;<br>
-        Láb. Informática;<br>
-        Láb. Ciências;<br>
-        Láb. Estética;<br>
-        Láb. Matemática;<br>
-        Láb. Enfermagem;<br>
-        Sala de Professores;<br>
-        Sala de Diretoria.</p>
+    <div class="div_register">
+      <form method="post" action="#">
+
+        <h1> BEM-VINDO!</h1>
+        <div class="div-aluno-prof">
+          <p> Você é professor ou aluno? </p>
+          <div class="div-select">
+            <label for="iden-prof"><input type="radio" name="select" class="select-prof" id="iden-prof" value="Professor" onclick="matriculaObrigatoria()" required>Professor</label>
+            <label for="iden-aluno"><input type="radio" name="select" class="select-aluno" id="iden-aluno" value="Aluno" onclick="matriculaObrigatoria()" required>Aluno</label></div>
+        </div>
+
+        <fieldset>
+
+          <label for="matricula"><span class="input-img" id="img-input-matricula" style="background: url(./Css/images/adicionar-usuario.png) no-repeat center; background-size: 20px auto;"></span><input type="text" name="matricula" id="matricula" placeholder="MATRÍCULA ESCOLAR" required></label>
+          <label for="email"><span class="input-img" style="background: url(./Css/images/envelope.png) no-repeat center; background-size: 20px;"></span><input type="email" name="email" id="email" placeholder="DIGITE SEU EMAIL" required></label>
+          <label for="senha"><span class="span-versenha visible" onclick="verSenha()" id="versenha" title="Clique para ver a senha"></span><input type="password" pattern="[A-Za-z0-9@#$%&]{8,}" title="Sua senha deve conter, no mínimo, 8 caracteres."name="senha" id="senha" placeholder="NOVA SENHA" required></label>
+          <label for="confirmar-senha"><span class="span-versenha visible" onclick="verSenhaConfirmar()" id="versenha-confirmar" title="Clique para ver a senha"></span><input type="password" pattern="[A-Za-z0-9@#$%&]{8,}" name="confirmar-senha" id="confirmar-senha" placeholder="CONFIRME SUA SENHA" required></label>
+
+          <div class="flex_container"><div class="barra_amarela_form"></div><p> Conclua o seu cadastro antes de continuar. </p></div>
+
+          <input type="submit" class="input-registrar" value="REGISTRAR">
+        </fieldset>
+      </form>
     </div>
-    <div class="conteudo-direita">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d591.7611934385637!2d-38.49926094723555!3d-3.8360843600708394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c751d4bc75b055%3A0xdd1f68422919cd8d!2sEEEP%20Jos%C3%A9%20de%20Barcelos!5e0!3m2!1spt-BR!2sbr!4v1699053768687!5m2!1spt-BR!2sbr"
-        width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade" id="maps"></iframe>
-      <p>Rua Angélica Gurgel, 362, Fortaleza - CE.</p>
-    </div>
-    <div class="clear"></div>
+</body>
+</html>
+<script>
+  var inputSenha = document.getElementById('senha');
+  var toggleSenha = document.getElementById('versenha');
+
+  function verSenha () {
+   if(toggleSenha.classList.contains('visible')){
+    toggleSenha.classList.remove('visible');
+    inputSenha.setAttribute("type", "text");
+   }else {
+    toggleSenha.classList.add('visible');
+    inputSenha.setAttribute("type", "password");
+   }
+
+  }
+
+  var inputSenhaConfirmar = document.getElementById('confirmar-senha');
+  var toggleSenhaConfirmar = document.getElementById('versenha-confirmar');
+
+  function verSenhaConfirmar () {
+   if(toggleSenhaConfirmar.classList.contains('visible')){
+    toggleSenhaConfirmar.classList.remove('visible');
+    inputSenhaConfirmar.setAttribute("type", "text");
+   }else {
+    toggleSenhaConfirmar.classList.add('visible');
+    inputSenhaConfirmar.setAttribute("type", "password");
+   }
+
+  }
+
+  function matriculaObrigatoria (){
+    var inputProfessor = document.getElementById('iden-prof');
+    var inputMatricula = document.getElementById('matricula');
+    var imageMatricula = document.getElementById('img-input-matricula');
+
+    if (inputProfessor.checked) {
+      inputMatricula.style.display ='none';
+      imageMatricula.style.display = 'none';
+    } else {
+      inputMatricula.style.display ='flex';
+      imageMatricula.style.display ='block';
+    }
+  }
+</script>
 
     <!-- BUTTON BACK TO TOP (JAMILLE) -->
     <div id="back_to_top">
@@ -150,19 +198,19 @@
         const scrollPercentage = (scrollTop / (scrollHeight - windowHeight)) * 100;
         // Verifique a largura da tela
         const windowWidth = window.innerWidth;
-        if (windowWidth <= 917) {
+        if (windowWidth <= 768) {
           // Se a largura da tela for menor ou igual a 768px, defina um valor maior para 'bottom'
           if (scrollPercentage >= 65) {
             socialButtons.style.bottom = "170px"; // Ajuste o valor conforme necessário
           } else {
-            socialButtons.style.bottom = "20px"; // VALOR PADRÃO É 20PX, MUDE DE ACORDO COM A PÁGINA. 
+            socialButtons.style.bottom = "20px"; // Ou qualquer outro valor desejado
           }
         } else {
           // Caso contrário, mantenha o comportamento anterior
           if (scrollPercentage >= 65) {
             socialButtons.style.bottom = "100px"; // Ou qualquer outro valor desejado
           } else {
-            socialButtons.style.bottom = "100px"; // VALOR PADRÃO É 20PX, MUDE DE ACORDO COM A PÁGINA. 
+            socialButtons.style.bottom = "20px"; // Ou qualquer outro valor desejado
           }
         }
       }
@@ -183,19 +231,20 @@
           class="fa-solid fa-file-invoice" style="color: #ffffff; margin-right: 10px;"></i>REGIMENTO ESCOLAR</a>
       <a href="../NossaEquipe/index.html" ontouchstart="changeIconColor(this)" ontouchend="resetIconColor(this)"><i
           class="fa-solid fa-people-group" style="color: #ffffff; margin-right: 10PX;"></i>NOSSA EQUIPE</a>
-      <a href="../NossaEscola/index.html" class="responsive" ontouchstart="changeIconColor(this)"
-        ontouchend="resetIconColor(this)"><i class="fa-solid fa-graduation-cap"
-          style="color: #ffffff; margin-right: 10px;"></i>NOSSA ESCOLA</a>
+      <a href="../NossaEscola/index.html" ontouchstart="changeIconColor(this)" ontouchend="resetIconColor(this)"><i
+          class="fa-solid fa-graduation-cap" style="color: #ffffff; margin-right: 10px;"></i>NOSSA ESCOLA</a>
       <a href="../MultiMeios/index.html" ontouchstart="changeIconColor(this)" ontouchend="resetIconColor(this)"><i
           class="fa-solid fa-book-open-reader" style="color: #ffffff; margin-right: 10px;"></i>MULTIMEIOS</a>
-      <a href="../Criadores/index.html" ontouchstart="changeIconColor(this)" ontouchend="resetIconColor(this)"><i
-          class="fa-solid fa-users-gear" style="color: #ffffff; margin-right: 10px;"></i>CRIADORES</a>
+      <a href="../Criadores/index.html" class="responsive" ontouchstart="changeIconColor(this)"
+        ontouchend="resetIconColor(this)"><i class="fa-solid fa-users-gear"
+          style="color: #ffffff; margin-right: 10px;"></i>CRIADORES</a>
       <a href="../Cursos/index.html" ontouchstart="changeIconColor(this)" ontouchend="resetIconColor(this)"><i
           class="fa-solid fa-brain" style="color: #ffffff; margin-right: 10px;"></i>CURSOS TÉCNICOS</a>
       <a href="../Acesso_Login/index.html" ontouchstart="changeIconColor(this)" ontouchend="resetIconColor(this)"><i
           class="fa-solid fa-right-to-bracket" style="color: #ffffff; margin-right: 10px;"></i>ACESSO</a>
     </nav>
   </div>
+</div>
   <!------------------------------------- HOVER PARA DISPOSITIVOS MOVEIS ------------------------------------>
   <script>
     function changeIconColor(element) {
@@ -205,54 +254,6 @@
       element.querySelector('i').style.color = '#ffffff'; // Cor original quando o mouse sai do <a>
     }
   </script>
-  <!--------------------------------------- FOOTER ----------------------------------->
-  <footer>
-    <div class="div_foot" id="endereco">
-      <div class="flex_container">
-        <div class="barramarelo"></div>
-        <h1 class="titulo_endereco">Endereço</h1>
-      </div>
-      <p>Rua Angélica Gurgel, 362, Fortaleza - CE</p>
-      <p>Horário: Segunda - Sexta: 7h20 - 16h40</p>
-    </div>
-    <div class="div_foot" id="sobre">
-      <div class="flex_container">
-        <div class="barramarelo"></div>
-        <h1 class="titulo_sobre" id="R1">Sobre</h1>
-      </div>
-      <p id="R2"><a href="./Criadores/criadores.html">© 2021 - 2023 - Turma Técnico em Informática</a></p>
-      <p id="R3">Desenvolvimento e Design</p>
-    </div>
-    <!--------------------------------------- INFORMAÇÕES DE CONTATO PARA FOOTER RESPONSIVO ----------------------------------->
-    <script>
-      if (window.innerWidth <= 560) { // Verifique se a largura da tela é menor ou igual a 800 pixels
-        document.getElementById('R1').textContent = 'Contato';
-      }
-      if (window.innerWidth <= 560) {
-        // Altere o texto
-        document.getElementById('R2').textContent = 'Whatsapp';
-        // Adicione um link (href)
-        var link = document.createElement('a');
-        link.href = 'https://wa.me/+558591919730'; // URL desejada
-        link.textContent = '(85) 9 9191-9730';
-        // Substitua o conteúdo anterior pelo link
-        document.getElementById('R2').innerHTML = '';
-        document.getElementById('R2').appendChild(link);
-      }
-      if (window.innerWidth <= 560) {
-        // Altere o texto
-        document.getElementById('R3').textContent = 'Instagram';
-        // Adicione um link (href)
-        var link = document.createElement('a');
-        link.href = 'https://www.instagram.com/eeep_jb/'; // URL desejada
-        link.textContent = '@eeep_jb';
-        // Substitua o conteúdo anterior pelo link
-        document.getElementById('R3').innerHTML = '';
-        document.getElementById('R3').appendChild(link);
-        document.getElementById('invisivel1').style.display = 'block';
-      }
-    </script>
-  </footer>
 </body>
 
 </html>

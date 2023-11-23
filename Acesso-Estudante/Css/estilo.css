@@ -1,0 +1,417 @@
+/* IMPORTAÇÃO DE FONTE */
+@font-face {
+    font-family: 'Bebas Neue Light';
+    src: url('BebasNeue-Light.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+/* BODY PADRÃO, NÃO ALTERAR! */
+body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        justify-content: flex-start;
+}
+/* MENSAGEM DE HOVER PARA IMAGEM DE PERFIL */
+.overlay-message {
+    position: absolute;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    top: 45%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+}
+#imagem:hover .overlay-message {
+    opacity: 1;
+}
+/* HEADER PADRÃO, CASO QUEIRA, COPIE, MAS NÃO ALTERE! */
+header {
+    background: linear-gradient(to right, #008442, #00511C);
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+    position: relative;
+}
+/* BOTÃO DE VOLTAR: */
+#backButton {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    transform: translateY(-50%);
+}
+/* DIV COM LOGO E NOMENCLATURA DA INSTITUIÇÃO */
+#logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#logo {
+    margin-right: 10px;
+}
+
+#title-container {
+    text-align: left;
+}
+h2 {
+    margin: 0;
+    font-family: 'Bebas Neue Light', sans-serif;
+    font-size: 35px;
+}
+
+/* COMPLEMENTO LINHA AMARELA ABAIXO DO HEADER */
+.yellow-stripe {
+    background-color: #FFD700;
+    height: 5px;
+    width: 100%;
+}
+
+/* DIV DOS BUTÕES E DA DATA: */
+#buttons-and-date-container {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 20px;
+    z-index: 2;
+}
+.date-container {
+    width: 90%;
+    height: 100px;
+    background-color: #008442;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    padding: 0 10px;
+}
+.date-text {
+    font-size: 25pt;
+}
+.calendar-icon {
+    font-size: 30px;
+    margin-left: 10px;
+    margin-bottom: 50px;
+}
+#buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.button {
+    width: 200px;
+    height: 130px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.1s ease, box-shadow 0.3s ease;
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 1);
+    margin-bottom: 15px;
+    background-color: #BCF6F4; /* Nova cor de fundo para o button1 */
+}
+.button img {
+    width: 90%;
+    object-fit: cover;
+    border-radius: 12px; /* Mantém o mesmo raio de borda do botão */
+}
+#sisedu {
+    margin-right: 5px;
+    margin-bottom: 10px;
+}
+#button2 {
+    background-image: url('./imgs/bg-ao.jpg'); /* Mantém o background image no button2 */
+    background-size: 100% 100%; /* Imagem 100% na div */
+    background-repeat: no-repeat;
+}
+.button:hover {
+    transform: translateY(-4px);
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.8);
+}
+.button:active {
+    transform: translateY(4px);
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.8);
+}
+/* SESSÃO DE PERFIL */
+#profile-section {
+    justify-content: left;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    width: 30%;
+    margin-left: 3%;
+    margin-top: 5%;
+}
+#profile-info {
+    display: block;
+    margin-top: 10%;
+}
+#profile-info img {
+    border-radius: 50%;
+    margin-right: 20px;
+    width: 60%;
+    height: 20%;
+    margin-bottom: 30px;
+}
+#profile-details {
+    width: 100%;
+}
+#profile-details h3 {
+    margin: 0;
+    font-size: 24px;
+}
+#profile-details p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+/* SESSÃO DE NOTIFICAÇÕES: */
+#notification-section {
+    position: fixed;
+    top: 50%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+    width: 45%; /* Ajuste conforme necessário */
+    height: 400px; /* Ajuste conforme necessário */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    z-index: 3;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+#notification-cards {
+  position: fixed;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 95%;
+  height: 350px;
+  overflow-y: auto;
+}
+#notification-title h3{
+  margin-top: -5px;
+  font-size: 150%;
+}
+.notification-card {
+    background-color: #FFD7E3;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    padding: 20px;
+}
+.notification-card h4 {
+    margin: 0;
+    font-size: 18px;
+}
+.notification-card p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+/* LINHA VERTICAL, COMPLEMENTO. */
+#vertical-line {
+    position: fixed;
+    top: 15%;
+    left: 26%;
+    width: 5px; /* Largura da linha */
+    height: 75%;
+    background-color: #000; /* Cor da linha */
+    z-index: 2; /* Colocado acima da seção de notificações */
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+/* RESPONSIVIDADE 1000PX */
+@media (max-width: 1000px) {
+    /* Adição de estilos melhorados para a div da data e os botões */
+#buttons-and-date-container {
+    position: relative;
+    right: 0px;
+    transform: translateY(-125%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    z-index: 2;
+    justify-content: center;
+}
+.date-container {
+    width: 90%;
+    height: 100px;
+    background-color: #008442;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    padding: 0 10px;
+}
+.date-text {
+    font-size: 25pt;
+}
+.calendar-icon {
+    font-size: 30px;
+    margin-left: 10px;
+    margin-bottom: 50px;
+}
+#buttons-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+.button {
+    width: 250px;
+    height: 150px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.1s ease, box-shadow 0.3s ease;
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 1);
+    background-color: #BCF6F4; /* Nova cor de fundo para o button1 */
+}
+.button img {
+    width: 90%;
+    object-fit: cover;
+    border-radius: 12px; /* Mantém o mesmo raio de borda do botão */
+}
+#sisedu {
+    margin-right: 5px;
+    margin-bottom: 10px;
+}
+#button2 {
+    background-size: 100% 100%; /* Imagem 100% na div */
+    background-repeat: no-repeat;
+    margin-left: 25px;
+}
+.button:hover {
+    transform: translateY(-4px);
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.8);
+}
+.button:active {
+    transform: translateY(4px);
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.8);
+}
+/* Estilos para a seção do perfil */
+#profile-section {
+  justify-content: center;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    width: 70%;
+    margin-left: 20%;
+    left: 50%;
+}
+#profile-info {
+    display: flex;
+    margin-top: 10%;
+}
+#profile-info img {
+    border-radius: 50%;
+    margin-right: 20px;
+    width: 40%;
+    height: 20%;
+    margin-bottom: 30px;
+}
+#profile-details {
+    width: 100%;
+}
+#profile-details h3 {
+    margin: 0;
+    margin-top: 15%;
+    font-size: 24px;
+}
+#profile-details p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+#notification-section {
+    position: relative;
+    top: 50%;
+    left: 52%;
+    transform: translate(-52%, 85%);
+    width: 70%; /* Ajuste conforme necessário */
+    height: 400px; /* Ajuste conforme necessário */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    z-index: 3;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+#notification-cards {
+  position: fixed;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 95%;
+  height: 350px;
+  overflow-y: auto;
+    
+}
+#notification-title h3{
+  margin-top: -5px;
+  font-size: 150%;
+}
+.notification-card {
+    background-color: #FFD7E3;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    padding: 20px;
+}
+.notification-card h4 {
+    margin: 0;
+    font-size: 18px;
+}
+.notification-card p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+/* Adição de uma divisão de linha vertical */
+#vertical-line {
+    display: none;
+}
+}
+/* RESPONSIVIDADE 610PX */
+@media (max-width: 610px) {
+.button {
+    width: 200px;
+    height: 120px;
+}
+}
+/* RESPONSIVIDADE 500PX */
+@media (max-width: 500px) {
+.button {
+    width: 120px;
+    height: 90px;
+}
+#title-container {
+    display: none;
+}
+#profile-info img {
+    border-radius: 50%;
+    margin-right: 20px;
+    width: 50%;
+    height: 20%;
+    margin-bottom: 30px;
+}
+#profile-section {
+    margin-left: 10%;
+    width: 80%;
+}
+#profile-info {
+    display: block;
+}
+}

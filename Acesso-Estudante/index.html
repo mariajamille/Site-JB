@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EEEP José de Barcelos</title>
+    <!-- LINK PARA O ICONE DA PAGINA -->
+    <link rel="icon" type="image/png" href="./Css/imgs/JB.png" />
+    <!-- LINK PARA O ESTILO.CSS -->
+    <link rel="stylesheet" type="text/css" href="./Css/estilo.css" />
+    <!-- LINK PARA O FONT AWESOME (ICONES) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- HEADER PADRÃO PAGINAS DE ACESSO -->
+    <header>
+        <a href="#" id="backButton"><i class="fas fa-arrow-left"></i></a>
+        <div id="logo-container">
+            <div id="logo">
+                <img src="./Css/imgs/JB.png" alt="Logo" width="30" height="40">
+            </div>
+            <div id="title-container">
+                <h2>EEEP José de Barcelos</h2>
+            </div>
+        </div>
+    </header>
+
+    <!-- FAIXA AMARELA ABAIXO DO HEADER -->
+    <div class="yellow-stripe"></div>
+
+    <!-- CONTEÚDO DA PÁGINA: -->
+
+    <!-- SESSÃO DO PERFIL DO ESTUDANTE -->
+    <div id="profile-section">
+        <div id="profile-info">
+            <!-- IMAGEM DE PERFIL DO ALUNO -->
+            <div id="imagem" style="position: relative;">
+                <!-- INPUT PARA ENVIAR A IMAGEM PARA O BANCO DE DADOS -->
+                <input type="file" id="inputFile" accept="image/*" style="display: none;">
+                <img src="./Css/imgs/perfil.jpg" id="imagemp" alt="Perfil" style="border-radius: 50%; width: 210px; height: 210px;">
+
+                <!-- MENSAGEM HOVER DA IMAGEM -->
+                <div class="overlay-message">Clique aqui para alterar! <i class="fa-solid fa-hand-pointer fa-beat" style="color: #ffffff; margin-left: 5px;"></i></div>
+            </div>
+
+            <!-- INFORMAÇÕES DO ESTUDANTE -->
+            <div id="profile-details">
+                <h3>Nome da Pessoa</h3>
+                <p>Classe: 3º INFORMATICA</p>
+                <p>Número de Matrícula: 123456</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- COMPLEMENTO DA PÁGINA... -->
+
+    <!-- LINHA VERTICAL PARA DIVISÃO DE CONTEÚDOS -->
+    <div id="vertical-line"></div>
+
+    <!-- SESSÃO DAS NOTIFICAÇÕES: -->
+
+    <div id="notification-section">
+        <div id="notification-title">
+            <h3>Notificações:</h3>
+        </div>
+        <div id="notification-cards">
+            <div class="notification-card">
+                <h4>Estudante atrasado!</h4>
+                  <p>Professor: MAFA DIBA CASTRO PEREZ.</p>
+                  <p>Data: 12 / 11 / 2023</p>
+              </div>
+        
+              <div class="notification-card">
+                <h4>Estudante atrasado!</h4>
+                  <p>Professor: MAFA DIBA CASTRO PEREZ.</p>
+                  <p>Data: 12 / 11 / 2023</p>
+              </div>  
+        
+              <div class="notification-card">
+                <h4>Estudante atrasado!</h4>
+                  <p>Professor: MAFA DIBA CASTRO PEREZ.</p>
+                  <p>Data: 12 / 11 / 2023</p>
+              </div>
+        
+            <!-- CASO QUEIRA TESTAR, ADICIONE MAIS CARDS AQUI! -->
+        </div>
+    </div>
+
+
+    <!-- DIV À DIREITA DA PÁGINA, DATA E BUTÕES DE REDIRECIONAMENTO -->
+    <!-- DIV PARA A DATA: -->
+    <div id="buttons-and-date-container">
+        <div class="date-container" id="dateDisplay">
+            <div class="date-text">
+                <!-- A data será exibida aqui -->
+            </div>
+            <i class="fas fa-calendar-alt calendar-icon"></i>
+        </div>
+
+        <!-- DIV DOS BUTÕES DE REDIRECIONAMENTO: -->
+        <div id="buttons-container">
+            <!-- LINK REDIRECIONADO PARA O SISEDU -->
+            <a href="https://sisedu.seduc.ce.gov.br/">
+                <button id="button1" class="button" onclick="animateButtonClick(1)">
+                <img src="./Css/imgs/sisedu.png" alt="Logo 1" id="sisedu">
+            </button></a>
+            <!-- LINK REDIRECIONADO PARA O ALUNO ONLINE -->
+            <a href="https://aluno.seduc.ce.gov.br/auth">
+            <button id="button2" class="button" onclick="animateButtonClick(2)">
+                <img src="./Css/imgs/alunoonline.png" alt="Logo 2">
+            </button></a>
+        </div>
+    </div>
+
+    <script>
+        // INICIO JAVASCRIPT, ANIMAÇÃO DOS BUTÕES (TESTE DE CONSOLE.LOG):
+
+        function animateButtonClick(buttonNumber) {
+            // Adicione a lógica da sua animação aqui
+            console.log("Botão " + buttonNumber + " clicado!");
+        }
+
+        // CONFIGURAÇÃO DA DATA:
+        function showDate() {
+            const dateContainer = document.querySelector('.date-text');
+            const currentDate = new Date();
+            const day = currentDate.getDate();
+            const month = currentDate.toLocaleDateString('pt-BR', { month: 'long' });
+            dateContainer.innerHTML = `<div>${day}</div><div>${month}</div>`;
+        }
+
+        showDate();
+
+        // HOVER PARA A IMAGEM DE PERFIL (ALTAMENTE NECESSÁRIO!):
+
+        // Seleciona a imagem e a mensagem:
+    const imagem = document.getElementById('imagem');
+    const imagemp = document.getElementById('imagemp');
+    
+
+    // Adiciona o evento de mouseover na imagem:
+    imagem.addEventListener('mouseover', function() {
+        imagemp.style.transition = '0.5s';
+        imagemp.style.filter = 'brightness(70%)';
+        imagemp.style.cursor = 'pointer';
+    });
+
+    // Adiciona o evento de mouseout na imagem:
+    imagem.addEventListener('mouseout', function() {
+        imagemp.style.transition = '0.5s';
+        imagemp.style.filter = 'brightness(100%)';
+    });
+    </script>
+    
+
+    <!-- RECADO PARA RUAN SOUSA. CARA, NÃO MANJO MUITO DE BACK-END, MAS FIZ UM EXEMPLO AQUI PARA ENVIAR A IMAGEM 
+    QUE SELECIONAMOS PARA O BANCO DE DADOS. PS: NÃO CONFIE, NEM EU CONFIO KKKK. -->
+
+
+
+    <script>
+        document.getElementById('imagemp').addEventListener('click', function() {
+          document.getElementById('inputFile').click();
+        });
+    
+        document.getElementById('inputFile').addEventListener('change', function() {
+          const input = this;
+          const file = input.files[0];
+          const formData = new FormData();
+          formData.append('inputFile', file);
+    
+          const xhr = new XMLHttpRequest();
+          xhr.open('POST', 'http://localhost:3000/upload', true); // Insira a URL do seu servidor aqui
+          xhr.onload = function() {
+            if (xhr.status === 200) {
+              console.log('Arquivo enviado com sucesso.');
+            } else {
+              console.error('Erro ao enviar arquivo.');
+            }
+          };
+          xhr.send(formData);
+        });
+      </script>
+
+<!-- FIM -->
+</body>
+
+</html>

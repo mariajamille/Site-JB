@@ -1,0 +1,784 @@
+/*--------------------------------------------- IMPORTAÇÃO DE FONTES. -------------------------------------------*/
+@font-face {
+  font-family: 'open-sans';
+  src: url('OpenSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('BebasNeue-Light.ttf') format('truetype');
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/*--------------------------------------------- HEADER PADRÃO (NÃO ALTERAR!) -------------------------------------------*/
+div#cabecalho {
+  position: relative;
+  background-color: #00511C;
+  color: white;
+  margin: 0;
+  padding: 10px;
+  height: 110px;
+}
+
+div#cabecalho img {
+  float: left;
+  margin-left: 5%;
+  margin-top: 5px;
+  width: 80px;
+}
+
+h3#escol {
+  font-family: 'open-sans';
+  margin-left: 12%;
+  margin-top: 1%;
+
+}
+
+h3#escol1 {
+  font-family: 'Bebas Neue', sans-serif;
+  margin-left: 12%;
+  margin-top: -1%;
+  font-size: 230%;
+}
+
+div#complemento {
+  background-color: #FFBD00;
+  padding: 7px;
+}
+
+div#navegacao {
+  background-color: #D1E2C8;
+  margin-left: -10px;
+  color: #00511C;
+}
+
+nav#nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'open-sans1';
+  font-size: 120%;
+  height: 38px;
+}
+
+#drop {
+  position: relative;
+  font-weight: bolder;
+  display: flex;
+  align-items: center;
+  height: 38px;
+}
+
+#drop::after {
+  content: '';
+  position: absolute;
+  background: #00511C;
+  left: 14px;
+  bottom: 0;
+  width: 80%;
+  height: 2px;
+  opacity: 0;
+  transition: .3s ease;
+  margin-top: -10px;
+}
+
+#drop:hover::after {
+  opacity: 1;
+  transform: translateY(8px);
+}
+
+.button {
+  font-family: 'open-sans';
+  cursor: pointer;
+  text-decoration: none;
+  color: darkgreen;
+  font-weight: bolder;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.button#pagina {
+  border-bottom: 5px solid darkgreen;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  text-decoration: none;
+}
+
+img#select {
+  width: 10px;
+  height: 10px;
+  float: right;
+  margin-top: -12%;
+  margin-right: 6%;
+}
+
+.seta {
+  font-size: 15px;
+  padding: 0px;
+  margin-left: 5px;
+  height: 70%;
+  margin-top: 22px;
+}
+
+.menu-drop a:hover {
+  background: #085537;
+  color: #fff;
+}
+
+button[name="drop"] {
+  border: none;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 100%;
+  color: darkgreen;
+  font-family: 'open-sans';
+  margin-right: 5%;
+}
+
+.menu-drop {
+  display: inline-block;
+  position: relative;
+  height: 40px;
+}
+
+.drop-content {
+  display: none;
+  background-color: #D1E2C8;
+  position: absolute;
+  z-index: 2;
+  border-radius: 10px;
+  width: 100%;
+  margin-top: 1px;
+  font-family: 'open-sans';
+
+}
+
+.drop-content a {
+  color: darkgreen;
+  padding: 8px 10px;
+  background-color: #D1E2C8;
+  text-decoration: none;
+  display: block;
+  border-bottom: #085537;
+  border-radius: 10px;
+  font-weight: bolder;
+}
+
+
+.menu-drop:hover .drop-content {
+  display: block;
+  border-bottom: #D1E2C8;
+}
+
+.menu-drop:hover button[name="drop"] {
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 10px;
+  border-bottom: #085537;
+}
+
+.show-nav {
+  display: none;
+}
+
+/*--------------------------------------------- MENU RESPONSIVO (NÃO ALTERAR!) -----------------------------------------*/
+.responsive {
+  background: linear-gradient(to right, #ffffff 4px, transparent 4px);
+  background-color: #03501e;
+}
+
+.responsive-nav:hover i {
+  color: #e61212;
+  /* Cor desejada ao passar o mouse sobre o ícone */
+}
+
+.responsive-nav {
+  transition: .5s;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  inset: 0 0 0 0;
+  background-color: #003a14;
+  z-index: 5;
+  width: 50%;
+  height: 100%;
+  left: -100vw;
+  transition: all 0s;
+  max-height: 100%;
+  /* Defina a altura máxima desejada para a div */
+  overflow: auto;
+  /* Isso adicionará uma barra de rolagem quando o conteúdo exceder a altura máxima */
+}
+
+.qualquer {
+  transition: .5s;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  inset: 0 0 0 0;
+  background-color: #00000000;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 1.5s;
+  max-height: 100%;
+  /* Defina a altura máxima desejada para a div */
+  overflow: auto;
+  /* Isso adicionará uma barra de rolagem quando o conteúdo exceder a altura máxima */
+  scrollbar-width: thin;
+}
+
+.responsive-nav a {
+  text-decoration: none;
+  width: 100%;
+  text-indent: 10px;
+  color: #fff;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  font-size: 18px;
+  transition: linear .3s;
+  margin-bottom: 2px;
+  margin-top: 2px;
+}
+
+.responsive-nav a:hover {
+  color: #00511C;
+  background-color: #D1E2C8;
+}
+
+.responsive-nav a {
+  font-family: 'open-sans';
+}
+
+.black-bar {
+  width: 90%;
+  background-color: #002c0f;
+  border-radius: 20px;
+  height: 5px;
+  transition: .4s;
+}
+
+
+
+/*--------------------------------------------- RESOLUÇÃO MENU RESPONSIVO (NÃO ALTERAR!) -----------------------------------------*/
+
+@media (max-width: 560px) {
+  .show-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 35px;
+    height: 35px;
+    margin-left: .9em;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+
+  .rotate-0 {
+    rotate: 45deg;
+    translate: 0 7px;
+  }
+
+  .rotate-1 {
+    display: none;
+  }
+
+  .rotate-2 {
+    translate: 0 -7px;
+    rotate: -45deg;
+  }
+
+  nav#nav {
+    display: none;
+  }
+
+  .ativo1 {
+    opacity: 1;
+    background-color: #00000081;
+    z-index: 2;
+  }
+
+  .ativo {
+    left: 0;
+  }
+
+  .desativado {
+    display: none;
+  }
+
+  /* INÍCIO DO BUTTON BACK TO TOP (JAMILLE) */
+#back_to_top {
+  position: fixed;
+  z-index: 999;
+  color: black;
+  bottom: 60px;
+  right: 30px;
+  height: 48px;
+  width: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+
+#back_to_top #btn_back #icon_up:hover {
+  transform: translateY(-3px);
+}
+
+#btn_back {
+  display: block;
+  height: calc(100% - 12px);
+  width: calc(100% - 12px);
+  background-color: white;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+/* FIM DO BUTTON BACK TO TOP (JAMILLE) */
+}
+
+@media (max-width: 485px) {
+  .responsive-nav {
+    width: 65%;
+  }
+
+}
+
+@media (max-width: 380px) {
+  .responsive-nav {
+    width: 82%;
+  }
+
+}
+
+
+/*--------------------------------------------- CONTENT PADRÃO DO SITE (NÃO ALTERAR!) -----------------------------------------*/
+/*
+tutorial content:
+a classe content deve ser posta entre as divs do header e footer, sendo customizada da seguinte forma:
+.content{
+  position: relative;
+  flex-grow: 1;
+}
+*/
+.content {
+  position: relative;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+
+#a {
+  text-decoration: none;
+}
+
+/*
+  --------------------------------------------- CONTENT (CONTEUDO DA PAGINA) ----------------------------------------------
+*/
+
+.content{
+  position: relative;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(./images/escola.webp) no-repeat center;
+  background-size: cover;
+}
+
+.div_login{
+  width: 40%;
+  height: 270px;
+  max-width: 200px;
+
+  background: #D1E2C8;
+  border-radius: 30px;
+  padding: 20px;
+}
+
+.flex_user-img {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.img-user {
+  width: 90px;
+  height: 90px;
+
+  background-color: #002c0f;
+  border-radius: 50%;
+  background: url(./images/user.png) no-repeat center;
+  background-size: 105%;
+}
+
+.div_login form {
+  width: 100%;
+  height: 100%;
+}
+
+fieldset {
+  outline: none;
+  border: none;
+  padding: 0;
+
+  margin-top: 20px;
+}
+
+.modal-box {
+  position: absolute;
+  visibility: hidden;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  height: 310px;
+  width: 240px;
+  padding: 0px 20px;
+  position: absolute;
+
+  border-radius: 20px;
+  background-color: #00511C;
+
+  z-index: 999;
+}
+
+.modal-box h1{
+  font-family: 'Bebas Neue', sans-serif;
+  color:#fff;
+  text-shadow: 0px 0px 3px #fff;
+  margin-bottom: 15px;
+  margin-top: 5px;
+  font-size: 2.4rem;
+}
+
+.modal-box p {
+  font-family:'Ruda', sans-serif;
+  font-size: 16px;
+  font-weight: bolder;
+
+  color: #ffffffe1;
+  line-height: 18px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.barra_amarela_form {
+  width: 8px;
+  height: 35px; 
+  margin-right: 15px;
+  background-color: #FFBD00;
+  border-radius: 10px;
+}
+
+#recuperar-email{
+  position: relative;
+  width: 100%;
+  height: 20px;
+  
+  margin-top: 40px;
+  margin-bottom: 20px;
+  
+  color: #fff;
+  font-size: 16px;
+  font-family:'Ruda', sans-serif;
+
+  background-color: transparent;
+  border: none;
+  border-bottom: solid 1px #ffffffbd; 
+}
+
+#enviar-email-button{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 25px;
+  margin-top: 5px;
+
+  color: #002c0f;
+  font-weight: 700;
+  font-size: 18px;  
+
+  background-color: #D1E2C8;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+#enviar-email-button:hover {
+  background-color: #beceb6;
+}
+
+.modal-box span {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  border-radius: 5px;
+  background: url(./images/fechar.png) no-repeat center;
+  background-size: cover;
+}
+
+.content input[type="text"], input[type="password"] {
+  position: relative;
+  width: 85%;
+  height: 20px;
+  
+  padding: 0 0 5px 28px;
+  
+  color: rgb(19, 18, 18);
+  font-size: 16px;
+  font-family:'Ruda', sans-serif;
+  font-size: 15px;
+
+  background-color: transparent;
+  border: none;
+  border-bottom: solid 1px rgba(17, 17, 17, 0.6); 
+}
+
+#email {
+  margin-bottom: 20px;
+}
+
+#senha{
+  margin-bottom: 10px;
+}
+
+.esqueceu-senha {
+  font-family:'Ruda', sans-serif;
+  font-size: 13px;
+  color: #002c0f;
+  margin-bottom: 10px;
+}
+
+fieldset{
+  display: flex;
+  flex-direction: column;
+}
+
+.esqueceu-senha:hover {
+  color: #e61212;
+  cursor: pointer;
+}
+
+.nãotemlogin {
+  font-family:'Ruda', sans-serif;
+  font-size: 11px;
+  color: #002c0f;
+}
+
+.nãotemlogin:hover{
+  color:#e61212;
+  cursor: pointer;
+}
+
+.content input:focus{
+  outline: none;
+  font-size: 14px;
+}
+
+.input-img{
+  position: absolute;
+  display: block; 
+  height: 20px;
+  width: 20px;
+  z-index: 1;
+}
+
+.input-acessar{
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+  height: 25px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+
+  color: #D1E2C8;
+  font-family:'Ruda', sans-serif;
+  font-size: 15px;  
+
+  background-color: #002c0f;
+  border: none;
+  border-radius: 20px;
+}
+
+.input-acessar:hover{
+  background-color: #00511C;
+  cursor: pointer;
+}
+
+.span-versenha {
+  position: absolute;
+  display: block; 
+  height: 20px;
+  width: 20px;
+  z-index: 1;
+
+  background: url(./images/fechar-o-olho.png) no-repeat center;
+  background-size: 20px;
+}
+
+.span-versenha.visible {
+  background: url(./images/olho.png) no-repeat center;
+  background-size: 20px;
+}
+
+
+
+/*
+  --------------------------------------------- CONFIGURAÇÃO BUTÕES REDES SOCIAIS (NÃO ALTERAR!) ----------------------------------------------
+*/
+.social-buttons {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  transition: bottom 0.3s;
+  /* Adicione a regra de transição aqui */
+}
+
+.social-buttons a {
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 10px;
+  background-color: #00511c;
+  /* Cor do WhatsApp */
+  text-align: center;
+  line-height: 50px;
+  font-size: 24px;
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.social-buttons img {
+  width: 35px;
+  justify-content: center;
+  margin-top: 7px;
+}
+
+.social-buttons a.instagram-button {
+  background-color: #00511c;
+  /* Cor do Instagram */
+}
+
+.social-buttons a:hover {
+  background-color: #128C7E;
+  /* Cor de destaque ao passar o mouse */
+}
+
+/*--------------------------------------------- RESOLUÇÃO BUTÕES REDES SOCIAIS (NÃO ALTERAR!) -----------------------------------------*/
+@media (max-width: 560px) {
+  .social-buttons {
+    display: none;
+  }
+}
+
+/* ----------------------------------- FOOTER PADRÃO DO SITE (NÃO ALTERAR) ---------------------------------------*/
+footer {
+  position: relative;
+  background: #00511C;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  color: #fff;
+  padding-bottom: 13px;
+  z-index: 6;
+}
+
+.div_foot {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.div_foot .titulo_endereco,
+.div_foot .titulo_sobre {
+  font-family: 'Bebas Neue';
+  letter-spacing: 3px;
+  margin-right: 5px;
+  font-size: 25px;
+  font-weight: 900;
+  height: 20px;
+}
+
+.flex_container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  max-height: 40px;
+}
+
+.flex_container h1 {
+  text-align: center;
+  margin-top: 7px;
+  height: 50px;
+}
+
+.div_foot {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: lighter;
+}
+
+.barramarelo {
+  height: 25px;
+  width: 5px;
+  background: #FFBD00;
+  margin-right: 15px;
+  border-radius: 10px;
+}
+
+footer p {
+  margin: 0;
+  margin-top: 3px;
+  font-size: 10px;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+#sobre {
+  margin-top: 6px;
+}
+
+#endereco {
+  margin-top: 6px;
+}

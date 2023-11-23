@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profjb</title>
+    <!-- bootstrap cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <!-- LINK PARA O FONT AWESOME (ICONES) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- js -->
+    <script src="./Css/script.js" defer></script>
+    <!-- link css -->
+    <link rel="stylesheet" href="./Css/estilo.css">
+
+</head>
+
+<body>
+    <!-- HEADER PADRÃO PAGINAS DE ACESSO -->
+    <header>
+        <a href="#" id="backButton"><i class="fas fa-arrow-left"></i></a>
+        <div id="logo-container">
+            <div id="logo">
+                <img src="imgs/JB.png" alt="Logo" width="30" height="40">
+            </div>
+            <div id="title-containerh">
+                <h2>EEEP José de Barcelos</h2>
+            </div>
+        </div>
+    </header>
+
+    <!-- FAIXA AMARELA ABAIXO DO HEADER -->
+    <div class="yellow-stripe"></div>
+
+    <!-- inicio do conteúdo da página  -->
+    <div class="conteudo">
+<main>
+    <div class="container">
+        <div class="row mt-3" id="bloco1">
+            <div class="col-sm-12 col-md-7" id="name-central">
+                <h3>Olá, MAFA DIBA CASTRO PEREZ!</h3>
+            </div>
+
+            <div class="col-sm-12 col-md-5">
+                 <!-- DIV PARA A DATA: -->
+    <div id="buttons-and-date-container">
+        <div class="date-container" id="dateDisplay">
+            <div class="date-text">
+                <!-- A data será exibida aqui -->
+            </div>
+            <i class="fas fa-calendar-alt calendar-icon"></i>
+        </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <!-- segundo container -->
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-sm-6 col-md-4">
+                        <div id="buttons-container">
+                            <div class="d-flex justify-content-around  align-items-center row1" id="bloco2">
+                                <button id="button1" class="button">
+                                        <section><i class="fa-solid fa-calendar-days fa-2xl" style="color: #ffffff; margin-bottom: 20px;"></i></section>
+                                        <section id="horario">HORÁRIOS</section>
+                                    </button>
+                                </div>
+                            <!-- LINK REDIRECIONADO PARA O PROFESSOR ONLINE -->
+                            <a href="https://professor.seduc.ce.gov.br/" target="_blank">
+                                <button id="button2" class="button" onclick="animateButtonClick(1)">
+                                    <img src="./imgs/professoronline.png" alt="Logo 1" id="profonline">
+                                </button></a>
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </main>
+
+    <!-- painel principal -->
+    <div class="container painel-one">
+        <section id="painel">
+            <div id="title-container">
+                <h3 class="title-painel">CONSULTAR ESTUDANTE</h3>
+                <!-- FAIXA AMARELA ABAIXO DO HEADER -->
+                <div class="yellow-stripe"></div>
+            </div>
+        </section>
+
+        <section id="info-painel">
+            <div class="container">
+                <div class="row" id="painel-central">
+                    <div class="col-sm-12 col-md-6">
+                        <section class="painel-turma mt-4">
+                            <h4>SELECIONE A TURMA:</h4>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Turma:</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </section>
+
+                        <section class="painel-aluno mt-4">
+                            <h4>SELECIONE O/A ESTUDANTE:</h4>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Estudante:</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </section>
+
+                        <section class="painel-comentario mt-4">
+                            <h4>ADICIONAR NOTIFICAÇÃO:</h4>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Situação:</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+
+                            <div class="form-floating mt-4">
+                                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                                    style="height: 100px"></textarea>
+                                <label for="floatingTextarea2">Descreva a situação.....</label>
+                            </div>
+                        </section>
+
+                        <section class="mt-4">
+                            <button type="button" class="btn btn-success">ENVIAR NOTIFICAÇÃO</button>
+                        </section>
+                    </div>
+
+
+                    <div class="col-sm-12 col-md-6 painel-right">
+                        <!-- SESSÃO DO PERFIL DO ESTUDANTE -->
+                        <div id="profile-section">
+                            <div id="profile-info">
+                                <!-- IMAGEM DE PERFIL DO ALUNO -->
+                                <div id="imagem" style="position: relative;">
+                                    <img src="imgs/perfil.jpg" id="imagemp" alt="Perfil"
+                                        style="border-radius: 50%; width: 210px; height: 210px;">
+                                </div>
+
+                                <!-- INFORMAÇÕES DO ESTUDANTE -->
+                                <div id="profile-details">
+                                    <h3>Nome da Pessoa</h3>
+                                    <p>Nascimento: 00/00/00</p>
+                                    <p>Número de Matrícula: 123456</p>
+                                    <p>Notificações: 3</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div id="notification-section">
+                            <div id="notification-title">
+                                <h3>Notificações do Aluno:</h3>
+                            </div>
+                            <div id="notification-cards">
+                                <div class="notification-card">
+
+                                    <div>
+                                        <h4>Estudante atrasado!</h4>
+                                        <p>Professor: MAFA DIBA CASTRO PEREZ.</p>
+                                        <p>Data: 12 / 11 / 2023</p>
+                                    </div>
+
+                                    <div><i class="fa-regular fa-trash-can fs-5"></i></div>
+
+                                </div>
+
+                                <div class="notification-card">
+                                    <div>
+                                        <h4>Estudante atrasado!</h4>
+                                        <p>Professor: Fulano.</p>
+                                        <p>Data: 12 / 11 / 2023</p>
+                                    </div>
+
+                                    <div><i class="fa-regular fa-trash-can fs-5"></i></div>
+                                </div>
+
+                                <div class="notification-card">
+                                    <div>
+                                        <h4>Estudante atrasado!</h4>
+                                        <p>Professor: Fulano.</p>
+                                        <p>Data: 12 / 11 / 2023</p>
+                                    </div>
+
+                                    <div><i class="fa-regular fa-trash-can fs-5"></i></div>
+                                </div>
+
+                                <!-- CASO QUEIRA TESTAR, ADICIONE MAIS CARDS AQUI! -->
+                            </div>
+                        </div>
+
+                        <!-- COMPLEMENTO DA PÁGINA... -->
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- fim do painel principal -->
+    </div>
+
+    <!-- fim do conteudo da página -->
+</div>
+</body>
+
+</html>

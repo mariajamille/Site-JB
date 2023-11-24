@@ -187,6 +187,10 @@ button[name="drop"] {
   display: none;
 }
 
+#btn_back {
+  display: none;
+  }
+
 /*--------------------------------------------- MENU RESPONSIVO (NÃO ALTERAR!) -----------------------------------------*/
 .responsive {
   background: linear-gradient(to right, #ffffff 4px, transparent 4px);

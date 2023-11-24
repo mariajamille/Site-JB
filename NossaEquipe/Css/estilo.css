@@ -191,6 +191,9 @@ button[name="drop"] {
   display: none;
 }
 
+#btn_back {
+  display: none;
+  }
 
 /*--------------------------------------------- MENU RESPONSIVO (NÃO ALTERAR!) -----------------------------------------*/
 .responsive {

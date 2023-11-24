@@ -269,6 +269,9 @@ button[name="drop"] {
   height: 5px;
   transition: .4s;
 }
+#btn_back {
+display: none;
+}
 
 /*--------------------------------------------- RESOLUÇÃO MENU RESPONSIVO (NÃO ALTERAR!) -----------------------------------------*/
 

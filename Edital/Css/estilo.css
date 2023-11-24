@@ -16,6 +16,10 @@ body {
   min-height: 100vh;
 }
 
+#btn_back {
+  display: none;
+  }
+  
 /*--------------------------------------------- HEADER PADRÃO (NÃO ALTERAR!) -------------------------------------------*/
 div#cabecalho {
   position: relative;

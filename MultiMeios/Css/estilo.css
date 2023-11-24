@@ -23,6 +23,10 @@ body {
   /* Impede a repetição da imagem */
 }
 
+#btn_back {
+  display: none;
+  }
+  
 /*--------------------------------------------- HEADER PADRÃO (NÃO ALTERAR!) -------------------------------------------*/
 div#cabecalho {
   position: relative;

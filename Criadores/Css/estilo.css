@@ -1,14 +1,3 @@
-/*--------------------------------------------- IMPORTAÇÃO DE FONTES. -------------------------------------------*/
-@font-face {
-  font-family: 'open-sans';
-  src: url('OpenSans-Regular.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Bebas Neue';
-  src: url('BebasNeue-Light.ttf') format('truetype');
-}
-
 body {
   margin: 0;
   display: flex;
@@ -33,11 +22,21 @@ div#cabecalho img {
   width: 80px;
 }
 
+@font-face {
+  font-family: 'open-sans';
+  src: url('OpenSans-Regular.ttf') format('truetype');
+}
+
 h3#escol {
   font-family: 'open-sans';
   margin-left: 12%;
   margin-top: 1%;
 
+}
+
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('BebasNeue-light.ttf') format('truetype');
 }
 
 h3#escol1 {
@@ -119,6 +118,16 @@ img#select {
   margin-right: 6%;
 }
 
+@font-face {
+  font-family: 'open-sans';
+  src: url('OpenSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('BebasNeue-Light.ttf') format('truetype');
+}
+
 .seta {
   font-size: 15px;
   padding: 0px;
@@ -187,7 +196,6 @@ button[name="drop"] {
   display: none;
 }
 
-/*--------------------------------------------- MENU RESPONSIVO (NÃO ALTERAR!) -----------------------------------------*/
 .responsive {
   background: linear-gradient(to right, #ffffff 4px, transparent 4px);
   background-color: #03501e;
@@ -313,40 +321,6 @@ button[name="drop"] {
   .desativado {
     display: none;
   }
-
-  /* INÍCIO DO BUTTON BACK TO TOP (JAMILLE) */
-#back_to_top {
-  position: fixed;
-  z-index: 999;
-  color: black;
-  bottom: 60px;
-  right: 30px;
-  height: 48px;
-  width: 48px;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-  font-size: 1.1rem;
-}
-
-
-#back_to_top #btn_back #icon_up:hover {
-  transform: translateY(-3px);
-}
-
-#btn_back {
-  display: block;
-  height: calc(100% - 12px);
-  width: calc(100% - 12px);
-  background-color: white;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-}
-
-/* FIM DO BUTTON BACK TO TOP (JAMILLE) */
 }
 
 @media (max-width: 485px) {
@@ -374,12 +348,10 @@ a classe content deve ser posta entre as divs do header e footer, sendo customiz
 }
 */
 .content {
-  position: relative;
-  flex-grow: 1;
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 
@@ -391,10 +363,197 @@ a classe content deve ser posta entre as divs do header e footer, sendo customiz
   --------------------------------------------- CONTENT (CONTEUDO DA PAGINA) ----------------------------------------------
 */
 
+
+
+/* TEXTO INFORMATIVO */
+.info-texto {
+  font-size: 2rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* CONFIGURAÇÃO DOS SLIDES */
+section {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  margin-left: 5%;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  font-size: 1.3rem;
+}
+
+@media (max-width: 800px) {
+
+  .logo {
+    width: 100%;
+  }
+}
+
+section#conteudo1 {
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 100%;
+  margin-right: 5%;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+
+.carousel-inner {
+  border-radius: 20px;
+}
+
+.img-slider {
+  inset: 0;
+  width: 50%;
+  height: auto;
+  z-index: 0;
+}
+
+.swiper-slide {
+  margin: 0;
+}
+
+.image {
+  display: flex;
+  flex-direction: column;
+  width: 15%;
+  height: auto;
+
+  font-family: 'open-sans';
+  font-weight: 700;
+}
+
+.image img {
+  margin: 0;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.image label {
+  text-align: center;
+  background-color: #00511C;
+  color: #feba03;
+}
+
+.paragrafo1 {
+  width: 70%;
+  text-align: left;
+  font-size: 1.5rem;
+  border-top: 30px solid #00511C;
+  background-color: #D1E2C8;
+  padding: 1em;
+  border-radius: 1em;
+}
+
+.paragrafo1 h1 {
+  color: #003a14;
+  font-size: 2rem;
+  font-family: 'open-sans';
+  font-weight: bolder;
+}
+
+.paragrafo1 p {
+  color: #00511C;
+  font-family: 'open-sans';
+}
+
+
+
+@media screen and (max-width:800px) {
+  section {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .content1 {
+    width: 90%;
+  }
+
+  .img-slider {
+    width: 100%;
+  }
+
+  .image {
+    width: 50vw;
+  }
+}
+
+#carouselExampleAutoplaying0 {
+  width: 50%;
+
+}
+
+#carouselExampleAutoplaying1 {
+  width: 50%;
+}
+
+#carouselExampleAutoplaying2 {
+  width: 50%;
+}
+
+#carouselExampleAutoplaying3 {
+  width: 50%;
+}
+
+.carousel-control-prev {
+  cursor: pointer;
+}
+
+.carousel-control-next {
+  cursor: pointer;
+  color: red;
+}
+
+@media (max-width: 830px) {
+  #carouselExampleAutoplaying0 {
+    width: 70%;
+  }
+
+  #carouselExampleAutoplaying1 {
+    width: 70%;
+  }
+
+  #carouselExampleAutoplaying2 {
+    width: 0%;
+  }
+
+  #carouselExampleAutoplaying3 {
+    width: 70%;
+  }
+}
+
+@media (max-width: 560px) {
+  #carouselExampleAutoplaying0 {
+    width: 90%;
+  }
+
+  #carouselExampleAutoplaying1 {
+    width: 90%;
+  }
+
+  #carouselExampleAutoplaying2 {
+    width: 90%;
+  }
+
+  #carouselExampleAutoplaying3 {
+    width: 90%;
+  }
+
+}
+
+/* CONFIGURAÇÃO DOS SLIDES END */
+
+
 /*
   ----------ESTILO DOS CARDS PERFIS:-----------
 */
 .profile-cards {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -405,8 +564,8 @@ a classe content deve ser posta entre as divs do header e footer, sendo customiz
   /* Calcula a largura dos cards com uma margem de 10px entre eles */
   position: relative;
   width: 300px;
-  border: 1px solid #ccc;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  /* border: 1px solid #ccc; */
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
   margin-top: 20PX;
   margin-right: 20px;
   /* Adiciona uma margem direita para criar espaçamento entre os cards */
@@ -417,8 +576,17 @@ a classe content deve ser posta entre as divs do header e footer, sendo customiz
   border-radius: 10px;
 }
 
+.profile-card img {
+  width: 100%;
+  height: 25rem;
+  object-fit: cover;
+  position: relative;
+  transition: 1s;
+}
+
 .profile-card:hover {
   transform: scale(1.05);
+  transition: .5s;
 
 }
 
@@ -439,12 +607,6 @@ a classe content deve ser posta entre as divs do header e footer, sendo customiz
   color: #fff;
 }
 
-.profile-image {
-  /* CONFIGURAÇÃO DA IMAGEM DE PERFIL DA PESSOA */
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
 
 .overlay {
   /* CONFIGURAÇÃO DO EFEITO DA FRASE */
@@ -453,9 +615,8 @@ a classe content deve ser posta entre as divs do header e footer, sendo customiz
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.651);
   opacity: 0;
-  transition: 0.3s;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -463,12 +624,12 @@ a classe content deve ser posta entre as divs do header e footer, sendo customiz
 }
 
 .profile-card:hover .overlay {
-  opacity: 1;
+  opacity: 2;
 }
 
 .overlay-text {
   color: #fff;
-  font-size: 18px;
+  font-size: 27px;
   text-align: center;
   padding: 10px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -478,32 +639,41 @@ a classe content deve ser posta entre as divs do header e footer, sendo customiz
 .profile-info {
   /* TAMANHO DA DIV DAS INFORMAÇÕES DA PESSOA */
   padding: 15px;
-
+  /* border-top: 12px solid orange; */
+  margin-top: -5px;
 }
 
 .profile-name {
   /* CONFIGURAÇÃO DO NOME DA PESSOA */
-  font-size: 18px;
+  font-size: 27px;
   font-weight: bold;
-  color: #333;
+  color: white;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-weight: lighter;
+  font-weight: 600;
 }
 
 .profile-name a {
   text-decoration: none;
-  color: #000000;
+  color: black;
 
 }
 
 .profile-role {
   /* CONFIGURAÇÃO DA FUNÇAO EXERCIDA PELA PESSOA */
-  font-size: 14px;
+  font-size: 19px;
   color: #666;
+  font-style: italic;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-weight: lighter;
 }
 
+.turma-info {
+  display: flex;
+  justify-content: center;
+  font-size: 1.4rem;
+  font-family: 'open-sans';
+  color: #003a14;
+}
 
 
 /*
@@ -550,6 +720,12 @@ a classe content deve ser posta entre as divs do header e footer, sendo customiz
 }
 
 /*--------------------------------------------- RESOLUÇÃO BUTÕES REDES SOCIAIS (NÃO ALTERAR!) -----------------------------------------*/
+@media (min-height: 821px) {
+  .social-buttons {
+    display: none;
+  }
+}
+
 @media (max-width: 560px) {
   .social-buttons {
     display: none;

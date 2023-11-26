@@ -332,6 +332,7 @@ display: none;
   display: grid;
   place-items: center;
   border-radius: 50%;
+  background-color: #FFBD00;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   font-size: 1.1rem;

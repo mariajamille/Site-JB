@@ -2,100 +2,83 @@
 <html>
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" href="./Css/estilo.css" />
-    <link href="../fontawesome/css/all.css" rel="stylesheet">
-    <link rel="icon" type="imagem/png" href="./Css/JB.png" />
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-
-    <link rel="stylesheet" type="text/css" href="Css/estilizado.css" />
-    <link href="../fontawesome/css/all.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-        crossorigin="anonymous"></script>
-
-
-    <title>Criadores - JB</title>
-    <!-------------------------------------- CONFIGURAÇÃO MENU RESPONSIVO (HAMBURGUER) ------------------------------------>
-    <script>
-        var elAtual = 0;
-        var el;
-        var windowWidth = window.innerWidth;
-
-        var showNav = () => {
-
-            document.getElementById("responsive-nav").classList.toggle("ativo");
-            document.getElementById("responsive-nav").style.transition = "0.5s";
-            document.getElementById("qualquer").classList.toggle("ativo1");
-            setTimeout(() => {
-                document.getElementById("responsive-nav").style.transition = "";
-            }, 500);
-            document
-                .getElementsByClassName("black-bar")[0]
-                .classList.toggle("rotate-0");
-            document
-                .getElementsByClassName("black-bar")[1]
-                .classList.toggle("rotate-1");
-            document
-                .getElementsByClassName("black-bar")[2]
-                .classList.toggle("rotate-2");
-        };
-        var showNav1 = () => {
-            document.getElementById("qualquer").classList.toggle("desativado");
-            setTimeout(() => {
-                qualquer.classList.remove('desativado');
-            }, 1000);
-        };
-
-
-    </script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css" href="./Css/estilo.css" />
+  <link href="../fontawesome/css/all.css" rel="stylesheet">
+  <link rel="icon" type="imagem/png" href="./Css/JB.png" />
+  <title>Regimento Escolar - JB</title>
+  <!-------------------------------------- CONFIGURAÇÃO MENU RESPONSIVO (HAMBURGUER) ------------------------------------>
+  <script>
+    var elAtual = 0;
+    var el;
+    var windowWidth = window.innerWidth;
+    var showNav = () => {
+      document.getElementById("responsive-nav").classList.toggle("ativo");
+      document.getElementById("responsive-nav").style.transition = "0.5s";
+      document.getElementById("qualquer").classList.toggle("ativo1");
+      setTimeout(() => {
+        document.getElementById("responsive-nav").style.transition = "";
+      }, 500);
+      document
+        .getElementsByClassName("black-bar")[0]
+        .classList.toggle("rotate-0");
+      document
+        .getElementsByClassName("black-bar")[1]
+        .classList.toggle("rotate-1");
+      document
+        .getElementsByClassName("black-bar")[2]
+        .classList.toggle("rotate-2");
+    };
+    var showNav1 = () => {
+      document.getElementById("qualquer").classList.toggle("desativado");
+      setTimeout(() => {
+        qualquer.classList.remove('desativado');
+      }, 1000);
+    };
+  </script>
 </head>
 
 <body>
-    <!-------------------------------------- HEADER ------------------------------------>
-    <div id="cabecalho">
-        <img src="./Css/JB.png" />
-        <h3 id="escol">Escola Estadual de Educação Profissional</h3>
-        <h3 id="escol1">JOSÉ DE BARCELOS</h3>
-    </div>
-    <div id="complemento"></div>
-    <div id="navegacao">
-        <nav id="nav">
-            <a href="../index.html" class="button">INÍCIO</a>
-            <div class="menu-drop">
-                <button type="button" name="drop" id="drop" class="button">
-                    INSTITUCIONAL
-                    <p class="seta">&#x25BC;</p>
-                </button>
-                <div class="drop-content">
-                    <a href="../Origem/index.html">Origem</a>
-                    <a href="../Edital/index.html">Regimento Escolar</a>
-                    <a href="../NossaEscola/index.html">Nossa Escola</a>
-                    <a href="../MultiMeios/index.html">MultiMeios</a>
-                </div>
-            </div>
-            <a href="../NossaEquipe/index.html" class="button">NOSSA EQUIPE</a>
-            <a href="../Criadores/index.html" class="button" id="pagina">CRIADORES</a>
-        </nav>
-        </nav>
-        <!------------------------------------- MENU RESPONSIVO ------------------------------------>
-        <div onClick="showNav()" class="show-nav">
-            <div class="black-bar"></div>
-            <div class="black-bar"></div>
-            <div class="black-bar"></div>
+  <!-------------------------------------- HEADER ------------------------------------>
+  <div id="cabecalho">
+    <img src="./Css/JB.png" />
+    <h3 id="escol">Escola Estadual de Educação Profissional</h3>
+    <h3 id="escol1">JOSÉ DE BARCELOS</h3>
+  </div>
+  <div id="complemento"></div>
+  <div id="navegacao">
+    <nav id="nav">
+      <a href="../index.html" class="button">INÍCIO</a>
+      <div class="menu-drop">
+        <button type="button" name="drop" id="drop" class="button">
+          INSTITUCIONAL
+          <p class="seta">&#x25BC;</p>
+        </button>
+        <div class="drop-content">
+          <a href="../Origem/index.html">Origem</a>
+          <a href="../Edital/index.html" >Regimento Escolar</a>
+          <a href="../NossaEscola/index.html">Nossa Escola</a>
+          <a href="../MultiMeios/index.html">MultiMeios</a>
         </div>
+      </div>
+      <a href="../NossaEquipe/index.html" class="button">NOSSA EQUIPE</a>
+      <a href="../Criadores/index.html" class="button" id="pagina">CRIADORES</a>
+    </nav>
+    <!------------------------------------- MENU RESPONSIVO ------------------------------------>
+    <div onClick="showNav()" class="show-nav">
+      <div class="black-bar"></div>
+      <div class="black-bar"></div>
+      <div class="black-bar"></div>
     </div>
+  </div>
+  <!------------------------------------- CONTENT ------------------------------------>
+  
 
-    <section>
+    <div class="content">
+      <section class="texto">
         <!-- TEXTO INICIAL -->
         <div class="paragrafo1">
-
             <h1>Porque criamos o site da escola?</h1>
             <p> A criação de um site escolar não apenas fortalece a comunicação e interação na comunidade educacional,
                 mas também se revela como uma ferramenta educacional valiosa, incentivando a participação ativa dos
@@ -105,657 +88,641 @@
             </p>
         </div>
         <!-- TEXTO INICIAL END -->
-
+    
     </section>
-
+    
+    <br><br>
     <div class="turma-info">
         <h1>Informática 2023</h1>
         <span class="material-symbols-outlined">
         </span>
     </div>
-
+    
     <br><br>
-
-    <!------------------------------------- CONTENT ------------------------------------>
-    <div class="content">
-
-        <!------------------------------------- CARDS DE PERFIS (TUTORIAL) ------------------------------------>
-
-        <div class="profile-card">
-            <img class="profile-image" src="./Css/imgs/img-amanda.webp" alt="Nome da Pessoa">
-            <div class="overlay">
-                <div class="overlay-text">"Não chore porque acabou, sorria porque aconteceu" - JK Rowling
-                </div>
-            </div>
-            <div class="profile-info">
-                <div class="profile-name"><a
-                        href="https://cursos.alura.com.br/forum/topico-utilizar-imagem-100-como-fundo-da-div-45932">Amanda
-                        Danyelle</a></div>
-                <div class="profile-role">Equipe: Design</div>
-            </div>
-        </div>
-
-        <div class="profile-card">
-            <img class="profile-image" src="Css/imgs/img-beatriz-rocha.webp" alt="Nome da Pessoa">
-            <div class="overlay">
-                <div class="overlay-text">
-                </div>
-            </div>
-            <div class="profile-info">
-                <div class="profile-name"><a
-                        href="https://cursos.alura.com.br/forum/topico-utilizar-imagem-100-como-fundo-da-div-45932">Ana
-                        Beatriz
-                        Rocha</a></div>
-                <div class="profile-role">Equipe: Design</div>
-            </div>
-        </div>
-
-
-        <div class="profile-card">
-            <img class="profile-image" src="./Css/imgs/img-clara.webp" alt="Nome da Pessoa">
-            <div class="overlay">
-                <div class="overlay-text">"Quando pensar em desistir, lembre-se poque começou"
-                </div>
-            </div>
-            <div class="profile-info">
-                <div class="profile-name"><a
-                        href="https://cursos.alura.com.br/forum/topico-utilizar-imagem-100-como-fundo-da-div-45932">Ana
-                        Clara</a>
-                </div>
-                <div class="profile-role">Equipe: Design</div>
-            </div>
-        </div>
-
-
-        <div class="profile-card">
-            <img class="profile-image" src="./Css/imgs/img-patricia.webp" alt="Nome da Pessoa">
-            <div class="overlay">
-                <div class="overlay-text">"Transforme grandes desafios em grandes oportunidades, assim, poderá
-                    alcançar
-                    resultados extraordinários"
-                </div>
-            </div>
-            <div class="profile-info">
-                <div class="profile-name"><a
-                        href="https://cursos.alura.com.br/forum/topico-utilizar-imagem-100-como-fundo-da-div-45932">Ana
-                        Patricia</a>
-                </div>
-                <div class="profile-role">Equipe: Front-end</div>
-            </div>
-        </div>
-
-
-        <div class="profile-card">
-            <img class="profile-image" src="./Css/imgs/img-audi.webp" alt="Nome da Pessoa">
-            <div class="overlay">
-                <div class="overlay-text">"O futuro é imprevisível, mas tenho a certeza que as escolhas que faço
-                    agora
-                    irão ditar o meu destino 🚀✨"
-                </div>
-            </div>
-            <div class="profile-info">
-                <div class="profile-name"><a
-                        href="https://cursos.alura.com.br/forum/topico-utilizar-imagem-100-como-fundo-da-div-45932">Audi
-                        de
-                        Oliveira</a></div>
-                <div class="profile-role">Equipe: Front-end</div>
-            </div>
-        </div>
-
-
-        <div class="profile-card">
-            <img class="profile-image" src="./Css/imgs/img-beatriz-souza.webp" alt="Nome da Pessoa">
-            <div class="overlay">
-                <div class="overlay-text">"Nada como o tempo para nos mostrar o que vale a pena"
-                </div>
-            </div>
-            <div class="profile-info">
-                <div class="profile-name"><a
-                        href="https://cursos.alura.com.br/forum/topico-utilizar-imagem-100-como-fundo-da-div-45932">Beatriz
-                        de
-                        Sousa</a></div>
-                <div class="profile-role">Equipe: Coleta de Dados</div>
-            </div>
-        </div>
-
-        <div class="profile-card">
-            <img class="profile-image" src="./Css/imgs/img-cristinny.webp" alt="Nome da Pessoa">
-            <div class="overlay">
-                <div class="overlay-text">"Nós precisamos ser tocados por quem amamos quase tanto quanto precisamos
-                    do
-                    ar para respirar."
-                    -A Cinco Passos de Você"
-                </div>
-            </div>
-            <div class="profile-info">
-                <div class="profile-name"><a
-                        href="https://cursos.alura.com.br/forum/topico-utilizar-imagem-100-como-fundo-da-div-45932">Cristinny
-                        Elizabeth</a></div>
-                <div class="profile-role">Equipe: Design</div>
-            </div>
-        </div>
-
-        <div class="profile-card">
-            <img class="profile-image" src="./Css/imgs/img-davi.webp" alt="Nome da Pessoa">
-            <div class="overlay">
-                <div class="overlay-text">"Codando enquanto o café esfria"
-                </div>
-            </div>
-            <div class="profile-info">
-                <div class="profile-name"><a
-                        href="https://cursos.alura.com.br/forum/topico-utilizar-imagem-100-como-fundo-da-div-45932">Davi
-                        Barbosa</a>
-                </div>
-                <div class="profile-role">Equipe: Front-end</div>
-            </div>
-        </div>
-
-        <div class="profile-card">
-            <img class="profile-image" src="./Css/imgs/img-elenn.webp" alt="Nome da Pessoa">
-            <div class="overlay">
-                <div class="overlay-text">"Quanto de você existe naquilo que você odeia?
-                    - Sigmund Freud"
-                </div>
-            </div>
-            <div class="profile-info">
-                <div class="profile-name"><a
-                        href="https://cursos.alura.com.br/forum/topico-utilizar-imagem-100-como-fundo-da-div-45932">Elenn
-                        Vitoria</a></div>
-                <div class="profile-role">Equipe: Coleta de Dados</div>
-            </div>
-        </div>
-
-        <div class="profile-card">
-            <img class="profile-image" src="Css/imgs/img-fabio.webp" alt="Nome da Pessoa">
-            <div class="overlay">
-                <div class="overlay-text">"A tecnologia move o mundo, e o amor move o universo"
-                </div>
-            </div>
-            <div class="profile-info">
-                <div class="profile-name"><a
-                        href="https://cursos.alura.com.br/forum/topico-utilizar-imagem-100-como-fundo-da-div-45932">Fabio
-                        Teles</a>
-                </div>
-                <div class="profile-role">Equipe: Back-end</div>
-            </div>
-        </div>
-
-        <div class="profile-card">
-            <img class="profile-image" src="./Css/imgs/img-elisa.webp" alt="Nome da Pessoa">
-            <div class="overlay">
-                <div class="overlay-text">"O sucesso é a soma de pequenos esforços repetidos dia após dia"
-                </div>
-            </div>
-            <div class="profile-info">
-                <div class="profile-name"><a
-                        href="https://cursos.alura.com.br/forum/topico-utilizar-imagem-100-como-fundo-da-div-45932">Francisca
-                        Eliza</a>
-                </div>
-                <div class="profile-role">Equipe: Coleta de Dados</div>
-            </div>
-        </div>
-
-        <div class="profile-card">
-            <img class="profile-image" src="./Css/imgs/img-nobre.webp" alt="Nome da Pessoa">
-            <div class="overlay">
-                <div class="overlay-text">"Por meio do design, criando experiências incríveis"
-                </div>
-            </div>
-            <div class="profile-info">
-                <div class="profile-name"><a
-                        href="https://cursos.alura.com.br/forum/topico-utilizar-imagem-100-como-fundo-da-div-45932">Gabriel
-                        Nobre</a></div>
-                <div class="profile-role">Equipe: Design</div>
-            </div>
-        </div>
-
-        <div class="profile-card">
-            <img class="profile-image" src="./Css/imgs/img-gustavo.webp" alt="Nome da Pessoa">
-            <div class="overlay">
-                <div class="overlay-text">"Sua curiosidade é maior que o seu medo, então viva, ao infinito e além
-                    🚀✨"
-                </div>
-            </div>
-            <div class="profile-info">
-                <div class="profile-name"><a
-                        href="https://cursos.alura.com.br/forum/topico-utilizar-imagem-100-como-fundo-da-div-45932">Gustavo
-                        Wendel</a></div>
-                <div class="profile-role">Equipe: Front-end</div>
-            </div>
-        </div>
-
-        <div class="profile-card">
-            <img class="profile-image" src="Css/imgs/img-ismael.webp" alt="Nome da Pessoa">
-            <div class="overlay">
-                <div class="overlay-text">"O trabalho dignifica o homem"
-                </div>
-            </div>
-            <div class="profile-info">
-                <div class="profile-name"><a
-                        href="https://cursos.alura.com.br/forum/topico-utilizar-imagem-100-como-fundo-da-div-45932">Ismael
-                        Levi</a></div>
-                <div class="profile-role">Equipe: Front-end</div>
-            </div>
-        </div>
-
-        <div class="profile-card">
-            <img class="profile-image" src="./Css/imgs/img-jayron.webp" alt="Nome da Pessoa">
-            <div class="overlay">
-                <div class="overlay-text">"Tudo que pode acontecer, acontecerá!"
-                </div>
-            </div>
-            <div class="profile-info">
-                <div class="profile-name"><a
-                        href="https://cursos.alura.com.br/forum/topico-utilizar-imagem-100-como-fundo-da-div-45932">Jayron
-                        Ferreira</a></div>
-                <div class="profile-role">Equipe: Front-end</div>
-            </div>
-        </div>
-
-        <div class="profile-card">
-            <img class="profile-image" src="./Css/imgs/img-daniel.webp" alt="Nome da Pessoa">
-            <div class="overlay">
-                <div class="overlay-text">"Eu sou o melhor"
-                </div>
-            </div>
-            <div class="profile-info">
-                <div class="profile-name"><a
-                        href="https://cursos.alura.com.br/forum/topico-utilizar-imagem-100-como-fundo-da-div-45932">João
-                        Daniel</a></div>
-                <div class="profile-role">Equipe: Design</div>
-            </div>
-        </div>
-
-        <div class="profile-card">
-            <img class="profile-image" src="./Css/imgs/img-joseph.webp" alt="Nome da Pessoa">
-            <div class="overlay">
-                <div class="overlay-text">"O perfeito caos"
-                </div>
-            </div>
-            <div class="profile-info">
-                <div class="profile-name"><a
-                        href="https://cursos.alura.com.br/forum/topico-utilizar-imagem-100-como-fundo-da-div-45932">Josephe
-                        Guilherme</a></div>
-                <div class="profile-role">Equipe: Front-end</div>
-            </div>
-        </div>
-
-        <div class="profile-card">
-            <img class="profile-image" src="./Css/imgs/img-karla.webp" alt="Nome da Pessoa">
-            <div class="overlay">
-                <div class="overlay-text">"Para quem não sabe para onde vai, qualquer caminho serve"
-                </div>
-            </div>
-            <div class="profile-info">
-                <div class="profile-name"><a
-                        href="https://cursos.alura.com.br/forum/topico-utilizar-imagem-100-como-fundo-da-div-45932">Karla
-                        Julia</a></div>
-                <div class="profile-role">Equipe: Front-end</div>
-            </div>
-        </div>
-
-        <div class="profile-card">
-            <img class="profile-image" src="Css/imgs/img-madu.webp" alt="Nome da Pessoa">
-            <div class="overlay">
-                <div class="overlay-text">"Não tenho preguiça, só pratico a arte de deixar tudo pra última hora"
-                </div>
-            </div>
-            <div class="profile-info">
-                <div class="profile-name"><a
-                        href="https://cursos.alura.com.br/forum/topico-utilizar-imagem-100-como-fundo-da-div-45932">Maria
-                        Eduarda</a></div>
-                <div class="profile-role">Equipe: Design</div>
-            </div>
-        </div>
-
-        <div class="profile-card">
-            <img class="profile-image" src="./Css/imgs/img-giovana.webp" alt="Nome da Pessoa">
-            <div class="overlay">
-                <div class="overlay-text">“As coisas que amamos nos dizem o que somos”
-                    ⁃ São Tomás de Aquino
-                </div>
-            </div>
-            <div class="profile-info">
-                <div class="profile-name"><a
-                        href="https://cursos.alura.com.br/forum/topico-utilizar-imagem-100-como-fundo-da-div-45932">Maria
-                        Giovana</a></div>
-                <div class="profile-role">Equipe: Front-end</div>
-            </div>
-        </div>
-
-        <div class="profile-card">
-            <img class="profile-image" src="./Css/imgs/img-jamille.webp" alt="Nome da Pessoa">
-            <div class="overlay">
-                <div class="overlay-text">"Que maravilha é ninguém precisar esperar um único momento para melhorar o
-                    mundo!" - Anne Frank
-                </div>
-            </div>
-            <div class="profile-info">
-                <div class="profile-name"><a
-                        href="https://cursos.alura.com.br/forum/topico-utilizar-imagem-100-como-fundo-da-div-45932">Maria
-                        Jamille</a></div>
-                <div class="profile-role">Equipe: Front-end</div>
-            </div>
-        </div>
-
-        <div class="profile-card">
-            <img class="profile-image" src="./Css/imgs/img-julia.webp" alt="Nome da Pessoa">
-            <div class="overlay">
-                <div class="overlay-text">"Nunca foi fácil, junta os seus pedaços e desce pra arena
-                    Mas lembre-se, aconteça o que aconteça, nada como um dia após outro dia"
-                    - Racionais MC’S
-                </div>
-            </div>
-            <div class="profile-info">
-                <div class="profile-name"><a
-                        href="https://cursos.alura.com.br/forum/topico-utilizar-imagem-100-como-fundo-da-div-45932">Maria
-                        Julia</a></div>
-                <div class="profile-role">Equipe: Front-end</div>
-            </div>
-        </div>
-
-        <div class="profile-card">
-            <img class="profile-image" src="./Css/imgs/img-rayssa.webp" alt="Nome da Pessoa">
-            <div class="overlay">
-                <div class="overlay-text">"Meu nível de maturidade varia conforme o dia da semana"
-                </div>
-            </div>
-            <div class="profile-info">
-                <div class="profile-name"><a
-                        href="https://cursos.alura.com.br/forum/topico-utilizar-imagem-100-como-fundo-da-div-45932">Maria
-                        Rayssa</a></div>
-                <div class="profile-role">Equipe: Coleta de Dados</div>
-            </div>
-        </div>
-
-        <div class="profile-card">
-            <img class="profile-image" src="./Css/imgs/img-vitoria.webp" alt="Nome da Pessoa">
-            <div class="overlay">
-                <div class="overlay-text">
-                </div>
-            </div>
-            <div class="profile-info">
-                <div class="profile-name"><a
-                        href="https://cursos.alura.com.br/forum/topico-utilizar-imagem-100-como-fundo-da-div-45932">Maria
-                        Vitoria</a></div>
-                <div class="profile-role">Equipe: Coleta de Dados</div>
-            </div>
-        </div>
-
-        <div class="profile-card">
-            <img class="profile-image" src="./Css/imgs/img-nicolas.webp" alt="Nome da Pessoa">
-            <div class="overlay">
-                <div class="overlay-text">"Chame-o de Voldemort. Sempre chame as coisas pelo nome que têm. O medo de
-                    um
-                    nome aumenta o medo da coisa em si" - Dumbledore
-                </div>
-            </div>
-            <div class="profile-info">
-                <div class="profile-name"><a
-                        href="https://cursos.alura.com.br/forum/topico-utilizar-imagem-100-como-fundo-da-div-45932">Nicolas
-                        Lima</a></div>
-                <div class="profile-role">Equipe: Front-end</div>
-            </div>
-        </div>
-
-        <div class="profile-card">
-            <img class="profile-image" src="./Css/imgs/img-pedro.webp" alt="Nome da Pessoa">
-            <div class="overlay">
-                <div class="overlay-text">"O que faz dar certo é continuar tentando"
-                </div>
-            </div>
-            <div class="profile-info">
-                <div class="profile-name"><a
-                        href="https://cursos.alura.com.br/forum/topico-utilizar-imagem-100-como-fundo-da-div-45932">Pedro
-                        Lucas</a></div>
-                <div class="profile-role">Equipe: Design</div>
-            </div>
-        </div>
-
-        <div class="profile-card">
-            <img class="profile-image" src="Css/imgs/img-rai.webp" alt="Nome da Pessoa">
-            <div class="overlay">
-                <div class="overlay-text">"Estou a mimir"
-                </div>
-            </div>
-            <div class="profile-info">
-                <div class="profile-name"><a
-                        href="https://cursos.alura.com.br/forum/topico-utilizar-imagem-100-como-fundo-da-div-45932">Rai
-                        Lopes</a></div>
-                <div class="profile-role">Equipe: Front-end</div>
-            </div>
-        </div>
-
-        <div class="profile-card">
-            <img class="profile-image" src="./Css/imgs/img-ruan.webp" alt="Nome da Pessoa">
-            <div class="overlay">
-                <div class="overlay-text">"Now there's a look in your eyes<br>
-                    Like black holes in the sky<br>
-                    <strong>Shine on, you crazy diamond</strong>"
-                </div>
-            </div>
-            <div class="profile-info">
-                <div class="profile-name"><a
-                        href="https://cursos.alura.com.br/forum/topico-utilizar-imagem-100-como-fundo-da-div-45932">Ruan
-                        Sousa</a></div>
-                <div class="profile-role">Equipe: Back-end</div>
-            </div>
-        </div>
-
-        <div class="profile-card">
-            <img class="profile-image" src="./Css/imgs/img-samara.webp" alt="Nome da Pessoa">
-            <div class="overlay">
-                <div class="overlay-text">"A verdadeira riqueza não se mede pelos bens materiais, mas pelas relações
-                    significativas que cultivamos"
-                </div>
-            </div>
-            <div class="profile-info">
-                <div class="profile-name"><a
-                        href="https://cursos.alura.com.br/forum/topico-utilizar-imagem-100-como-fundo-da-div-45932">Samara
-                        Oliveira</a></div>
-                <div class="profile-role">Equipe: Design</div>
-            </div>
-        </div>
-
-        <div class="profile-card">
-            <img class="profile-image" src="./Css/imgs/img-samuel.webp" alt="Nome da Pessoa">
-            <div class="overlay">
-                <div class="overlay-text">
-                </div>
-            </div>
-            <div class="profile-info">
-                <div class="profile-name"><a
-                        href="https://cursos.alura.com.br/forum/topico-utilizar-imagem-100-como-fundo-da-div-45932">Samuel
-                        Viana</a></div>
-                <div class="profile-role">Equipe: Coleta de Dados</div>
-            </div>
-        </div>
-
-        <div class="profile-card">
-            <img class="profile-image" src="./Css/imgs/img-viviane.webp" alt="Nome da Pessoa">
-            <div class="overlay">
-                <div class="overlay-text">"O seu sonho merece a sua dedicação"
-                </div>
-            </div>
-            <div class="profile-info">
-                <div class="profile-name"><a
-                        href="https://cursos.alura.com.br/forum/topico-utilizar-imagem-100-como-fundo-da-div-45932">Viviane
-                        da Silva</a></div>
-                <div class="profile-role">Equipe: Coleta de Dados</div>
-            </div>
-        </div>
-
-        <div class="profile-card">
-            <img class="profile-image" src="./Css/imgs/img-yasmin.webp" alt="Nome da Pessoa">
-            <div class="overlay">
-                <div class="overlay-text">"Mesmo que eu acabe indo muito longe, não posso parar
-                    Porque mesmo as sombras escuras só existem quando há luz" - Behind The Light (Stray Kids)
-                </div>
-            </div>
-            <div class="profile-info">
-                <div class="profile-name"><a
-                        href="https://cursos.alura.com.br/forum/topico-utilizar-imagem-100-como-fundo-da-div-45932">Yasmin
-                        Kessia</a></div>
-                <div class="profile-role">Equipe: Coleta de Dados</div>
-            </div>
-        </div>
-
-        <div class="profile-card">
-            <img class="profile-image" src="./Css/imgs/img-ylan.webp" alt="Nome da Pessoa">
-            <div class="overlay">
-                <div class="overlay-text">"A vida é feita de ilusões, escolha a sua e seja feliz"
-                </div>
-            </div>
-            <div class="profile-info">
-                <div class="profile-name"><a
-                        href="https://cursos.alura.com.br/forum/topico-utilizar-imagem-100-como-fundo-da-div-45932">Ylana
-                        Freire</a></div>
-                <div class="profile-role">Equipe: Design</div>
-            </div>
-        </div>
-        <!-- ADICIONE MAIS CARDS DE PESSOAS AQUI! -->
-
-     <!-- BUTTON BACK TO TOP (JAMILLE) -->
-     <div id="back_to_top">
-        <div id="btn_back">
-          <i id="icon_up" class="fa-solid fa-arrow-up"></i>
-        </div>
+    <div class="cards">
+    <div class="profile-card">
+      <img class="profile-image" src="./Css/imgs/img-amanda.webp" alt="Nome da Pessoa">
+      <div class="overlay">
+          <div class="overlay-text">"Não chore porque acabou, sorria porque aconteceu" - JK Rowling
+          </div>
       </div>
-      <script>
-       //BOTÃO BACK TO TOP (JAMILLE)
-    let calcScrollValue = () => {
-      let scrollProgress = document.getElementById("back_to_top");
-      let pos = document.documentElement.scrollTop;
-      let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      let scrollValue = Math.round((pos * 100) / calcHeight);
-  
-      if (pos > 50) {
-        scrollProgress.style.display = "grid";
-      } else {
-        scrollProgress.style.display = "none";
-      }
-  
-      scrollProgress.addEventListener("click", () => {
-        // Scroll suave para o topo
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth' // Adiciona um efeito de rolagem suave
-        });
-      });
-  
-      scrollProgress.style.background = `conic-gradient(#FFBD00 ${scrollValue}%, #d7d7d7 ${scrollValue}%)`;
-    };
-  
-    window.onscroll = calcScrollValue;
-    window.onload = calcScrollValue;
-  </script>
-    <!------------------------------------- BUTÕES REDES SOCIAIS ------------------------------------>
-    <div class="social-buttons">
-        <a href="https://wa.me/+558591919730" target="_blank" class="whatsapp-button">
-            <img src="./Css/whatsapp.png" alt="WhatsApp">
-        </a>
-        <a href="https://www.instagram.com/eeep_jb/" target="_blank" class="instagram-button">
-            <img src="./Css/instagram.png" alt="Instagram">
-        </a>
+      <div class="profile-info">
+          <div class="profile-name"><a
+                  href="https://www.instagram.com/amanda_ambrosio_/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==">Amanda
+                  Danyelle</a></div>
+          <div class="profile-role">Equipe: Design</div>
+      </div>
+  </div>
+
+  <div class="profile-card">
+      <img class="profile-image" src="Css/imgs/img-beatriz-rocha.webp" alt="Nome da Pessoa">
+      <div class="overlay">
+          <div class="overlay-text">
+          </div>
+      </div>
+      <div class="profile-info">
+          <div class="profile-name"><a
+                  href="https://www.instagram.com/_ana_biia._/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==">Ana
+                  Beatriz
+                  Rocha</a></div>
+          <div class="profile-role">Equipe: Design</div>
+      </div>
+  </div>
+
+
+  <div class="profile-card">
+      <img class="profile-image" src="./Css/imgs/img-clara.webp" alt="Nome da Pessoa">
+      <div class="overlay">
+          <div class="overlay-text">"Quando pensar em desistir, lembre-se poque começou"
+          </div>
+      </div>
+      <div class="profile-info">
+          <div class="profile-name"><a
+                  href="https://www.instagram.com/claraxsilvaax/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==">Ana
+                  Clara</a>
+          </div>
+          <div class="profile-role">Equipe: Design</div>
+      </div>
+  </div>
+
+
+  <div class="profile-card">
+      <img class="profile-image" src="./Css/imgs/img-patricia.webp" alt="Nome da Pessoa">
+      <div class="overlay">
+          <div class="overlay-text">"Transforme grandes desafios em grandes oportunidades, assim, poderá
+              alcançar
+              resultados extraordinários"
+          </div>
+      </div>
+      <div class="profile-info">
+          <div class="profile-name"><a
+                  href="https://www.instagram.com/ana_patricia867/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==">Ana
+                  Patricia</a>
+          </div>
+          <div class="profile-role">Equipe: Front-end</div>
+      </div>
+  </div>
+
+
+  <div class="profile-card">
+      <img class="profile-image" src="./Css/imgs/img-audi.webp" alt="Nome da Pessoa">
+      <div class="overlay">
+          <div class="overlay-text">"O futuro é imprevisível, mas tenho a certeza que as escolhas que faço
+              agora
+              irão ditar o meu destino 🚀✨"
+          </div>
+      </div>
+      <div class="profile-info">
+          <div class="profile-name"><a
+                  href="https://www.instagram.com/audiliveira/">Audi
+                  de
+                  Oliveira</a></div>
+          <div class="profile-role">Equipe: Front-end</div>
+      </div>
+  </div>
+
+
+  <div class="profile-card">
+      <img class="profile-image" src="./Css/imgs/img-beatriz-souza.webp" alt="Nome da Pessoa">
+      <div class="overlay">
+          <div class="overlay-text">"Nada como o tempo para nos mostrar o que vale a pena"
+          </div>
+      </div>
+      <div class="profile-info">
+          <div class="profile-name"><a
+                  href="https://www.instagram.com/idkb3a__/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==">Beatriz
+                  de
+                  Sousa</a></div>
+          <div class="profile-role">Equipe: Coleta de Dados</div>
+      </div>
+  </div>
+
+  <div class="profile-card">
+      <img class="profile-image" src="./Css/imgs/img-cristinny.webp" alt="Nome da Pessoa">
+      <div class="overlay">
+          <div class="overlay-text">"Nós precisamos ser tocados por quem amamos quase tanto quanto precisamos
+              do
+              ar para respirar."
+              -A Cinco Passos de Você"
+          </div>
+      </div>
+      <div class="profile-info">
+          <div class="profile-name"><a
+                  href="https://www.instagram.com/tinny_macedo.x/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==">Cristinny
+                  Elizabeth</a></div>
+          <div class="profile-role">Equipe: Design</div>
+      </div>
+  </div>
+
+  <div class="profile-card">
+      <img class="profile-image" src="./Css/imgs/img-davi.webp" alt="Nome da Pessoa">
+      <div class="overlay">
+          <div class="overlay-text">"Codando enquanto o café esfria"
+          </div>
+      </div>
+      <div class="profile-info">
+          <div class="profile-name"><a
+                  href="https://www.instagram.com/davi.b11/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==">Davi
+                  Barbosa</a>
+          </div>
+          <div class="profile-role">Equipe: Front-end</div>
+      </div>
+  </div>
+
+  <div class="profile-card">
+      <img class="profile-image" src="./Css/imgs/img-elenn.webp" alt="Nome da Pessoa">
+      <div class="overlay">
+          <div class="overlay-text">"Quanto de você existe naquilo que você odeia?
+              - Sigmund Freud"
+          </div>
+      </div>
+      <div class="profile-info">
+          <div class="profile-name"><a
+                  href="https://www.instagram.com/elennvtr/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==">Elenn
+                  Vitoria</a></div>
+          <div class="profile-role">Equipe: Coleta de Dados</div>
+      </div>
+  </div>
+
+  <div class="profile-card">
+      <img class="profile-image" src="Css/imgs/img-fabio.webp" alt="Nome da Pessoa">
+      <div class="overlay">
+          <div class="overlay-text">"A tecnologia move o mundo, e o amor move o universo"
+          </div>
+      </div>
+      <div class="profile-info">
+          <div class="profile-name"><a
+                  href="https://www.instagram.com/fabiotelesbezerra/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==">Fabio
+                  Teles</a>
+          </div>
+          <div class="profile-role">Equipe: Back-end</div>
+      </div>
+  </div>
+
+  <div class="profile-card">
+      <img class="profile-image" src="./Css/imgs/img-elisa.webp" alt="Nome da Pessoa">
+      <div class="overlay">
+          <div class="overlay-text">"O sucesso é a soma de pequenos esforços repetidos dia após dia"
+          </div>
+      </div>
+      <div class="profile-info">
+          <div class="profile-name"><a
+                  href="https://www.instagram.com/eliza_barros13/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==">Francisca
+                  Eliza</a>
+          </div>
+          <div class="profile-role">Equipe: Coleta de Dados</div>
+      </div>
+  </div>
+
+  <div class="profile-card">
+      <img class="profile-image" src="./Css/imgs/img-nobre.webp" alt="Nome da Pessoa">
+      <div class="overlay">
+          <div class="overlay-text">"Por meio do design, criando experiências incríveis"
+          </div>
+      </div>
+      <div class="profile-info">
+          <div class="profile-name"><a
+                  href="https://www.instagram.com/gabnnobre/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==">Gabriel
+                  Nobre</a></div>
+          <div class="profile-role">Equipe: Design</div>
+      </div>
+  </div>
+
+  <div class="profile-card">
+      <img class="profile-image" src="./Css/imgs/img-gustavo.webp" alt="Nome da Pessoa">
+      <div class="overlay">
+          <div class="overlay-text">"Sua curiosidade é maior que o seu medo, então viva, ao infinito e além
+              🚀✨"
+          </div>
+      </div>
+      <div class="profile-info">
+          <div class="profile-name"><a
+                  href="https://www.instagram.com/gwendelrds/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==">Gustavo
+                  Wendel</a></div>
+          <div class="profile-role">Equipe: Front-end</div>
+      </div>
+  </div>
+
+  <div class="profile-card">
+      <img class="profile-image" src="Css/imgs/img-ismael.webp" alt="Nome da Pessoa">
+      <div class="overlay">
+          <div class="overlay-text">"O trabalho dignifica o homem"
+          </div>
+      </div>
+      <div class="profile-info">
+          <div class="profile-name"><a
+                  href="https://www.instagram.com/ismaelllmagalhaes/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==">Ismael
+                  Levi</a></div>
+          <div class="profile-role">Equipe: Front-end</div>
+      </div>
+  </div>
+
+  <div class="profile-card">
+      <img class="profile-image" src="./Css/imgs/img-jayron.webp" alt="Nome da Pessoa">
+      <div class="overlay">
+          <div class="overlay-text">"Tudo que pode acontecer, acontecerá!"
+          </div>
+      </div>
+      <div class="profile-info">
+          <div class="profile-name"><a
+                  href="https://www.instagram.com/imjayfp/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==">Jayron
+                  Ferreira</a></div>
+          <div class="profile-role">Equipe: Front-end</div>
+      </div>
+  </div>
+
+  <div class="profile-card">
+      <img class="profile-image" src="./Css/imgs/img-daniel.webp" alt="Nome da Pessoa">
+      <div class="overlay">
+          <div class="overlay-text">"Eu sou o melhor"
+          </div>
+      </div>
+      <div class="profile-info">
+          <div class="profile-name"><a
+                  href="https://www.instagram.com/daniielbr_/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==">João
+                  Daniel</a></div>
+          <div class="profile-role">Equipe: Design</div>
+      </div>
+  </div>
+
+  <div class="profile-card">
+      <img class="profile-image" src="./Css/imgs/img-joseph.webp" alt="Nome da Pessoa">
+      <div class="overlay">
+          <div class="overlay-text">"O perfeito caos"
+          </div>
+      </div>
+      <div class="profile-info">
+          <div class="profile-name"><a
+                  href="https://www.instagram.com/josephekkj/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==">Josephe
+                  Guilherme</a></div>
+          <div class="profile-role">Equipe: Front-end</div>
+      </div>
+  </div>
+
+  <div class="profile-card">
+      <img class="profile-image" src="./Css/imgs/img-karla.webp" alt="Nome da Pessoa">
+      <div class="overlay">
+          <div class="overlay-text">"Para quem não sabe para onde vai, qualquer caminho serve"
+          </div>
+      </div>
+      <div class="profile-info">
+          <div class="profile-name"><a
+                  href="https://www.instagram.com/julia_verasp/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==">Karla
+                  Julia</a></div>
+          <div class="profile-role">Equipe: Front-end</div>
+      </div>
+  </div>
+
+  <div class="profile-card">
+      <img class="profile-image" src="Css/imgs/img-madu.webp" alt="Nome da Pessoa">
+      <div class="overlay">
+          <div class="overlay-text">"Não tenho preguiça, só pratico a arte de deixar tudo pra última hora"
+          </div>
+      </div>
+      <div class="profile-info">
+          <div class="profile-name"><a
+                  href="#">Maria
+                  Eduarda</a></div>
+          <div class="profile-role">Equipe: Design</div>
+      </div>
+  </div>
+
+  <div class="profile-card">
+      <img class="profile-image" src="./Css/imgs/img-giovana.webp" alt="Nome da Pessoa">
+      <div class="overlay">
+          <div class="overlay-text">“As coisas que amamos nos dizem o que somos”
+              ⁃ São Tomás de Aquino
+          </div>
+      </div>
+      <div class="profile-info">
+          <div class="profile-name"><a
+                  href="https://www.instagram.com/mgiovanah/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==">Maria
+                  Giovana</a></div>
+          <div class="profile-role">Equipe: Front-end</div>
+      </div>
+  </div>
+
+  <div class="profile-card">
+      <img class="profile-image" src="./Css/imgs/img-jamille.webp" alt="Nome da Pessoa">
+      <div class="overlay">
+          <div class="overlay-text">"Que maravilha é ninguém precisar esperar um único momento para melhorar o
+              mundo!" - Anne Frank
+          </div>
+      </div>
+      <div class="profile-info">
+          <div class="profile-name"><a
+                  href="https://www.instagram.com/jamille_sp/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==">Maria
+                  Jamille</a></div>
+          <div class="profile-role">Equipe: Front-end</div>
+      </div>
+  </div>
+
+  <div class="profile-card">
+      <img class="profile-image" src="./Css/imgs/img-julia.webp" alt="Nome da Pessoa">
+      <div class="overlay">
+          <div class="overlay-text">"Nunca foi fácil, junta os seus pedaços e desce pra arena
+              Mas lembre-se, aconteça o que aconteça, nada como um dia após outro dia"
+              - Racionais MC’S
+          </div>
+      </div>
+      <div class="profile-info">
+          <div class="profile-name"><a
+                  href="https://www.instagram.com/mrjuulia/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==">Maria
+                  Julia</a></div>
+          <div class="profile-role">Equipe: Front-end</div>
+      </div>
+  </div>
+
+  <div class="profile-card">
+      <img class="profile-image" src="./Css/imgs/img-rayssa.webp" alt="Nome da Pessoa">
+      <div class="overlay">
+          <div class="overlay-text">"Meu nível de maturidade varia conforme o dia da semana"
+          </div>
+      </div>
+      <div class="profile-info">
+          <div class="profile-name"><a
+                  href="https://www.instagram.com/marim.mt/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==">Maria
+                  Rayssa</a></div>
+          <div class="profile-role">Equipe: Coleta de Dados</div>
+      </div>
+  </div>
+
+  <div class="profile-card">
+      <img class="profile-image" src="./Css/imgs/img-vitoria.webp" alt="Nome da Pessoa">
+      <div class="overlay">
+          <div class="overlay-text">
+          </div>
+      </div>
+      <div class="profile-info">
+          <div class="profile-name"><a
+                  href="#">Maria
+                  Vitoria</a></div>
+          <div class="profile-role">Equipe: Coleta de Dados</div>
+      </div>
+  </div>
+
+  <div class="profile-card">
+      <img class="profile-image" src="./Css/imgs/img-nicolas.webp" alt="Nome da Pessoa">
+      <div class="overlay">
+          <div class="overlay-text">"Chame-o de Voldemort. Sempre chame as coisas pelo nome que têm. O medo de
+              um
+              nome aumenta o medo da coisa em si" - Dumbledore
+          </div>
+      </div>
+      <div class="profile-info">
+          <div class="profile-name"><a
+                  href="https://www.instagram.com/nyckolas0307/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==">Nicolas
+                  Lima</a></div>
+          <div class="profile-role">Equipe: Front-end</div>
+      </div>
+  </div>
+
+  <div class="profile-card">
+      <img class="profile-image" src="./Css/imgs/img-pedro.webp" alt="Nome da Pessoa">
+      <div class="overlay">
+          <div class="overlay-text">"O que faz dar certo é continuar tentando"
+          </div>
+      </div>
+      <div class="profile-info">
+          <div class="profile-name"><a
+                  href="https://www.instagram.com/pedrottorresx/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==">Pedro
+                  Lucas</a></div>
+          <div class="profile-role">Equipe: Design</div>
+      </div>
+  </div>
+
+  <div class="profile-card">
+      <img class="profile-image" src="Css/imgs/img-rai.webp" alt="Nome da Pessoa">
+      <div class="overlay">
+          <div class="overlay-text">"Estou a mimir"
+          </div>
+      </div>
+      <div class="profile-info">
+          <div class="profile-name"><a
+                  href="https://www.instagram.com/railopes04/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==">Rai
+                  Lopes</a></div>
+          <div class="profile-role">Equipe: Front-end</div>
+      </div>
+  </div>
+
+  <div class="profile-card">
+      <img class="profile-image" src="./Css/imgs/img-ruan.webp" alt="Nome da Pessoa">
+      <div class="overlay">
+          <div class="overlay-text">"Now there's a look in your eyes<br>
+              Like black holes in the sky<br>
+              <strong>Shine on, you crazy diamond</strong>"
+          </div>
+      </div>
+      <div class="profile-info">
+          <div class="profile-name"><a
+                  href="https://www.instagram.com/riosodo_sixsixtysix/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==">Ruan
+                  Sousa</a></div>
+          <div class="profile-role">Equipe: Back-end</div>
+      </div>
+  </div>
+
+  <div class="profile-card">
+      <img class="profile-image" src="./Css/imgs/img-samara.webp" alt="Nome da Pessoa">
+      <div class="overlay">
+          <div class="overlay-text">"A verdadeira riqueza não se mede pelos bens materiais, mas pelas relações
+              significativas que cultivamos"
+          </div>
+      </div>
+      <div class="profile-info">
+          <div class="profile-name"><a
+                  href="https://www.instagram.com/samaraoliive/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==">Samara
+                  Oliveira</a></div>
+          <div class="profile-role">Equipe: Design</div>
+      </div>
+  </div>
+
+  <div class="profile-card">
+      <img class="profile-image" src="./Css/imgs/img-samuel.webp" alt="Nome da Pessoa">
+      <div class="overlay">
+          <div class="overlay-text">
+          </div>
+      </div>
+      <div class="profile-info">
+          <div class="profile-name"><a
+                  href="https://www.instagram.com/samuelviana43/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==">Samuel
+                  Viana</a></div>
+          <div class="profile-role">Equipe: Coleta de Dados</div>
+      </div>
+  </div>
+
+  <div class="profile-card">
+      <img class="profile-image" src="./Css/imgs/img-viviane.webp" alt="Nome da Pessoa">
+      <div class="overlay">
+          <div class="overlay-text">"O seu sonho merece a sua dedicação"
+          </div>
+      </div>
+      <div class="profile-info">
+          <div class="profile-name"><a
+                  href="https://www.instagram.com/vivipinheir0/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==">Viviane
+                  da Silva</a></div>
+          <div class="profile-role">Equipe: Coleta de Dados</div>
+      </div>
+  </div>
+
+  <div class="profile-card">
+      <img class="profile-image" src="./Css/imgs/img-yasmin.webp" alt="Nome da Pessoa">
+      <div class="overlay">
+          <div class="overlay-text">"Mesmo que eu acabe indo muito longe, não posso parar
+              Porque mesmo as sombras escuras só existem quando há luz" - Behind The Light (Stray Kids)
+          </div>
+      </div>
+      <div class="profile-info">
+          <div class="profile-name"><a
+                  href="https://www.instagram.com/yasmin_kessia/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==">Yasmin
+                  Kessia</a></div>
+          <div class="profile-role">Equipe: Coleta de Dados</div>
+      </div>
+  </div>
+
+  <div class="profile-card">
+      <img class="profile-image" src="./Css/imgs/img-ylan.webp" alt="Nome da Pessoa">
+      <div class="overlay">
+          <div class="overlay-text">"A vida é feita de ilusões, escolha a sua e seja feliz"
+          </div>
+      </div>
+      <div class="profile-info">
+          <div class="profile-name"><a
+                  href="https://www.instagram.com/ylanandrade/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==">Ylana
+                  Freire</a></div>
+          <div class="profile-role">Equipe: Design</div>
+      </div>
+  </div>
+  <!-- ADICIONE MAIS CARDS DE PESSOAS AQUI! -->
+
+</div>
+    <!-- BUTTON BACK TO TOP (JAMILLE) -->
+    <div id="back_to_top">
+      <div id="btn_back">
+        <i id="icon_up" class="fa-solid fa-arrow-up"></i>
+      </div>
     </div>
     <script>
-        // Função para atualizar a posição dos botões com base na rolagem e largura da tela
-        function updateButtonPosition() {
-            const socialButtons = document.querySelector(".social-buttons");
-            const windowHeight = window.innerHeight;
-            const scrollHeight = document.documentElement.scrollHeight;
-            const scrollTop = window.scrollY;
-            const scrollPercentage = (scrollTop / (scrollHeight - windowHeight)) * 100;
+      //BOTÃO BACK TO TOP (JAMILLE)
+  let calcScrollValue = () => {
+    let scrollProgress = document.getElementById("back_to_top");
+    let pos = document.documentElement.scrollTop;
+    let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
 
-            // Verifique a largura da tela
-            const windowWidth = window.innerWidth;
+    if (pos > 50) {
+      scrollProgress.style.display = "grid";
+    } else {
+      scrollProgress.style.display = "none";
+    }
 
-            if (windowWidth <= 768) {
-                // Se a largura da tela for menor ou igual a 768px, defina um valor maior para 'bottom'
-                if (scrollPercentage >= 65) {
-                    socialButtons.style.bottom = "170px"; // Ajuste o valor conforme necessário
-                } else {
-                    socialButtons.style.bottom = "20px"; // Ou qualquer outro valor desejado
-                }
-            } else {
-                // Caso contrário, mantenha o comportamento anterior
-                if (scrollPercentage >= 65) {
-                    socialButtons.style.bottom = "100px"; // Ou qualquer outro valor desejado
-                } else {
-                    socialButtons.style.bottom = "20px"; // Ou qualquer outro valor desejado
-                }
-            }
+    scrollProgress.addEventListener("click", () => {
+      // Scroll suave para o topo
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // Adiciona um efeito de rolagem suave
+      });
+    });
 
+   
+  };
+
+  window.onscroll = calcScrollValue;
+  window.onload = calcScrollValue;
+</script>
+    <!------------------------------------- BUTÕES REDES SOCIAIS ------------------------------------>
+    <div class="social-buttons">
+      <a href="https://wa.me/+558591919730" target="_blank" class="whatsapp-button">
+        <img src="./Css/whatsapp.png" alt="WhatsApp">
+      </a>
+      <a href="https://www.instagram.com/eeep_jb/" target="_blank" class="instagram-button">
+        <img src="./Css/instagram.png" alt="Instagram">
+      </a>
+    </div>
+    <script>
+      // Função para atualizar a posição dos botões com base na rolagem e largura da tela
+      function updateButtonPosition() {
+        const socialButtons = document.querySelector(".social-buttons");
+        const windowHeight = window.innerHeight;
+        const scrollHeight = document.documentElement.scrollHeight;
+        const scrollTop = window.scrollY;
+        const scrollPercentage = (scrollTop / (scrollHeight - windowHeight)) * 100;
+        // Verifique a largura da tela
+        const windowWidth = window.innerWidth;
+        if (windowWidth <= 768) {
+          // Se a largura da tela for menor ou igual a 768px, defina um valor maior para 'bottom'
+          if (scrollPercentage >= 65) {
+            socialButtons.style.bottom = "170px"; // Ajuste o valor conforme necessário
+          } else {
+            socialButtons.style.bottom = "100px"; // VALOR PADRÃO É 20PX, MUDE DE ACORDO COM A PÁGINA. 
+          }
+        } else {
+          // Caso contrário, mantenha o comportamento anterior
+          if (scrollPercentage >= 30) {
+            socialButtons.style.bottom = "100px"; // Ou qualquer outro valor desejado
+          } else {
+            socialButtons.style.bottom = "90px"; // VALOR PADRÃO É 20PX, MUDE DE ACORDO COM A PÁGINA. 
+          }
         }
-
-        // Adicione um ouvinte de evento de redimensionamento da janela para atualizar a posição dos botões
-        window.addEventListener("scroll", updateButtonPosition);
-        window.addEventListener("resize", updateButtonPosition);
-
-        // Chame a função para definir a posição inicial
-        updateButtonPosition();
-
-
+      }
+      // Adicione um ouvinte de evento de redimensionamento da janela para atualizar a posição dos botões
+      window.addEventListener("scroll", updateButtonPosition);
+      window.addEventListener("resize", updateButtonPosition);
+      // Chame a função para definir a posição inicial
+      updateButtonPosition();
     </script>
     <!------------------------------------- LINKS MENU RESPONSIVO ------------------------------------>
     <div class="qualquer" id="qualquer" onclick="showNav()"></div>
     <nav class="responsive-nav" id="responsive-nav">
-        <a href="../index.html" ontouchstart="changeIconColor(this)" ontouchend="resetIconColor(this)"><i
-                class="fa-solid fa-house" style="color: #ffffff; margin-right: 10px;"></i>INÍCIO</a>
-        <a href="../Origem/index.html" ontouchstart="changeIconColor(this)" ontouchend="resetIconColor(this)"><i
-                class="fa-solid fa-timeline" style="color: #ffffff; margin-right: 10px;"></i>ORIGEM</a>
-        <a href="../Edital/index.html" ontouchstart="changeIconColor(this)" ontouchend="resetIconColor(this)"><i
-                class="fa-solid fa-file-invoice" style="color: #ffffff; margin-right: 10px;"></i>REGIMENTO
-            ESCOLAR</a>
-        <a href="../NossaEquipe/index.html" ontouchstart="changeIconColor(this)" ontouchend="resetIconColor(this)"><i
-                class="fa-solid fa-people-group" style="color: #ffffff; margin-right: 10PX;"></i>NOSSA EQUIPE</a>
-        <a href="../NossaEscola/index.html" ontouchstart="changeIconColor(this)" ontouchend="resetIconColor(this)"><i
-                class="fa-solid fa-graduation-cap" style="color: #ffffff; margin-right: 10px;"></i>NOSSA ESCOLA</a>
-        <a href="../MultiMeios/index.html" ontouchstart="changeIconColor(this)" ontouchend="resetIconColor(this)"><i
-                class="fa-solid fa-book-open-reader" style="color: #ffffff; margin-right: 10px;"></i>MULTIMEIOS</a>
-        <a href="../Criadores/index.html" class="responsive" ontouchstart="changeIconColor(this)"
-            ontouchend="resetIconColor(this)"><i class="fa-solid fa-users-gear"
-                style="color: #ffffff; margin-right: 10px;"></i>CRIADORES</a>
-        <a href="../Cursos/index.html" ontouchstart="changeIconColor(this)" ontouchend="resetIconColor(this)"><i
-                class="fa-solid fa-brain" style="color: #ffffff; margin-right: 10px;"></i>CURSOS TÉCNICOS</a>
-        <a href="#" ontouchstart="changeIconColor(this)" ontouchend="resetIconColor(this)"><i
-                class="fa-solid fa-right-to-bracket" style="color: #ffffff; margin-right: 10px;"></i>ACESSO</a>
+      <a href="../index.html" ontouchstart="changeIconColor(this)" ontouchend="resetIconColor(this)"><i
+          class="fa-solid fa-house" style="color: #ffffff; margin-right: 10px;"></i>INÍCIO</a>
+      <a href="../Origem/index.html" ontouchstart="changeIconColor(this)" ontouchend="resetIconColor(this)"><i
+          class="fa-solid fa-timeline" style="color: #ffffff; margin-right: 10px;"></i>ORIGEM</a>
+      <a href="../Edital/index.html" class="responsive" ontouchstart="changeIconColor(this)"
+        ontouchend="resetIconColor(this)"><i class="fa-solid fa-file-invoice"
+          style="color: #ffffff; margin-right: 10px;"></i>REGIMENTO ESCOLAR</a>
+      <a href="../NossaEquipe/index.html" ontouchstart="changeIconColor(this)" ontouchend="resetIconColor(this)"><i
+          class="fa-solid fa-people-group" style="color: #ffffff; margin-right: 10PX;"></i>NOSSA EQUIPE</a>
+      <a href="../NossaEscola/index.html" ontouchstart="changeIconColor(this)" ontouchend="resetIconColor(this)"><i
+          class="fa-solid fa-graduation-cap" style="color: #ffffff; margin-right: 10px;"></i>NOSSA ESCOLA</a>
+      <a href="../MultiMeios/index.html" ontouchstart="changeIconColor(this)" ontouchend="resetIconColor(this)"><i
+          class="fa-solid fa-book-open-reader" style="color: #ffffff; margin-right: 10px;"></i>MULTIMEIOS</a>
+      <a href="../Criadores/index.html" ontouchstart="changeIconColor(this)" ontouchend="resetIconColor(this)"><i
+          class="fa-solid fa-users-gear" style="color: #ffffff; margin-right: 10px;"></i>CRIADORES</a>
+      <a href="../Cursos/index.html" ontouchstart="changeIconColor(this)" ontouchend="resetIconColor(this)"><i
+          class="fa-solid fa-brain" style="color: #ffffff; margin-right: 10px;"></i>CURSOS TÉCNICOS</a>
+      <a href="../Acesso_Login/index.html" ontouchstart="changeIconColor(this)" ontouchend="resetIconColor(this)"><i
+          class="fa-solid fa-right-to-bracket" style="color: #ffffff; margin-right: 10px;"></i>ACESSO</a>
     </nav>
-
-    
-    <!------------------------------------- HOVER PARA DISPOSITIVOS MOVEIS ------------------------------------>
-    <script>
-        function changeIconColor(element) {
-            element.querySelector('i').style.color = '#00511C'; // Cor desejada quando o mouse passa sobre o <a>
-        }
-
-        function resetIconColor(element) {
-            element.querySelector('i').style.color = '#ffffff'; // Cor original quando o mouse sai do <a>
-        }
-
-    </script>
-
-    <!--------------------------------------- FOOTER ----------------------------------->
-    <footer>
-        <div class="div_foot" id="endereco">
-            <div class="flex_container">
-                <div class="barramarelo"></div>
-                <h1 class="titulo_endereco">Endereço</h1>
-            </div>
-            <p>Rua Angélica Gurgel, 362, Fortaleza - CE</p>
-            <p>Horário: Segunda - Sexta: 7h20 - 16h40</p>
-        </div>
-        <div class="div_foot" id="sobre">
-            <div class="flex_container">
-                <div class="barramarelo"></div>
-                <h1 class="titulo_sobre">Sobre</h1>
-            </div>
-
-            <p><a href="./Criadores/criadores.html">© 2021 - 2023 - Turma Técnico em Informática</a></p>
-            <p>Desenvolvimento e Design</p>
-        </div>
-    </footer>
+  </div>
 </div>
+  <!------------------------------------- HOVER PARA DISPOSITIVOS MOVEIS ------------------------------------>
+  <script>
+    function changeIconColor(element) {
+      element.querySelector('i').style.color = '#00511C'; // Cor desejada quando o mouse passa sobre o <a>
+    }
+    function resetIconColor(element) {
+      element.querySelector('i').style.color = '#ffffff'; // Cor original quando o mouse sai do <a>
+    }
+  </script>
+  </div>
+  <!--------------------------------------- FOOTER ----------------------------------->
+  <footer>
+    <div class="div_foot" id="endereco">
+      <div class="flex_container">
+        <div class="barramarelo"></div>
+        <h1 class="titulo_endereco">Endereço</h1>
+      </div>
+      <p>Rua Angélica Gurgel, 362, Fortaleza - CE</p>
+      <p>Horário: Segunda - Sexta: 7h20 - 16h40</p>
+    </div>
+    <div class="div_foot" id="sobre">
+      <div class="flex_container">
+        <div class="barramarelo"></div>
+        <h1 class="titulo_sobre">Sobre</h1>
+      </div>
+      <p><a href="./Criadores/criadores.html">© 2021 - 2023 - Turma Técnico em Informática</a></p>
+      <p>Desenvolvimento e Design</p>
+    </div>
+  </footer>
 </body>
 
 </html>

@@ -1,3 +1,14 @@
+/*--------------------------------------------- IMPORTAÇÃO DE FONTES. -------------------------------------------*/
+@font-face {
+  font-family: 'open-sans';
+  src: url('OpenSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('BebasNeue-Light.ttf') format('truetype');
+}
+
 body {
   margin: 0;
   display: flex;
@@ -5,6 +16,10 @@ body {
   min-height: 100vh;
 }
 
+#btn_back {
+  display: none;
+  }
+  
 /*--------------------------------------------- HEADER PADRÃO (NÃO ALTERAR!) -------------------------------------------*/
 div#cabecalho {
   position: relative;
@@ -22,21 +37,11 @@ div#cabecalho img {
   width: 80px;
 }
 
-@font-face {
-  font-family: 'open-sans';
-  src: url('OpenSans-Regular.ttf') format('truetype');
-}
-
 h3#escol {
   font-family: 'open-sans';
   margin-left: 12%;
   margin-top: 1%;
 
-}
-
-@font-face {
-  font-family: 'Bebas Neue';
-  src: url('BebasNeue-light.ttf') format('truetype');
 }
 
 h3#escol1 {
@@ -73,6 +78,7 @@ nav#nav {
   display: flex;
   align-items: center;
   height: 38px;
+    text-decoration: none;
 }
 
 #drop::after {
@@ -116,16 +122,6 @@ img#select {
   float: right;
   margin-top: -12%;
   margin-right: 6%;
-}
-
-@font-face {
-  font-family: 'open-sans';
-  src: url('OpenSans-Regular.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Bebas Neue';
-  src: url('BebasNeue-Light.ttf') format('truetype');
 }
 
 .seta {
@@ -196,6 +192,7 @@ button[name="drop"] {
   display: none;
 }
 
+/*--------------------------------------------- MENU RESPONSIVO (NÃO ALTERAR!) -----------------------------------------*/
 .responsive {
   background: linear-gradient(to right, #ffffff 4px, transparent 4px);
   background-color: #03501e;
@@ -273,9 +270,7 @@ button[name="drop"] {
   transition: .4s;
 }
 
-#btn_back {
-  display: none;
-  }
+
 
 /*--------------------------------------------- RESOLUÇÃO MENU RESPONSIVO (NÃO ALTERAR!) -----------------------------------------*/
 
@@ -325,22 +320,22 @@ button[name="drop"] {
   }
 
   /* INÍCIO DO BUTTON BACK TO TOP (JAMILLE) */
-#back_to_top {
-  position: fixed;
-  z-index: 999;
-  color: black;
-  bottom: 60px;
-  right: 30px;
-  height: 48px;
-  width: 48px;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-  font-size: 1.1rem;
-}
-
+  #back_to_top {
+    position: fixed;
+    z-index: 999;
+    color: black;
+    bottom: 60px;
+    right: 30px;
+    height: 48px;
+    width: 48px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background-color: #FFBD00;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    font-size: 1.1rem;
+  }
 
 #back_to_top #btn_back #icon_up:hover {
   transform: translateY(-3px);
@@ -357,7 +352,6 @@ button[name="drop"] {
 }
 
 /* FIM DO BUTTON BACK TO TOP (JAMILLE) */
-
 }
 
 @media (max-width: 485px) {
@@ -374,7 +368,6 @@ button[name="drop"] {
 
 }
 
-
 /*--------------------------------------------- CONTENT PADRÃO DO SITE (NÃO ALTERAR!) -----------------------------------------*/
 /*
 tutorial content:
@@ -385,96 +378,36 @@ a classe content deve ser posta entre as divs do header e footer, sendo customiz
 }
 */
 .content {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  position: relative;
+    flex-grow: 1;
+    font-family: 'open-sans';
+    font-size: 90%;
+    display: block;
+    justify-content: center;
+    align-items: center;
 }
-
+.texto{
+  display: flex;
+  justify-content: center;
+}
+.cards {
+  position: relative;
+    flex-grow: 1;
+    display: flex;
+    font-family: 'open-sans';
+    font-size: 90%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
 
 #a {
   text-decoration: none;
 }
 
 /*
-  --------------------------------------------- CONTENT (CONTEUDO DA PAGINA) ----------------------------------------------
+  --------------------------------------------- CONTENT (ADICIONE AQUI O CONTEÚDO DA PAGINA) ----------------------------------------------
 */
-
-
-
-/* TEXTO INFORMATIVO */
-.info-texto {
-  font-size: 2rem;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-/* CONFIGURAÇÃO DOS SLIDES */
-section {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  max-width: 100%;
-  margin-left: 5%;
-  margin-bottom: 50px;
-  margin-top: 50px;
-  font-size: 1.3rem;
-}
-
-@media (max-width: 800px) {
-
-  .logo {
-    width: 100%;
-  }
-}
-
-section#conteudo1 {
-  align-items: center;
-  justify-content: flex-start;
-  max-width: 100%;
-  margin-right: 5%;
-  margin-bottom: 50px;
-  margin-top: 50px;
-}
-
-
-.carousel-inner {
-  border-radius: 20px;
-}
-
-.img-slider {
-  inset: 0;
-  width: 50%;
-  height: auto;
-  z-index: 0;
-}
-
-.swiper-slide {
-  margin: 0;
-}
-
-.image {
-  display: flex;
-  flex-direction: column;
-  width: 15%;
-  height: auto;
-
-  font-family: 'open-sans';
-  font-weight: 700;
-}
-
-.image img {
-  margin: 0;
-  margin-bottom: 20px;
-  width: 100%;
-}
-
-.image label {
-  text-align: center;
-  background-color: #00511C;
-  color: #feba03;
-}
 
 .paragrafo1 {
   width: 70%;
@@ -484,6 +417,7 @@ section#conteudo1 {
   background-color: #D1E2C8;
   padding: 1em;
   border-radius: 1em;
+  margin-top: 5%;
 }
 
 .paragrafo1 h1 {
@@ -497,94 +431,6 @@ section#conteudo1 {
   color: #00511C;
   font-family: 'open-sans';
 }
-
-
-
-@media screen and (max-width:800px) {
-  section {
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-  }
-
-  .content1 {
-    width: 90%;
-  }
-
-  .img-slider {
-    width: 100%;
-  }
-
-  .image {
-    width: 50vw;
-  }
-}
-
-#carouselExampleAutoplaying0 {
-  width: 50%;
-
-}
-
-#carouselExampleAutoplaying1 {
-  width: 50%;
-}
-
-#carouselExampleAutoplaying2 {
-  width: 50%;
-}
-
-#carouselExampleAutoplaying3 {
-  width: 50%;
-}
-
-.carousel-control-prev {
-  cursor: pointer;
-}
-
-.carousel-control-next {
-  cursor: pointer;
-  color: red;
-}
-
-@media (max-width: 830px) {
-  #carouselExampleAutoplaying0 {
-    width: 70%;
-  }
-
-  #carouselExampleAutoplaying1 {
-    width: 70%;
-  }
-
-  #carouselExampleAutoplaying2 {
-    width: 0%;
-  }
-
-  #carouselExampleAutoplaying3 {
-    width: 70%;
-  }
-}
-
-@media (max-width: 560px) {
-  #carouselExampleAutoplaying0 {
-    width: 90%;
-  }
-
-  #carouselExampleAutoplaying1 {
-    width: 90%;
-  }
-
-  #carouselExampleAutoplaying2 {
-    width: 90%;
-  }
-
-  #carouselExampleAutoplaying3 {
-    width: 90%;
-  }
-
-}
-
-/* CONFIGURAÇÃO DOS SLIDES END */
-
 
 /*
   ----------ESTILO DOS CARDS PERFIS:-----------
@@ -713,6 +559,17 @@ section#conteudo1 {
 }
 
 
+
+@media (max-width: 435px) {
+  .pdf {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 10%;
+  }
+}
+
+
+
 /*
   --------------------------------------------- CONFIGURAÇÃO BUTÕES REDES SOCIAIS (NÃO ALTERAR!) ----------------------------------------------
 */
@@ -757,12 +614,6 @@ section#conteudo1 {
 }
 
 /*--------------------------------------------- RESOLUÇÃO BUTÕES REDES SOCIAIS (NÃO ALTERAR!) -----------------------------------------*/
-@media (min-height: 821px) {
-  .social-buttons {
-    display: none;
-  }
-}
-
 @media (max-width: 560px) {
   .social-buttons {
     display: none;

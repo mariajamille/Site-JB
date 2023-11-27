@@ -201,10 +201,7 @@ button[name="drop"] {
   background-color: #03501e;
 }
 
-.responsive-nav:hover i {
-  color: #e61212;
-  /* Cor desejada ao passar o mouse sobre o ícone */
-}
+
 
 .responsive-nav {
   transition: .5s;
@@ -256,14 +253,23 @@ button[name="drop"] {
   margin-top: 2px;
 }
 
+.responsive-nav a i{
+  color: white;
+  margin-right: 10px;
+}
 .responsive-nav a:hover {
   color: #00511C;
   background-color: #D1E2C8;
 }
 
+.responsive-nav a:hover i{
+  color: #00511C;
+  transition: linear .3s;
+}
 .responsive-nav a {
   font-family: 'open-sans';
 }
+
 
 .black-bar {
   width: 90%;

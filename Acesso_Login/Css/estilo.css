@@ -193,10 +193,7 @@ button[name="drop"] {
   background-color: #03501e;
 }
 
-.responsive-nav:hover i {
-  color: #e61212;
-  /* Cor desejada ao passar o mouse sobre o ícone */
-}
+
 
 .responsive-nav {
   transition: .5s;
@@ -248,11 +245,19 @@ button[name="drop"] {
   margin-top: 2px;
 }
 
+.responsive-nav a i{
+  color: white;
+  margin-right: 10px;
+}
 .responsive-nav a:hover {
   color: #00511C;
   background-color: #D1E2C8;
 }
 
+.responsive-nav a:hover i{
+  color: #00511C;
+  transition: linear .3s;
+}
 .responsive-nav a {
   font-family: 'open-sans';
 }
@@ -314,39 +319,6 @@ button[name="drop"] {
     display: none;
   }
 
-  /* INÍCIO DO BUTTON BACK TO TOP (JAMILLE) */
-#back_to_top {
-  position: fixed;
-  z-index: 999;
-  color: black;
-  bottom: 60px;
-  right: 30px;
-  height: 48px;
-  width: 48px;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-  font-size: 1.1rem;
-}
-
-
-#back_to_top #btn_back #icon_up:hover {
-  transform: translateY(-3px);
-}
-
-#btn_back {
-  display: block;
-  height: calc(100% - 12px);
-  width: calc(100% - 12px);
-  background-color: white;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-}
-
-/* FIM DO BUTTON BACK TO TOP (JAMILLE) */
 }
 
 @media (max-width: 485px) {
@@ -556,9 +528,8 @@ fieldset {
   padding: 0 0 5px 28px;
   
   color: rgb(19, 18, 18);
-  font-size: 16px;
+  font-size: 12px;
   font-family:'Ruda', sans-serif;
-  font-size: 15px;
 
   background-color: transparent;
   border: none;

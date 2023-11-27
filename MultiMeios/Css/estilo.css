@@ -271,7 +271,7 @@ button[name="drop"] {
 
 .responsive-nav a:hover i{
   color: #00511C;
-  transition: linear .3s;
+  transition: linear .1s;
 }
 .responsive-nav a {
   font-family: 'open-sans';

@@ -550,7 +550,6 @@ a classe content deve ser posta entre as divs do header e footer, sendo customiz
   /* CONFIGURAÇÃO DA FUNÇAO EXERCIDA PELA PESSOA */
   font-size: 19px;
   color: #666;
-  font-style: italic;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-weight: lighter;
 }
